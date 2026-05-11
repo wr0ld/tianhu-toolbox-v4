@@ -11,6 +11,7 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QFont, QCursor, QIcon, QAction
 
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from utils import run_tool as original_run_tool
 
