@@ -200,7 +200,8 @@ class MainWindow (QMainWindow ):
         self ._perf_proc =None 
 
         self .tools =load_tools ()
-        self .categories =load_categories ()
+        raw_categories =load_categories ()
+        self .categories =list (raw_categories )
         for t in self .tools :
             if t ["category"]not in self .categories :
                 self .categories .append (t ["category"])
@@ -213,7 +214,8 @@ class MainWindow (QMainWindow ):
                 self .categories .insert (0 ,special )
 
         self .categories .sort (key =self ._cat_sort_key )
-        save_categories (self .categories )
+        if self .categories !=raw_categories :
+            save_categories (self .categories )
 
         # self.tool_shortcuts = {}  # 已禁用全局热键功能
         # self.load_shortcuts()
@@ -239,7 +241,6 @@ class MainWindow (QMainWindow ):
         self ._btn_cursor_filter =ButtonHoverCursorFilter (self )
         QApplication .instance ().installEventFilter (self ._btn_cursor_filter )
 
-        self .check_java_path ()
         self .init_tray ()
         # self.init_shortcuts()  # 已禁用全局热键功能
         self .load_main_window_state_and_geometry ()
@@ -249,6 +250,7 @@ class MainWindow (QMainWindow ):
         # self._screenshot_signal.connect(self.take_screenshot)  # 已禁用截图功能
 
         QTimer .singleShot (500 ,self .check_tools_health )
+        QTimer .singleShot (3000 ,self .check_java_path )
 
         # self._register_global_hotkeys()  # 已禁用全局热键功能
 
