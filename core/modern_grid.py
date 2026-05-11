@@ -527,23 +527,6 @@ class ToolDelegate (QStyledItemDelegate ):
         cat_text = painter.fontMetrics().elidedText(cat_text, Qt.TextElideMode.ElideRight, cat_rect.width())
         painter.drawText(cat_rect, Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter, cat_text)
 
-
-        if not show_selection :
-            run_btn_rect =QRect (content_rect .right ()-60 ,footer_y ,60 ,26 )
-
-
-            painter .setPen (Qt .PenStyle .NoPen )
-            btn_bg =primary_color 
-            if is_hover :
-                 btn_bg =btn_bg .lighter (110 )
-            painter .setBrush (btn_bg )
-            painter .drawRoundedRect (run_btn_rect ,6 ,6 )
-
-            btn_text_color = config.THEME.get("button_text", "#FFFFFF")
-            painter.setPen(QColor(btn_text_color))
-            painter.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
-            painter.drawText(run_btn_rect, Qt.AlignmentFlag.AlignCenter, "运行")
-
         painter .restore ()
 
     def sizeHint (self ,option ,index ):
@@ -566,20 +549,6 @@ class ToolDelegate (QStyledItemDelegate ):
                 tool =index .data (Qt .ItemDataRole .UserRole )
                 self .fav_clicked .emit (tool )
                 return True 
-
-
-            is_batch =False 
-            if hasattr (self .parent (),"show_select_box"):
-                is_batch =self .parent ().show_select_box 
-
-            if not is_batch :
-                footer_height =28 
-                footer_y =card_rect .bottom ()-self .padding -footer_height 
-                run_btn_rect =QRect (content_rect .right ()-60 ,footer_y ,60 ,26 )
-                if run_btn_rect .contains (pos ):
-                    tool =index .data (Qt .ItemDataRole .UserRole )
-                    self .run_clicked .emit (tool )
-                    return True 
 
         return False 
 

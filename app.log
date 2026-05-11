@@ -391,3 +391,12 @@
 
 2026-05-11 23:00:29,341 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/postgre/postgreUtil-1.0-SNAPSHOT-jar-with-dependencies.jar" 
 
+
+2026-05-12 00:13:44,111 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/yakit/Yakit.exe" 
+
+2026-05-12 00:18:05,178 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value
+
+2026-05-12 00:18:35,620 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/nmap" && "nmap.exe" "
+2026-05-12 00:18:41,800 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/upx-5.1.1-win64" && "upx.exe" "
+2026-05-12 00:18:44,785 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/秋风AI代码审计个人版(3)/秋风AI代码审计个人版.exe" 
+2026-05-12 00:19:02,721 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 

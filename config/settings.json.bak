@@ -112,6 +112,26 @@
   ],
   "recent_tools": [
     [
+      "秋风AI代码审计个人版",
+      "我的"
+    ],
+    [
+      "upx",
+      "我的"
+    ],
+    [
+      "nmap",
+      "我的"
+    ],
+    [
+      "CMD5",
+      "网页工具"
+    ],
+    [
+      "Yakit",
+      "抓包与代理工具"
+    ],
+    [
       "Postgresql一键利用工具",
       "漏洞扫描与利用工具"
     ],
@@ -130,29 +150,9 @@
     [
       "Kunlun-Penetration-Testing-Platform-main",
       "我的"
-    ],
-    [
-      "IWannaGetAll",
-      "漏洞扫描与利用工具"
-    ],
-    [
-      "APP信息收集工具探测工具",
-      "信息收集工具"
-    ],
-    [
-      "APP检测利用工具",
-      "信息收集工具"
-    ],
-    [
-      "VEO指纹识别工具",
-      "信息收集工具"
-    ],
-    [
-      "Fine",
-      "信息收集工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAACeAAAApgAABqAAAAO3AAAAngAAAKYAAAagAAADtwAAAAAAAAAABqsAAACeAAAApgAABqAAAAO3",
+  "main_window_geometry": "AdnQywADAAAAAAABAAAAiAAABgMAAAOZAAAAAQAAAIgAAAYDAAADmQAAAAAAAAAABqsAAAABAAAAiAAABgMAAAOZ",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgMAAAMSAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
