@@ -502,23 +502,23 @@ class ToolDelegate (QStyledItemDelegate ):
             "PowerShell": "PS", "网页": "WEB",
         }
         type_label = type_short_map.get(tool_type_str, tool_type_str[:3] if tool_type_str else "")
-        if type_label:
-            type_font = QFont("Segoe UI", 8, QFont.Weight.Bold)
-            painter.setFont(type_font)
-            type_text_w = painter.fontMetrics().horizontalAdvance(type_label) + 10
-            type_badge_rect = QRect(content_rect.left(), footer_y + 4, type_text_w, 18)
-            type_bg = QColor(primary_color)
-            type_bg.setAlpha(35)
-            type_bd = QColor(primary_color)
-            type_bd.setAlpha(100)
-            painter.setPen(QPen(type_bd, 1))
-            painter.setBrush(type_bg)
-            painter.drawRoundedRect(type_badge_rect, 4, 4)
-            painter.setPen(_theme_qcolor(config.THEME['primary']))
-            painter.drawText(type_badge_rect, Qt.AlignmentFlag.AlignCenter, type_label)
-            cat_left = content_rect.left() + type_text_w + 6
-        else:
-            cat_left = content_rect.left()
+        # if type_label:
+        #     type_font = QFont("Segoe UI", 8, QFont.Weight.Bold)
+        #     painter.setFont(type_font)
+        #     type_text_w = painter.fontMetrics().horizontalAdvance(type_label) + 10
+        #     type_badge_rect = QRect(content_rect.left(), footer_y + 4, type_text_w, 18)
+        #     type_bg = QColor(primary_color)
+        #     type_bg.setAlpha(35)
+        #     type_bd = QColor(primary_color)
+        #     type_bd.setAlpha(100)
+        #     painter.setPen(QPen(type_bd, 1))
+        #     painter.setBrush(type_bg)
+        #     painter.drawRoundedRect(type_badge_rect, 4, 4)
+        #     painter.setPen(_theme_qcolor(config.THEME['primary']))
+        #     painter.drawText(type_badge_rect, Qt.AlignmentFlag.AlignCenter, type_label)
+        #     cat_left = content_rect.left() + type_text_w + 6
+        # else:
+        cat_left = content_rect.left()
 
         # cat_rect = QRect(cat_left, footer_y, content_rect.width() - 70 - (cat_left - content_rect.left()), footer_height)
         # painter.setPen(_theme_qcolor(config.THEME['primary']))
