@@ -5,3 +5,6 @@ notepad/
 python3/
 tools/
 *.pyc
+*.jpg
+*.png
+*.ico
