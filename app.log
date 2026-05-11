@@ -1,0 +1,378 @@
+
+2026-04-30 14:07:55,441 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+
+2026-04-30 14:08:00,603 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:08:08,994 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/jndi" && "start1.bat" "
+2026-04-30 14:08:17,610 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/jndi" && "start1.bat" "
+
+2026-04-30 14:08:25,646 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:08:28,122 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/jndi" && "start1.bat" "
+
+2026-04-30 14:24:03,790 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:24:08,977 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/jndi" && "start1.bat" "
+2026-04-30 14:24:15,765 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:25:00,425 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/jndi" && "start1.bat" "
+2026-04-30 14:25:08,846 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:25:12,162 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/jndi" && "start1.bat" "
+2026-04-30 14:26:36,615 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:26:40,095 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:26:43,048 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:26:48,440 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:26:54,608 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:27:02,543 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:30:20,898 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/marshalsec-0.0.3-SNAPSHOT-all/start.bat" 
+2026-04-30 14:30:39,671 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:30:40,603 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/marshalsec-0.0.3-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:30:50,975 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:30:55,358 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:31:13,255 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:31:14,140 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-1.0-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:31:27,102 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:31:28,188 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-1.0-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:31:45,172 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-Plus-2.5-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:31:49,045 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-Plus-2.5-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:32:50,785 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:32:51,726 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-1.0-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:32:57,478 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-Plus-2.5-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:33:24,423 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-1.0-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:33:51,224 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-1.0-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:33:55,775 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-Plus-2.5-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:34:01,096 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/marshalsec-0.0.3-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:34:04,632 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/JNDI注入工具/JNDI-Injection-Exploit-Plus-2.5-SNAPSHOT-all" && "start.bat" "
+2026-04-30 14:39:42,289 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/jwt_GUI/jwt_GUI.exe" 
+2026-04-30 14:41:15,626 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/sqlmap" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "sqlmap.py" -h"
+2026-04-30 14:41:26,970 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/sqlmap/GUI-sqlmap" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "sqlmap_v1.3.2.jar" "
+2026-04-30 14:42:00,814 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:42:01,860 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/sqlmap/GUI-sqlmap/sqlmap_v1.3.2.jar" 
+2026-04-30 14:42:04,884 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/sqlmap/GUI-sqlmap/sqlmap_v1.3.2.jar" 
+2026-04-30 14:42:08,591 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:42:09,355 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/sqlmap/GUI-sqlmap/sqlmap_v1.3.2.jar" 
+2026-04-30 14:42:16,108 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/sqlmap/GUI-sqlmap/sqlmap_v1.3.2.jar" 
+2026-04-30 14:43:57,656 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:43:58,462 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/sqlmap/GUI-sqlmap/sqlmap_v1.3.2.jar" 
+2026-04-30 14:45:18,505 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro_attack2/Pyke-Shiro_0.3.jar" 
+2026-04-30 14:45:21,432 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro_attack2/Pyke-Shiro_0.3.jar" 
+2026-04-30 14:45:29,281 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro/shiro_attack-4.7.0-SNAPSHOT-all.jar" 
+2026-04-30 14:47:51,917 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShiroExploit/ShiroExploit-1.0.2.jar" 
+2026-04-30 14:48:03,164 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShiroExploit/ShiroExploit-1.0.2.jar" 
+2026-04-30 14:48:05,653 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro_attack2/Pyke-Shiro_0.3.jar" 
+2026-04-30 14:48:11,148 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro_attack2/Pyke-Shiro_0.3.jar" 
+2026-04-30 14:48:15,293 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro/shiro_attack-4.7.0-SNAPSHOT-all.jar" 
+2026-04-30 14:48:20,781 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.0.1-zulu-8-jfx.jar" 
+2026-04-30 14:50:24,576 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "D:/bp/jre/bp.jar" 
+2026-04-30 14:50:27,711 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "D:/bp/jre/bp.jar" 
+2026-04-30 14:50:47,716 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:51:34,661 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:52:52,868 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 14:53:11,990 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:53:12,892 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 14:55:00,190 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 14:55:29,489 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 14:56:07,099 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:56:07,848 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start1.bat" "
+2026-04-30 14:56:32,577 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start1.bat" "
+2026-04-30 14:57:00,458 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start1.bat" "
+2026-04-30 14:57:15,034 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start1.bat" "
+2026-04-30 14:57:27,081 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 14:57:28,147 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 14:59:29,389 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 15:00:35,527 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 15:01:21,211 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 15:01:22,104 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "D:/bp/start.bat" 
+2026-04-30 15:01:26,666 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 15:01:27,441 - INFO - [运行工具] cmd /c start "" "D:/bp/start.bat" 
+2026-04-30 15:01:36,903 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 15:01:38,256 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 15:01:45,745 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 15:03:35,343 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 15:03:58,480 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 15:04:12,588 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+2026-04-30 15:04:33,645 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:/bp" && "start.bat" "
+
+2026-04-30 15:14:32,602 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-04-30 15:14:37,372 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:\bp" && "start.bat" "
+2026-04-30 15:14:52,390 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+
+2026-05-02 11:53:18,272 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 11:53:32,528 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/静刃-新增未授权检测和脆弱路径探测/jingren.exe" 
+2026-05-02 11:54:57,523 - INFO - [运行工具] cmd /c start "" "E:/EasyTools-windows-amd64/EasyTools.exe" 
+2026-05-02 11:55:24,698 - INFO - [运行工具] cmd /c start "" "E:/TscanPlus/TscanPlus_Win_Amd64.exe" 
+2026-05-02 11:57:42,886 - INFO - [运行工具] cmd /c start "" "E:/TscanPlus/TscanPlus_Win_Amd64.exe" 
+2026-05-02 11:58:54,225 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/struts2/hyacinth.jar" 
+2026-05-02 12:01:39,820 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/jwt_GUI/jwt_GUI.exe" 
+2026-05-02 12:01:44,293 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/jmg-gui-1.0.9_250101.jar" 
+2026-05-02 12:04:55,545 - INFO - [运行工具] cmd /c start "" "E:/Online_tools/main.exe" 
+2026-05-02 12:05:16,442 - INFO - [运行工具] cmd /c start "" "E:/Online_tools/main.exe" 
+2026-05-02 12:06:02,475 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/静刃-新增未授权检测和脆弱路径探测/jingren.exe" 
+
+2026-05-02 12:06:49,264 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 12:14:20,253 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/woodpecker-framework.1.3.5/woodpecker-framework.1.3.5.jar" 
+2026-05-02 12:15:37,906 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/jmg-gui-1.0.9_250101.jar" 
+2026-05-02 12:15:51,703 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 12:15:52,912 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/jmg-gui-1.0.9_250101.jar" 
+
+2026-05-02 12:18:17,266 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 12:18:58,825 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/秋风AI代码审计个人版(3)/秋风AI代码审计个人版.exe" 
+
+2026-05-02 12:21:15,064 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 12:21:40,320 - INFO - [运行工具] cmd /c start "" "E:/TrafficEye/trafficeye.exe" 
+
+2026-05-02 18:17:47,517 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 18:18:01,723 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 18:18:05,463 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7/cobaltstrike-client.jar" -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -javaagent:CSAgent.jar=CSAgent.properties -Duser.language=en
+2026-05-02 18:18:13,021 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7/cobaltstrike-client.jar" -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -javaagent:CSAgent.jar=CSAgent.properties -Duser.language=en
+2026-05-02 18:18:23,798 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 18:19:51,536 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7/cobaltstrike-client.jar" -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -javaagent:CSAgent.jar=CSAgent.properties -Duser.language=en
+2026-05-02 18:21:27,122 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 18:21:27,986 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7/cobaltstrike-client.jar" -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -javaagent:CSAgent.jar=CSAgent.properties -Duser.language=en
+2026-05-02 18:22:36,934 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 18:22:37,868 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7/cobaltstrike-client.jar" -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -javaagent:CSAgent.jar=CSAgent.properties -Duser.language=en -jar cobaltstrike-client.jar
+2026-05-02 18:23:13,364 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7/cobaltstrike-client.jar" -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -javaagent:CSAgent.jar=CSAgent.properties -Duser.language=en -jar cobaltstrike-client.jar
+2026-05-02 18:24:34,750 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 18:24:36,029 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7/cobaltstrike.bat" -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -javaagent:CSAgent.jar=CSAgent.properties -Duser.language=en -jar cobaltstrike-client.jar
+2026-05-02 18:24:44,911 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-02 18:24:45,774 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:25:08,254 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:27:07,008 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:27:17,225 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:27:25,033 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:27:33,880 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:28:31,922 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:28:47,162 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:29:02,899 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:29:12,227 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:29:20,043 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:29:41,187 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:30:12,515 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-02 18:35:53,197 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-02 19:20:34,289 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+
+2026-05-03 00:31:11,848 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 00:31:13,587 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-03 07:57:10,577 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 07:57:16,752 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-03 07:57:32,887 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 07:57:33,693 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-03 07:57:42,396 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-03 08:00:16,639 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-03 08:20:33,841 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 08:20:34,630 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-03 09:48:37,186 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+
+2026-05-03 09:51:59,812 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 09:52:00,880 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-03 15:00:34,772 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+
+2026-05-03 16:32:50,203 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 16:32:51,189 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-03 17:40:29,412 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 17:40:37,768 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/ShiroExploit-1.0.2.jar" 
+2026-05-03 17:40:40,730 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.0.1-zulu-8-jfx.jar" 
+
+2026-05-03 18:05:17,835 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 18:05:24,851 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.0.1-zulu-8-jfx.jar" 
+
+2026-05-03 18:34:19,164 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 18:34:20,909 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-03 20:55:50,250 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 20:55:57,590 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/weblogic/WeblogicTool_1.3.jar" 
+
+2026-05-03 21:17:18,098 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 21:17:24,621 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/proxifire/Proxifier.exe" 
+
+2026-05-03 21:29:44,171 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 21:29:52,373 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/proxifire/Proxifier.exe" 
+
+2026-05-03 21:37:27,195 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 21:37:31,815 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/weblogic/WeblogicTool_1.3.jar" 
+
+2026-05-03 21:43:28,144 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 21:43:34,460 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/weblogic/WeblogicTool_1.3.jar" 
+
+2026-05-03 21:57:12,706 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 21:57:16,885 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/weblogic/WeblogicTool_1.3.jar" 
+
+2026-05-03 21:58:24,641 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-03 21:58:28,919 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_webshell/Godzilla/godzilla.jar" 
+
+2026-05-04 10:55:03,954 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-04 10:55:04,852 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-04 10:56:29,184 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-04 10:56:29,918 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-04 11:11:02,275 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-04 11:11:03,320 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-05 15:06:49,561 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-05 15:06:53,969 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/jmg-gui-1.0.9_250101.jar" 
+
+2026-05-06 10:40:07,244 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 10:40:14,969 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/redis-rogue-server/redis.exe" 
+
+2026-05-06 15:20:05,351 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 15:20:16,034 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/fscan" && "fscan.exe" -h"
+2026-05-06 15:20:45,051 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/fscan" && "fscan.exe" -h"
+
+2026-05-06 16:48:27,056 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+
+2026-05-06 16:52:15,250 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 16:52:20,281 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/proxifire/Proxifier.exe" 
+
+2026-05-06 16:53:09,750 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 16:53:19,999 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/dirsearch" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "dirsearch.py" -h"
+
+2026-05-06 19:48:23,888 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+
+2026-05-06 19:48:43,309 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+
+2026-05-06 19:51:10,485 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 19:51:22,692 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1/Multiple.Database.Utilization.Tools-2.1.1-jar-with-dependencies.jar" 
+2026-05-06 19:51:38,775 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false
+2026-05-06 19:52:45,520 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 19:52:53,326 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 19:52:54,823 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false"
+2026-05-06 19:52:58,632 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false"
+2026-05-06 19:53:02,127 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "Multiple.Database.Utilization.Tools-2.1.1-jar-with-dependencies.jar" "
+
+2026-05-06 19:53:16,278 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 19:53:20,477 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false"
+2026-05-06 19:54:27,840 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 19:54:28,824 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_scan/mdut" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false"
+2026-05-06 19:54:53,194 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 19:54:56,499 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 19:55:02,290 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 19:55:07,056 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false
+
+2026-05-06 20:13:15,687 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 20:13:19,750 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false
+
+2026-05-06 20:18:10,944 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 20:18:17,517 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-06 20:18:38,676 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-06 20:18:40,099 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-07 09:08:12,743 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-07 09:08:13,949 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-07 09:08:25,784 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-07 09:10:43,012 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-07 10:26:42,430 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/未授权漏洞检测工具/unauthorized-tools-1.0.0.jar" 
+2026-05-07 10:26:55,008 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-07 10:26:56,691 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/未授权漏洞检测工具/unauthorized-tools-1.0.0.jar" 
+2026-05-07 10:27:08,165 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-07 10:27:13,397 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/woodpecker-framework.1.3.5/woodpecker-framework.1.3.5.jar" 
+
+2026-05-07 10:28:51,307 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-07 10:29:20,800 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/Bu-40xbypass-v1.0.0/Bu-40xbypass.exe" 
+2026-05-07 10:34:26,446 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/tools/YsoGUI/target/YsoGUI-1.0.0.jar" 
+2026-05-07 10:35:02,525 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/tools/YsoGUI/target/YsoGUI-1.0.0.jar" 
+2026-05-07 10:35:27,028 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/静刃-新增未授权检测和脆弱路径探测/jingren.exe" 
+2026-05-07 10:36:01,381 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-07 10:36:05,612 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-07 12:11:00,095 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/oneforall" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "oneforall.py" "
+2026-05-07 12:21:25,458 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-07 12:37:00,399 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/subfinder_2.14.0_windows_amd64" && "subfinder.exe" "
+2026-05-07 12:37:10,529 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/subfinder_2.14.0_windows_amd64" && "subfinder.exe" "
+2026-05-07 13:04:58,879 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/fcke" && "httpx.exe" -h"
+2026-05-07 13:05:57,447 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/fcke" && "httpx.exe" -h"
+2026-05-07 13:18:27,799 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/nmap/nmap.exe" 
+2026-05-07 13:18:38,243 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-07 13:18:39,349 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/nmap" && "nmap.exe" "
+2026-05-07 13:19:31,520 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/nmap" && "nmap.exe" "
+2026-05-07 13:25:26,815 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/nmap" && "nmap.exe" "
+2026-05-07 17:33:03,334 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/proxifire/Proxifier.exe" 
+2026-05-07 20:08:52,106 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/aniya/AniYa.exe" 
+2026-05-07 20:09:06,950 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/yanri/yanri.exe" 
+2026-05-07 20:09:08,120 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/aniya/AniYa.exe" 
+2026-05-07 20:09:30,213 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/aniya/AniYa.exe" 
+2026-05-07 20:09:46,142 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/foxbypass/FoxBypass_V1.0.exe" 
+2026-05-07 20:09:57,495 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/rqed" && "Heavenly.exe" "
+2026-05-07 20:10:14,534 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/rustms/app.exe" 
+2026-05-07 20:10:25,527 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/rustms/app.exe" 
+2026-05-07 20:11:29,802 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/webshellsc/Webshell_Generate-1.2.4.jar" 
+2026-05-07 20:11:45,937 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/XG_NTAI_V2/XG_NTAI.jar" 
+2026-05-07 20:12:01,624 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/yanri/yanri.exe" 
+2026-05-07 20:35:35,856 - INFO - 工具健康检查: 1 个工具路径缺失 (Clash代理工具...)
+2026-05-07 20:35:56,004 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/fcke" && "httpx.exe" -h"
+2026-05-07 20:36:06,618 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/dirsearch" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "dirsearch.py" -h"
+2026-05-07 20:36:24,424 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_webshell/alien/WebShell.exe" 
+2026-05-07 20:36:40,858 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_webshell/yh/ether_ghost_v0.2.2.exe" 
+2026-05-07 20:37:50,863 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:\bp" && "start.bat" "
+2026-05-07 20:39:05,636 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/clash\resources/clash-verge.exe" 
+2026-05-07 20:39:11,800 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/clash\resources/clash-verge.exe" 
+2026-05-07 20:39:46,206 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/httpcanary/Reqable.exe" 
+2026-05-07 20:41:49,842 - INFO - [运行工具] cmd /c start "" "E:/SunnyNet/SunnyNet.exe" 
+2026-05-07 20:42:35,059 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/adyu" && "nxc.exe" -h"
+2026-05-07 20:43:43,349 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/adyu" && "nxc.exe" -h"
+
+2026-05-08 09:59:40,068 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+
+2026-05-08 10:08:05,786 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/java-chains-1.4.4-windows-amd64" && "start.bat" "
+
+2026-05-08 15:37:05,209 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/AES-Encoder-main" && "aes_tool.bat" "
+
+2026-05-09 08:50:43,805 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/morelian/morelian.exe" 
+2026-05-09 08:56:07,716 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/静刃-新增未授权检测和脆弱路径探测/jingren.exe" 
+2026-05-09 08:56:21,042 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/jwt_GUI/jwt_GUI.exe" 
+2026-05-09 08:57:53,171 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+2026-05-09 09:01:54,834 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/pyinstxtractor" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "pyinstxtractor.py" "
+2026-05-09 09:03:19,424 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/upx-5.1.1-win64" && "upx.exe" "
+2026-05-09 09:04:31,386 - INFO - 工具健康检查: 1 个工具路径缺失 (pyinstxtractor...)
+2026-05-09 09:04:43,050 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/pyinstxtractor" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "pyinstxtractor.py" "
+2026-05-09 09:06:31,108 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/suibozhuliu/[随波逐流]CTF编码工具 V7.2 20260112.exe" 
+2026-05-09 09:22:54,267 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/suibozhuliu/[随波逐流]CTF编码工具 V7.3 20260506.exe" 
+
+2026-05-10 17:16:39,947 - INFO - [运行工具] cmd /c start "" "E:/github/Venom/Venom.exe" 
+
+2026-05-10 20:22:36,058 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/ladon/LadonGUI.exe" 
+2026-05-10 20:22:54,842 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/leiying/SnowShadow_v1.0/SnowShadow.exe" 
+2026-05-10 20:24:01,644 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/webfinder-next.jar" 
+2026-05-10 20:24:16,252 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/webfinder-next.jar" 
+2026-05-10 20:24:42,924 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/fine/Fine.exe" 
+2026-05-10 20:25:55,855 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/fine/MFinder_windows_amd64.exe" 
+2026-05-10 20:26:01,551 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/fine/Fine.exe" 
+2026-05-10 20:26:25,671 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/veo" && "veo.exe" -h"
+2026-05-10 20:26:29,343 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/appinfo/APPjc/appmsg.jar" 
+2026-05-10 20:26:35,224 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/appinfo" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "app.py" --help"
+2026-05-10 21:00:03,636 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
+2026-05-10 21:00:10,639 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
+2026-05-10 21:02:58,931 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
+
+2026-05-11 13:15:46,116 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/Kunlun-Penetration-Testing-Platform-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "main.py" "
+2026-05-11 13:20:37,217 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/Kunlun-Penetration-Testing-Platform-main" && "D:/Python/python.exe" "main.py" "
+2026-05-11 13:20:43,114 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/Kunlun-Penetration-Testing-Platform-main" && "D:/Python/python.exe" "main.py" "
+
+
+
+
+
+2026-05-11 19:12:09,064 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+2026-05-11 19:12:28,191 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/jwt_GUI/jwt_GUI.exe" 
+
+
+
+
+
+
+
+
+
+
+
+
+2026-05-11 21:52:46,091 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value
+
+
+
+
+
+

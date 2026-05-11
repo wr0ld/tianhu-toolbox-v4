@@ -1,0 +1,14 @@
+# 天狐渗透工具箱项目规则
+
+## 批处理文件（.bat）编写规则
+- 只写命令本身，不添加 `@echo off`、`cd /d "%~dp0"`、`pause` 等额外内容
+- 除非有特殊需求，否则保持批处理文件内容最简化
+- 示例：启动一个 jar 工具，批处理文件内容只需 `java -jar xxx.jar`
+- 如果需要启动 GUI 程序且不想残留黑色命令行窗口，使用 `start "" "程序路径" 参数` + `exit` 的方式：
+  - `start ""` 会将程序在新进程中启动，当前 bat 继续执行
+  - `exit` 会强制关闭当前 cmd 窗口（即使外层用 `cmd /k` 启动也能关闭）
+  - 示例：
+    ```bat
+    start "" "D:\bp\jre\bin\javaw.exe" -jar jre\bp.jar
+    exit
+    ```
