@@ -732,7 +732,7 @@ class ModernToolGrid (QListView ):
             return 
         self ._cancel_hover_tooltip ()
         self ._tip_index =index 
-        self ._tip_timer .start (3000 )
+        self ._tip_timer .start (000 )
 
     def _cancel_hover_tooltip (self ):
         try :

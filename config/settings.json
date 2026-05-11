@@ -112,6 +112,18 @@
   ],
   "recent_tools": [
     [
+      "PackerFuzzer信息探测工具",
+      "信息收集工具"
+    ],
+    [
+      "CobaltStrike 4.7",
+      "后渗透工具"
+    ],
+    [
+      "bp",
+      "抓包与代理工具"
+    ],
+    [
       "jwt_GUI",
       "我的"
     ],
@@ -138,21 +150,9 @@
     [
       "nmap",
       "我的"
-    ],
-    [
-      "CMD5",
-      "网页工具"
-    ],
-    [
-      "Yakit",
-      "抓包与代理工具"
-    ],
-    [
-      "Postgresql一键利用工具",
-      "漏洞扫描与利用工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAD////4AAAAzgAABfoAAAPf////+AAAAM4AAAX6AAAD3wAAAAAAAAAABqv////4AAAAzgAABfoAAAPf",
+  "main_window_geometry": "AdnQywADAAAAAAABAAAAzgAABgMAAAPfAAAAAQAAAM4AAAYDAAAD3wAAAAAAAAAABqsAAAABAAAAzgAABgMAAAPf",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgMAAAMSAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

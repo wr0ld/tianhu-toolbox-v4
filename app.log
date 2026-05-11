@@ -409,3 +409,8 @@
 2026-05-12 00:23:46,448 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/jwt_GUI/jwt_GUI.exe" 
 
 
+
+
+2026-05-12 00:29:41,940 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:\bp" && "start.bat" "
+2026-05-12 00:29:45,887 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-12 00:29:50,677 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/webpackscan" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "PackerFuzzer.py" "
