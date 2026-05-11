@@ -112,6 +112,10 @@
   ],
   "recent_tools": [
     [
+      "Postgresql一键利用工具",
+      "漏洞扫描与利用工具"
+    ],
+    [
       "Morker文库",
       "网页工具"
     ],
@@ -146,13 +150,9 @@
     [
       "Fine",
       "信息收集工具"
-    ],
-    [
-      "MFinder",
-      "信息收集工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAAzAAAAqQAABjUAAAO6AAAAMwAAAKkAAAY1AAADugAAAAAAAAAABqsAAAAzAAAAqQAABjUAAAO6",
+  "main_window_geometry": "AdnQywADAAAAAACeAAAApgAABqAAAAO3AAAAngAAAKYAAAagAAADtwAAAAAAAAAABqsAAACeAAAApgAABqAAAAO3",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgMAAAMSAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

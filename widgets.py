@@ -474,7 +474,7 @@ class ToolDialog (QDialog ):
         super ().__init__ (parent )
         self .categories =categories 
         self .tool_data =tool_data 
-        self .shortcut_key =""
+        # self.shortcut_key = ""  # 已禁用全局热键功能
         self .init_ui ()
         self .setModal (True )
 
@@ -588,22 +588,22 @@ class ToolDialog (QDialog ):
             self .cb_weight .setCurrentText (str (self .tool_data .get ("weight",0 )))
         lay .addWidget (self .cb_weight )
 
-        lb_short =QLabel ("快捷键:")
-        lay .addWidget (lb_short )
-        hshort =QHBoxLayout ()
-        self .ed_shortcut =QLineEdit ()
-        self .ed_shortcut .setPlaceholderText ("按下组合键或手动输入")
-        if self .tool_data and hasattr (self .parent (),"tool_shortcuts"):
-            exist =self .parent ().tool_shortcuts .get (self .tool_data ['name'],"")
-            if exist :
-                self .ed_shortcut .setText (exist )
-                self .shortcut_key =exist 
-        btn_clear =QPushButton ("清除")
-        btn_clear .setObjectName ("noHoverBtn")
-        btn_clear .clicked .connect (self .clear_short )
-        hshort .addWidget (self .ed_shortcut )
-        hshort .addWidget (btn_clear )
-        lay .addLayout (hshort )
+        # lb_short = QLabel("快捷键:")  # 已禁用全局热键功能
+        # lay.addWidget(lb_short)
+        # hshort = QHBoxLayout()
+        # self.ed_shortcut = QLineEdit()
+        # self.ed_shortcut.setPlaceholderText("按下组合键或手动输入")
+        # if self.tool_data and hasattr(self.parent(), "tool_shortcuts"):
+        #     exist = self.parent().tool_shortcuts.get(self.tool_data['name'], "")
+        #     if exist:
+        #         self.ed_shortcut.setText(exist)
+        #         self.shortcut_key = exist
+        # btn_clear = QPushButton("清除")
+        # btn_clear.setObjectName("noHoverBtn")
+        # btn_clear.clicked.connect(self.clear_short)
+        # hshort.addWidget(self.ed_shortcut)
+        # hshort.addWidget(btn_clear)
+        # lay.addLayout(hshort)
 
         hbtn =QHBoxLayout ()
         self .btn_save =QPushButton ("保存")
@@ -668,63 +668,62 @@ class ToolDialog (QDialog ):
         if fi :
             self .ed_path .setText (fi )
 
-    def clear_short (self ):
-        self .ed_shortcut .clear ()
-        self .shortcut_key =""
-        if self .tool_data and hasattr (self .parent (),"tool_shortcuts"):
-            nm =self .tool_data ['name']
-            if nm in self .parent ().tool_shortcuts :
-                del self .parent ().tool_shortcuts [nm ]
-                sets =QSettings ("config/shortcuts.ini",QSettings .Format .IniFormat )
-                sets .remove (f"shortcuts/{nm}")
-                sets .sync ()
-                # self.parent().init_shortcuts()  # 已禁用全局热键功能
+    # def clear_short(self):  # 已禁用全局热键功能
+    #     self.ed_shortcut.clear()
+    #     self.shortcut_key = ""
+    #     if self.tool_data and hasattr(self.parent(), "tool_shortcuts"):
+    #         nm = self.tool_data['name']
+    #         if nm in self.parent().tool_shortcuts:
+    #             del self.parent().tool_shortcuts[nm]
+    #             sets = QSettings("config/shortcuts.ini", QSettings.Format.IniFormat)
+    #             sets.remove(f"shortcuts/{nm}")
+    #             sets.sync()
+    #             # self.parent().init_shortcuts()
 
-    def keyPressEvent (self ,e ):
-        if self .ed_shortcut .hasFocus ():
-            mods =[]
-            if e .modifiers ()&Qt .KeyboardModifier .ControlModifier :
-                mods .append ("Ctrl")
-            if e .modifiers ()&Qt .KeyboardModifier .AltModifier :
-                mods .append ("Alt")
-            if e .modifiers ()&Qt .KeyboardModifier .ShiftModifier :
-                mods .append ("Shift")
-            if e .key ()in (Qt .Key .Key_Control ,Qt .Key .Key_Alt ,Qt .Key .Key_Shift ):
-                return 
-            keystr =QKeySequence (e .key ()).toString ()
-            if not keystr :
-                return 
-            final ="+".join (mods +[keystr ])
-            forbidden =final .strip ().lower ().replace (' ','')
-            if forbidden in FORBIDDEN_HOTKEYS :
-                QMessageBox .warning (self ,"快捷键冲突","此快捷键为系统常用快捷键，禁止使用")
-                self .ed_shortcut .clear ()
-                return 
-            if self .check_conflict (final ):
-                QMessageBox .warning (self ,"快捷键冲突","此快捷键已被其它工具占用")
-                self .ed_shortcut .clear ()
-                return 
-            self .ed_shortcut .setText (final )
-            self .shortcut_key =final 
-            if self .tool_data :
-                sets =QSettings ("config/shortcuts.ini",QSettings .Format .IniFormat )
-                sets .setValue (f"shortcuts/{self.tool_data['name']}",final )
-                sets .sync ()
-                if hasattr (self .parent (),"tool_shortcuts"):
-                    self .parent ().tool_shortcuts [self .tool_data ['name']]=final 
-                    # self.parent().init_shortcuts()  # 已禁用全局热键功能
+    # def keyPressEvent(self, e):  # 已禁用全局热键功能
+    #     if self.ed_shortcut.hasFocus():
+    #         mods = []
+    #         if e.modifiers() & Qt.KeyboardModifier.ControlModifier:
+    #             mods.append("Ctrl")
+    #         if e.modifiers() & Qt.KeyboardModifier.AltModifier:
+    #             mods.append("Alt")
+    #         if e.modifiers() & Qt.KeyboardModifier.ShiftModifier:
+    #             mods.append("Shift")
+    #         if e.key() in (Qt.Key.Key_Control, Qt.Key.Key_Alt, Qt.Key.Key_Shift):
+    #             return
+    #         keystr = QKeySequence(e.key()).toString()
+    #         if not keystr:
+    #             return
+    #         final = "+".join(mods + [keystr])
+    #         forbidden = final.strip().lower().replace(' ', '')
+    #         if forbidden in FORBIDDEN_HOTKEYS:
+    #             QMessageBox.warning(self, "快捷键冲突", "此快捷键为系统常用快捷键，禁止使用")
+    #             self.ed_shortcut.clear()
+    #             return
+    #         if self.check_conflict(final):
+    #             QMessageBox.warning(self, "快捷键冲突", "此快捷键已被其它工具占用")
+    #             self.ed_shortcut.clear()
+    #             return
+    #         self.ed_shortcut.setText(final)
+    #         self.shortcut_key = final
+    #         if self.tool_data:
+    #             sets = QSettings("config/shortcuts.ini", QSettings.Format.IniFormat)
+    #             sets.setValue(f"shortcuts/{self.tool_data['name']}", final)
+    #             sets.sync()
+    #             if hasattr(self.parent(), "tool_shortcuts"):
+    #                 self.parent().tool_shortcuts[self.tool_data['name']] = final
+    #                     # self.parent().init_shortcuts()
+    #     else:
+    #         super().keyPressEvent(e)
 
-        else :
-            super ().keyPressEvent (e )
-
-    def check_conflict (self ,newval ):
-        if not hasattr (self .parent (),"tool_shortcuts"):
-            return False 
-        curr =self .tool_data ['name']if self .tool_data else None 
-        for nm ,val in self .parent ().tool_shortcuts .items ():
-            if val ==newval and nm !=curr :
-                return True 
-        return False 
+    # def check_conflict(self, newval):  # 已禁用全局热键功能
+    #     if not hasattr(self.parent(), "tool_shortcuts"):
+    #         return False
+    #     curr = self.tool_data['name'] if self.tool_data else None
+    #     for nm, val in self.parent().tool_shortcuts.items():
+    #         if val == newval and nm != curr:
+    #             return True
+    #     return False
 
     def _on_save_clicked (self ):
         tags_str =self .ed_tags .text ().strip ()
@@ -736,14 +735,14 @@ class ToolDialog (QDialog ):
         if long_tags :
             QMessageBox .warning (self ,"标签超长","每个标签最多10个字符！")
             return 
-        val =self .ed_shortcut .text ().strip ()
-        forbidden =val .lower ().replace (' ','')
-        if forbidden and forbidden in FORBIDDEN_HOTKEYS :
-            QMessageBox .warning (self ,"快捷键冲突","此快捷键为系统常用快捷键，禁止使用")
-            return 
-        if val and self .check_conflict (val ):
-            QMessageBox .warning (self ,"快捷键冲突","此快捷键已被其它工具占用")
-            return 
+        # val = self.ed_shortcut.text().strip()  # 已禁用全局热键功能
+        # forbidden = val.lower().replace(' ', '')
+        # if forbidden and forbidden in FORBIDDEN_HOTKEYS:
+        #     QMessageBox.warning(self, "快捷键冲突", "此快捷键为系统常用快捷键，禁止使用")
+        #     return
+        # if val and self.check_conflict(val):
+        #     QMessageBox.warning(self, "快捷键冲突", "此快捷键已被其它工具占用")
+        #     return
         self .accept ()
 
     def get_tool_data (self ):
@@ -784,14 +783,14 @@ class ToolDialog (QDialog ):
         except Exception :
             pass 
 
-        if hasattr (self .parent (),"tool_shortcuts"):
-            if self .tool_data and self .tool_data ['name']in self .parent ().tool_shortcuts :
-                if (not self .shortcut_key )or (self .tool_data ['name']!=data ['name']):
-                    if self .tool_data ['name']in self .parent ().tool_shortcuts :
-                        del self .parent ().tool_shortcuts [self .tool_data ['name']]
-                    # self.parent().init_shortcuts()  # 已禁用全局热键功能
-            if self .shortcut_key :
-                self .parent ().tool_shortcuts [data ['name']]=self .shortcut_key 
+        # if hasattr(self.parent(), "tool_shortcuts"):  # 已禁用全局热键功能
+        #     if self.tool_data and self.tool_data['name'] in self.parent().tool_shortcuts:
+        #         if (not self.shortcut_key) or (self.tool_data['name'] != data['name']):
+        #             if self.tool_data['name'] in self.parent().tool_shortcuts:
+        #                 del self.parent().tool_shortcuts[self.tool_data['name']]
+        #                 # self.parent().init_shortcuts()
+        #     if self.shortcut_key:
+        #         self.parent().tool_shortcuts[data['name']] = self.shortcut_key
 
         return data 
 
