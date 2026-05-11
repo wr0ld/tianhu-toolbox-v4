@@ -4,3 +4,4 @@ java_path/
 notepad/
 python3/
 tools/
+*.pyc
