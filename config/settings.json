@@ -112,6 +112,18 @@
   ],
   "recent_tools": [
     [
+      "jwt_GUI",
+      "我的"
+    ],
+    [
+      "[随波逐流]CTF编码工具 V7.2 20260112",
+      "ctf"
+    ],
+    [
+      "IWannaGetAll",
+      "漏洞扫描与利用工具"
+    ],
+    [
       "EasyTools",
       "我的"
     ],
@@ -138,21 +150,9 @@
     [
       "Postgresql一键利用工具",
       "漏洞扫描与利用工具"
-    ],
-    [
-      "Morker文库",
-      "网页工具"
-    ],
-    [
-      "jwt_GUI",
-      "我的"
-    ],
-    [
-      "Kunlun-Penetration-Testing-Platform-main",
-      "我的"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAABAAAAiAAABgMAAAOZAAAAAQAAAIgAAAYDAAADmQAAAAAAAAAABqsAAAABAAAAiAAABgMAAAOZ",
+  "main_window_geometry": "AdnQywADAAAAAAABAAAA4wAABgMAAAP0AAAAAQAAAOMAAAYDAAAD9AAAAAAAAAAABqsAAAABAAAA4wAABgMAAAP0",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgMAAAMSAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

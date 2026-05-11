@@ -140,7 +140,6 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "_health": "ok",
     "group": ""
   },
   {
@@ -3095,6 +3094,7 @@
     "url": "",
     "custom_interpreter_name": "python3",
     "custom_interpreter_type": "python",
-    "group": ""
+    "group": "",
+    "_health": "ok"
   }
 ]

@@ -3086,15 +3086,15 @@
   {
     "name": "Kunlun-Penetration-Testing-Platform-main",
     "category": "我的",
-    "type": "Python",
+    "type": "Python(python3)",
     "description": "昆仑安全测试平台",
     "weight": 0,
     "tags": [],
     "path": "/tools/other/Kunlun-Penetration-Testing-Platform-main/main.py",
     "params": "",
     "url": "",
-    "custom_interpreter_name": "",
-    "custom_interpreter_type": "",
+    "custom_interpreter_name": "python3",
+    "custom_interpreter_type": "python",
     "group": ""
   }
 ]

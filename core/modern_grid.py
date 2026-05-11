@@ -520,12 +520,12 @@ class ToolDelegate (QStyledItemDelegate ):
         else:
             cat_left = content_rect.left()
 
-        cat_rect = QRect(cat_left, footer_y, content_rect.width() - 70 - (cat_left - content_rect.left()), footer_height)
-        painter.setPen(_theme_qcolor(config.THEME['primary']))
-        painter.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
-        cat_text = f"📁 {tool['category']}"
-        cat_text = painter.fontMetrics().elidedText(cat_text, Qt.TextElideMode.ElideRight, cat_rect.width())
-        painter.drawText(cat_rect, Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter, cat_text)
+        # cat_rect = QRect(cat_left, footer_y, content_rect.width() - 70 - (cat_left - content_rect.left()), footer_height)
+        # painter.setPen(_theme_qcolor(config.THEME['primary']))
+        # painter.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
+        # cat_text = f"📁 {tool['category']}"
+        # cat_text = painter.fontMetrics().elidedText(cat_text, Qt.TextElideMode.ElideRight, cat_rect.width())
+        # painter.drawText(cat_rect, Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter, cat_text)
 
         painter .restore ()
 
