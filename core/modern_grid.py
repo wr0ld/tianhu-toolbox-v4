@@ -241,36 +241,13 @@ class ToolModel (QAbstractListModel ):
         return mime_data
 
     def dropMimeData (self ,data ,action ,row ,column ,parent ):
+        # InternalMove 模式下，Qt 会自行处理数据移动
+        # dropEvent 中用 id() 追踪位置变化并做权重重算
+        # 这里返回 False 让 Qt 接管移动操作
         if action ==Qt .DropAction .IgnoreAction :
             return True
         if not data .hasFormat ("application/x-toolgrid-index"):
             return False
-        if column >0 :
-            return False
-
-        raw =bytes (data .data ("application/x-toolgrid-index")).decode ()
-        src_rows =[int (x )for x in raw .split (",")if x ]
-        if not src_rows :
-            return False
-
-        # 取第一个源行（单拖拽）
-        src_row =src_rows [0 ]
-        if src_row <0 or src_row >=len (self ._tools ):
-            return False
-
-        tool =self ._tools .pop (src_row )
-
-        # 确定插入位置
-        if row <0 :
-            dest_row =len (self ._tools )
-        else :
-            dest_row =row if row <=len (self ._tools )else len (self ._tools )
-            if src_row <dest_row :
-                dest_row -=1
-
-        self ._tools .insert (dest_row ,tool )
-
-        # 让 ModernToolGrid 接管，计算新权重
         return False
 
     def set_tools (self ,tools ):
@@ -698,7 +675,7 @@ class ModernToolGrid (QListView ):
         self .setDragEnabled (True )
         self .setAcceptDrops (True )
         self .setDropIndicatorShown (True )
-        self .setDragDropMode (QListView .DragDropMode .DragDrop )
+        self .setDragDropMode (QListView .DragDropMode .InternalMove )
         self .setDefaultDropAction (Qt .DropAction .MoveAction )
 
         self ._lg_item_reveal ={}
@@ -735,34 +712,7 @@ class ModernToolGrid (QListView ):
         except Exception :
             return False 
 
-    def mousePressEvent (self ,e :QMouseEvent ):
-        if e .button ()==Qt .MouseButton .LeftButton :
-            self ._drag_start_pos =e .pos ()
-        super ().mousePressEvent (e )
-
     def mouseMoveEvent (self ,e :QMouseEvent ):
-        # 手动启动 QDrag（DragDrop 模式下 Qt 不会自动启动）
-        if (self ._drag_start_pos is not None
-            and (e .buttons ()&Qt .MouseButton .LeftButton )
-            and (e .pos ()-self ._drag_start_pos ).manhattanLength ()>=self ._drag_threshold ):
-            idx =self .indexAt (self ._drag_start_pos )
-            if idx .isValid ():
-                drag =QDrag (self )
-                mime_data =self .model ().mimeData ([idx ])
-                drag .setMimeData (mime_data )
-                # 创建拖动预览图
-                pixmap =QPixmap (self .visualRect (idx ).size ())
-                pixmap .fill (Qt .GlobalColor .transparent )
-                painter =QPainter (pixmap )
-                self .itemDelegate ().paint (painter ,QStyleOptionViewItem (),idx )
-                painter .end ()
-                drag .setPixmap (pixmap .scaled (pixmap .size ()*0.8 ,Qt .AspectRatioMode .KeepAspectRatio ,Qt .TransformationMode .SmoothTransformation ))
-                drag .setHotSpot (pixmap .rect ().center ())
-                self ._drag_start_pos =None
-                self ._cancel_hover_tooltip ()
-                drag .exec (Qt .DropAction .MoveAction )
-                return
-
         try :
             over_run =self ._hit_test_run_button (e .pos ())
             if over_run !=self ._hovering_run_button :
@@ -1367,71 +1317,41 @@ class ModernToolGrid (QListView ):
             return round ((prev_w +next_w )/2.0 ,4 )
 
     def dropEvent (self ,e ):
-        """重写 dropEvent：直接从 QMimeData 解析源行号，通过 dropIndicatorPosition 确定目标位置，
-        手动完成模型移动和权重重算，然后刷新视图。"""
-        mime_data =e .mimeData ()
-        if mime_data is None or not mime_data .hasFormat ("application/x-toolgrid-index"):
-            e .ignore ()
+        """InternalMove 模式：Qt 内部处理移动，我们只需在之后做权重重算"""
+        # 记录拖动前的工具 id 序列
+        ids_before =[id (t )for t in self .tool_model ._tools ]
+
+        super ().dropEvent (e )
+
+        # 拖动后的工具 id 序列
+        ids_after =[id (t )for t in self .tool_model ._tools ]
+
+        if len (ids_before )!=len (ids_after ):
             return
 
-        # 解析源行号
-        raw =bytes (mime_data .data ("application/x-toolgrid-index")).decode ()
-        src_rows =[int (x )for x in raw .split (",")if x ]
-        if not src_rows :
-            e .ignore ()
+        # 找出被移动的卡片：在前后序列中 id 位置发生变化
+        moved_id =None
+        dest_row =None
+        for i ,tid in enumerate (ids_before ):
+            j =ids_after .index (tid )if tid in ids_after else -1
+            if i !=j and j !=-1 :
+                moved_id =tid
+                dest_row =j
+                break
+
+        if moved_id is None :
             return
-        src_row =src_rows [0 ]
-
-        tools =self .tool_model ._tools
-        if src_row <0 or src_row >=len (tools ):
-            e .ignore ()
-            return
-
-        # 确定目标行号
-        drop_pos =e .position ().toPoint ()
-        target_idx =self .indexAt (drop_pos )
-        drop_indicator =self .dropIndicatorPosition ()
-
-        if target_idx .isValid ():
-            dest_row =target_idx .row ()
-            # 根据 dropIndicatorPosition 调整目标位置
-            if drop_indicator ==QListView .DropIndicatorPosition .BelowItem :
-                dest_row +=1
-            elif drop_indicator ==QListView .DropIndicatorPosition .AboveItem :
-                pass  # dest_row 不变
-            elif drop_indicator ==QListView .DropIndicatorPosition .OnItem :
-                # 放到目标项的位置，目标项向下移
-                pass  # dest_row 不变，源项插入到这里
-        else :
-            # 放到最后
-            dest_row =len (tools )
-
-        if dest_row >len (tools ):
-            dest_row =len (tools )
-
-        # 源和目标相同则不处理
-        if src_row ==dest_row or (src_row +1 ==dest_row and drop_indicator ==QListView .DropIndicatorPosition .BelowItem and src_row <dest_row ):
-            e .ignore ()
-            return
-
-        # 执行移动
-        tool =tools .pop (src_row )
-        if src_row <dest_row :
-            dest_row -=1
-        tools .insert (dest_row ,tool )
 
         # 计算新权重
         new_weight =self ._recalculate_drop_weight (dest_row )
-        tools [dest_row ]["weight"]=new_weight
+        self .tool_model ._tools [dest_row ]["weight"]=new_weight
 
-        # 刷新模型和视图
-        self .tool_model .beginResetModel ()
-        self .tool_model .endResetModel ()
+        # 刷新卡片显示
+        idx =self .tool_model .index (dest_row )
+        self .tool_model .dataChanged .emit (idx ,idx ,[Qt .ItemDataRole .UserRole ])
         self .viewport ().update ()
 
-        e .accept ()
-
-        logger .debug (f"拖动排序: {tool .get ('name','')} → 位置 {dest_row}, 权重 {new_weight}")
+        logger .debug (f"拖动排序: 位置 {dest_row}, 权重 {new_weight}")
 
 
 class LiquidGlassMenu (QMenu ):

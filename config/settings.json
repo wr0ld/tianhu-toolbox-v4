@@ -121,6 +121,18 @@
   ],
   "recent_tools": [
     [
+      "jmg-gui-1.0.9_250101",
+      "我的"
+    ],
+    [
+      "nmap",
+      "我的"
+    ],
+    [
+      "DDDD漏扫工具",
+      "漏洞扫描与利用工具"
+    ],
+    [
       "woodpecker-framework.1.3.5",
       "我的"
     ],
@@ -147,21 +159,9 @@
     [
       "CyberStrikeAI",
       "我的"
-    ],
-    [
-      "云资产管理工具",
-      "我的"
-    ],
-    [
-      "ShadowScan",
-      "我的"
-    ],
-    [
-      "DirSearch目录探测工具",
-      "信息收集工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAABAAAAIAAABgIAAAM3AAAAAQAAACAAAAYCAAADNwAAAAAAAAAAB4AAAAABAAAAIAAABgIAAAM3",
+  "main_window_geometry": "AdnQywADAAAAAAeAAAAAIAAADYEAAAM3AAAHgAAAACAAAA2BAAADNwAAAAEAAAAABqsAAAeAAAAAIAAADYEAAAM3",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgIAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
