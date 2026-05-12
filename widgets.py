@@ -569,16 +569,16 @@ class ToolDialog (QDialog ):
             self .ed_desc .setText (self .tool_data .get ("description",""))
         lay .addWidget (self .ed_desc )
 
-        lb_tags =QLabel ("标签 (最多3个, 每个≤10字符, 英文逗号分隔):")
-        lay .addWidget (lb_tags )
-        self .ed_tags =QLineEdit ()
-        self .ed_tags .setPlaceholderText ("如：内网, 提权, webshell")
-        if self .tool_data and self .tool_data .get ("tags"):
-            self .ed_tags .setText (", ".join (self .tool_data .get ("tags",[])[:3 ]))
-        lay .addWidget (self .ed_tags )
-        lab_tip =QLabel ("多个标签请用英文逗号 , 分隔；每个标签最多10字符，最多3个标签")
-        lab_tip .setStyleSheet ("color: #888; font-size: 11px; padding-left:3px;")
-        lay .addWidget (lab_tip )
+        # lb_tags =QLabel ("标签 (最多3个, 每个≤10字符, 英文逗号分隔):")  # 标签功能已禁用
+        # lay .addWidget (lb_tags )
+        # self .ed_tags =QLineEdit ()
+        # self .ed_tags .setPlaceholderText ("如：内网, 提权, webshell")
+        # if self .tool_data and self .tool_data .get ("tags"):
+        #     self .ed_tags .setText (", ".join (self .tool_data .get ("tags",[])[:3 ]))
+        # lay .addWidget (self .ed_tags )
+        # lab_tip =QLabel ("多个标签请用英文逗号 , 分隔；每个标签最多10字符，最多3个标签")
+        # lab_tip .setStyleSheet ("color: #888; font-size: 11px; padding-left:3px;")
+        # lay .addWidget (lab_tip )
 
         lb_weight =QLabel ("显示权重(0-10):")
         lay .addWidget (lb_weight )
@@ -726,15 +726,15 @@ class ToolDialog (QDialog ):
     #     return False
 
     def _on_save_clicked (self ):
-        tags_str =self .ed_tags .text ().strip ()
-        tags =[t .strip ()for t in tags_str .split (",")if t .strip ()]
-        if len (tags )>3 :
-            QMessageBox .warning (self ,"标签数量超限","最多只能填写3个标签！")
-            return 
-        long_tags =[t for t in tags if len (t )>10 ]
-        if long_tags :
-            QMessageBox .warning (self ,"标签超长","每个标签最多10个字符！")
-            return 
+        # tags_str =self .ed_tags .text ().strip ()  # 标签功能已禁用
+        # tags =[t .strip ()for t in tags_str .split (",")if t .strip ()]
+        # if len (tags )>3 :
+        #     QMessageBox .warning (self ,"标签数量超限","最多只能填写3个标签！")
+        #     return 
+        # long_tags =[t for t in tags if len (t )>10 ]
+        # if long_tags :
+        #     QMessageBox .warning (self ,"标签超长","每个标签最多10个字符！")
+        #     return 
         # val = self.ed_shortcut.text().strip()  # 已禁用全局热键功能
         # forbidden = val.lower().replace(' ', '')
         # if forbidden and forbidden in FORBIDDEN_HOTKEYS:
@@ -754,11 +754,12 @@ class ToolDialog (QDialog ):
         data ['description']=self .ed_desc .text ().strip ()
         data ['weight']=int (self .cb_weight .currentText ())
 
-        tags_str =self .ed_tags .text ().strip ()
-        tags =[t .strip ()for t in tags_str .split (",")if t .strip ()]
-        tags =tags [:3 ]
-        tags =[t [:10 ]for t in tags ]
-        data ['tags']=tags 
+        # tags_str =self .ed_tags .text ().strip ()  # 标签功能已禁用
+        # tags =[t .strip ()for t in tags_str .split (",")if t .strip ()]
+        # tags =tags [:3 ]
+        # tags =[t [:10 ]for t in tags ]
+        # data ['tags']=tags 
+        data ['tags']=[]  # 标签功能已禁用 
 
         if data ['type']=="网页":
             data ['url']=self .ed_url .text ().strip ()

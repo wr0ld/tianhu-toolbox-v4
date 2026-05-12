@@ -895,7 +895,7 @@ def load_tools ():
                 "desc":"description",
                 "priority":"weight",
                 "order":"weight",
-                "tag":"tags",
+                # "tag":"tags",  # 标签功能已禁用
                 }
                 for oldk ,newk in key_map .items ():
                     if newk not in tool and oldk in tool :
@@ -921,12 +921,13 @@ def load_tools ():
                 except Exception :
                     tool ["weight"]=0 
 
-                tags =tool .get ("tags",[])
-                if isinstance (tags ,str ):
-                    tags =[x .strip ()for x in tags .split (",")if x .strip ()]
-                if not isinstance (tags ,list ):
-                    tags =[]
-                tool ["tags"]=tags 
+                # tags =tool .get ("tags",[])  # 标签功能已禁用
+                # if isinstance (tags ,str ):
+                #     tags =[x .strip ()for x in tags .split (",")if x .strip ()]
+                # if not isinstance (tags ,list ):
+                #     tags =[]
+                # tool ["tags"]=tags 
+                tool ["tags"]=[] 
 
                 if "group"not in tool :
                     tool ["group"]=""
@@ -990,8 +991,9 @@ def save_tools (tools ):
                     clone ['path']=abs_path
             except (ValueError ,TypeError ):
                 clone ['path']=abs_path 
-            if "tags"not in clone :
-                clone ["tags"]=[]
+            # if "tags"not in clone :  # 标签功能已禁用
+            #     clone ["tags"]=[]
+            clone ["tags"]=[]  # 标签功能已禁用
             if "group"not in clone :
                 clone ["group"]=""
             out_list .append (clone )

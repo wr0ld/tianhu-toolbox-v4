@@ -13,7 +13,12 @@
       "path": "D:/Python/python.exe"
     }
   ],
-  "cli_java_interpreters": [],
+  "cli_java_interpreters": [
+    {
+      "name": "java21",
+      "path": "D:/Java/jdk-24/bin"
+    }
+  ],
   "cli_default_python": "",
   "cli_default_java": "",
   "favorite_tools": [
@@ -108,52 +113,56 @@
     [
       "IWannaGetAll",
       "漏洞扫描与利用工具"
+    ],
+    [
+      "云资产管理工具",
+      "我的"
     ]
   ],
   "recent_tools": [
     [
-      "PackerFuzzer信息探测工具",
+      "upx",
+      "我的"
+    ],
+    [
+      "CyberStrikeAI",
+      "我的"
+    ],
+    [
+      "云资产管理工具",
+      "我的"
+    ],
+    [
+      "ShadowScan",
+      "我的"
+    ],
+    [
+      "DirSearch目录探测工具",
       "信息收集工具"
+    ],
+    [
+      "RequestTemplate",
+      "后渗透工具"
     ],
     [
       "CobaltStrike 4.7",
       "后渗透工具"
     ],
     [
-      "bp",
-      "抓包与代理工具"
+      "Counter-Strike",
+      "后渗透工具"
     ],
     [
-      "jwt_GUI",
-      "我的"
+      "GoExec",
+      "后渗透工具"
     ],
     [
-      "[随波逐流]CTF编码工具 V7.2 20260112",
-      "ctf"
-    ],
-    [
-      "IWannaGetAll",
-      "漏洞扫描与利用工具"
-    ],
-    [
-      "EasyTools",
-      "我的"
-    ],
-    [
-      "秋风AI代码审计个人版",
-      "我的"
-    ],
-    [
-      "upx",
-      "我的"
-    ],
-    [
-      "nmap",
-      "我的"
+      "SharpScan",
+      "后渗透工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAABAAAAzgAABgMAAAPfAAAAAQAAAM4AAAYDAAAD3wAAAAAAAAAABqsAAAABAAAAzgAABgMAAAPf",
-  "main_window_state": "AAAA/wAAAAD9AAAAAAAABgMAAAMSAAAABAAAAAQAAAAIAAAACPwAAAAA",
+  "main_window_geometry": "AdnQywADAAAAAACdAAAALwAABp4AAANGAAAAnQAAAC8AAAaeAAADRgAAAAAAAAAAB4AAAACdAAAALwAABp4AAANG",
+  "main_window_state": "AAAA/wAAAAD9AAAAAAAABgIAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
   "screenshot_hotkey": "",

@@ -414,3 +414,36 @@
 2026-05-12 00:29:41,940 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:\bp" && "start.bat" "
 2026-05-12 00:29:45,887 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
 2026-05-12 00:29:50,677 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/webpackscan" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "PackerFuzzer.py" "
+
+2026-05-12 00:32:58,292 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value
+2026-05-12 00:34:13,651 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/yongheng/方程式工具包图形界面版V0.51.jar" 
+2026-05-12 00:34:35,700 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/yongheng/方程式工具包图形界面版V0.51.jar" 
+2026-05-12 00:34:44,564 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/sharpscan" && "SharpScan.exe" "
+2026-05-12 00:34:50,412 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/goexec/goexec_v0.3.0_windows_amd64" && "goexec.exe" "
+2026-05-12 00:35:06,764 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/goexec/goexec_v0.3.0_windows_amd64" && "goexec.exe" "
+2026-05-12 00:35:11,468 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/Counter-Strike/cs.jar" -Dfile.encoding=utf-8 -Xms512M -Xmx1024M -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -Duser.language=en
+2026-05-12 00:35:15,389 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/Counter-Strike/cs.jar" -Dfile.encoding=utf-8 -Xms512M -Xmx1024M -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -Duser.language=en
+2026-05-12 00:36:00,021 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Counter-Strike" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "start1.bat" "
+2026-05-12 00:36:09,141 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Counter-Strike" && "start1.bat" "
+2026-05-12 00:36:15,734 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Counter-Strike" && "start.bat" "
+2026-05-12 00:36:19,021 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Counter-Strike" && "start.bat" "
+2026-05-12 00:36:22,470 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/Counter-Strike" && "start.bat" "
+2026-05-12 00:36:48,382 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-12 00:36:56,959 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/RequestTemplate/RequestTemplate.jar" 
+2026-05-12 00:37:02,382 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/RequestTemplate/RequestTemplate.jar" 
+2026-05-12 00:37:33,704 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/dirsearch" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "dirsearch.py" -h"
+
+2026-05-12 17:57:11,534 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShadowScan_V1.0.0/ShadowScan.jar" 
+2026-05-12 17:57:27,561 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShadowScan_V1.0.0/ShadowScan.jar" 
+2026-05-12 17:58:58,024 - INFO - [运行工具] "D:/Java/jdk-24\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShadowScan_V1.0.0/ShadowScan.jar" 
+2026-05-12 17:59:01,711 - INFO - [运行工具] "D:/Java/jdk-24\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShadowScan_V1.0.0/ShadowScan.jar" 
+2026-05-12 17:59:58,360 - INFO - [运行工具] "D:/Java/jdk-24/bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShadowScan_V1.0.0/ShadowScan.jar" 
+2026-05-12 18:00:19,248 - INFO - [运行工具] "D:/Java/jdk-24/bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShadowScan_V1.0.0/ShadowScan.jar" 
+2026-05-12 18:07:05,923 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/king-akmanage/云资产管理工具.exe" 
+2026-05-12 18:07:09,266 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/king-akmanage/云资产管理工具.exe" 
+
+2026-05-12 20:00:12,238 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/CyberStrikeAI-main" && "start.bat" "
+2026-05-12 20:01:22,803 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/upx-5.1.1-win64" && "upx.exe" "
+
+
+

@@ -140,7 +140,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "_health": "ok"
   },
   {
     "name": "北极熊综合利用工具",
@@ -367,13 +368,15 @@
   {
     "name": "Counter-Strike",
     "category": "后渗透工具",
-    "type": "JAVA8(图形化)",
+    "type": "命令行",
     "description": "",
     "weight": 0,
-    "path": "/tools/gui_other/Counter-Strike/cs.jar",
-    "params": "-Dfile.encoding=utf-8 -Xms512M -Xmx1024M -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -Duser.language=en",
-    "url": "",
     "tags": [],
+    "path": "/tools/gui_other/Counter-Strike/start.bat",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
     "group": "",
     "_health": "ok"
   },
@@ -3096,5 +3099,49 @@
     "custom_interpreter_type": "python",
     "group": "",
     "_health": "ok"
+  },
+  {
+    "name": "ShadowScan",
+    "category": "我的",
+    "type": "Java(java21)",
+    "description": "敏感信息收集",
+    "weight": 0,
+    "tags": [],
+    "path": "/tools/other/ShadowScan_V1.0.0/ShadowScan.jar",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "java21",
+    "custom_interpreter_type": "java",
+    "_health": "ok",
+    "group": ""
+  },
+  {
+    "name": "云资产管理工具",
+    "category": "我的",
+    "type": "GUI应用",
+    "description": "云资产管理工具",
+    "weight": 0,
+    "tags": [],
+    "path": "/tools/other/king-akmanage/云资产管理工具.exe",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": "",
+    "_health": "ok"
+  },
+  {
+    "name": "CyberStrikeAI",
+    "category": "我的",
+    "type": "批处理",
+    "description": "AI渗透",
+    "weight": 0,
+    "tags": [],
+    "path": "/tools/other/CyberStrikeAI-main/start.bat",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
   }
 ]

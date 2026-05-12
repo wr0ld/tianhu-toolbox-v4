@@ -458,28 +458,28 @@ class ToolDelegate (QStyledItemDelegate ):
         painter .drawText (fav_rect ,Qt .AlignmentFlag .AlignCenter ,fav_text )
 
 
-        tags =tool .get ("tags",[])[:3 ]
-        tag_y =content_rect .top ()+header_height +4 
-        tag_height =18 
+        # tags =tool .get ("tags",[])[:3 ]  # 标签功能已禁用
+        # tag_y =content_rect .top ()+header_height +4 
+        # tag_height =18 
 
-        painter .setFont (QFont ("Segoe UI",8 ))
-        tag_x =content_rect .left ()
-        for tag in tags :
-            tag_text =f"#{tag[:10]}"
-            tag_width =painter .fontMetrics ().horizontalAdvance (tag_text )+10 
-            tag_rect =QRect (tag_x ,tag_y ,tag_width ,tag_height )
+        # painter .setFont (QFont ("Segoe UI",8 ))
+        # tag_x =content_rect .left ()
+        # for tag in tags :
+        #     tag_text =f"#{tag[:10]}"
+        #     tag_width =painter .fontMetrics ().horizontalAdvance (tag_text )+10 
+        #     tag_rect =QRect (tag_x ,tag_y ,tag_width ,tag_height )
 
-            painter .setPen (Qt .PenStyle .NoPen )
-            painter .setBrush (_theme_qcolor (config .THEME ['surface']))
-            painter .drawRoundedRect (tag_rect ,4 ,4 )
+        #     painter .setPen (Qt .PenStyle .NoPen )
+        #     painter .setBrush (_theme_qcolor (config .THEME ['surface']))
+        #     painter .drawRoundedRect (tag_rect ,4 ,4 )
 
-            painter .setPen (_theme_qcolor (config .THEME ['text_secondary']))
-            painter .drawText (tag_rect ,Qt .AlignmentFlag .AlignCenter ,tag_text )
+        #     painter .setPen (_theme_qcolor (config .THEME ['text_secondary']))
+        #     painter .drawText (tag_rect ,Qt .AlignmentFlag .AlignCenter ,tag_text )
 
-            tag_x +=tag_width +4 
+        #     tag_x +=tag_width +4 
 
-
-        desc_y =tag_y +tag_height +6 
+        # desc_y =tag_y +tag_height +6 
+        desc_y =content_rect .top ()+header_height +4  # 标签功能已禁用，使用默认位置
         desc_height =36 
         desc_rect =QRect (content_rect .left (),desc_y ,content_rect .width (),desc_height )
 
@@ -767,8 +767,9 @@ class ModernToolGrid (QListView ):
             desc =str (tool .get ('description',''))
             path =str (tool .get ('path',''))
             url =str (tool .get ('url',''))
-            tags =tool .get ('tags',[])or []
-            tags_str =', '.join ([str (t )for t in tags if str (t ).strip ()])
+            # tags =tool .get ('tags',[])or []  # 标签功能已禁用
+            # tags_str =', '.join ([str (t )for t in tags if str (t ).strip ()])
+            tags_str =''  # 标签功能已禁用
 
             def esc (v ):
                 return html .escape (str (v ))
@@ -779,8 +780,8 @@ class ModernToolGrid (QListView ):
             ]
             if w !="":
                 rows .append (("权重",w ))
-            if tags_str :
-                rows .append (("标签",tags_str ))
+            # if tags_str :  # 标签功能已禁用
+            #     rows .append (("标签",tags_str ))
             if desc :
                 rows .append (("描述",desc ))
             if url :

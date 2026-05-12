@@ -636,11 +636,12 @@ def fuzzy_search (tools :List [Dict [str ,Any ]],search_text :str )->List [Dict 
             nm =str (t .get ('name','')).casefold ()
             desc =str (t .get ("description","")).casefold ()
             cat =str (t .get ('category','')).casefold ()
-            tags_val =t .get ("tags",[])
-            if isinstance (tags_val ,(list ,tuple ,set )):
-                tags =" ".join ([str (x )for x in tags_val ]).casefold ()
-            else :
-                tags =str (tags_val ).casefold ()
+            # tags_val =t .get ("tags",[])  # 标签功能已禁用
+            # if isinstance (tags_val ,(list ,tuple ,set )):
+            #     tags =" ".join ([str (x )for x in tags_val ]).casefold ()
+            # else :
+            #     tags =str (tags_val ).casefold ()
+            tags =""  # 标签功能已禁用
         except Exception :
             nm =""
             desc =""
