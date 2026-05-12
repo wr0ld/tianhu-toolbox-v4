@@ -833,7 +833,7 @@ class MainWindow (QMainWindow ):
                 final .append (t )
 
 
-        final .sort (key =lambda x :(-int (x .get ("weight",0 )or 0 ),str (x .get ('name',''))))
+        final .sort (key =lambda x :(-float (x .get ("weight",0 )or 0 ),str (x .get ('name',''))))
 
 
         disp =SETTINGS .get ("display_mode","scroll")

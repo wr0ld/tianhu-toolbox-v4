@@ -4,9 +4,9 @@ import os
 import subprocess 
 import re 
 import html 
-from PyQt6 .QtCore import Qt ,QAbstractListModel ,QModelIndex ,pyqtSignal ,QSize ,QRect ,QPoint ,QEvent ,QRectF ,QVariantAnimation ,QEasingCurve ,QTimer 
-from PyQt6 .QtGui import QPainter ,QColor ,QFont ,QPen ,QBrush ,QPixmap ,QIcon ,QMouseEvent ,QPainterPath ,QLinearGradient 
-from PyQt6 .QtWidgets import QListView ,QStyledItemDelegate ,QApplication ,QMenu ,QStyle ,QToolTip ,QWidget ,QVBoxLayout ,QLabel ,QGraphicsDropShadowEffect 
+from PyQt6 .QtCore import Qt ,QAbstractListModel ,QModelIndex ,pyqtSignal ,QSize ,QRect ,QPoint ,QEvent ,QRectF ,QVariantAnimation ,QEasingCurve ,QTimer ,QMimeData ,QByteArray
+from PyQt6 .QtGui import QPainter ,QColor ,QFont ,QPen ,QBrush ,QPixmap ,QIcon ,QMouseEvent ,QPainterPath ,QLinearGradient ,QDrag ,QCursor
+from PyQt6 .QtWidgets import QListView ,QStyledItemDelegate ,QApplication ,QMenu ,QStyle ,QToolTip ,QWidget ,QVBoxLayout ,QLabel ,QGraphicsDropShadowEffect
 
 import config 
 from config import SETTINGS 
@@ -201,26 +201,100 @@ class ToolModel (QAbstractListModel ):
 
     def data (self ,index ,role =Qt .ItemDataRole .DisplayRole ):
         if not index .isValid ()or index .row ()>=len (self ._tools ):
-            return None 
+            return None
 
         tool =self ._tools [index .row ()]
 
         if role ==Qt .ItemDataRole .DisplayRole :
             return tool ['name']
         elif role ==Qt .ItemDataRole .UserRole :
-            return tool 
+            return tool
 
-        return None 
+        return None
+
+    def setData (self ,index ,value ,role =Qt .ItemDataRole .EditRole ):
+        if role ==Qt .ItemDataRole .UserRole and index .isValid ()and 0 <=index .row ()<len (self ._tools ):
+            self ._tools [index .row ()]=value
+            self .dataChanged .emit (index ,index ,[role ])
+            return True
+        return False
+
+    def flags (self ,index ):
+        default_flags =super ().flags (index )
+        if not index .isValid ():
+            return Qt .ItemFlag .ItemIsDropEnabled |default_flags
+        return Qt .ItemFlag .ItemIsDragEnabled |Qt .ItemFlag .ItemIsDropEnabled |default_flags
+
+    def supportedDropActions (self ):
+        return Qt .DropAction .MoveAction
+
+    def mimeTypes (self ):
+        return ["application/x-toolgrid-index"]
+
+    def mimeData (self ,indexes ):
+        mime_data =QMimeData ()
+        data =QByteArray ()
+        for idx in indexes :
+            if idx .isValid ():
+                data .append (str (idx .row ()).encode ()+b",")
+        mime_data .setData ("application/x-toolgrid-index",data )
+        return mime_data
+
+    def dropMimeData (self ,data ,action ,row ,column ,parent ):
+        if action ==Qt .DropAction .IgnoreAction :
+            return True
+        if not data .hasFormat ("application/x-toolgrid-index"):
+            return False
+        if column >0 :
+            return False
+
+        raw =bytes (data .data ("application/x-toolgrid-index")).decode ()
+        src_rows =[int (x )for x in raw .split (",")if x ]
+        if not src_rows :
+            return False
+
+        # 取第一个源行（单拖拽）
+        src_row =src_rows [0 ]
+        if src_row <0 or src_row >=len (self ._tools ):
+            return False
+
+        tool =self ._tools .pop (src_row )
+
+        # 确定插入位置
+        if row <0 :
+            dest_row =len (self ._tools )
+        else :
+            dest_row =row if row <=len (self ._tools )else len (self ._tools )
+            if src_row <dest_row :
+                dest_row -=1
+
+        self ._tools .insert (dest_row ,tool )
+
+        # 让 ModernToolGrid 接管，计算新权重
+        return False
 
     def set_tools (self ,tools ):
         self .beginResetModel ()
-        self ._tools =tools 
+        self ._tools =tools
         self .endResetModel ()
 
     def get_tool (self ,index ):
         if 0 <=index .row ()<len (self ._tools ):
             return self ._tools [index .row ()]
-        return None 
+        return None
+
+    def get_tools (self ):
+        return list (self ._tools )
+
+    def update_weights (self ,weights_list ):
+        """批量更新权重并刷新模型"""
+        for i ,w in enumerate (weights_list ):
+            if i <len (self ._tools ):
+                self ._tools [i ]["weight"]=w
+        self .dataChanged .emit (
+            self .index (0 ),self .index (len (self ._tools )-1 ),
+            [Qt .ItemDataRole .UserRole ]
+        )
 
 class ToolDelegate (QStyledItemDelegate ):
     run_clicked =pyqtSignal (dict )
@@ -433,22 +507,36 @@ class ToolDelegate (QStyledItemDelegate ):
         painter .drawText (name_rect ,Qt .AlignmentFlag .AlignLeft |Qt .AlignmentFlag .AlignVCenter ,name_text )
 
 
-        try :
-            w =tool .get ("weight",None )
-            if isinstance (w ,int )or (isinstance (w ,str )and str (w ).isdigit ()):
-                w =int (w )
-                badge_bg =QColor (primary_color )
-                badge_bg .setAlpha (28 )
-                badge_bd =QColor (primary_color )
-                badge_bd .setAlpha (90 )
-                painter .setPen (QPen (badge_bd ,1 ))
-                painter .setBrush (badge_bg )
-                painter .drawRoundedRect (weight_rect ,8 ,8 )
-                painter .setPen (primary_color )
-                painter .setFont (QFont ("Segoe UI",8 ,QFont .Weight .Bold ))
-                painter .drawText (weight_rect ,Qt .AlignmentFlag .AlignCenter ,str (w ))
-        except Exception :
-            pass 
+        # 权重徽章渲染已禁用
+        # try :
+        #     w =tool .get ("weight",None )
+        #     if w is not None :
+        #         try :
+        #             fw =float (w )
+        #             # 格式化浮点数: 整数不带小数点，小数保留最多3位
+        #             if fw ==int (fw ):
+        #                 w_str =str (int (fw ))
+        #             else :
+        #                 w_str =f"{fw:.3f}".rstrip ("0").rstrip (".")
+        #             badge_bg =QColor (primary_color )
+        #             badge_bg .setAlpha (28 )
+        #             badge_bd =QColor (primary_color )
+        #             badge_bd .setAlpha (90 )
+        #             # 调整徽章宽度适应长文本
+        #             fm =painter .fontMetrics ()
+        #             text_w =fm .horizontalAdvance (w_str )+8
+        #             adjusted_rect =QRect (weight_rect .right ()-max (22 ,text_w ),weight_rect .top (),max (22 ,text_w ),16 )
+        #             painter .setPen (QPen (badge_bd ,1 ))
+        #             painter .setBrush (badge_bg )
+        #             painter .drawRoundedRect (adjusted_rect ,8 ,8 )
+        #             painter .setPen (primary_color )
+        #             font =QFont ("Segoe UI",7 ,QFont .Weight .Bold )
+        #             painter .setFont (font )
+        #             painter .drawText (adjusted_rect ,Qt .AlignmentFlag .AlignCenter ,w_str )
+        #         except (ValueError ,TypeError ):
+        #             pass
+        # except Exception :
+        #     pass
 
 
         is_fav =is_tool_favorited (tool )
@@ -607,6 +695,12 @@ class ModernToolGrid (QListView ):
         self ._tip_index =QModelIndex ()
         self ._tip_popup =TooltipPopup (self )
 
+        self .setDragEnabled (True )
+        self .setAcceptDrops (True )
+        self .setDropIndicatorShown (True )
+        self .setDragDropMode (QListView .DragDropMode .DragDrop )
+        self .setDefaultDropAction (Qt .DropAction .MoveAction )
+
         self ._lg_item_reveal ={}
         self ._lg_item_reveal_timer =QTimer (self )
         self ._lg_item_reveal_timer .setInterval (16 )
@@ -615,7 +709,11 @@ class ModernToolGrid (QListView ):
         try :
             self .verticalScrollBar ().valueChanged .connect (lambda _ =None :self ._lg_update_item_reveal_targets ())
         except Exception :
-            pass 
+            pass
+
+        # 拖拽防误触
+        self ._drag_start_pos =None
+        self ._drag_threshold =10 
 
     def _hit_test_run_button (self ,pos :QPoint )->bool :
         try :
@@ -637,17 +735,44 @@ class ModernToolGrid (QListView ):
         except Exception :
             return False 
 
+    def mousePressEvent (self ,e :QMouseEvent ):
+        if e .button ()==Qt .MouseButton .LeftButton :
+            self ._drag_start_pos =e .pos ()
+        super ().mousePressEvent (e )
+
     def mouseMoveEvent (self ,e :QMouseEvent ):
+        # 手动启动 QDrag（DragDrop 模式下 Qt 不会自动启动）
+        if (self ._drag_start_pos is not None
+            and (e .buttons ()&Qt .MouseButton .LeftButton )
+            and (e .pos ()-self ._drag_start_pos ).manhattanLength ()>=self ._drag_threshold ):
+            idx =self .indexAt (self ._drag_start_pos )
+            if idx .isValid ():
+                drag =QDrag (self )
+                mime_data =self .model ().mimeData ([idx ])
+                drag .setMimeData (mime_data )
+                # 创建拖动预览图
+                pixmap =QPixmap (self .visualRect (idx ).size ())
+                pixmap .fill (Qt .GlobalColor .transparent )
+                painter =QPainter (pixmap )
+                self .itemDelegate ().paint (painter ,QStyleOptionViewItem (),idx )
+                painter .end ()
+                drag .setPixmap (pixmap .scaled (pixmap .size ()*0.8 ,Qt .AspectRatioMode .KeepAspectRatio ,Qt .TransformationMode .SmoothTransformation ))
+                drag .setHotSpot (pixmap .rect ().center ())
+                self ._drag_start_pos =None
+                self ._cancel_hover_tooltip ()
+                drag .exec (Qt .DropAction .MoveAction )
+                return
+
         try :
             over_run =self ._hit_test_run_button (e .pos ())
             if over_run !=self ._hovering_run_button :
-                self ._hovering_run_button =over_run 
+                self ._hovering_run_button =over_run
                 if over_run :
                     self .viewport ().setCursor (Qt .CursorShape .PointingHandCursor )
                 else :
                     self .viewport ().unsetCursor ()
         except Exception :
-            pass 
+            pass
 
 
         try :
@@ -664,7 +789,7 @@ class ModernToolGrid (QListView ):
                         if self ._lg_hover_index .isValid ()or self ._lg_hover_progress :
                             self ._lg_set_hover_index (QModelIndex ())
         except Exception :
-            pass 
+            pass
 
         try :
             pos =e .pos ()
@@ -677,7 +802,7 @@ class ModernToolGrid (QListView ):
                 if not card_rect .contains (pos ):
                     self ._cancel_hover_tooltip ()
         except Exception :
-            pass 
+            pass
         super ().mouseMoveEvent (e )
 
     def leaveEvent (self ,e ):
@@ -1188,6 +1313,125 @@ class ModernToolGrid (QListView ):
             EnvManager ().open_cmd (cwd =folder_path ,env_type ="cli_default")
         elif action ==act_ps :
             EnvManager ().open_powershell (cwd =folder_path ,env_type ="cli_default")
+
+    # === 拖动排序：权重重算与洗牌 ===
+
+    def _reshuffle_all_weights (self ):
+        """将所有卡片的权重按当前显示顺序重新分配为递减的整数序列（1000, 999, 998...）"""
+        tools =self .tool_model .get_tools ()
+        n =len (tools )
+        if n ==0 :
+            return
+        new_weights =[]
+        base =1000.0
+        for i in range (n ):
+            new_weights .append (base -float (i ))
+        self .tool_model .update_weights (new_weights )
+        self .viewport ().update ()
+
+    def _recalculate_drop_weight (self ,dest_row :int )->float :
+        """计算拖动后目标位置的新权重。
+        取目标前后两个卡片的权重中间值。
+        如果边界权重相等或无效，先洗牌再重新计算。"""
+        tools =self .tool_model .get_tools ()
+        n =len (tools )
+        if n ==0 :
+            return 0.0
+
+        def _get_weight (idx ):
+            try :
+                w =tools [idx ].get ("weight",0 )
+                return float (w )
+            except Exception :
+                return 0.0
+
+        # 获取目标前后卡片的权重
+        prev_w =_get_weight (dest_row -1 )if dest_row >0 else None
+        next_w =_get_weight (dest_row )if dest_row <n else None
+
+        # 检查是否需要洗牌：前后权重相等且有效，或都是0
+        if prev_w is not None and next_w is not None and prev_w ==next_w :
+            self ._reshuffle_all_weights ()
+            # 洗牌后重新获取
+            tools =self .tool_model .get_tools ()
+            prev_w =_get_weight (dest_row -1 )if dest_row >0 else None
+            next_w =_get_weight (dest_row )if dest_row <n else None
+
+        if prev_w is None and next_w is None :
+            return 0.0
+        elif prev_w is None :
+            return next_w +1.0
+        elif next_w is None :
+            return prev_w -1.0
+        else :
+            return round ((prev_w +next_w )/2.0 ,4 )
+
+    def dropEvent (self ,e ):
+        """重写 dropEvent：直接从 QMimeData 解析源行号，通过 dropIndicatorPosition 确定目标位置，
+        手动完成模型移动和权重重算，然后刷新视图。"""
+        mime_data =e .mimeData ()
+        if mime_data is None or not mime_data .hasFormat ("application/x-toolgrid-index"):
+            e .ignore ()
+            return
+
+        # 解析源行号
+        raw =bytes (mime_data .data ("application/x-toolgrid-index")).decode ()
+        src_rows =[int (x )for x in raw .split (",")if x ]
+        if not src_rows :
+            e .ignore ()
+            return
+        src_row =src_rows [0 ]
+
+        tools =self .tool_model ._tools
+        if src_row <0 or src_row >=len (tools ):
+            e .ignore ()
+            return
+
+        # 确定目标行号
+        drop_pos =e .position ().toPoint ()
+        target_idx =self .indexAt (drop_pos )
+        drop_indicator =self .dropIndicatorPosition ()
+
+        if target_idx .isValid ():
+            dest_row =target_idx .row ()
+            # 根据 dropIndicatorPosition 调整目标位置
+            if drop_indicator ==QListView .DropIndicatorPosition .BelowItem :
+                dest_row +=1
+            elif drop_indicator ==QListView .DropIndicatorPosition .AboveItem :
+                pass  # dest_row 不变
+            elif drop_indicator ==QListView .DropIndicatorPosition .OnItem :
+                # 放到目标项的位置，目标项向下移
+                pass  # dest_row 不变，源项插入到这里
+        else :
+            # 放到最后
+            dest_row =len (tools )
+
+        if dest_row >len (tools ):
+            dest_row =len (tools )
+
+        # 源和目标相同则不处理
+        if src_row ==dest_row or (src_row +1 ==dest_row and drop_indicator ==QListView .DropIndicatorPosition .BelowItem and src_row <dest_row ):
+            e .ignore ()
+            return
+
+        # 执行移动
+        tool =tools .pop (src_row )
+        if src_row <dest_row :
+            dest_row -=1
+        tools .insert (dest_row ,tool )
+
+        # 计算新权重
+        new_weight =self ._recalculate_drop_weight (dest_row )
+        tools [dest_row ]["weight"]=new_weight
+
+        # 刷新模型和视图
+        self .tool_model .beginResetModel ()
+        self .tool_model .endResetModel ()
+        self .viewport ().update ()
+
+        e .accept ()
+
+        logger .debug (f"拖动排序: {tool .get ('name','')} → 位置 {dest_row}, 权重 {new_weight}")
 
 
 class LiquidGlassMenu (QMenu ):

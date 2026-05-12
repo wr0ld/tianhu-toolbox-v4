@@ -121,6 +121,26 @@
   ],
   "recent_tools": [
     [
+      "woodpecker-framework.1.3.5",
+      "我的"
+    ],
+    [
+      "加密解密小工具(非MD5版)",
+      "其他工具"
+    ],
+    [
+      "SOMD5",
+      "网页工具"
+    ],
+    [
+      "CMD5",
+      "网页工具"
+    ],
+    [
+      "天穹动态分析云沙箱",
+      "网页工具"
+    ],
+    [
       "upx",
       "我的"
     ],
@@ -139,29 +159,9 @@
     [
       "DirSearch目录探测工具",
       "信息收集工具"
-    ],
-    [
-      "RequestTemplate",
-      "后渗透工具"
-    ],
-    [
-      "CobaltStrike 4.7",
-      "后渗透工具"
-    ],
-    [
-      "Counter-Strike",
-      "后渗透工具"
-    ],
-    [
-      "GoExec",
-      "后渗透工具"
-    ],
-    [
-      "SharpScan",
-      "后渗透工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAACdAAAALwAABp4AAANGAAAAnQAAAC8AAAaeAAADRgAAAAAAAAAAB4AAAACdAAAALwAABp4AAANG",
+  "main_window_geometry": "AdnQywADAAAAAAABAAAAIAAABgIAAAM3AAAAAQAAACAAAAYCAAADNwAAAAAAAAAAB4AAAAABAAAAIAAABgIAAAM3",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgIAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

@@ -580,13 +580,19 @@ class ToolDialog (QDialog ):
         # lab_tip .setStyleSheet ("color: #888; font-size: 11px; padding-left:3px;")
         # lay .addWidget (lab_tip )
 
-        lb_weight =QLabel ("显示权重(0-10):")
+        lb_weight =QLabel ("显示权重(任意数字):")
         lay .addWidget (lb_weight )
-        self .cb_weight =QComboBox ()
-        self .cb_weight .addItems ([str (i )for i in range (11 )])
+        self .ed_weight =QLineEdit ()
+        self .ed_weight .setPlaceholderText ("如 5、3.14、-2.5，数字越大越靠前")
         if self .tool_data :
-            self .cb_weight .setCurrentText (str (self .tool_data .get ("weight",0 )))
-        lay .addWidget (self .cb_weight )
+            w =self .tool_data .get ("weight",None )
+            if w is not None :
+                self .ed_weight .setText (str (w ))
+            else :
+                self .ed_weight .setText ("0")
+        else :
+            self .ed_weight .setText ("0")
+        lay .addWidget (self .ed_weight )
 
         # lb_short = QLabel("快捷键:")  # 已禁用全局热键功能
         # lay.addWidget(lb_short)
@@ -752,7 +758,10 @@ class ToolDialog (QDialog ):
         data ['type']=self .cb_type .currentText ()
 
         data ['description']=self .ed_desc .text ().strip ()
-        data ['weight']=int (self .cb_weight .currentText ())
+        try :
+            data ['weight']=float (self .ed_weight .text ().strip ())
+        except Exception :
+            data ['weight']=0.0
 
         # tags_str =self .ed_tags .text ().strip ()  # 标签功能已禁用
         # tags =[t .strip ()for t in tags_str .split (",")if t .strip ()]

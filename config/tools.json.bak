@@ -3127,6 +3127,21 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
+    "group": "",
+    "_health": "ok"
+  },
+  {
+    "name": "CyberStrikeAI",
+    "category": "我的",
+    "type": "批处理",
+    "description": "AI渗透",
+    "weight": 0,
+    "tags": [],
+    "path": "/tools/other/CyberStrikeAI-main/start.bat",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
     "group": ""
   }
 ]

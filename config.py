@@ -917,9 +917,9 @@ def load_tools ():
                     tool ["description"]=""
 
                 try :
-                    tool ["weight"]=int (tool .get ("weight",0 )or 0 )
+                    tool ["weight"]=float (tool .get ("weight",0 )or 0 )
                 except Exception :
-                    tool ["weight"]=0 
+                    tool ["weight"]=0.0
 
                 # tags =tool .get ("tags",[])  # 标签功能已禁用
                 # if isinstance (tags ,str ):
