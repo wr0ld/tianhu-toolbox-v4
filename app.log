@@ -512,3 +512,72 @@ NameError: name 'QStyleOptionViewItem' is not defined
 
 2026-05-12 21:55:10,877 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/nmap" && "nmap.exe" "
 2026-05-12 21:55:17,377 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/jmg-gui-1.0.9_250101.jar" 
+
+2026-05-12 22:06:13,308 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/oneforall" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "oneforall.py" "
+2026-05-12 22:08:57,834 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/subfinder_2.14.0_windows_amd64" && "subfinder.exe" "
+2026-05-12 22:09:05,658 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/oneforall" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "oneforall.py" "
+2026-05-12 22:09:08,497 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/subfinder_2.14.0_windows_amd64" && "subfinder.exe" "
+2026-05-12 22:11:37,198 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/ksubdomain/ksubdomain.exe" 
+2026-05-12 22:11:44,214 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/ksubdomain" && "ksubdomain.exe" "
+2026-05-12 22:14:15,738 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/fcke" && "httpx.exe" -h"
+
+2026-05-12 22:35:44,425 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/goby/goby-win-x64-2.0.5/Goby.exe" 
+2026-05-12 22:35:50,439 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/spring/SpringBootVul-GUI/SpringBootVul_GUI.jar" 
+2026-05-12 22:35:58,542 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/spring" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "SpringBoot-Scan.py" -h"
+
+2026-05-13 09:51:58,429 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/nmap" && "nmap.exe" "
+2026-05-13 09:52:33,484 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/nmap" && "nmap.exe" "
+
+
+
+2026-05-13 19:41:22,962 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/afrog" && "afrog.exe" -h"
+
+2026-05-13 19:44:08,327 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/xray/super-xray-1.7-system-jre.exe" 
+
+
+
+2026-05-13 21:13:33,211 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "BinarySpy.py" "
+2026-05-13 21:22:55,840 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "BinarySpy.py" "
+2026-05-13 21:23:08,159 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "BinarySpy.py" "
+2026-05-13 21:23:18,758 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "BinarySpy.py" "
+2026-05-13 21:23:50,452 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "D:/Python/python.exe" "BinarySpy.py" "
+2026-05-13 21:23:55,581 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "D:/Python/python.exe" "BinarySpy.py" "
+2026-05-13 21:24:49,373 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "D:/Python/python.exe" "start.bat" "
+2026-05-13 21:25:13,022 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "D:/Python/python.exe" "start.bat" "
+2026-05-13 21:25:19,815 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "D:/Python/python.exe" "start.bat" "
+2026-05-13 21:25:38,607 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:25:44,032 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:25:50,920 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:27:19,089 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:27:33,529 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:28:02,704 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main/start.bat" 
+2026-05-13 21:28:41,233 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && "start.bat" "
+
+2026-05-13 21:28:55,553 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:29:12,452 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:29:19,010 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "start.bat" "
+2026-05-13 21:29:30,980 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "start.bat" "
+2026-05-13 21:29:54,538 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main/start.bat" 
+2026-05-13 21:30:05,459 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:31:27,187 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:31:39,789 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:32:09,885 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:32:18,062 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main/start.bat" 
+2026-05-13 21:33:38,822 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main/start.bat" 
+2026-05-13 21:33:50,247 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main/start.bat" 
+2026-05-13 21:34:00,247 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:34:36,591 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:35:21,472 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main" && "start.bat" "
+2026-05-13 21:35:51,759 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main" && wscript "start.vbs" "
+2026-05-13 21:36:01,504 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main/start.vbs" 
+2026-05-13 21:36:07,480 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main/start.vbs" 
+2026-05-13 21:36:21,913 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/BinarySpy-main/start.vbs" 
+2026-05-13 21:36:54,033 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/webshellsc/Webshell_Generate-1.2.4.jar" 
+2026-05-13 21:38:46,044 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/webshellsc" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "Webshell_Generate-1.2.6.jar" "
+2026-05-13 21:39:26,940 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_other/webshellsc" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "Webshell_Generate-1.2.6.jar" "
+2026-05-13 21:39:37,021 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_other/webshellsc/Webshell_Generate-1.2.6.jar" 
+
+
+
+2026-05-13 21:55:12,626 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value
+2026-05-13 21:55:14,975 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value

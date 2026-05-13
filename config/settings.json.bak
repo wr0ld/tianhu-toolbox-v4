@@ -117,51 +117,55 @@
     [
       "云资产管理工具",
       "我的"
+    ],
+    [
+      "Webshell生成器",
+      "免杀工具"
     ]
   ],
   "recent_tools": [
     [
-      "jmg-gui-1.0.9_250101",
-      "我的"
+      "ICP备案查询官网",
+      "网页工具"
+    ],
+    [
+      "GitHub",
+      "网页工具"
+    ],
+    [
+      "Webshell生成器",
+      "免杀工具"
+    ],
+    [
+      "BinarySpy",
+      "免杀工具"
+    ],
+    [
+      "XRAY图形化版工具",
+      "漏洞扫描与利用工具"
+    ],
+    [
+      "Afrog可定制化漏洞扫描工具",
+      "漏洞扫描与利用工具"
     ],
     [
       "nmap",
       "我的"
     ],
     [
-      "DDDD漏扫工具",
+      "SpringBoot-Scan",
+      "框架漏洞利用工具"
+    ],
+    [
+      "SpringBootVul-GUI",
+      "框架漏洞利用工具"
+    ],
+    [
+      "Goby_v2.4.7_1400+Poc版本",
       "漏洞扫描与利用工具"
-    ],
-    [
-      "woodpecker-framework.1.3.5",
-      "我的"
-    ],
-    [
-      "加密解密小工具(非MD5版)",
-      "其他工具"
-    ],
-    [
-      "SOMD5",
-      "网页工具"
-    ],
-    [
-      "CMD5",
-      "网页工具"
-    ],
-    [
-      "天穹动态分析云沙箱",
-      "网页工具"
-    ],
-    [
-      "upx",
-      "我的"
-    ],
-    [
-      "CyberStrikeAI",
-      "我的"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAeAAAAAIAAADYEAAAM3AAAHgAAAACAAAA2BAAADNwAAAAEAAAAABqsAAAeAAAAAIAAADYEAAAM3",
+  "main_window_geometry": "AdnQywADAAAAAAfbAAAASgAADdwAAANhAAAH2wAAAEoAAA3cAAADYQAAAAEAAAAABqsAAAfbAAAASgAADdwAAANh",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgIAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

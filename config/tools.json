@@ -250,7 +250,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "_health": "ok"
   },
   {
     "name": "DirSearch目录探测工具",
@@ -603,15 +604,16 @@
   {
     "name": "Webshell生成器",
     "category": "免杀工具",
-    "type": "JAVA8(图形化)",
+    "type": "JAVA8",
     "description": "",
     "weight": 0.0,
-    "path": "/tools/gui_other/webshellsc/Webshell_Generate-1.2.4.jar",
+    "tags": [],
+    "path": "/tools/gui_other/webshellsc/Webshell_Generate-1.2.6.jar",
     "params": "",
     "url": "",
-    "tags": [],
-    "group": "",
-    "_health": "ok"
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
   },
   {
     "name": "XG拟态WEBSHELL免杀工具",
@@ -3141,5 +3143,35 @@
     "custom_interpreter_type": "",
     "group": "",
     "_health": "ok"
+  },
+  {
+    "name": "ksubdomain",
+    "category": "我的",
+    "type": "命令行",
+    "description": "",
+    "weight": 0.0,
+    "tags": [],
+    "path": "/tools/other/ksubdomain/ksubdomain.exe",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": "",
+    "_health": "ok"
+  },
+  {
+    "name": "BinarySpy",
+    "category": "免杀工具",
+    "type": "GUI应用",
+    "description": "patch shellcode",
+    "weight": 0.0,
+    "tags": [],
+    "path": "/tools/other/BinarySpy-main/start.vbs",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "_health": "ok",
+    "group": ""
   }
 ]

@@ -670,7 +670,13 @@ class ToolDialog (QDialog ):
         self .ed_params .setVisible (not is_web )
 
     def browse_file (self ):
-        fi ,_ =QFileDialog .getOpenFileName (self ,"选择工具文件")
+        current_path =self .ed_path .text ().strip ()
+        start_dir =""
+        if current_path :
+            start_dir =os .path .dirname (current_path )
+            if not os .path .isabs (start_dir ):
+                start_dir =""
+        fi ,_ =QFileDialog .getOpenFileName (self ,"选择工具文件",start_dir )
         if fi :
             self .ed_path .setText (fi )
 
