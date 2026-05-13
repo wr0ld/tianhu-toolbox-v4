@@ -895,15 +895,6 @@ class SettingsDialog (QDialog ):
             self .cb_exit .setCurrentText ("每次询问")
         lay .addWidget (self .cb_exit )
 
-        lay .addWidget (QLabel ("工具卡片显示模式:"))
-        self .cb_display_mode =QComboBox ()
-        self .cb_display_mode .addItems (["scroll(滚动)","paged(分页)"])
-        if SETTINGS .get ("display_mode","scroll")=="paged":
-            self .cb_display_mode .setCurrentText ("paged(分页)")
-        else :
-            self .cb_display_mode .setCurrentText ("scroll(滚动)")
-        lay .addWidget (self .cb_display_mode )
-
         lay .addWidget (QLabel (""))
         health_row =QHBoxLayout ()
         health_row .addWidget (QLabel ("工具健康检查:"))
@@ -1244,11 +1235,6 @@ class SettingsDialog (QDialog ):
             df_theme =theme_map .get (DEFAULT_SETTINGS ["theme"],"深色")
             self .cb_theme .setCurrentText (df_theme )
 
-            if DEFAULT_SETTINGS ["display_mode"]=="paged":
-                self .cb_display_mode .setCurrentText ("paged(分页)")
-            else :
-                self .cb_display_mode .setCurrentText ("scroll(滚动)")
-
             self .ed_py .setText (DEFAULT_SETTINGS ["python_path"])
             self .ed_j8 .setText (DEFAULT_SETTINGS ["java8_path"])
             self .ed_j11 .setText (DEFAULT_SETTINGS ["java11_path"])
@@ -1414,17 +1400,13 @@ class SettingsDialog (QDialog ):
         themetxt =self .cb_theme .currentText ()
         theme_key =theme_map .get (themetxt ,"dark")
 
-        dsp ="scroll"
-        if self .cb_display_mode .currentText ()=="paged(分页)":
-            dsp ="paged"
-
         new_s =dict (SETTINGS )
         new_s ["confirm_exit"]=self .chk_confirm .isChecked ()
         new_s ["exit_mode"]=ex 
         new_s ["python_path"]=self .ed_py .text ().strip ()
         new_s ["java8_path"]=self .ed_j8 .text ().strip ()
         new_s ["java11_path"]=self .ed_j11 .text ().strip ()
-        new_s ["display_mode"]=dsp 
+        new_s ["display_mode"]="scroll"
 
         new_s ["cli_python_interpreters"]=list (self .cli_python_list )
         new_s ["cli_java_interpreters"]=list (self .cli_java_list )

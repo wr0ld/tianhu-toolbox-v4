@@ -224,9 +224,10 @@ class MainWindow (QMainWindow ):
         self .current_category =""
         self .search_text =""
 
-        self .current_page =1 
-        self .page_size =16 
-        self .total_pages =1 
+        # 分页模式已停用，仅保留 scroll(滚动) 模式
+        # self.current_page = 1
+        # self.page_size = 16
+        # self.total_pages = 1
 
 
         self ._is_restarting =False
@@ -427,45 +428,38 @@ class MainWindow (QMainWindow ):
         self .tool_grid .batch_run_requested .connect (self .run_tools_batch )
         rlayout .addWidget (self .tool_grid )
 
-
-        self .page_widget =QWidget ()
-        page_layout =QHBoxLayout (self .page_widget )
-        page_layout .setContentsMargins (0 ,5 ,0 ,5 )
-
-        self .btn_prev =QPushButton ("上一页")
-        self .btn_prev .setObjectName ("noHoverBtn")
-        self .btn_prev .setFixedWidth (80 )
-        self .btn_prev .clicked .connect (self .prev_page )
-
-        self .lb_page =QLabel ("1 / 1")
-        self .lb_page .setAlignment (Qt .AlignmentFlag .AlignCenter )
-
-        self .btn_next =QPushButton ("下一页")
-        self .btn_next .setObjectName ("noHoverBtn")
-        self .btn_next .setFixedWidth (80 )
-        self .btn_next .clicked .connect (self .next_page )
-
-        self .ed_page_jump =QLineEdit ()
-        self .ed_page_jump .setFixedWidth (50 )
-        self .ed_page_jump .setPlaceholderText ("页码")
-        self .ed_page_jump .setAlignment (Qt .AlignmentFlag .AlignCenter )
-        self .ed_page_jump .returnPressed .connect (self .jump_to_page )
-
-        self .btn_jump =QPushButton ("跳转")
-        self .btn_jump .setObjectName ("noHoverBtn")
-        self .btn_jump .setFixedWidth (60 )
-        self .btn_jump .clicked .connect (self .jump_to_page )
-
-        page_layout .addStretch ()
-        page_layout .addWidget (self .btn_prev )
-        page_layout .addWidget (self .lb_page )
-        page_layout .addWidget (self .btn_next )
-        page_layout .addSpacing (20 )
-        page_layout .addWidget (self .ed_page_jump )
-        page_layout .addWidget (self .btn_jump )
-        page_layout .addStretch ()
-
-        rlayout .addWidget (self .page_widget )
+        # 分页模式已停用，仅保留 scroll(滚动) 模式
+        # self.page_widget = QWidget()
+        # page_layout = QHBoxLayout(self.page_widget)
+        # page_layout.setContentsMargins(0, 5, 0, 5)
+        # self.btn_prev = QPushButton("上一页")
+        # self.btn_prev.setObjectName("noHoverBtn")
+        # self.btn_prev.setFixedWidth(80)
+        # self.btn_prev.clicked.connect(self.prev_page)
+        # self.lb_page = QLabel("1 / 1")
+        # self.lb_page.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        # self.btn_next = QPushButton("下一页")
+        # self.btn_next.setObjectName("noHoverBtn")
+        # self.btn_next.setFixedWidth(80)
+        # self.btn_next.clicked.connect(self.next_page)
+        # self.ed_page_jump = QLineEdit()
+        # self.ed_page_jump.setFixedWidth(50)
+        # self.ed_page_jump.setPlaceholderText("页码")
+        # self.ed_page_jump.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        # self.ed_page_jump.returnPressed.connect(self.jump_to_page)
+        # self.btn_jump = QPushButton("跳转")
+        # self.btn_jump.setObjectName("noHoverBtn")
+        # self.btn_jump.setFixedWidth(60)
+        # self.btn_jump.clicked.connect(self.jump_to_page)
+        # page_layout.addStretch()
+        # page_layout.addWidget(self.btn_prev)
+        # page_layout.addWidget(self.lb_page)
+        # page_layout.addWidget(self.btn_next)
+        # page_layout.addSpacing(20)
+        # page_layout.addWidget(self.ed_page_jump)
+        # page_layout.addWidget(self.btn_jump)
+        # page_layout.addStretch()
+        # rlayout.addWidget(self.page_widget)
 
         content_layout .addWidget (right_panel )
         main_lay .addLayout (content_layout )
@@ -650,67 +644,49 @@ class MainWindow (QMainWindow ):
     def refresh_grid_layout (self ):
         try :
             self .tool_grid .adjust_card_size ()
-            self ._recompute_page_size_if_needed ()
+            # 分页模式已停用
+            # self._recompute_page_size_if_needed()
         except Exception as e :
             logger .error (f"刷新卡片布局异常: {e}")
 
     def _recompute_page_size_if_needed (self ):
-        try :
-            if SETTINGS .get ("display_mode","scroll")!="paged":
-                return 
-
-
-            if not self .isMaximized ():
-                new_page_size =20 
-            else :
-                grid_size =self .tool_grid .gridSize ()
-                if grid_size .width ()<=0 or grid_size .height ()<=0 :
-                    return 
-                vp =self .tool_grid .viewport ().size ()
-                cols =max (1 ,vp .width ()//grid_size .width ())
-                rows =max (1 ,vp .height ()//grid_size .height ())
-                new_page_size =max (1 ,cols *rows )
-
-            if new_page_size !=self .page_size :
-                self .page_size =new_page_size 
-                self .current_page =1 
-                self .update_tool_grid ()
-        except Exception as e :
-            logger .error (f"自适应分页数量异常: {e}")
+        # 分页模式已停用，仅保留 scroll(滚动) 模式
+        return
 
     def resizeEvent (self ,e ):
         super ().resizeEvent (e )
         if getattr (self ,'_dpi_adjusting',False ):
             return
-        self ._recompute_page_size_if_needed ()
+        # 分页模式已停用
+        # self._recompute_page_size_if_needed()
 
-    def prev_page (self ):
-        if self .current_page >1 :
-            self .current_page -=1 
-            self .update_tool_grid ()
+    # def prev_page(self):
+    #     if self.current_page > 1:
+    #         self.current_page -= 1
+    #         self.update_tool_grid()
 
-    def next_page (self ):
-        if self .current_page <self .total_pages :
-            self .current_page +=1 
-            self .update_tool_grid ()
+    # def next_page(self):
+    #     if self.current_page < self.total_pages:
+    #         self.current_page += 1
+    #         self.update_tool_grid()
 
-    def jump_to_page (self ):
-        txt =self .ed_page_jump .text ().strip ()
-        if not txt .isdigit ():
-            return 
-        val =int (txt )
-        if 1 <=val <=self .total_pages :
-            self .current_page =val 
-            self .update_tool_grid ()
-            self .ed_page_jump .clear ()
-        else :
-            msg =QMessageBox (self )
-            msg .setWindowTitle ("提示")
-            msg .setText (f"页码超出范围 (1-{self.total_pages})")
-            msg .setIcon (QMessageBox .Icon .Warning )
-            ok_btn =msg .addButton ("确定",QMessageBox .ButtonRole .AcceptRole )
-            msg .setDefaultButton (ok_btn )
-            msg .exec ()
+    # def jump_to_page(self):
+    #     txt = self.ed_page_jump.text().strip()
+    #     if not txt.isdigit():
+    #         return
+    #     val = int(txt)
+    #     if 1 <= val <= self.total_pages:
+    #         self.current_page = val
+    #         self.update_tool_grid()
+    #         self.ed_page_jump.clear()
+    #     else:
+    #         msg = QMessageBox(self)
+    #         msg.setWindowTitle("提示")
+    #         msg.setText(f"页码超出范围 (1-{self.total_pages})")
+    #         msg.setIcon(QMessageBox.Icon.Warning)
+    #         ok_btn = msg.addButton("确定", QMessageBox.ButtonRole.AcceptRole)
+    #         msg.setDefaultButton(ok_btn)
+    #         msg.exec()
 
     def import_data (self ):
         try :
@@ -836,32 +812,8 @@ class MainWindow (QMainWindow ):
         final .sort (key =lambda x :(-float (x .get ("weight",0 )or 0 ),str (x .get ('name',''))))
 
 
-        disp =SETTINGS .get ("display_mode","scroll")
-
-        if disp =="paged":
-            self .page_widget .show ()
-            total_items =len (final )
-            if total_items ==0 :
-                self .total_pages =1 
-                self .current_page =1 
-                display_tools =[]
-            else :
-                self .total_pages =(total_items +self .page_size -1 )//self .page_size 
-                if self .current_page >self .total_pages :
-                    self .current_page =self .total_pages 
-                if self .current_page <1 :
-                    self .current_page =1 
-
-                start_idx =(self .current_page -1 )*self .page_size 
-                end_idx =start_idx +self .page_size 
-                display_tools =final [start_idx :end_idx ]
-
-            self .lb_page .setText (f"{self.current_page} / {self.total_pages}")
-            self .btn_prev .setEnabled (self .current_page >1 )
-            self .btn_next .setEnabled (self .current_page <self .total_pages )
-        else :
-            self .page_widget .hide ()
-            display_tools =final
+        # 分页模式已停用，仅保留 scroll(滚动) 模式
+        display_tools =final
 
         for tool in display_tools :
             tool ["_health"]=self ._health_status .get (tool .get ("name",""),"ok")
@@ -878,7 +830,6 @@ class MainWindow (QMainWindow ):
 
     def on_cat_selected (self ,cat ):
         self .current_category =cat 
-        self .current_page =1 
         self .update_tool_grid ()
 
     def on_cat_renamed (self ,old_name ,new_name ):
@@ -961,7 +912,6 @@ class MainWindow (QMainWindow ):
 
     def on_search (self ,txt ):
         self .search_text =(txt or "").strip ()
-        self .current_page =1
         self .update_tool_grid ()
         self .refresh_grid_layout ()
 
