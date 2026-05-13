@@ -125,6 +125,10 @@
   ],
   "recent_tools": [
     [
+      "PackerFuzzer信息探测工具",
+      "信息收集工具"
+    ],
+    [
       "ICP备案查询官网",
       "网页工具"
     ],
@@ -159,13 +163,9 @@
     [
       "SpringBootVul-GUI",
       "框架漏洞利用工具"
-    ],
-    [
-      "Goby_v2.4.7_1400+Poc版本",
-      "漏洞扫描与利用工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAB8AAAATAAABn0AAANjAAAAfAAAAEwAAAZ9AAADYwAAAAAAAAAAB4AAAAB8AAAATAAABn0AAANj",
+  "main_window_geometry": "AdnQywADAAAAAAAOAAAAJwAABg8AAAM+AAAADgAAACcAAAYPAAADPgAAAAAAAAAAB4AAAAAOAAAAJwAABg8AAAM+",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgIAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

@@ -259,7 +259,7 @@ class SearchBar (QFrame ):
         lay .setContentsMargins (0 ,0 ,0 ,0 )
         lay .setSpacing (6 )
 
-        lab_icon =QLabel ("🔍",self )
+        lab_icon =QLabel ("",self )
         lay .addWidget (lab_icon )
 
         self .search_input =QLineEdit ()
@@ -369,7 +369,7 @@ class CategoryPanel (QFrame ):
         self .container_layout .setContentsMargins (0 ,0 ,0 ,0 )
         self .container_layout .setSpacing (10 )
 
-        all_btn =CategoryButton ("🗒 全部工具",self ,is_user_category =False ,category_key ="")
+        all_btn =CategoryButton ("全部工具",self ,is_user_category =False ,category_key ="")
         all_btn .clicked .connect (lambda :self .on_click (all_btn ,""))
         all_btn .setChecked (True )
         self .buttons [""]=all_btn 
@@ -452,9 +452,9 @@ class CategoryPanel (QFrame ):
 
         all_count =category_counts .get ("",None )
         if all_count is not None :
-            self .buttons [""].setText (f"🗒 全部工具 ({all_count})")
+            self .buttons [""].setText (f"全部工具 ({all_count})")
         else :
-            self .buttons [""].setText ("🗒 全部工具")
+            self .buttons [""].setText ("全部工具")
 
         if current_cat in self .buttons :
             self .on_click (self .buttons [current_cat ],current_cat )
