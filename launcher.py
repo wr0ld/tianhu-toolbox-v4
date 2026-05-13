@@ -8,7 +8,7 @@ from PyQt6.QtWidgets import (
     QMessageBox, QMenu, QMenuBar, QDialog, QFormLayout, QComboBox,
     QFileDialog, QSpacerItem, QSizePolicy, QToolButton, QToolTip
 )
-from PyQt6.QtCore import Qt, QSize
+from PyQt6.QtCore import Qt, QSize, QTimer
 from PyQt6.QtGui import QFont, QCursor, QIcon, QAction
 
 
@@ -258,6 +258,7 @@ class CategorySection(QFrame):
 class LauncherWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        self._stylesheet_applied = False
         self.tools = load_json_file(TOOLS_FILE, [])
         self.categories = load_json_file(CATEGORIES_FILE, [])
         self.settings = load_json_file(SETTINGS_FILE, {})
@@ -292,7 +293,7 @@ class LauncherWindow(QMainWindow):
         main_layout.addWidget(scroll_area, 1)
 
         self.refresh_tools()
-        self.apply_stylesheet()
+        QTimer.singleShot(0, self.apply_stylesheet)
 
     def setup_menubar(self):
         menubar = self.menuBar()
@@ -424,6 +425,72 @@ class LauncherWindow(QMainWindow):
                 QMessageBox.warning(self, "错误", "保存工具失败")
 
     def apply_stylesheet(self):
+        if self._stylesheet_applied:
+            return
+        self._stylesheet_applied = True
+
+        theme_name = str(self.settings.get("theme", "")).strip().lower()
+        if theme_name == "performance":
+            style = """
+            QMainWindow {
+                background: #0f172a;
+            }
+            QMenuBar {
+                background: #111827;
+                color: #e5e7eb;
+                border-bottom: 1px solid #1f2937;
+            }
+            QMenuBar::item:selected {
+                background: #1f2937;
+            }
+            QMenu {
+                background: #111827;
+                color: #e5e7eb;
+                border: 1px solid #1f2937;
+            }
+            QMenu::item:selected {
+                background: #1f2937;
+            }
+            QLineEdit, QComboBox {
+                background: #111827;
+                color: #e5e7eb;
+                border: 1px solid #334155;
+                border-radius: 3px;
+                padding: 4px 8px;
+            }
+            QScrollArea#mainScroll {
+                background: #0f172a;
+                border: none;
+            }
+            QFrame#categorySection {
+                background: #111827;
+                border: 1px solid #1f2937;
+                border-radius: 5px;
+                margin: 2px;
+            }
+            QLabel#sectionTitle {
+                color: #e5e7eb;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 8px 15px;
+                background: #172033;
+                border-radius: 3px;
+            }
+            QPushButton {
+                background: #111827;
+                color: #e5e7eb;
+                border: 1px solid #334155;
+                border-radius: 4px;
+                font-size: 12px;
+            }
+            QPushButton:hover {
+                background: #172033;
+                border: 1px solid #3b82f6;
+            }
+            """
+            self.setStyleSheet(style)
+            return
+
         style = """
         QMainWindow {
             background: #f0f0f0;

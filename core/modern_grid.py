@@ -450,23 +450,24 @@ class ToolDelegate (QStyledItemDelegate ):
         content_rect =card_rect .adjusted (self .padding ,self .padding ,-self .padding ,-self .padding )
 
 
-        health_status =str (tool .get ("_health","ok"))
-        dot_radius =5
-        dot_cx =content_rect .left ()+dot_radius +3
-        dot_cy =content_rect .top ()+11
-        dot_color =QColor ("#10B981")if health_status =="ok" else QColor ("#EF4444")
-        painter .save ()
-        glow_color =QColor (dot_color )
-        glow_color .setAlpha (50 )
-        painter .setPen (Qt .PenStyle .NoPen )
-        painter .setBrush (glow_color )
-        painter .drawEllipse (QPoint (dot_cx ,dot_cy ),dot_radius +3 ,dot_radius +3 )
-        painter .setBrush (dot_color )
-        painter .drawEllipse (QPoint (dot_cx ,dot_cy ),dot_radius ,dot_radius )
-        highlight =QColor (255 ,255 ,255 ,80 )
-        painter .setBrush (highlight )
-        painter .drawEllipse (QPoint (dot_cx -1 ,dot_cy -1 ),2 ,2 )
-        painter .restore ()
+        # 工具健康检查红绿状态灯已停用，仅保留设置页中的手动“立即检查”
+        # health_status =str (tool .get ("_health","ok"))
+        # dot_radius =5
+        # dot_cx =content_rect .left ()+dot_radius +3
+        # dot_cy =content_rect .top ()+11
+        # dot_color =QColor ("#10B981")if health_status =="ok" else QColor ("#EF4444")
+        # painter .save ()
+        # glow_color =QColor (dot_color )
+        # glow_color .setAlpha (50 )
+        # painter .setPen (Qt .PenStyle .NoPen )
+        # painter .setBrush (glow_color )
+        # painter .drawEllipse (QPoint (dot_cx ,dot_cy ),dot_radius +3 ,dot_radius +3 )
+        # painter .setBrush (dot_color )
+        # painter .drawEllipse (QPoint (dot_cx ,dot_cy ),dot_radius ,dot_radius )
+        # highlight =QColor (255 ,255 ,255 ,80 )
+        # painter .setBrush (highlight )
+        # painter .drawEllipse (QPoint (dot_cx -1 ,dot_cy -1 ),2 ,2 )
+        # painter .restore ()
 
 
         header_height =24

@@ -250,7 +250,8 @@ class MainWindow (QMainWindow ):
         self ._toggle_visibility_signal .connect (self .toggle_window_visibility )
         # self._screenshot_signal.connect(self.take_screenshot)  # 已禁用截图功能
 
-        QTimer .singleShot (500 ,self .check_tools_health )
+        # 启动自动工具健康检查已停用，仅保留设置页中的手动“立即检查”
+        # QTimer .singleShot (500 ,self .check_tools_health )
         QTimer .singleShot (3000 ,self .check_java_path )
 
         # self._register_global_hotkeys()  # 已禁用全局热键功能
@@ -815,8 +816,9 @@ class MainWindow (QMainWindow ):
         # 分页模式已停用，仅保留 scroll(滚动) 模式
         display_tools =final
 
-        for tool in display_tools :
-            tool ["_health"]=self ._health_status .get (tool .get ("name",""),"ok")
+        # 工具卡片健康状态灯已停用，不再向卡片注入 _health 状态
+        # for tool in display_tools :
+        #     tool ["_health"]=self ._health_status .get (tool .get ("name",""),"ok")
 
         self .tool_grid .set_final_tools (display_tools )
 
@@ -974,7 +976,8 @@ class MainWindow (QMainWindow ):
         if save_tools (self .tools ):
             self .update_cat_panel ()
             self .update_tool_grid ()
-            self ._health_status [td .get ("name","")]=self .health_checker .check_tool (td )
+            # 新增工具时不再主动执行健康检查，仅保留设置页手动检测
+            # self ._health_status [td .get ("name","")]=self .health_checker .check_tool (td )
             self .update_tool_grid ()
             return True
         return False 
@@ -1023,7 +1026,8 @@ class MainWindow (QMainWindow ):
         except Exception as e :
             QMessageBox .warning (self ,"编辑工具异常",str (e ))
         # self.re_register_hotkeys()  # 已禁用全局热键功能
-        self .check_tools_health ()
+        # 编辑工具后不再主动执行健康检查，仅保留设置页手动检测
+        # self .check_tools_health ()
         self .update_tool_grid ()
 
     def delete_tool (self ,tool_data ):
