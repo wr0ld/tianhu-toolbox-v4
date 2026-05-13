@@ -190,11 +190,13 @@ class TitleBar (QWidget ):
 
         lay .addStretch ()
 
-        self .perf_label =QLabel ("CPU --% | 内存 --MB",self )
-        self .perf_label .setAlignment (Qt .AlignmentFlag .AlignVCenter |Qt .AlignmentFlag .AlignRight )
-        self .perf_label .setStyleSheet ("font-size:12px; padding-right:10px;")
-        self .perf_label .setMinimumWidth (180 )
-        lay .addWidget (self .perf_label )
+        # 顶部性能监控文字已停用
+        self .perf_label =QLabel ("",self )
+        self .perf_label .hide ()
+        # self .perf_label .setAlignment (Qt .AlignmentFlag .AlignVCenter |Qt .AlignmentFlag .AlignRight )
+        # self .perf_label .setStyleSheet ("font-size:12px; padding-right:10px;")
+        # self .perf_label .setMinimumWidth (180 )
+        # lay .addWidget (self .perf_label )
 
         self .btn_min =QPushButton ("🗕")
         self .btn_min .setObjectName ("titleButton")

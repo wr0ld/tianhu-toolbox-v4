@@ -469,7 +469,8 @@ class MainWindow (QMainWindow ):
         self .update_cat_panel ()
         self .update_tool_grid ()
 
-        self .init_perf_monitor ()
+        # 顶部 CPU / 内存性能监控已停用
+        # self .init_perf_monitor ()
 
 
     def init_perf_monitor (self ):
