@@ -581,3 +581,11 @@ NameError: name 'QStyleOptionViewItem' is not defined
 
 2026-05-13 21:55:12,626 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value
 2026-05-13 21:55:14,975 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value
+
+
+
+
+
+
+
+

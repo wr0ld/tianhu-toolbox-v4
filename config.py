@@ -158,6 +158,33 @@ LIQUID_GLASS_THEME ={
 "button_text":"#FFFFFF"
 }
 
+PERFORMANCE_THEME ={
+"primary":"#3B82F6",
+"secondary":"#111827",
+"background":"#0F172A",
+"surface":"#111827",
+"content_bg":"#0F172A",
+"text":"#E5E7EB",
+"text_secondary":"#94A3B8",
+"border":"#1F2937",
+"hover":"#172033",
+"selected":"#3B82F633",
+"error":"#EF4444",
+"success":"#22C55E",
+"header":"#111827",
+"toolbar":"#111827",
+"dropdown":"#111827",
+"title_bar":"#111827",
+"title_bar_text":"#E5E7EB",
+"title_btn_hover":"#1F2937",
+"title_btn_close_hover":"#B91C1C",
+"card_bg":"#111827",
+"category_bg":"#0B1220",
+"scrollbar":"#475569",
+"scrollbar_hover":"#64748B",
+"button_text":"#FFFFFF"
+}
+
 THEMES ={
 "dark":{
 "primary":"#2B5DCD",
@@ -282,6 +309,7 @@ THEMES ={
 "red_blue_glass":RED_BLUE_GLASS_THEME ,
 "Titanium_silver":Titanium_silver_THEME ,
 "sandstone_gray":SANDSTONE_GRAY_THEME ,
+"performance":PERFORMANCE_THEME ,
 "liquid_glass":LIQUID_GLASS_THEME ,
 "custom_image":{}
 }

@@ -929,10 +929,11 @@ class SettingsDialog (QDialog ):
         lay .addWidget (QLabel ("主题:"))
         self .cb_theme =QComboBox ()
         self .cb_theme .addItems ([
-        "清爽","深色","浅色","护眼","粉色","蓝色","cyberpunk",
+        "性能模式","清爽","深色","浅色","护眼","粉色","蓝色","cyberpunk",
         "红蓝渐变","钛银金属","砂岩暖灰","自定义背景"
         ])
         theme_map ={
+        "performance":"性能模式",
         "dark":"深色","light":"浅色","eye_care":"护眼","pink":"粉色",
         "blue":"蓝色","cyberpunk":"cyberpunk","red_blue_glass":"红蓝渐变",
         "Titanium_silver":"钛银金属","sandstone_gray":"砂岩暖灰",
@@ -1227,6 +1228,7 @@ class SettingsDialog (QDialog ):
                 self .cb_exit .setCurrentText ("每次询问")
 
             theme_map ={
+            "performance":"性能模式",
             "dark":"深色",
             "light":"浅色",
             "eye_care":"护眼",
@@ -1396,6 +1398,7 @@ class SettingsDialog (QDialog ):
         ex =exit_map .get (self .cb_exit .currentText (),"ask")
 
         theme_map ={
+        "性能模式":"performance",
         "深色":"dark",
         "浅色":"light",
         "护眼":"eye_care",
