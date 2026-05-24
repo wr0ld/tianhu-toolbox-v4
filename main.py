@@ -23,7 +23,8 @@ export_all_data ,import_all_data
 )
 from utils import (
 ensure_single_instance ,check_environment ,validate_java_path ,run_tool ,
-run_tools_batch ,is_tool_favorited ,add_favorite_tool ,remove_favorite_tool ,
+# run_tools_batch ,is_tool_favorited ,add_favorite_tool ,remove_favorite_tool ,  # 已禁用批量运行功能
+is_tool_favorited ,add_favorite_tool ,remove_favorite_tool ,
 save_main_window_geometry ,load_main_window_geometry ,save_main_window_state ,load_main_window_state ,
 SearchWorker ,fuzzy_search ,get_favorite_tools ,get_recent_tools
 )
@@ -393,18 +394,18 @@ class MainWindow (QMainWindow ):
         # self.btn_terminal.clicked.connect(self.toggle_terminal)
         # hl.addWidget(self.btn_terminal)
 
-        self .btn_batch =QPushButton ("批量模式")
-        self .btn_batch .setObjectName ("noHoverBtn")
-        self .btn_batch .setFixedWidth (100 )
-        self .btn_batch .clicked .connect (self .toggle_batch_mode )
-        hl .addWidget (self .btn_batch )
+        # self .btn_batch =QPushButton ("批量模式")  # 已禁用批量模式
+        # self .btn_batch .setObjectName ("noHoverBtn")
+        # self .btn_batch .setFixedWidth (100 )
+        # self .btn_batch .clicked .connect (self .toggle_batch_mode )
+        # hl .addWidget (self .btn_batch )
 
-        self .btn_run_batch =QPushButton ("运行选中")
-        self .btn_run_batch .setObjectName ("noHoverBtn")
-        self .btn_run_batch .setFixedWidth (100 )
-        self .btn_run_batch .clicked .connect (self .do_batch_run )
-        self .btn_run_batch .hide ()
-        hl .addWidget (self .btn_run_batch )
+        # self .btn_run_batch =QPushButton ("运行选中")  # 已禁用批量模式
+        # self .btn_run_batch .setObjectName ("noHoverBtn")
+        # self .btn_run_batch .setFixedWidth (100 )
+        # self .btn_run_batch .clicked .connect (self .do_batch_run )
+        # self .btn_run_batch .hide ()
+        # hl .addWidget (self .btn_run_batch )
 
         # btn_import =QPushButton ("导入")  # 已移至设置界面
         # btn_import .setObjectName ("noHoverBtn")
@@ -426,7 +427,7 @@ class MainWindow (QMainWindow ):
         self .tool_grid .tool_edit .connect (self .edit_tool )
         self .tool_grid .tool_delete .connect (self .delete_tool )
         self .tool_grid .favorite_changed .connect (self .on_favorite_changed )
-        self .tool_grid .batch_run_requested .connect (self .run_tools_batch )
+        # self .tool_grid .batch_run_requested .connect (self .run_tools_batch )  # 已禁用批量模式
         rlayout .addWidget (self .tool_grid )
 
         # 分页模式已停用，仅保留 scroll(滚动) 模式
@@ -1067,12 +1068,12 @@ class MainWindow (QMainWindow ):
         except Exception as e :
             QMessageBox .warning (self ,"错误",f"运行失败:{e}")
 
-    def run_tools_batch (self ,tools ):
-        try :
-            succ =run_tools_batch (tools )
-            QMessageBox .information (self ,"批量运行",f"已启动 {succ} 个工具")
-        except Exception as e :
-            QMessageBox .warning (self ,"批量运行",f"发生异常: {e}")
+    # def run_tools_batch (self ,tools ):  # 已禁用批量模式
+    #     try :
+    #         succ =run_tools_batch (tools )
+    #         QMessageBox .information (self ,"批量运行",f"已启动 {succ} 个工具")
+    #     except Exception as e :
+    #         QMessageBox .warning (self ,"批量运行",f"发生异常: {e}")
 
     def on_favorite_changed (self ,tool_data ,is_fav ):
         self .update_cat_panel ()
@@ -1470,45 +1471,45 @@ class MainWindow (QMainWindow ):
         except Exception as e :
             QMessageBox .warning (self ,"错误",f"运行失败: {e}")
 
-    def _update_batch_button_order (self ,run_first :bool ):
-        layout =self .btn_batch .parentWidget ().layout ()
-        if layout is None :
-            return 
-        idx_batch =layout .indexOf (self .btn_batch )
-        idx_run =layout .indexOf (self .btn_run_batch )
-        if idx_batch <0 or idx_run <0 :
-            return 
-        start_idx =min (idx_batch ,idx_run )
-        layout .removeWidget (self .btn_batch )
-        layout .removeWidget (self .btn_run_batch )
-        if run_first :
-            layout .insertWidget (start_idx ,self .btn_run_batch )
-            layout .insertWidget (start_idx +1 ,self .btn_batch )
-        else :
-            layout .insertWidget (start_idx ,self .btn_batch )
-            layout .insertWidget (start_idx +1 ,self .btn_run_batch )
+    # def _update_batch_button_order (self ,run_first :bool ):  # 已禁用批量模式
+    #     layout =self .btn_batch .parentWidget ().layout ()
+    #     if layout is None :
+    #         return 
+    #     idx_batch =layout .indexOf (self .btn_batch )
+    #     idx_run =layout .indexOf (self .btn_run_batch )
+    #     if idx_batch <0 or idx_run <0 :
+    #         return 
+    #     start_idx =min (idx_batch ,idx_run )
+    #     layout .removeWidget (self .btn_batch )
+    #     layout .removeWidget (self .btn_run_batch )
+    #     if run_first :
+    #         layout .insertWidget (start_idx ,self .btn_run_batch )
+    #         layout .insertWidget (start_idx +1 ,self .btn_batch )
+    #     else :
+    #         layout .insertWidget (start_idx ,self .btn_batch )
+    #         layout .insertWidget (start_idx +1 ,self .btn_run_batch )
 
-    def toggle_batch_mode (self ):
-        is_active =not self .tool_grid .show_select_box 
-        self .tool_grid .enable_batch_mode (is_active )
-        if is_active :
-            self .btn_batch .setText ("退出批量")
-            self .btn_run_batch .show ()
-            self ._update_batch_button_order (True )
-        else :
-            self .btn_batch .setText ("批量模式")
-            self .btn_run_batch .hide ()
-            self ._update_batch_button_order (False )
+    # def toggle_batch_mode (self ):  # 已禁用批量模式
+    #     is_active =not self .tool_grid .show_select_box 
+    #     self .tool_grid .enable_batch_mode (is_active )
+    #     if is_active :
+    #         self .btn_batch .setText ("退出批量")
+    #         self .btn_run_batch .show ()
+    #         self ._update_batch_button_order (True )
+    #     else :
+    #         self .btn_batch .setText ("批量模式")
+    #         self .btn_run_batch .hide ()
+    #         self ._update_batch_button_order (False )
 
-    def do_batch_run (self ):
-        selected =self .tool_grid .get_selected_tools ()
-        if not selected :
-            QMessageBox .information (self ,"提示","未选择任何工具")
-            return 
+    # def do_batch_run (self ):  # 已禁用批量模式
+    #     selected =self .tool_grid .get_selected_tools ()
+    #     if not selected :
+    #         QMessageBox .information (self ,"提示","未选择任何工具")
+    #         return 
 
-        self .run_tools_batch (selected )
+    #     self .run_tools_batch (selected )
 
-        self .toggle_batch_mode ()
+    #     self .toggle_batch_mode ()
 
     def check_tools_health (self ):
         try :

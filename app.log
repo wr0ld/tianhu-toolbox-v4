@@ -732,3 +732,8 @@ NameError: name 'QStyleOptionViewItem' is not defined
 
 
 
+
+2026-05-24 17:26:08,592 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/fscan" && "fscan.exe" -h"
+
+2026-05-24 17:39:59,913 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_webshell/Godzilla/godzilla.jar" 
+2026-05-24 17:40:08,726 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_webshell/Godzilla/godzilla.jar" 

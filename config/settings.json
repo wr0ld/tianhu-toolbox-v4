@@ -125,6 +125,14 @@
   ],
   "recent_tools": [
     [
+      "哥斯拉",
+      "WebShell管理工具"
+    ],
+    [
+      "Fscan_V2.0",
+      "漏洞扫描与利用工具"
+    ],
+    [
       "EasyTools",
       "我的"
     ],
@@ -155,17 +163,9 @@
     [
       "GoExec",
       "后渗透工具"
-    ],
-    [
-      "CobaltStrike 4.7",
-      "后渗透工具"
-    ],
-    [
-      "Counter-Strike",
-      "后渗透工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAftAAAAVwAADe0AAANNAAAH7QAAAFcAAA3tAAADTQAAAAEAAAAABqsAAAftAAAAVwAADe0AAANN",
+  "main_window_geometry": "AdnQywADAAAAAAe6AAAARgAADboAAAM8AAAHugAAAEYAAA26AAADPAAAAAEAAAAABqsAAAe6AAAARgAADboAAAM8",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

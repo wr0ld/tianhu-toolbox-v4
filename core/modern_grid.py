@@ -382,10 +382,11 @@ class ToolDelegate (QStyledItemDelegate ):
         is_selected =(option .state &QStyle .StateFlag .State_Selected )
 
 
-        show_selection =is_selected 
-        if hasattr (self .parent (),"show_select_box"):
-            if not self .parent ().show_select_box :
-                show_selection =False 
+        # show_selection =is_selected  # 已禁用批量模式选中态
+        # if hasattr (self .parent (),"show_select_box"):
+        #     if not self .parent ().show_select_box :
+        #         show_selection =False 
+        show_selection =False 
 
         if show_selection :
             bg_color =_theme_qcolor (config .THEME ['selected'])
@@ -623,7 +624,7 @@ class ModernToolGrid (QListView ):
     tool_edit =pyqtSignal (dict )
     tool_delete =pyqtSignal (dict )
     favorite_changed =pyqtSignal (dict ,bool )
-    batch_run_requested =pyqtSignal (list )
+    # batch_run_requested =pyqtSignal (list )  # 已禁用批量模式
 
     def __init__ (self ,parent =None ):
         super ().__init__ (parent )
@@ -633,6 +634,7 @@ class ModernToolGrid (QListView ):
         self .setSpacing (3 )
         self .setMouseTracking (True )
         self .viewport ().setMouseTracking (True )
+        self .setSelectionMode (QListView .SelectionMode .NoSelection )
 
         self .setStyleSheet ("QListView { background: transparent; border: none; }")
 
@@ -663,7 +665,7 @@ class ModernToolGrid (QListView ):
 
         self .doubleClicked .connect (self ._on_double_clicked )
 
-        self .show_select_box =False 
+        # self .show_select_box =False  # 已禁用批量模式
 
         self ._hovering_run_button =False 
 
@@ -695,8 +697,8 @@ class ModernToolGrid (QListView ):
 
     def _hit_test_run_button (self ,pos :QPoint )->bool :
         try :
-            if self .show_select_box :
-                return False 
+            # if self .show_select_box :  # 已禁用批量模式
+            #     return False 
             idx =self .indexAt (pos )
             if not idx .isValid ():
                 return False 
@@ -1105,24 +1107,24 @@ class ModernToolGrid (QListView ):
 
         self .viewport ().update ()
 
-    def get_selected_tools (self ):
-        indexes =self .selectedIndexes ()
-        tools =[]
-        for idx in indexes :
-            t =idx .data (Qt .ItemDataRole .UserRole )
-            if t :
-                tools .append (t )
-        return tools 
+    # def get_selected_tools (self ):  # 已禁用批量模式
+    #     indexes =self .selectedIndexes ()
+    #     tools =[]
+    #     for idx in indexes :
+    #         t =idx .data (Qt .ItemDataRole .UserRole )
+    #         if t :
+    #             tools .append (t )
+    #     return tools 
 
     def set_display_mode (self ,mode ):
 
 
         pass 
 
-    def enable_batch_mode (self ,enable =True ):
-        self .show_select_box =enable 
-        self .setSelectionMode (QListView .SelectionMode .MultiSelection if enable else QListView .SelectionMode .SingleSelection )
-        self .viewport ().update ()
+    # def enable_batch_mode (self ,enable =True ):  # 已禁用批量模式
+    #     self .show_select_box =enable 
+    #     self .setSelectionMode (QListView .SelectionMode .MultiSelection if enable else QListView .SelectionMode .SingleSelection )
+    #     self .viewport ().update ()
 
     def adjust_card_size (self ):
 
