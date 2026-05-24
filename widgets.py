@@ -261,8 +261,8 @@ class SearchBar (QFrame ):
         lay .setContentsMargins (0 ,0 ,0 ,0 )
         lay .setSpacing (6 )
 
-        lab_icon =QLabel ("",self )
-        lay .addWidget (lab_icon )
+        # lab_icon =QLabel ("",self )  # 已移除左侧空占位，搜索框与卡片左侧对齐
+        # lay .addWidget (lab_icon )
 
         self .search_input =QLineEdit ()
         self .search_input .setPlaceholderText ("搜索工具...")
