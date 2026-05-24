@@ -5,6 +5,7 @@ import socket
 import subprocess
 import logging
 import threading
+from functools import lru_cache
 from typing import List ,Dict ,Any
 
 from PyQt6 .QtCore import QObject ,QEvent ,QPropertyAnimation ,QEasingCurve ,QParallelAnimationGroup ,QPointF ,Qt ,QVariantAnimation ,QPoint ,QTimer 
@@ -19,6 +20,13 @@ logger =logging .getLogger (__name__ )
 
 ENV_WARNED ={}
 JAVA_WARNED =False 
+
+try :
+    from xpinyin import Pinyin 
+except Exception :
+    Pinyin =None 
+
+_PINYIN_ENGINE =None 
 
 
 class _LiquidGlassAnimFilter (QObject ):
@@ -625,6 +633,54 @@ def validate_java_path ():
     check_environment ("JAVA11")
     return True 
 
+def _get_pinyin_engine ():
+    global _PINYIN_ENGINE 
+    if _PINYIN_ENGINE is not None :
+        return _PINYIN_ENGINE 
+    if Pinyin is None :
+        return None 
+    try :
+        _PINYIN_ENGINE =Pinyin ()
+    except Exception :
+        _PINYIN_ENGINE =None 
+    return _PINYIN_ENGINE 
+
+def _normalize_search_token (text :str )->str :
+    try :
+        s =str (text ).casefold ().strip ()
+    except Exception :
+        s =""
+    return "".join ([ch for ch in s if not ch .isspace ()and ch not in "-_/\\."])
+
+@lru_cache (maxsize =4096 )
+def _build_search_aliases (text :str )->tuple :
+    try :
+        raw =str (text or "")
+    except Exception :
+        raw =""
+    raw_cf =raw .casefold ()
+    compact =_normalize_search_token (raw )
+    aliases ={raw_cf ,compact }
+
+    eng =_get_pinyin_engine ()
+    if eng is not None and any ('\u4e00' <=ch <='\u9fff' for ch in raw ):
+        try :
+            full_py =str (eng .get_pinyin (raw ,"")).casefold ()
+            full_py =_normalize_search_token (full_py )
+            if full_py :
+                aliases .add (full_py )
+        except Exception :
+            pass 
+        try :
+            initials =str (eng .get_initials (raw ,"")).casefold ()
+            initials =_normalize_search_token (initials )
+            if initials :
+                aliases .add (initials )
+        except Exception :
+            pass 
+
+    return tuple ([v for v in aliases if v ])
+
 def fuzzy_search (tools :List [Dict [str ,Any ]],search_text :str )->List [Dict [str ,Any ]]:
     if not search_text :
         return tools 
@@ -632,12 +688,16 @@ def fuzzy_search (tools :List [Dict [str ,Any ]],search_text :str )->List [Dict 
         st =str (search_text ).casefold ()
     except Exception :
         st =""
+    st_compact =_normalize_search_token (st )
     ret =[]
     for t in tools :
         try :
             nm =str (t .get ('name','')).casefold ()
             desc =str (t .get ("description","")).casefold ()
             cat =str (t .get ('category','')).casefold ()
+            path =str (t .get ('path','')).casefold ()
+            url =str (t .get ('url','')).casefold ()
+            params =str (t .get ('params','')).casefold ()
             # tags_val =t .get ("tags",[])  # 标签功能已禁用
             # if isinstance (tags_val ,(list ,tuple ,set )):
             #     tags =" ".join ([str (x )for x in tags_val ]).casefold ()
@@ -648,8 +708,32 @@ def fuzzy_search (tools :List [Dict [str ,Any ]],search_text :str )->List [Dict 
             nm =""
             desc =""
             cat =""
+            path =""
+            url =""
+            params =""
             tags =""
-        if (st in nm )or (st in desc )or (st in cat )or (st in tags ):
+        if (st in nm )or (st in desc )or (st in cat )or (st in path )or (st in url )or (st in params )or (st in tags ):
+            ret .append (t )
+            continue 
+        if not st_compact :
+            continue 
+        alias_fields =[
+        str (t .get ('name','')),
+        str (t .get ('category','')),
+        str (t .get ('description','')),
+        str (t .get ('path','')),
+        str (t .get ('url','')),
+        str (t .get ('params','')),
+        ]
+        matched =False 
+        for field in alias_fields :
+            for alias in _build_search_aliases (field ):
+                if st_compact in alias :
+                    matched =True 
+                    break 
+            if matched :
+                break 
+        if matched :
             ret .append (t )
     return ret 
 

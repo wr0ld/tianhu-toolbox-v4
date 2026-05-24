@@ -125,6 +125,10 @@
   ],
   "recent_tools": [
     [
+      "御剑2珍藏版",
+      "信息收集工具"
+    ],
+    [
       "哥斯拉",
       "WebShell管理工具"
     ],
@@ -159,13 +163,9 @@
     [
       "Ladon_GUI",
       "后渗透工具"
-    ],
-    [
-      "GoExec",
-      "后渗透工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAfAAAAAiwAADcAAAAOBAAAHwAAAAIsAAA3AAAADgQAAAAEAAAAABqsAAAfAAAAAiwAADcAAAAOB",
+  "main_window_geometry": "AdnQywADAAAAAAfFAAAAlgAADcUAAAOMAAAHxQAAAJYAAA3FAAADjAAAAAEAAAAABqsAAAfFAAAAlgAADcUAAAOM",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
