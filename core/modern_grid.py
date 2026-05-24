@@ -62,11 +62,11 @@ class TooltipPopup (QWidget ):
         self ._label .setWordWrap (True )
         c_layout .addWidget (self ._label )
 
-        effect =QGraphicsDropShadowEffect (self )
-        effect .setBlurRadius (26 )
-        effect .setOffset (0 ,8 )
-        effect .setColor (QColor (0 ,0 ,0 ,160 ))
-        self ._content .setGraphicsEffect (effect )
+        # effect =QGraphicsDropShadowEffect (self )  # 已移除提示卡片阴影
+        # effect .setBlurRadius (26 )
+        # effect .setOffset (0 ,8 )
+        # effect .setColor (QColor (0 ,0 ,0 ,160 ))
+        # self ._content .setGraphicsEffect (effect )
 
         self ._anim =QVariantAnimation (self )
         self ._anim .setDuration (160 )
