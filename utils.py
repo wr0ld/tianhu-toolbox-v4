@@ -477,6 +477,7 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
     path =tool_data .get ("path","")
     params =tool_data .get ("params","")
     url =tool_data .get ("url","")
+    cmd =""
 
     base_path =os .path .abspath ("tools")
     if os .path .isabs (path ):
@@ -492,6 +493,7 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
             if url :
                 if not url .lower ().startswith (("http://","https://")):
                     url ="http://"+url
+                cmd =f"webbrowser.open({url})"
                 webbrowser .open (url)
             else :
                 raise RuntimeError ("无效的网页地址")

@@ -375,11 +375,11 @@ class MainWindow (QMainWindow ):
         btn_add .clicked .connect (self .add_tool )
         hl .addWidget (btn_add )
 
-        self .btn_notebook =QPushButton ("记事本")
-        self .btn_notebook .setObjectName ("noHoverBtn")
-        self .btn_notebook .setFixedWidth (80 )
-        self .btn_notebook .clicked .connect (self .open_notebook )
-        hl .addWidget (self .btn_notebook )
+        # self .btn_notebook =QPushButton ("记事本")  # 已禁用记事本入口
+        # self .btn_notebook .setObjectName ("noHoverBtn")
+        # self .btn_notebook .setFixedWidth (80 )
+        # self .btn_notebook .clicked .connect (self .open_notebook )
+        # hl .addWidget (self .btn_notebook )
 
         btn_set =QPushButton ("设置")
         btn_set .setObjectName ("noHoverBtn")

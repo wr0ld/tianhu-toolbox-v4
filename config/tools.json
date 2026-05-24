@@ -337,7 +337,7 @@
     "name": "CobaltStrike 4.7",
     "category": "后渗透工具",
     "type": "批处理",
-    "description": "美化破解版 CS",
+    "description": "美化破解版 CS cs",
     "weight": 9.0,
     "tags": [],
     "path": "/tools/gui_other/Cobalt_Strike_4.7/cobaltstrike.bat",
@@ -345,8 +345,7 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": "",
-    "_health": "ok"
+    "group": ""
   },
   {
     "name": "XieBro_C2",
@@ -367,7 +366,7 @@
     "name": "Counter-Strike",
     "category": "后渗透工具",
     "type": "命令行",
-    "description": "",
+    "description": "c2 cs",
     "weight": 0.0,
     "tags": [],
     "path": "/tools/gui_other/Counter-Strike/start.bat",
@@ -375,8 +374,7 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": "",
-    "_health": "ok"
+    "group": ""
   },
   {
     "name": "Ladon_GUI",
@@ -808,13 +806,12 @@
     "description": "GUI版",
     "weight": 1.0,
     "tags": [],
-    "path": "/tools/gui_scan/nuclei/nuclei-7.4.8.jar",
+    "path": "/tools/gui_scan/nuclei/nuclei-7.5.18.jar",
     "params": "",
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": "",
-    "_health": "ok"
+    "group": ""
   },
   {
     "name": "Redis-Tools",
@@ -969,7 +966,7 @@
     "name": "IWannaGetAll",
     "category": "漏洞扫描与利用工具",
     "type": "JAVA8",
-    "description": "多产品漏洞综合检测利用工具 sqlmap,内存马,yso,heapdump,tasklist",
+    "description": "多产品漏洞综合检测利用工具 sqlmap,内存马,yso,heapdump,tasklist,文件下载,反弹命令",
     "weight": 2.0,
     "tags": [],
     "path": "/tools/gui_scan/apt/IWannaGetAll-vFinal.jar",
@@ -977,8 +974,7 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": "",
-    "_health": "ok"
+    "group": ""
   },
   {
     "name": "AK SK利用工具(图形化版)",
@@ -2231,14 +2227,15 @@
     "name": "FinalShell连接工具",
     "category": "其他工具",
     "type": "GUI应用",
-    "description": "",
+    "description": "ssh",
     "weight": 0.0,
+    "tags": [],
     "path": "/tools/gui_other/finalshell/finalshell.exe",
     "params": "",
     "url": "",
-    "tags": [],
-    "group": "",
-    "_health": "ok"
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
   },
   {
     "name": "HeavenlyBypassAV",
@@ -2746,12 +2743,11 @@
     "description": "",
     "weight": 0.0,
     "tags": [],
-    "path": "/tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.0.1-zulu-8-jfx.jar",
+    "path": "/tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.0-zulu-8-jfx.jar",
     "params": "",
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "_health": "ok",
     "group": ""
   },
   {
@@ -2788,7 +2784,7 @@
     "name": "EasyTools",
     "category": "我的",
     "type": "GUI应用",
-    "description": "默连 微信小程序",
+    "description": "默连 微信小程序 jwt 云上安全 云服务",
     "weight": 0.0,
     "tags": [],
     "path": "E:\\EasyTools-windows-amd64\\EasyTools.exe",
@@ -2796,7 +2792,6 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "_health": "ok",
     "group": ""
   },
   {
@@ -3013,7 +3008,7 @@
     "name": "morelian",
     "category": "WebShell管理工具",
     "type": "GUI应用",
-    "description": "默连",
+    "description": "默连 webshell",
     "weight": 0.0,
     "tags": [],
     "path": "/tools/other/morelian/morelian.exe",
@@ -3021,7 +3016,6 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "_health": "ok",
     "group": ""
   },
   {
@@ -3163,7 +3157,7 @@
     "name": "BinarySpy",
     "category": "免杀工具",
     "type": "GUI应用",
-    "description": "patch shellcode",
+    "description": "patch shellcode 免杀",
     "weight": 0.0,
     "tags": [],
     "path": "/tools/other/BinarySpy-main/start.vbs",
@@ -3171,7 +3165,118 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "_health": "ok",
+    "group": ""
+  },
+  {
+    "name": "XTerminal",
+    "category": "其他工具",
+    "type": "GUI应用",
+    "description": "ssh",
+    "weight": 0.0,
+    "tags": [],
+    "path": "E:\\XTerminal\\XTerminal.exe",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
+  },
+  {
+    "name": "jeecg-exploit-scanner-4.3.0",
+    "category": "漏洞扫描与利用工具",
+    "type": "JAVA8",
+    "description": "",
+    "weight": 0.0,
+    "tags": [],
+    "path": "/tools/gui_scan/jeecg/jeecg-exploit-scanner-4.3.0.jar",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
+  },
+  {
+    "name": "memory-shell-detector-gui",
+    "category": "我的",
+    "type": "Java(java21)",
+    "description": "内存马检测工具",
+    "weight": 0.0,
+    "tags": [],
+    "path": "/tools/other/memshell-killer/memory-shell-detector-gui.jar",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "java21",
+    "custom_interpreter_type": "java",
+    "group": ""
+  },
+  {
+    "name": "sensitive-info-tool",
+    "category": "我的",
+    "type": "GUI应用",
+    "description": "oss 云服务 小程序 平台",
+    "weight": 0.0,
+    "tags": [],
+    "path": "/tools/other/sensitive-info-tool/sensitive-info-tool.exe",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
+  },
+  {
+    "name": "crawlergo",
+    "category": "我的",
+    "type": "命令行",
+    "description": "自动点击网页触发",
+    "weight": 0.0,
+    "tags": [],
+    "path": "/tools/other/crawlergo/crawlergo.exe",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
+  },
+  {
+    "name": "DudeSuite",
+    "category": "我的",
+    "type": "GUI应用",
+    "description": "综合web扫描",
+    "weight": 0.0,
+    "tags": [],
+    "path": "/tools/other/DudeSuite.v1.2.2.2.win-x64/DudeSuite.exe",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
+  },
+  {
+    "name": "PyGlimmer",
+    "category": "ctf",
+    "type": "Python",
+    "description": "pyc py 反编译 ctf 隐写",
+    "weight": 0.0,
+    "tags": [],
+    "path": "/tools/other/PyGlimmer-main/PyGlimmer.py",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
+  },
+  {
+    "name": "vshell",
+    "category": "后渗透工具",
+    "type": "PowerShell",
+    "description": "c2",
+    "weight": 0.0,
+    "tags": [],
+    "path": "/tools/other/v_windows_amd64/v_windows_amd64.exe",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
     "group": ""
   }
 ]

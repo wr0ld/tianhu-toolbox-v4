@@ -621,3 +621,111 @@ NameError: name 'QStyleOptionViewItem' is not defined
 
 
 
+
+
+
+2026-05-13 23:18:19,502 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/finalshell/finalshell.exe" 
+
+2026-05-13 23:32:10,783 - INFO - [运行工具] cmd /c start "" "E:/XTerminal/XTerminal.exe" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026-05-14 19:48:29,815 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/jeecg/jeecgExploitss.jar" 
+
+2026-05-14 19:51:33,544 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/jeecg/jeecg-exploit-scanner-4.3.0.jar" 
+
+
+2026-05-14 19:57:42,819 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/memshell-killer/memory-shell-detector-gui.jar" 
+2026-05-14 19:58:18,771 - INFO - [运行工具] "D:/Java/jdk-24/bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/memshell-killer/memory-shell-detector-gui.jar" 
+
+2026-05-15 16:32:16,224 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/dddd" && "dddd2.exe" -h"
+
+2026-05-15 16:56:35,440 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/nuclei/nuclei-7.4.8.jar" 
+2026-05-15 17:03:19,703 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/nuclei/nuclei-7.5.18.jar" 
+2026-05-15 17:03:22,212 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/nuclei/nuclei-7.5.18.jar" 
+2026-05-15 17:03:29,013 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/nuclei/nuclei-7.5.18.jar" 
+2026-05-15 17:05:11,735 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/nuclei/nuclei-7.5.18.jar" 
+2026-05-15 17:05:21,341 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/nuclei/nuclei-7.5.18.jar" 
+
+
+2026-05-17 15:47:52,125 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1/Multiple.Database.Utilization.Tools-2.1.1-jar-with-dependencies.jar" 
+2026-05-17 15:47:57,502 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false
+
+2026-05-17 16:56:14,191 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false
+
+2026-05-19 13:54:23,720 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false
+
+2026-05-19 14:10:24,430 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1-Extend-1.2.0-T00ls-jar-with-dependencies.jar" -Doracle.jdbc.javaNetNio=false
+
+2026-05-19 14:12:46,511 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/mdut/Multiple.Database.Utilization.Tools-2.1.1/Multiple.Database.Utilization.Tools-2.1.1-jar-with-dependencies.jar" 
+
+2026-05-19 19:39:46,930 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\tools\YsoGUI\target\YsoGUI-1.0.0.jar" 
+2026-05-19 19:46:09,659 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\tools\YsoGUI\target\YsoGUI-1.0.0.jar" 
+2026-05-19 20:08:54,569 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
+
+2026-05-21 19:27:43,566 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.0.1-zulu-8-jfx.jar" 
+2026-05-21 19:29:39,299 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.0.1-zulu-8-jfx.jar" 
+2026-05-21 19:29:47,866 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.0-zulu-8-jfx.jar" 
+2026-05-21 19:30:15,690 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro/shiro_attack-4.7.0-SNAPSHOT-all.jar" 
+2026-05-21 19:30:31,690 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro/shiro_attack-4.7.0-SNAPSHOT-all.jar" 
+2026-05-21 19:30:35,698 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro_attack2/Pyke-Shiro_0.3.jar" 
+2026-05-21 19:30:45,315 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/ShiroExploit-1.0.2.jar" 
+
+2026-05-21 19:34:22,475 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/crawlergo" && "crawlergo.exe" "
+2026-05-21 19:34:25,191 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/crawlergo" && "crawlergo.exe" "
+2026-05-21 19:34:48,145 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/crawlergo" && "crawlergo.exe" "
+2026-05-21 19:34:58,016 - INFO - [运行工具] cmd /c start powershell -noexit -command "cd 'E:/ONE-FOX-toolsV4.0/tools/other/crawlergo'; .\crawlergo.exe "
+2026-05-21 19:35:07,857 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/crawlergo" && "crawlergo.exe" "
+
+
+2026-05-21 21:46:54,508 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/jwt_GUI/jwt_GUI.exe" 
+2026-05-21 21:47:34,386 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+
+
+
+2026-05-24 15:23:14,053 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hikvision/hikvision.exe" 
+2026-05-24 15:23:18,010 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/DudeSuite.v1.2.2.2.win-x64/DudeSuite.exe" 
+2026-05-24 15:24:49,284 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/DudeSuite.v1.2.2.2.win-x64/DudeSuite.exe" 
+2026-05-24 15:32:24,909 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/PyGlimmer-main" && "D:/Python/python.exe" "PyGlimmer.py" "
+2026-05-24 15:32:44,757 - INFO - [运行工具] cmd /c start powershell -noexit -command "cd 'E:/ONE-FOX-toolsV4.0/tools/other/PyGlimmer-main'; .\PyGlimmer.py python"
+2026-05-24 15:33:00,493 - INFO - [运行工具] cmd /c start powershell -noexit -command "cd 'E:/ONE-FOX-toolsV4.0/tools/other/PyGlimmer-main'; .\PyGlimmer.py python PyGlimmer.py"
+2026-05-24 15:33:10,668 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/PyGlimmer-main" && "D:/Python/python.exe" "PyGlimmer.py" "
+2026-05-24 15:33:20,998 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/PyGlimmer-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "PyGlimmer.py" "
+2026-05-24 15:33:33,278 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/PyGlimmer-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "PyGlimmer.py" "
+2026-05-24 15:34:13,023 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/pyinstxtractor" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "pyinstxtractor.py" "
+2026-05-24 15:34:16,758 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/BinarySpy-main/start.vbs" 
+
+2026-05-24 16:02:42,069 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value
+2026-05-24 16:05:06,387 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/leiying/SnowShadow_v1.0/SnowShadow.exe" 
+2026-05-24 16:05:11,867 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value
+2026-05-24 16:10:13,611 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/yjdirscanv1.1/御剑2.exe" 
+2026-05-24 16:10:24,599 - ERROR - run_tool失败: cannot access local variable 'cmd' where it is not associated with a value
+
+2026-05-24 16:14:13,510 - INFO - [运行工具] webbrowser.open(https://wechat.doonsec.com/)
+
+2026-05-24 16:16:42,647 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Counter-Strike" && "start.bat" "
+2026-05-24 16:16:48,033 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Cobalt_Strike_4.7" && "cobaltstrike.bat" "
+2026-05-24 16:16:52,868 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/goexec/goexec_v0.3.0_windows_amd64" && "goexec.exe" "
+2026-05-24 16:16:56,411 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/ladon/LadonGUI.exe" 
+2026-05-24 16:17:12,261 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/ladon/LadonGUI.exe" 
+2026-05-24 16:17:16,581 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/sharpscan" && "SharpScan.exe" "
+2026-05-24 16:17:20,514 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/yongheng/方程式工具包图形界面版V0.51.jar" 
+2026-05-24 16:18:38,821 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/dogcs_v2.1/XieBroC2.exe" 
+2026-05-24 16:33:13,747 - INFO - [运行工具] cmd /c start powershell -noexit -command "cd 'E:/ONE-FOX-toolsV4.0/tools/other/v_windows_amd64'; .\v_windows_amd64.exe "
+2026-05-24 16:34:34,978 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/morelian/morelian.exe" 
+2026-05-24 16:35:25,292 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+2026-05-24 16:35:25,797 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+

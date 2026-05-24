@@ -125,48 +125,48 @@
   ],
   "recent_tools": [
     [
-      "PackerFuzzer信息探测工具",
-      "信息收集工具"
-    ],
-    [
-      "ICP备案查询官网",
-      "网页工具"
-    ],
-    [
-      "GitHub",
-      "网页工具"
-    ],
-    [
-      "Webshell生成器",
-      "免杀工具"
-    ],
-    [
-      "BinarySpy",
-      "免杀工具"
-    ],
-    [
-      "XRAY图形化版工具",
-      "漏洞扫描与利用工具"
-    ],
-    [
-      "Afrog可定制化漏洞扫描工具",
-      "漏洞扫描与利用工具"
-    ],
-    [
-      "nmap",
+      "EasyTools",
       "我的"
     ],
     [
-      "SpringBoot-Scan",
-      "框架漏洞利用工具"
+      "morelian",
+      "WebShell管理工具"
     ],
     [
-      "SpringBootVul-GUI",
-      "框架漏洞利用工具"
+      "vshell",
+      "后渗透工具"
+    ],
+    [
+      "XieBro_C2",
+      "后渗透工具"
+    ],
+    [
+      "方程式工具包",
+      "后渗透工具"
+    ],
+    [
+      "SharpScan",
+      "后渗透工具"
+    ],
+    [
+      "Ladon_GUI",
+      "后渗透工具"
+    ],
+    [
+      "GoExec",
+      "后渗透工具"
+    ],
+    [
+      "CobaltStrike 4.7",
+      "后渗透工具"
+    ],
+    [
+      "Counter-Strike",
+      "后渗透工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAABAAAAQQAABgIAAANYAAAAAQAAAEEAAAYCAAADWAAAAAAAAAAAB4AAAAABAAAAQQAABgIAAANY",
-  "main_window_state": "AAAA/wAAAAD9AAAAAAAABgIAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
+  "main_window_geometry": "AdnQywADAAAAAAf3AAAAwwAADfcAAAO5AAAH9wAAAMMAAA33AAADuQAAAAEAAAAABqsAAAf3AAAAwwAADfcAAAO5",
+  "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
   "screenshot_hotkey": "",
