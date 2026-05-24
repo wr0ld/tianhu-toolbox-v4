@@ -369,11 +369,11 @@ class MainWindow (QMainWindow ):
         self .shortcut_find =QShortcut (QKeySequence ("Ctrl+F"),self )
         self .shortcut_find .activated .connect (self ._focus_search )
 
-        btn_add =QPushButton ("添加工具")
-        btn_add .setObjectName ("noHoverBtn")
-        btn_add .setFixedWidth (100 )
-        btn_add .clicked .connect (self .add_tool )
-        hl .addWidget (btn_add )
+        # btn_add =QPushButton ("添加工具")  # 已隐藏添加工具按钮
+        # btn_add .setObjectName ("noHoverBtn")
+        # btn_add .setFixedWidth (100 )
+        # btn_add .clicked .connect (self .add_tool )
+        # hl .addWidget (btn_add )
 
         # self .btn_notebook =QPushButton ("记事本")  # 已禁用记事本入口
         # self .btn_notebook .setObjectName ("noHoverBtn")
