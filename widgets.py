@@ -910,8 +910,31 @@ class SettingsDialog (QDialog ):
         health_row .addStretch ()
         lay .addLayout (health_row )
 
+        lay .addWidget (QLabel ("数据管理:"))
+        data_row =QHBoxLayout ()
+        btn_import =QPushButton ("导入")
+        btn_import .setObjectName ("noHoverBtn")
+        btn_import .clicked .connect (self ._on_import_data )
+        data_row .addWidget (btn_import )
+        btn_export =QPushButton ("导出")
+        btn_export .setObjectName ("noHoverBtn")
+        btn_export .clicked .connect (self ._on_export_data )
+        data_row .addWidget (btn_export )
+        data_row .addStretch ()
+        lay .addLayout (data_row )
+
         lay .addStretch ()
         self .tab_widget .addTab (tab ,"常规")
+
+    def _on_import_data (self ):
+        parent =self .parent ()
+        if parent and hasattr (parent ,"import_data"):
+            parent .import_data ()
+
+    def _on_export_data (self ):
+        parent =self .parent ()
+        if parent and hasattr (parent ,"export_data"):
+            parent .export_data ()
 
     def _build_theme_tab (self ):
         tab =QWidget ()

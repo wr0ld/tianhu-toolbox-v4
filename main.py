@@ -406,17 +406,17 @@ class MainWindow (QMainWindow ):
         self .btn_run_batch .hide ()
         hl .addWidget (self .btn_run_batch )
 
-        btn_import =QPushButton ("导入")
-        btn_import .setObjectName ("noHoverBtn")
-        btn_import .setFixedWidth (70 )
-        btn_import .clicked .connect (self .import_data )
-        hl .addWidget (btn_import )
+        # btn_import =QPushButton ("导入")  # 已移至设置界面
+        # btn_import .setObjectName ("noHoverBtn")
+        # btn_import .setFixedWidth (70 )
+        # btn_import .clicked .connect (self .import_data )
+        # hl .addWidget (btn_import )
 
-        btn_export =QPushButton ("导出")
-        btn_export .setObjectName ("noHoverBtn")
-        btn_export .setFixedWidth (70 )
-        btn_export .clicked .connect (self .export_data )
-        hl .addWidget (btn_export )
+        # btn_export =QPushButton ("导出")  # 已移至设置界面
+        # btn_export .setObjectName ("noHoverBtn")
+        # btn_export .setFixedWidth (70 )
+        # btn_export .clicked .connect (self .export_data )
+        # hl .addWidget (btn_export )
 
         topbar .setLayout (hl )
         rlayout .addWidget (topbar )
