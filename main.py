@@ -1470,15 +1470,35 @@ class MainWindow (QMainWindow ):
         except Exception as e :
             QMessageBox .warning (self ,"错误",f"运行失败: {e}")
 
+    def _update_batch_button_order (self ,run_first :bool ):
+        layout =self .btn_batch .parentWidget ().layout ()
+        if layout is None :
+            return 
+        idx_batch =layout .indexOf (self .btn_batch )
+        idx_run =layout .indexOf (self .btn_run_batch )
+        if idx_batch <0 or idx_run <0 :
+            return 
+        start_idx =min (idx_batch ,idx_run )
+        layout .removeWidget (self .btn_batch )
+        layout .removeWidget (self .btn_run_batch )
+        if run_first :
+            layout .insertWidget (start_idx ,self .btn_run_batch )
+            layout .insertWidget (start_idx +1 ,self .btn_batch )
+        else :
+            layout .insertWidget (start_idx ,self .btn_batch )
+            layout .insertWidget (start_idx +1 ,self .btn_run_batch )
+
     def toggle_batch_mode (self ):
         is_active =not self .tool_grid .show_select_box 
         self .tool_grid .enable_batch_mode (is_active )
         if is_active :
             self .btn_batch .setText ("退出批量")
             self .btn_run_batch .show ()
+            self ._update_batch_button_order (True )
         else :
             self .btn_batch .setText ("批量模式")
             self .btn_run_batch .hide ()
+            self ._update_batch_button_order (False )
 
     def do_batch_run (self ):
         selected =self .tool_grid .get_selected_tools ()
