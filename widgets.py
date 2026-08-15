@@ -5,7 +5,8 @@ from PyQt6 .QtWidgets import (
 QFrame ,QVBoxLayout ,QHBoxLayout ,QLabel ,QLineEdit ,QPushButton ,
 QComboBox ,QScrollArea ,QWidget ,QToolButton ,QMenu ,QDialog ,
 QFileDialog ,QMessageBox ,QInputDialog ,QCheckBox ,QGridLayout ,QSizePolicy ,
-QTabWidget ,QStackedWidget ,QSplitter
+QTabWidget ,QStackedWidget ,QSplitter ,QTableWidget ,QTableWidgetItem ,
+QHeaderView ,QAbstractItemView
 )
 from PyQt6 .QtCore import Qt ,pyqtSignal ,QTimer ,QEvent ,QSettings ,QVariantAnimation ,QEasingCurve
 from PyQt6 .QtGui import QAction ,QKeySequence ,QIcon ,QColor ,QPalette
@@ -1042,36 +1043,43 @@ class SettingsDialog (QDialog ):
 
         self .cli_python_list =list (SETTINGS .get ("cli_python_interpreters",[])or [])
         self .cli_java_list =list (SETTINGS .get ("cli_java_interpreters",[])or [])
+        self ._default_python =str (SETTINGS .get ("cli_default_python","")).strip ()
+        self ._default_java =str (SETTINGS .get ("cli_default_java","")).strip ()
+        self ._syncing_tables =False 
 
         lay .addWidget (QLabel ("Python解释器:"))
-        cli_py_row =QHBoxLayout ()
-        self .cb_cli_py =QComboBox ()
-        cli_py_row .addWidget (self .cb_cli_py )
+        self .table_py =self ._make_interpreter_table ()
+        self .table_py .itemChanged .connect (self ._on_table_item_changed )
+        lay .addWidget (self .table_py )
+        py_btn_row =QHBoxLayout ()
         btn_add_cli_py =QPushButton ("新增")
         btn_add_cli_py .setObjectName ("noHoverBtn")
         btn_add_cli_py .clicked .connect (self .add_cli_python )
-        cli_py_row .addWidget (btn_add_cli_py )
+        py_btn_row .addWidget (btn_add_cli_py )
         btn_del_cli_py =QPushButton ("删除")
         btn_del_cli_py .setObjectName ("noHoverBtn")
         btn_del_cli_py .clicked .connect (self .del_cli_python )
-        cli_py_row .addWidget (btn_del_cli_py )
-        lay .addLayout (cli_py_row )
+        py_btn_row .addWidget (btn_del_cli_py )
+        py_btn_row .addStretch ()
+        lay .addLayout (py_btn_row )
 
         lay .addWidget (QLabel ("Java解释器:"))
-        cli_java_row =QHBoxLayout ()
-        self .cb_cli_java =QComboBox ()
-        cli_java_row .addWidget (self .cb_cli_java )
+        self .table_java =self ._make_interpreter_table ()
+        self .table_java .itemChanged .connect (self ._on_table_item_changed )
+        lay .addWidget (self .table_java )
+        java_btn_row =QHBoxLayout ()
         btn_add_cli_java =QPushButton ("新增")
         btn_add_cli_java .setObjectName ("noHoverBtn")
         btn_add_cli_java .clicked .connect (self .add_cli_java )
-        cli_java_row .addWidget (btn_add_cli_java )
+        java_btn_row .addWidget (btn_add_cli_java )
         btn_del_cli_java =QPushButton ("删除")
         btn_del_cli_java .setObjectName ("noHoverBtn")
         btn_del_cli_java .clicked .connect (self .del_cli_java )
-        cli_java_row .addWidget (btn_del_cli_java )
-        lay .addLayout (cli_java_row )
+        java_btn_row .addWidget (btn_del_cli_java )
+        java_btn_row .addStretch ()
+        lay .addLayout (java_btn_row )
 
-        self .refresh_cli_defaults ()
+        self ._refresh_interpreter_tables ()
 
         lay .addWidget (QLabel (""))
 
@@ -1266,44 +1274,113 @@ class SettingsDialog (QDialog ):
 
             self .cli_python_list =list (DEFAULT_SETTINGS .get ("cli_python_interpreters",[])or [])
             self .cli_java_list =list (DEFAULT_SETTINGS .get ("cli_java_interpreters",[])or [])
-            self .refresh_cli_defaults ()
-            try :
-                self .cb_cli_py .setCurrentIndex (0 )
-            except Exception :
-                pass 
-            try :
-                self .cb_cli_java .setCurrentIndex (0 )
-            except Exception :
-                pass 
+            self ._default_python =str (DEFAULT_SETTINGS .get ("cli_default_python","")).strip ()
+            self ._default_java =str (DEFAULT_SETTINGS .get ("cli_default_java","")).strip ()
+            self ._refresh_interpreter_tables ()
 
-    def refresh_cli_defaults (self ):
-        self .cb_cli_py .clear ()
-        self .cb_cli_py .addItem ("(不指定)","")
-        for item in self .cli_python_list :
-            nm =str (item .get ("name","")).strip ()
-            p =str (item .get ("path","")).strip ()
-            if nm and p :
-                self .cb_cli_py .addItem (f"{nm}  [{p}]",nm )
+    def _make_interpreter_table (self ):
+        table =QTableWidget ()
+        table .setColumnCount (3 )
+        table .setHorizontalHeaderLabels (["名称","路径","默认"])
+        table .setSelectionBehavior (QAbstractItemView .SelectionBehavior .SelectRows )
+        table .setSelectionMode (QAbstractItemView .SelectionMode .SingleSelection )
+        table .setEditTriggers (QAbstractItemView .EditTrigger .NoEditTriggers )
+        table .verticalHeader () .setVisible (False )
+        table .setShowGrid (False )
+        table .setAlternatingRowColors (True )
+        table .horizontalHeader () .setStretchLastSection (False )
+        table .horizontalHeader () .setSectionResizeMode (0 ,QHeaderView .ResizeMode .ResizeToContents )
+        table .horizontalHeader () .setSectionResizeMode (1 ,QHeaderView .ResizeMode .Stretch )
+        table .horizontalHeader () .setSectionResizeMode (2 ,QHeaderView .ResizeMode .ResizeToContents )
+        table .setMinimumHeight (110 )
+        table .setMaximumHeight (180 )
+        border =THEME .get ("border","#333")
+        surface =THEME .get ("surface","#222")
+        hover =THEME .get ("hover","#333")
+        text_secondary =THEME .get ("text_secondary","#999")
+        table .setStyleSheet (
+        f"QTableWidget {{ border: 1px solid {border}; border-radius: 8px; background-color: transparent; alternate-background-color: {hover}; }}"
+        f"QHeaderView::section {{ background-color: {surface}; color: {text_secondary}; border: none; padding: 6px 8px; font-weight: 600; }}"
+        f"QTableWidget::item {{ padding: 4px 8px; }}"
+        )
+        return table 
 
-        self .cb_cli_java .clear ()
-        self .cb_cli_java .addItem ("(不指定)","")
-        for item in self .cli_java_list :
-            nm =str (item .get ("name","")).strip ()
-            p =str (item .get ("path","")).strip ()
-            if nm and p :
-                self .cb_cli_java .addItem (f"{nm}  [{p}]",nm )
+    def _table_row_name (self ,table ,row ):
+        name_item =table .item (row ,0 )
+        if name_item is None :
+            return ""
+        return str (name_item .text ()).strip ()
 
-        want_py =str (SETTINGS .get ("cli_default_python","")).strip ()
-        if want_py :
-            idx =self .cb_cli_py .findData (want_py )
-            if idx >=0 :
-                self .cb_cli_py .setCurrentIndex (idx )
+    def _selected_interpreter_name (self ,table ):
+        row =table .currentRow ()
+        if row <0 :
+            return ""
+        return self ._table_row_name (table ,row )
 
-        want_java =str (SETTINGS .get ("cli_default_java","")).strip ()
-        if want_java :
-            idx =self .cb_cli_java .findData (want_java )
-            if idx >=0 :
-                self .cb_cli_java .setCurrentIndex (idx )
+    def _populate_interpreter_table (self ,table ,items ,default_name ):
+        self ._syncing_tables =True 
+        try :
+            table .setRowCount (0 )
+            for item in items :
+                nm =str (item .get ("name","")).strip ()
+                p =str (item .get ("path","")).strip ()
+                if not nm and not p :
+                    continue 
+                row =table .rowCount ()
+                table .insertRow (row )
+                table .setItem (row ,0 ,QTableWidgetItem (nm ))
+                table .setItem (row ,1 ,QTableWidgetItem (p ))
+                chk_item =QTableWidgetItem ()
+                chk_item .setFlags (Qt .ItemFlag .ItemIsUserCheckable |Qt .ItemFlag .ItemIsEnabled |Qt .ItemFlag .ItemIsSelectable )
+                chk_item .setCheckState (Qt .CheckState .Checked if nm ==default_name else Qt .CheckState .Unchecked )
+                table .setItem (row ,2 ,chk_item )
+        finally :
+            self ._syncing_tables =False 
+
+    def _refresh_interpreter_tables (self ):
+        self ._populate_interpreter_table (self .table_py ,self .cli_python_list ,self ._default_python )
+        self ._populate_interpreter_table (self .table_java ,self .cli_java_list ,self ._default_java )
+
+    def _sync_default_checkstates (self ):
+        self ._syncing_tables =True 
+        try :
+            self ._sync_table_checkstates (self .table_py ,self ._default_python )
+            self ._sync_table_checkstates (self .table_java ,self ._default_java )
+        finally :
+            self ._syncing_tables =False 
+
+    def _sync_table_checkstates (self ,table ,default_name ):
+        for row in range (table .rowCount ()):
+            nm =self ._table_row_name (table ,row )
+            chk_item =table .item (row ,2 )
+            if chk_item is not None :
+                chk_item .setCheckState (Qt .CheckState .Checked if nm ==default_name else Qt .CheckState .Unchecked )
+
+    def _on_table_item_changed (self ,item ):
+        if getattr (self ,"_syncing_tables",False ):
+            return 
+        table =item .tableWidget ()
+        if table is None :
+            return 
+        if item .column ()!=2 :
+            return 
+        is_py =(table is self .table_py )
+        name =self ._table_row_name (table ,item .row ())
+        if not name :
+            return 
+        if item .checkState ()==Qt .CheckState .Checked :
+            if is_py :
+                self ._default_python =name 
+            else :
+                self ._default_java =name 
+        else :
+            if is_py :
+                if self ._default_python ==name :
+                    self ._default_python =""
+            else :
+                if self ._default_java ==name :
+                    self ._default_java =""
+        self ._sync_default_checkstates ()
 
     def add_cli_python (self ):
         name ,ok =QInputDialog .getText (self ,"名称","Python解释器名称：")
@@ -1328,15 +1405,17 @@ class SettingsDialog (QDialog ):
             return 
 
         self .cli_python_list .append ({"name":name ,"path":path })
-        self .refresh_cli_defaults ()
+        self ._refresh_interpreter_tables ()
 
     def del_cli_python (self ):
-        nm =self .cb_cli_py .currentData ()
+        nm =self ._selected_interpreter_name (self .table_py )
         if not nm :
             QMessageBox .warning (self ,"错误","没有选中要删除的Python解释器")
             return 
         self .cli_python_list =[x for x in self .cli_python_list if str (x .get ("name",""))!=str (nm )]
-        self .refresh_cli_defaults ()
+        if self ._default_python ==nm :
+            self ._default_python =""
+        self ._refresh_interpreter_tables ()
 
     def add_cli_java (self ):
         name ,ok =QInputDialog .getText (self ,"名称","Java解释器名称：")
@@ -1361,15 +1440,17 @@ class SettingsDialog (QDialog ):
             return 
 
         self .cli_java_list .append ({"name":name ,"path":path })
-        self .refresh_cli_defaults ()
+        self ._refresh_interpreter_tables ()
 
     def del_cli_java (self ):
-        nm =self .cb_cli_java .currentData ()
+        nm =self ._selected_interpreter_name (self .table_java )
         if not nm :
             QMessageBox .warning (self ,"错误","没有选中要删除的Java解释器")
             return 
         self .cli_java_list =[x for x in self .cli_java_list if str (x .get ("name",""))!=str (nm )]
-        self .refresh_cli_defaults ()
+        if self ._default_java ==nm :
+            self ._default_java =""
+        self ._refresh_interpreter_tables ()
 
     def _on_health_check (self ):
         try :
@@ -1434,8 +1515,8 @@ class SettingsDialog (QDialog ):
 
         new_s ["cli_python_interpreters"]=list (self .cli_python_list )
         new_s ["cli_java_interpreters"]=list (self .cli_java_list )
-        new_s ["cli_default_python"]=str (self .cb_cli_py .currentData ()or "").strip ()
-        new_s ["cli_default_java"]=str (self .cb_cli_java .currentData ()or "").strip ()
+        new_s ["cli_default_python"]=str (self ._default_python or "").strip ()
+        new_s ["cli_default_java"]=str (self ._default_java or "").strip ()
 
         if new_s ["cli_default_python"]:
             if not any (str (x .get ("name",""))==new_s ["cli_default_python"]for x in new_s ["cli_python_interpreters"]):

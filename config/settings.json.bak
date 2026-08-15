@@ -141,6 +141,10 @@
   ],
   "recent_tools": [
     [
+      "灯塔 plus",
+      "我的"
+    ],
+    [
       "Jenkins综合利用工具",
       "漏洞扫描与利用工具"
     ],
@@ -175,13 +179,9 @@
     [
       "Counter-Strike",
       "后渗透工具"
-    ],
-    [
-      "Struts2漏洞检查工具2019版 V2.3",
-      "VulToolsKit"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAD////1AAAAuwAABfUAAAOx////9QAAALsAAAX1AAADsQAAAAAAAAAABqv////1AAAAuwAABfUAAAOx",
+  "main_window_geometry": "AdnQywADAAAAAACQAAAAfQAABpAAAANzAAAAkAAAAH0AAAaQAAADcwAAAAAAAAAABqsAAACQAAAAfQAABpAAAANz",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
