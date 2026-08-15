@@ -139,6 +139,10 @@
   ],
   "recent_tools": [
     [
+      "ThinkphpGUI-1.3-SNAPSHOT",
+      "我的"
+    ],
+    [
       "jwt_GUI",
       "我的"
     ],
@@ -173,13 +177,9 @@
     [
       "JenkinsExploit-GUI-1.3-SNAPSHOT",
       "VulToolsKit"
-    ],
-    [
-      "XXL-JOB漏洞利用工具",
-      "漏洞扫描与利用工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAD///91AAAArgAABXUAAAOk////dQAAAK4AAAV1AAADpAAAAAAAAAAABqv///91AAAArgAABXUAAAOk",
+  "main_window_geometry": "AdnQywADAAAAAAByAAAAbAAABnIAAANiAAAAcgAAAGwAAAZyAAADYgAAAAAAAAAABqsAAAByAAAAbAAABnIAAANi",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

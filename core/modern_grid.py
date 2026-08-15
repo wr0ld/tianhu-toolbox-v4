@@ -1,7 +1,6 @@
 import logging 
 import sys 
 import os 
-import subprocess 
 import re 
 import html 
 from PyQt6 .QtCore import Qt ,QAbstractListModel ,QModelIndex ,pyqtSignal ,QSize ,QRect ,QPoint ,QEvent ,QRectF ,QVariantAnimation ,QEasingCurve ,QTimer ,QMimeData ,QByteArray
@@ -1255,7 +1254,7 @@ class ModernToolGrid (QListView ):
             return 
 
         if sys .platform .startswith ("win"):
-            subprocess .Popen (["explorer",folder_path ])
+            os .startfile (folder_path )
 
     # === 拖动排序：权重重算与洗牌 ===
 
