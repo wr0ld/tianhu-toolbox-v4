@@ -1078,12 +1078,22 @@ class SettingsDialog (QDialog ):
         self .tab_widget .addTab (tab ,"高级")
 
     def browse_py (self ):
-        fi ,_ =QFileDialog .getOpenFileName (self ,"选择Python可执行文件")
+        current_path =self .ed_py .text ().strip ()
+        start_dir =""
+        if current_path :
+            start_dir =os .path .dirname (current_path )
+            if not os .path .isabs (start_dir ):
+                start_dir =""
+        fi ,_ =QFileDialog .getOpenFileName (self ,"选择Python可执行文件",start_dir )
         if fi :
             self .ed_py .setText (fi )
 
     def browse_dir (self ,line_edit ):
-        d =QFileDialog .getExistingDirectory (self ,"选择目录")
+        current_path =line_edit .text ().strip ()
+        start_dir =""
+        if current_path and os .path .isabs (current_path ):
+            start_dir =current_path 
+        d =QFileDialog .getExistingDirectory (self ,"选择目录",start_dir )
         if d :
             line_edit .setText (d )
 

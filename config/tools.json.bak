@@ -4193,7 +4193,7 @@
     "name": "OSSFileBrowse-1.1-SNAPSHOT",
     "category": "我的",
     "type": "JAVA8",
-    "description": "存储桶",
+    "description": "存储桶 kkFileView",
     "weight": 0.0,
     "tags": [],
     "path": "/tools/other/VulToolsKit/云资产AK-SK利用管理工具/OSSFileBrowse-1.1/OSSFileBrowse-1.1-SNAPSHOT.jar",
