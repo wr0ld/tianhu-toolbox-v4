@@ -480,6 +480,8 @@ def fix_paths (settings_dict :dict ):
 
 SETTINGS =load_settings ()
 fix_paths (SETTINGS )
+SETTINGS ["theme"]="liquid_glass"
+SETTINGS ["custom_bg_path"]=""
 THEME =load_theme (SETTINGS .get ("theme","dark"))
 
 _dropdown_bg =THEME .get ("dropdown",THEME .get ("surface","#222"))

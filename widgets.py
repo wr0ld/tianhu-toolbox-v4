@@ -849,7 +849,6 @@ class SettingsDialog (QDialog ):
         self .tab_widget .setObjectName ("settingsTabWidget")
 
         self ._build_general_tab ()
-        self ._build_theme_tab ()
         self ._build_env_tab ()
         self ._build_advanced_tab ()
 
@@ -936,51 +935,6 @@ class SettingsDialog (QDialog ):
         parent =self .parent ()
         if parent and hasattr (parent ,"export_data"):
             parent .export_data ()
-
-    def _build_theme_tab (self ):
-        tab =QWidget ()
-        lay =QVBoxLayout (tab )
-        lay .setSpacing (12 )
-        lay .setContentsMargins (10 ,10 ,10 ,10 )
-
-        lay .addWidget (QLabel ("主题:"))
-        self .cb_theme =QComboBox ()
-        self .cb_theme .addItems ([
-        "性能模式","清爽","深色","浅色","护眼","粉色","蓝色","cyberpunk",
-        "红蓝渐变","钛银金属","砂岩暖灰","自定义背景"
-        ])
-        theme_map ={
-        "performance":"性能模式",
-        "dark":"深色","light":"浅色","eye_care":"护眼","pink":"粉色",
-        "blue":"蓝色","cyberpunk":"cyberpunk","red_blue_glass":"红蓝渐变",
-        "Titanium_silver":"钛银金属","sandstone_gray":"砂岩暖灰",
-        "liquid_glass":"清爽","custom_image":"自定义背景"
-        }
-        now_th =SETTINGS .get ("theme","dark")
-        if now_th in theme_map :
-            self .cb_theme .setCurrentText (theme_map [now_th ])
-        else :
-            self .cb_theme .setCurrentText ("深色")
-        lay .addWidget (self .cb_theme )
-
-        self .bg_path_widget =QWidget ()
-        bg_lay =QHBoxLayout (self .bg_path_widget )
-        bg_lay .setContentsMargins (0 ,0 ,0 ,0 )
-        bg_lay .setSpacing (5 )
-        self .ed_bg_path =QLineEdit (SETTINGS .get ("custom_bg_path",""))
-        bg_lay .addWidget (self .ed_bg_path )
-        self .btn_browse_bg =QPushButton ("浏览")
-        self .btn_browse_bg .setObjectName ("noHoverBtn")
-        self .btn_browse_bg .clicked .connect (self .browse_bg_image )
-        bg_lay .addWidget (self .btn_browse_bg )
-        self .bg_path_widget .hide ()
-        lay .addWidget (self .bg_path_widget )
-
-        self .cb_theme .currentTextChanged .connect (self .on_theme_changed )
-        self .on_theme_changed (self .cb_theme .currentText ())
-
-        lay .addStretch ()
-        self .tab_widget .addTab (tab ,"主题")
 
     def _build_env_tab (self ):
         tab =QWidget ()
@@ -1186,24 +1140,6 @@ class SettingsDialog (QDialog ):
             pal2 .setColor (QPalette .ColorRole .Window ,bg )
             content_widget .setPalette (pal2 )
 
-    def browse_bg_image (self ):
-        fi ,_ =QFileDialog .getOpenFileName (
-        self ,"选择图片","","图片文件 (*.png *.jpg *.jpeg *.bmp *.gif)"
-        )
-        if fi :
-            ext =os .path .splitext (fi )[1 ].lower ()
-            if ext not in (".png",".jpg",".jpeg",".bmp",".gif"):
-                QMessageBox .warning (self ,"错误","仅支持png, jpg, jpeg, bmp, gif图片格式！")
-                return 
-            self .ed_bg_path .setText (fi )
-
-    def on_theme_changed (self ,txt ):
-        if txt =="自定义背景":
-            self .bg_path_widget .show ()
-        else :
-            self .bg_path_widget .hide ()
-            self .ed_bg_path .setText ("")
-
     def _capture_hotkey_common (self ,event ,line_edit ):
         mods =[]
         if event .modifiers ()&Qt .KeyboardModifier .ControlModifier :
@@ -1243,27 +1179,9 @@ class SettingsDialog (QDialog ):
             else :
                 self .cb_exit .setCurrentText ("每次询问")
 
-            theme_map ={
-            "performance":"性能模式",
-            "dark":"深色",
-            "light":"浅色",
-            "eye_care":"护眼",
-            "pink":"粉色",
-            "blue":"蓝色",
-            "cyberpunk":"cyberpunk",
-            "red_blue_glass":"红蓝渐变",
-            "Titanium_silver":"钛银金属",
-            "sandstone_gray":"砂岩暖灰",
-            "liquid_glass":"清爽",
-            "custom_image":"自定义背景"
-            }
-            df_theme =theme_map .get (DEFAULT_SETTINGS ["theme"],"深色")
-            self .cb_theme .setCurrentText (df_theme )
-
             self .ed_py .setText (DEFAULT_SETTINGS ["python_path"])
             self .ed_j8 .setText (DEFAULT_SETTINGS ["java8_path"])
             self .ed_j11 .setText (DEFAULT_SETTINGS ["java11_path"])
-            self .ed_bg_path .setText ("")
 
             self .cli_python_list =list (DEFAULT_SETTINGS .get ("cli_python_interpreters",[])or [])
             self .cli_java_list =list (DEFAULT_SETTINGS .get ("cli_java_interpreters",[])or [])
@@ -1440,23 +1358,6 @@ class SettingsDialog (QDialog ):
         }
         ex =exit_map .get (self .cb_exit .currentText (),"ask")
 
-        theme_map ={
-        "性能模式":"performance",
-        "深色":"dark",
-        "浅色":"light",
-        "护眼":"eye_care",
-        "粉色":"pink",
-        "蓝色":"blue",
-        "cyberpunk":"cyberpunk",
-        "红蓝渐变":"red_blue_glass",
-        "钛银金属":"Titanium_silver",
-        "砂岩暖灰":"sandstone_gray",
-        "清爽":"liquid_glass",
-        "自定义背景":"custom_image"
-        }
-        themetxt =self .cb_theme .currentText ()
-        theme_key =theme_map .get (themetxt ,"dark")
-
         new_s =dict (SETTINGS )
         new_s ["confirm_exit"]=self .chk_confirm .isChecked ()
         new_s ["exit_mode"]=ex 
@@ -1467,20 +1368,6 @@ class SettingsDialog (QDialog ):
 
         new_s ["cli_python_interpreters"]=list (self .cli_python_list )
         new_s ["cli_java_interpreters"]=list (self .cli_java_list )
-
-        if theme_key =="custom_image":
-            bg_path =self .ed_bg_path .text ().strip ()
-            ext =os .path .splitext (bg_path )[1 ].lower ()
-            if not bg_path or not os .path .isfile (bg_path ):
-                QMessageBox .warning (self ,"错误","必须选择一张图片作为自定义背景！")
-                return 
-            if ext not in (".png",".jpg",".jpeg",".bmp",".gif"):
-                QMessageBox .warning (self ,"错误","仅支持png, jpg, jpeg, bmp, gif图片格式！")
-                return 
-            new_s ["custom_bg_path"]=bg_path 
-        else :
-            new_s ["custom_bg_path"]=""
-        new_s ["theme"]=theme_key
 
         # new_s["screenshot_hotkey"] = self.ed_screenshot_key.text().strip()  # 已禁用截图功能
         # new_s["quick_open_hotkey"] = self.ed_quick_open_key.text().strip()  # 已禁用全局热键功能
