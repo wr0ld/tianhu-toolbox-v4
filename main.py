@@ -382,6 +382,12 @@ class MainWindow (QMainWindow ):
         # self .btn_notebook .clicked .connect (self .open_notebook )
         # hl .addWidget (self .btn_notebook )
 
+        btn_log =QPushButton ("日志")
+        btn_log .setObjectName ("noHoverBtn")
+        btn_log .setFixedWidth (80 )
+        btn_log .clicked .connect (self .open_log_file )
+        hl .addWidget (btn_log )
+
         btn_set =QPushButton ("设置")
         btn_set .setObjectName ("noHoverBtn")
         btn_set .setFixedWidth (80 )
@@ -542,6 +548,19 @@ class MainWindow (QMainWindow ):
             self .search_bar .search_input .selectAll ()
         except Exception :
             pass 
+
+    def open_log_file (self ):
+        try :
+            log_path =os .path .join (os .path .dirname (os .path .abspath (__file__ )),"app.log")
+            if not os .path .isfile (log_path ):
+                QMessageBox .information (self ,"打开日志",f"日志文件不存在:\n{log_path}")
+                return 
+            if sys .platform .startswith ("win"):
+                os .startfile (log_path )
+            else :
+                subprocess .Popen (["xdg-open",log_path ])
+        except Exception as e :
+            QMessageBox .warning (self ,"打开日志",f"打开日志失败: {e}")
 
     def dragEnterEvent (self ,event ):
         try :

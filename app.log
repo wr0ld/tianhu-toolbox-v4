@@ -746,3 +746,242 @@ NameError: name 'QStyleOptionViewItem' is not defined
 2026-05-24 17:47:04,231 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/yjdirscanv1.1/御剑2.exe" 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026-05-24 18:12:03,285 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:\bp" && "start.bat" "
+2026-05-24 18:13:02,276 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/oracleShell.jar" 
+2026-05-24 18:13:16,684 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/Seay-Svn源代码泄露漏洞利用工具.exe" 
+
+2026-05-25 12:59:13,571 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/jwt_GUI/jwt_GUI.exe" 
+
+2026-05-25 13:03:38,510 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/jwt_GUI/jwt_GUI.exe" 
+
+2026-05-25 17:13:04,138 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/Rscan/rscan_win64.exe" 
+2026-05-25 17:13:11,634 - INFO - [运行工具] cmd /c start powershell -noexit -command "cd 'E:/ONE-FOX-toolsV4.0/tools/other/Rscan'; .\rscan_win64.exe "
+
+2026-05-25 22:51:56,079 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/ARL-plus-docker-main" && "start.bat" "
+2026-05-25 22:54:42,690 - ERROR - run_tool失败: 未找到自定义Java路径[java21]
+2026-05-25 22:55:18,114 - INFO - [运行工具] "E:/jdk-24/bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/memshell-killer/memory-shell-detector-gui.jar" 
+2026-05-25 22:55:26,101 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/jmg-gui-1.0.9_250101.jar" 
+2026-05-25 22:59:54,154 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/MemShellParty" && "start_memshell_party.bat" "
+
+2026-05-27 09:33:24,784 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/Sign-Sacker-2.0.1/Sign-Sacker-2.0.exe" 
+2026-05-27 09:39:46,386 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/e0e1-wx-master" && "D:/Python/python.exe" "main.py" "
+
+2026-05-27 13:06:29,102 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/Seay-Svn源代码泄露漏洞利用工具.exe" 
+
+2026-05-27 13:07:10,948 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/秋风AI代码审计个人版(3)/秋风AI代码审计个人版.exe" 
+2026-05-27 13:07:14,417 - INFO - [运行工具] cmd /c start "" "E:/Seay源代码审计系统/Seay源代码审计系统.exe" 
+
+2026-05-27 14:54:53,167 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/sqlmap/GUI-sqlmap/sqlmap_v1.3.2.jar" 
+
+2026-05-30 12:30:32,371 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/Bu-40xbypass-v1.0.0/Bu-40xbypass.exe" 
+2026-05-30 12:30:44,578 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/dirsearch_bypass403-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "dirsearch.py" "
+
+
+
+2026-05-30 13:56:30,517 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/suibozhuliu/[随波逐流]CTF编码工具 V7.3 20260506.exe" 
+
+2026-05-30 14:16:44,109 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/PyGlimmer-main" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "PyGlimmer.py" "
+2026-05-30 14:17:04,440 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/pyinstxtractor" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "pyinstxtractor.py" "
+
+2026-06-01 13:28:15,877 - INFO - [运行工具] "E:/jdk-24/bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/k8s/k8s-pen-tool-1.0.0.jar" 
+
+2026-06-04 18:10:27,746 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+2026-06-04 18:11:59,273 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/morelian/morelian.exe" 
+
+2026-06-04 19:21:21,126 - INFO - [运行工具] cmd /c start powershell -noexit -command "cd 'E:/ONE-FOX-toolsV4.0/tools/other/easyshell'; .\easyshell.exe "
+
+2026-06-05 17:56:21,414 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/nacos/nacos-exploit-3.0.5-jar-with-dependencies.jar" 
+
+2026-06-05 20:27:25,815 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro/shiro_attack-4.7.0-SNAPSHOT-all.jar" 
+2026-06-05 20:27:32,038 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro_attack2/Pyke-Shiro_0.3.jar" 
+2026-06-05 20:27:32,635 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/ShiroExploit-1.0.2.jar" 
+2026-06-05 20:27:35,998 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.0-zulu-8-jfx.jar" 
+2026-06-05 20:28:19,678 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro/shiro_attack-4.7.0-SNAPSHOT-all.jar" 
+2026-06-05 20:28:29,502 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/ShiroExploit-1.0.2.jar" 
+2026-06-05 20:28:58,824 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro_attack2/Pyke-Shiro_0.3.jar" 
+
+2026-06-07 10:35:00,132 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/heapdump" && "start1.bat" "
+2026-06-07 10:35:03,801 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/heapdump" && "start1.bat" "
+
+2026-06-07 12:36:17,416 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/OAexp/weekoa.exe" 
+2026-06-07 12:37:53,942 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+
+
+2026-06-08 18:35:43,986 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/UploadRanger/UploadRanger.exe" 
+2026-06-08 22:21:50,584 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/UploadRanger/UploadRanger.exe" 
+
+2026-06-09 13:17:29,656 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/struts2/struts2_19.jar" 
+
+2026-06-09 14:56:43,466 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.0-zulu-8-jfx.jar" 
+2026-06-09 14:56:47,999 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro/shiro_attack-4.7.0-SNAPSHOT-all.jar" 
+2026-06-09 14:56:51,237 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro_attack2/Pyke-Shiro_0.3.jar" 
+2026-06-09 14:56:54,926 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/ShiroExploit-1.0.2.jar" 
+2026-06-09 14:56:57,550 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.0-zulu-8-jfx.jar" 
+2026-06-09 16:48:03,824 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.0-zulu-8-jfx.jar" 
+
+2026-06-09 16:50:15,244 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/ShiroExploit-1.0.2.jar" 
+2026-06-09 16:50:15,770 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro_attack2/Pyke-Shiro_0.3.jar" 
+2026-06-09 16:50:16,561 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/shiro/shiro/shiro_attack-4.7.0-SNAPSHOT-all.jar" 
+
+2026-06-09 17:01:41,530 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.0-zulu-8-jfx.jar" 
+
+2026-06-10 17:07:55,578 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.0-zulu-8-jfx.jar" 
+
+
+2026-06-11 22:47:35,809 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/subfinder_2.14.0_windows_amd64" && "subfinder.exe" "
+2026-06-11 22:48:00,166 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/oneforall" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "oneforall.py" "
+
+
+2026-06-12 16:42:40,062 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/goby/goby-win-x64-2.0.5/Goby.exe" 
+2026-06-12 16:47:44,086 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/goby/goby-win-x64-2.0.5/Goby.exe" 
+
+2026-06-12 19:06:55,896 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/webpackscan" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "PackerFuzzer.py" "
+2026-06-12 19:10:28,361 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+2026-06-12 19:11:08,490 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/webpackscan" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "PackerFuzzer.py" "
+
+
+
+2026-06-22 20:27:04,742 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.0-zulu-8-jfx.jar" 
+2026-06-22 20:29:12,691 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.1-zulu-8-jfx.jar" 
+
+
+2026-06-23 16:16:51,651 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+2026-06-23 16:19:59,934 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/heapdump" && "start1.bat" "
+2026-06-23 16:20:26,748 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
+
+2026-06-23 16:28:21,530 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/other/ds_store_exp-master" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "ds_store_exp.py" "
+
+
+2026-07-27 11:15:43,098 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/sensitive-info-tool/sensitive-info-tool.exe" 
+
+
+2026-08-06 17:36:42,872 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/ShiroExploit/shiro_attack-5.0.1-zulu-8-jfx-bundle/shiro_attack-5.1.1-zulu-8-jfx.jar" 
+2026-08-06 18:11:48,599 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/OAexp/weekoa.exe" 
+2026-08-06 18:11:49,640 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" -jar -javaagent:Exp-Tools-1.3.1-encrypted.jar
+2026-08-06 18:12:34,951 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" -jar -javaagent:Exp-Tools-1.3.1-encrypted.jar
+2026-08-06 18:21:10,424 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/OAexp/weekoa.exe" 
+
+2026-08-07 23:45:47,877 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/海康威视/Rookie-修复版.jar" 
+2026-08-07 23:46:15,180 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" -jar -javaagent:Exp-Tools-1.3.1-encrypted.jar
+2026-08-07 23:46:21,835 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" -jar -javaagent:Exp-Tools-1.3.1-encrypted.jar
+2026-08-07 23:46:36,765 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_scan/hvvoaexploit" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "start1.bat" -jar -javaagent:Exp-Tools-1.3.1-encrypted.jar"
+2026-08-07 23:46:47,059 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_scan/hvvoaexploit" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "start.bat" -jar -javaagent:Exp-Tools-1.3.1-encrypted.jar"
+2026-08-07 23:47:00,572 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_scan/hvvoaexploit" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "Exp-Tools-1.3.1-encrypted.jar" "
+2026-08-07 23:47:17,037 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/OAexp/weekoa.exe" 
+2026-08-07 23:47:40,206 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/LiqunKit_1.5.1/LiqunKit_1.6.2_交流版.jar" 
+2026-08-07 23:49:08,247 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/net8.0-windows/hikvision漏洞利用工具.exe" 
+
+2026-08-10 13:52:51,580 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/nacos/nacos-exploit-3.0.5-jar-with-dependencies.jar" 
+2026-08-10 13:54:09,876 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/LiqunKit_1.5.1" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "LiqunKit_1.6.2_交流版.jar" "
+2026-08-10 13:54:25,257 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "Exp-Tools-1.3.1-encrypted.jar" "
+2026-08-10 13:54:39,588 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/LiqunKit_1.5.1/LiqunKit_1.6.2_交流版.jar" 
+2026-08-10 13:54:52,264 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 13:54:57,319 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 13:55:04,360 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 13:55:04,705 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 13:55:27,266 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 13:57:37,916 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 13:57:44,356 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_11_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 13:59:27,572 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 13:59:41,861 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 13:59:42,181 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" 
+2026-08-10 14:00:25,951 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" -noverify
+2026-08-10 14:00:45,815 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" -noverify -javaagent:Exp-Tools-1.3.1-encrypted.jar
+2026-08-10 14:00:48,485 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hvvoaexploit/Exp-Tools-1.3.1-encrypted.jar" -noverify -javaagent:Exp-Tools-1.3.1-encrypted.jar
+2026-08-10 14:02:38,921 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_scan/hvvoaexploit" && "start1.bat" "
+2026-08-10 14:02:53,256 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_scan/hvvoaexploit" && "start1.bat" "
+2026-08-10 14:04:52,154 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/nacos/nacos-exploit-3.0.5-jar-with-dependencies.jar" 
+2026-08-10 14:08:48,982 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/nacos/nacos-exploit-3.0.5-jar-with-dependencies.jar" 
+2026-08-10 16:53:57,363 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/redis-rogue-server/redis.exe" 
+2026-08-10 20:27:08,267 - INFO - [运行工具] cmd /c start powershell -noexit -command "cd 'E:\ONE-FOX-toolsV4.0\tools/other/easyshell'; .\easyshell.exe "
+2026-08-10 20:27:14,907 - INFO - [运行工具] cmd /c start powershell -noexit -command "cd 'E:\ONE-FOX-toolsV4.0\tools/other/easyshell'; .\easyshell.exe "
+2026-08-10 20:27:22,587 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/easyshell" && "easyshell.exe" "
+2026-08-10 20:28:21,511 - INFO - [运行工具] cmd /c start "" "E:\EasyTools-windows-amd64\EasyTools.exe" 
+2026-08-10 20:36:11,120 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/JDumpSpider-1.1-SNAPSHOT-full/JDumpSpider-1.1-SNAPSHOT-full.jar" 
+2026-08-10 20:36:15,460 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/JDumpSpider-1.1-SNAPSHOT-full/JDumpSpider-1.1-SNAPSHOT-full.jar" 
+
+2026-08-10 20:47:09,360 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/dirsearch" && "E:\ONE-FOX-toolsV4.0\python3\python.exe" "dirsearch.py" -h"
+
+2026-08-10 23:56:09,745 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hikvision/hikvision.exe" 
+2026-08-10 23:59:01,638 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/ActiveMqRCE漏洞利用工具/ActiveMqRCE/ActiveMQRCE.jar" 
+2026-08-10 23:59:14,604 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/ActiveMqRCE漏洞利用工具/ActiveMqRCE/ActiveMQRCE.jar" 
+2026-08-11 00:01:20,787 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/ActiveMqRCE漏洞利用工具/ActiveMqRCE/ActiveMQRCE.jar" 
+2026-08-11 00:01:33,058 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/ActiveMqRCE漏洞利用工具/ActiveMqRCE/ActiveMQRCE.jar" 
+2026-08-11 00:03:43,013 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/DecryptTools综合加解密后渗透工具/DecryptTools/DecryptToolsV2.4.jar" 
+2026-08-11 00:04:12,749 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Confluence综合漏洞利用工具/confluence_memshell-1.1-SNAPSHOT.jar" 
+2026-08-11 00:06:49,166 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Hikvision综合漏洞利用工具/Rookie_Hikvison.jar" 
+2026-08-11 00:07:13,511 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/海康威视/Rookie-修复版.jar" 
+2026-08-11 00:07:23,974 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Hikvision综合漏洞利用工具/Rookie_Hikvison.jar" 
+2026-08-11 00:07:30,464 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/net8.0-windows/hikvision漏洞利用工具.exe" 
+2026-08-11 00:07:34,022 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/HikvisionExploitGUI-windows/HikvisionExploitGUI-windows.exe" 
+2026-08-11 00:07:39,000 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hikvision/hikvision.exe" 
+2026-08-11 00:07:45,440 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/net8.0-windows/hikvision漏洞利用工具.exe" 
+2026-08-11 00:08:06,273 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/hikvision/hikvision.exe" 
+2026-08-11 00:09:01,144 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/net8.0-windows/hikvision漏洞利用工具.exe" 
+2026-08-11 00:10:55,938 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Jboss综合漏洞利用工具/JBossExploit-v1.0.jar" 
+2026-08-11 00:10:58,403 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Jboss综合漏洞利用工具/JavaJboss.jar" 
+2026-08-11 00:11:50,043 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Jeecg&Jeecg-boot框架漏洞利用工具/Jeecg_Tools-1.0-java8.jar" 
+2026-08-11 00:12:00,755 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Jeecg&Jeecg-boot框架漏洞利用工具/jeecgExploitss.jar" 
+2026-08-11 00:12:53,171 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Jenkins综合漏洞利用工具/JenkinsExploitGUI_v1.0.jar" 
+2026-08-11 00:13:09,277 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Jenkins综合漏洞利用工具/JenkinsExploit-GUI-1.3-SNAPSHOT.jar" 
+2026-08-11 00:14:37,454 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Nacos综合漏洞利用工具/NacosExploit.jar" 
+2026-08-11 00:14:51,532 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Nacos综合漏洞利用工具/NacosExploit-1.0.1-SNAPSHOT-jar-with-dependencies.jar" 
+2026-08-11 00:15:05,149 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Nacos综合漏洞利用工具/NacosExploitGUI_v4.0.jar" 
+2026-08-11 00:16:02,239 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/YONYOU-TOOL-2.0.9.jar" 
+2026-08-11 00:16:19,303 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/YongYouNcTool-1.0.jar" 
+2026-08-11 00:16:31,166 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/TongdaTools.jar" 
+2026-08-11 00:16:40,207 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/Thelostworld_OA.jar" 
+2026-08-11 00:17:13,392 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/MYExploit.jar" 
+2026-08-11 00:17:33,312 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/IWannaGetAll-v1.3.0.jar" 
+2026-08-11 00:18:09,119 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/Exp-Tools-1.2.7-encrypted.jar" 
+2026-08-11 00:18:13,392 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/Exp-Tools-1.2.7-encrypted.jar" 
+2026-08-11 00:18:23,241 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/2023HW.jar" 
+2026-08-11 00:20:08,163 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/HVVExploitApply/HVVExploitApply.jar" 
+2026-08-11 00:21:00,058 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/OA增强版V2.3/weekoa.exe" 
+2026-08-11 00:21:05,355 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/apt-tools/apt-tools.jar" 
+2026-08-11 00:21:54,540 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/OA综合漏洞利用工具/apt-tools/apt-tools.jar" 
+2026-08-11 00:22:41,869 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/若依RuoYi综合漏洞利用工具/RuoYiExploitGUI_v1.0.jar" 
+2026-08-11 00:22:53,597 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/若依RuoYi综合漏洞利用工具/Ruoyi-All-1.0-SNAPSHOT.jar" 
+2026-08-11 00:24:00,174 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/帆软反序列化漏洞利用工具/FrChannel.jar" 
+2026-08-11 00:24:05,518 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/帆软反序列化漏洞利用工具/FrChannelPlus.jar" 
+2026-08-11 00:24:36,472 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Xxl-job漏洞利用工具/xxl-jobExploitGUI_v1.0.jar" 
+2026-08-11 00:24:54,702 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Weblogic综合漏洞利用工具/WeblogicTool_1.3.jar" 
+2026-08-11 00:25:55,640 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Struts2全版本漏洞检测工具/Struts2_19.32.jar" 
+2026-08-11 00:26:03,695 - INFO - [运行工具] cmd /c start "" "E:/ONE-FOX-toolsV4.0/tools/other/VulToolsKit/Struts2全版本漏洞检测工具/Struts2.2019.V2.3/Struts2漏洞检查工具2019版 V2.3.exe" 
+2026-08-11 00:32:25,653 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_other/Counter-Strike" && "start.bat" "
+
+
+2026-08-11 16:17:52,822 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/redis-rogue-server/redis.exe" 
+2026-08-11 16:26:04,113 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/nacos/nacos-exploit-3.0.5-jar-with-dependencies.jar" 
+
+2026-08-12 09:33:07,934 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_scan/heapdump" && "start1.bat" "
+2026-08-12 09:33:16,933 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_scan/heapdump" && "start.bat" "
+2026-08-12 09:33:30,985 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:/ONE-FOX-toolsV4.0/tools/gui_scan/heapdump" && "JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" -gui"
+2026-08-12 09:33:40,601 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/heapdump/JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" -gui
+2026-08-12 09:33:44,556 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/heapdump/JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" -gui
+2026-08-12 09:34:24,151 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:/ONE-FOX-toolsV4.0/tools/gui_scan/heapdump/JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" --gui
+
+2026-08-12 14:15:53,015 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/VulToolsKit/Xxl-job漏洞利用工具/xxl-jobExploitGUI_v1.0.jar" 
+2026-08-12 14:15:54,162 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/xxljob/XXL-JOB漏洞综合利用工具_1.5.jar" 
+
+
+2026-08-16 03:49:08,821 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/VulToolsKit/Jenkins综合漏洞利用工具/JenkinsExploit-GUI-1.3-SNAPSHOT.jar" 
+2026-08-16 03:49:13,291 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/VulToolsKit/Jenkins综合漏洞利用工具/JenkinsExploitGUI_v1.0.jar" 
+2026-08-16 03:49:17,699 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\javaw.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/jenkins/JenkinsExploit-GUI-1.3-SNAPSHOT.jar" 
+
+
+2026-08-16 04:16:53,877 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/ARL-plus-docker-main" && "start.bat" "

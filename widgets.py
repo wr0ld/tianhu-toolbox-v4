@@ -1074,7 +1074,6 @@ class SettingsDialog (QDialog ):
         self .refresh_cli_defaults ()
 
         lay .addWidget (QLabel (""))
-        # lay.addWidget(QLabel("快捷键设置:"))  # 已禁用全局热键及截图功能
 
         # 以下截图快捷键UI已禁用
         # ss_row = QHBoxLayout()

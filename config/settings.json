@@ -16,7 +16,7 @@
   "cli_java_interpreters": [
     {
       "name": "java21",
-      "path": "D:/Java/jdk-24/bin"
+      "path": "E:/jdk-24/bin"
     }
   ],
   "cli_default_python": "",
@@ -111,61 +111,77 @@
       "抓包与代理工具"
     ],
     [
-      "IWannaGetAll",
-      "漏洞扫描与利用工具"
-    ],
-    [
       "云资产管理工具",
       "我的"
     ],
     [
       "Webshell生成器",
       "免杀工具"
+    ],
+    [
+      "灯塔 plus",
+      "我的"
+    ],
+    [
+      "MemShellParty",
+      "我的"
+    ],
+    [
+      "dirsearch_bypass403",
+      "我的"
+    ],
+    [
+      "IWannaGetAll",
+      "漏洞扫描与利用工具"
+    ],
+    [
+      "heapdump解密工具",
+      "框架漏洞利用工具"
     ]
   ],
   "recent_tools": [
     [
-      "御剑2珍藏版",
-      "信息收集工具"
-    ],
-    [
-      "哥斯拉",
-      "WebShell管理工具"
-    ],
-    [
-      "Fscan_V2.0",
-      "漏洞扫描与利用工具"
-    ],
-    [
-      "EasyTools",
+      "灯塔 plus",
       "我的"
     ],
     [
-      "morelian",
-      "WebShell管理工具"
+      "Jenkins综合利用工具",
+      "漏洞扫描与利用工具"
     ],
     [
-      "vshell",
-      "后渗透工具"
+      "JenkinsExploitGUI_v1.0",
+      "VulToolsKit"
     ],
     [
-      "XieBro_C2",
-      "后渗透工具"
+      "JenkinsExploit-GUI-1.3-SNAPSHOT",
+      "VulToolsKit"
     ],
     [
-      "方程式工具包",
-      "后渗透工具"
+      "XXL-JOB漏洞利用工具",
+      "漏洞扫描与利用工具"
     ],
     [
-      "SharpScan",
-      "后渗透工具"
+      "xxl-jobExploitGUI_v1.0",
+      "VulToolsKit"
     ],
     [
-      "Ladon_GUI",
+      "JDumpSpiderGUI-1.0-SNAPSHOT-full",
+      "我的"
+    ],
+    [
+      "Nacos综合利用工具",
+      "漏洞扫描与利用工具"
+    ],
+    [
+      "Redis-Tools",
+      "其他工具"
+    ],
+    [
+      "Counter-Strike",
       "后渗透工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAfFAAAAlgAADcUAAAOMAAAHxQAAAJYAAA3FAAADjAAAAAEAAAAABqsAAAfFAAAAlgAADcUAAAOM",
+  "main_window_geometry": "AdnQywADAAD////1AAAAuwAABfUAAAOx////9QAAALsAAAX1AAADsQAAAAAAAAAABqv////1AAAAuwAABfUAAAOx",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
@@ -174,6 +190,7 @@
   "terminal_save_prompt": "prompt_if_content",
   "terminal_default_shell": "cmd",
   "terminal_font_size": 10,
+  "open_log_hotkey": "Ctrl+L",
   "collapsed_categories": [
     "网页工具"
   ]
