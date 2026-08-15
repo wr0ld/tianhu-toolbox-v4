@@ -786,28 +786,27 @@ class MainWindow (QMainWindow ):
             self .setStyleSheet (STYLESHEET )
 
 
-        try :
-            from utils import install_liquid_glass_animations 
-            install_liquid_glass_animations (self )
-        except Exception :
-            pass 
+        # 以下特效已注释（毛玻璃 acrylic + 动画 + 弹窗模糊），用于加快启动速度
+        # try :
+        #     from utils import install_liquid_glass_animations 
+        #     install_liquid_glass_animations (self )
+        # except Exception :
+        #     pass 
 
-        try :
-            from utils import install_red_blue_glass_popup_blur 
-            install_red_blue_glass_popup_blur (self )
-        except Exception :
-            pass 
+        # try :
+        #     from utils import install_red_blue_glass_popup_blur 
+        #     install_red_blue_glass_popup_blur (self )
+        # except Exception :
+        #     pass 
 
+        # theme_name =SETTINGS .get ("theme","dark")
+        # hwnd =int (self .winId ())
+        # effect =WindowEffect ()
 
-        theme_name =SETTINGS .get ("theme","dark")
-        hwnd =int (self .winId ())
-        effect =WindowEffect ()
-
-        if theme_name in ("liquid_glass","red_blue_glass","custom_image"):
-
-            effect .set_acrylic_effect (hwnd ,is_dark =True )
-        else :
-            effect .remove_background_effect (hwnd )
+        # if theme_name in ("liquid_glass","red_blue_glass","custom_image"):
+        #     effect .set_acrylic_effect (hwnd ,is_dark =True )
+        # else :
+        #     effect .remove_background_effect (hwnd )
 
     def paintEvent (self ,event ):
         if SETTINGS .get ("theme")=="custom_image":
@@ -831,11 +830,11 @@ class MainWindow (QMainWindow ):
         self .cat_panel .update_categories (self .categories ,ccount )
 
 
-        try :
-            from utils import install_liquid_glass_animations 
-            install_liquid_glass_animations (self .cat_panel )
-        except Exception :
-            pass 
+        # try :  # 特效已注释
+        #     from utils import install_liquid_glass_animations 
+        #     install_liquid_glass_animations (self .cat_panel )
+        # except Exception :
+        #     pass 
 
     def update_tool_grid (self ):
 
@@ -878,11 +877,11 @@ class MainWindow (QMainWindow ):
         self .tool_grid .set_final_tools (display_tools )
 
 
-        try :
-            from utils import animate_liquid_glass_fade 
-            animate_liquid_glass_fade (self .tool_grid )
-        except Exception :
-            pass 
+        # try :  # 特效已注释
+        #     from utils import animate_liquid_glass_fade 
+        #     animate_liquid_glass_fade (self .tool_grid )
+        # except Exception :
+        #     pass 
         self .refresh_grid_layout ()
 
     def on_cat_selected (self ,cat ):
@@ -1222,11 +1221,11 @@ class MainWindow (QMainWindow ):
         diag =SettingsDialog (self )
         diag .settings_changed .connect (self .on_settings_changed )
 
-        try :
-            from utils import install_liquid_glass_animations 
-            install_liquid_glass_animations (diag )
-        except Exception :
-            pass 
+        # try :  # 特效已注释
+        #     from utils import install_liquid_glass_animations 
+        #     install_liquid_glass_animations (diag )
+        # except Exception :
+        #     pass 
 
         diag .exec ()
 
