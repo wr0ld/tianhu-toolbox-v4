@@ -139,11 +139,11 @@
   ],
   "recent_tools": [
     [
-      "JDumpSpider-1.1-SNAPSHOT-full",
+      "JDumpSpiderGUI-1.0-SNAPSHOT-full",
       "我的"
     ],
     [
-      "JDumpSpiderGUI-1.0-SNAPSHOT-full",
+      "JDumpSpider-1.1-SNAPSHOT-full",
       "我的"
     ],
     [
@@ -179,7 +179,7 @@
       "我的"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAD///8IAAADtQAABQgAAAar////CAAAA7UAAAUIAAAGqwAAAAAAAAAABqv///8IAAADtQAABQgAAAar",
+  "main_window_geometry": "AdnQywADAAAAAAChAAAAFgAABqEAAAMMAAAAoQAAABYAAAahAAADDAAAAAAAAAAABqsAAAChAAAAFgAABqEAAAMM",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

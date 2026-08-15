@@ -10,7 +10,8 @@ import logging .handlers
 from PyQt6 .QtWidgets import (
 QApplication ,QMainWindow ,QMessageBox ,QWidget ,
 QVBoxLayout ,QHBoxLayout ,QPushButton ,QSystemTrayIcon ,QMenu ,
-QFileDialog ,QInputDialog ,QLabel ,QLineEdit ,QAbstractButton 
+QFileDialog ,QInputDialog ,QLabel ,QLineEdit ,QAbstractButton ,
+QDialog ,QPlainTextEdit 
 )
 from PyQt6 .QtCore import Qt ,QSettings ,QByteArray ,QTimer ,pyqtSignal ,QThread ,QObject ,QEvent ,QVariantAnimation ,QEasingCurve ,qInstallMessageHandler ,QtMsgType 
 from PyQt6 .QtGui import QPainter ,QPixmap ,QShortcut ,QKeySequence 
@@ -107,9 +108,10 @@ class _RateLimitingHandler (logging .Handler ):
                 st [0 ],st [1 ],st [2 ]=win_start ,count ,supp +1 
 
 
+_LOG_PATH =os .path .join (os .path .dirname (os .path .abspath (__file__ )),"app.log")
 _fmt =logging .Formatter ('%(asctime)s - %(levelname)s - %(message)s')
 _file =logging .handlers .RotatingFileHandler (
-"app.log",maxBytes =2 *1024 *1024 ,backupCount =5 ,encoding ="utf-8"
+_LOG_PATH ,maxBytes =2 *1024 *1024 ,backupCount =5 ,encoding ="utf-8"
 )
 _file .setFormatter (_fmt )
 _console =logging .StreamHandler ()
@@ -551,14 +553,46 @@ class MainWindow (QMainWindow ):
 
     def open_log_file (self ):
         try :
-            log_path =os .path .join (os .path .dirname (os .path .abspath (__file__ )),"app.log")
+            log_path =_LOG_PATH 
             if not os .path .isfile (log_path ):
                 QMessageBox .information (self ,"打开日志",f"日志文件不存在:\n{log_path}")
                 return 
-            if sys .platform .startswith ("win"):
-                os .startfile (log_path )
-            else :
-                subprocess .Popen (["xdg-open",log_path ])
+
+            dlg =QDialog (self )
+            dlg .setWindowTitle ("日志查看")
+            dlg .resize (820 ,560 )
+            lay =QVBoxLayout (dlg )
+            lay .setContentsMargins (10 ,10 ,10 ,10 )
+            lay .setSpacing (8 )
+
+            view =QPlainTextEdit ()
+            view .setReadOnly (True )
+            lay .addWidget (view )
+
+            hb =QHBoxLayout ()
+            btn_refresh =QPushButton ("刷新")
+            btn_refresh .setObjectName ("noHoverBtn")
+            btn_close =QPushButton ("关闭")
+            btn_close .setObjectName ("noHoverBtn")
+            hb .addStretch ()
+            hb .addWidget (btn_refresh )
+            hb .addWidget (btn_close )
+            lay .addLayout (hb )
+
+            def _load ():
+                try :
+                    with open (log_path ,"r",encoding ="utf-8",errors ="replace")as f :
+                        content =f .read ()
+                    view .setPlainText (content )
+                    sb =view .verticalScrollBar ()
+                    sb .setValue (sb .maximum ())
+                except Exception as e :
+                    QMessageBox .warning (dlg ,"打开日志",f"读取日志失败: {e}")
+
+            _load ()
+            btn_refresh .clicked .connect (lambda *_ :_load ())
+            btn_close .clicked .connect (dlg .accept )
+            dlg .exec ()
         except Exception as e :
             QMessageBox .warning (self ,"打开日志",f"打开日志失败: {e}")
 
