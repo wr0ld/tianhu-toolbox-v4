@@ -17,3 +17,12 @@
 2026-08-16 05:55:26,723 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/heapdump/JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" --gui
 2026-08-16 05:55:28,796 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/heapdump/JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" --gui
 2026-08-16 05:55:32,487 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/heapdump/JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" --gui
+
+2026-08-16 06:23:08,559 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/supersql/SuperSQLInjection.exe" 
+
+2026-08-16 06:23:36,756 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_other/XG_NTAI_V2/XG_NTAI.jar" 
+
+2026-08-16 06:25:23,786 - INFO - [运行工具] cmd /c start cmd /k "cd /d "D:\bp" && "start.bat" "
+2026-08-16 06:25:30,979 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_webshell/Godzilla/tz/哥斯拉特战版.jar" 
+2026-08-16 06:25:32,524 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_webshell/Godzilla/tz/哥斯拉特战版.jar" 
+

@@ -29,10 +29,6 @@
       "WebShell管理工具"
     ],
     [
-      "CobaltStrike 4.7",
-      "后渗透工具"
-    ],
-    [
       "Mimikatz",
       "后渗透工具"
     ],
@@ -135,9 +131,29 @@
     [
       "heapdump解密工具",
       "框架漏洞利用工具"
+    ],
+    [
+      "CobaltStrike 4.7",
+      "后渗透工具"
     ]
   ],
   "recent_tools": [
+    [
+      "哥斯拉特战版",
+      "WebShell管理工具"
+    ],
+    [
+      "bp",
+      "抓包与代理工具"
+    ],
+    [
+      "XG拟态WEBSHELL免杀工具",
+      "免杀工具"
+    ],
+    [
+      "超级SQL注入工具",
+      "漏洞扫描与利用工具"
+    ],
     [
       "JDumpSpiderGUI-1.0-SNAPSHOT-full",
       "我的"
@@ -161,25 +177,9 @@
     [
       "jingren",
       "我的"
-    ],
-    [
-      "crawlergo",
-      "我的"
-    ],
-    [
-      "JNDI-Injection-Exploit-1.0-SNAPSHOT-all-",
-      "我的"
-    ],
-    [
-      "nmap",
-      "我的"
-    ],
-    [
-      "灯塔 plus",
-      "我的"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAChAAAAFgAABqEAAAMMAAAAoQAAABYAAAahAAADDAAAAAAAAAAABqsAAAChAAAAFgAABqEAAAMM",
+  "main_window_geometry": "AdnQywADAAAAAACnAAAAqwAABqcAAAOhAAAApwAAAKsAAAanAAADoQAAAAAAAAAABqsAAACnAAAAqwAABqcAAAOh",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",

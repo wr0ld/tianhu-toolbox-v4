@@ -1173,6 +1173,9 @@ class ModernToolGrid (QListView ):
         menu .setCursor (Qt .CursorShape .PointingHandCursor )
         act_run =menu .addAction ("运行")
         menu .addSeparator ()
+        is_fav =is_tool_favorited (tool )
+        act_fav =menu .addAction ("取消收藏"if is_fav else "加入收藏")
+        menu .addSeparator ()
         act_edit =menu .addAction ("编辑")
         act_del =menu .addAction ("删除")
         menu .addSeparator ()
@@ -1191,6 +1194,13 @@ class ModernToolGrid (QListView ):
                     self .tool_delete .emit (tool )
                 elif action ==act_folder :
                     self ._handle_context_action (tool )
+                elif action ==act_fav :
+                    if is_tool_favorited (tool ):
+                        remove_favorite_tool (tool )
+                        self .favorite_changed .emit (tool ,False )
+                    else :
+                        add_favorite_tool (tool )
+                        self .favorite_changed .emit (tool ,True )
             finally :
                 try :
                     menu .deleteLater ()

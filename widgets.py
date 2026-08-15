@@ -413,7 +413,9 @@ class CategoryPanel (QFrame ):
 
         current_cat =""
         if hasattr (self ,'current_button')and self .current_button :
-            raw_text =self .current_button .text ().replace ("📁 ","").replace ("🗒 ","")
+            raw_text =self .current_button .text ()
+            for _ic in ("📁 ","🕘 ","⭐ ","🗒 "):
+                raw_text =raw_text .replace (_ic ,"")
             idx =raw_text .rfind ("(")
             if idx !=-1 :
                 raw_text =raw_text [:idx ].strip ()
@@ -439,7 +441,13 @@ class CategoryPanel (QFrame ):
 
         for cat in ordered :
             cc =category_counts .get (cat ,0 )
-            text =f"📁 {cat}"
+            if cat =="最近启动":
+                icon ="🕘"
+            elif cat =="我的收藏":
+                icon ="⭐"
+            else :
+                icon ="📁"
+            text =f"{icon} {cat}"
             if cc >0 :
                 text +=f" ({cc})"
             is_user_cat =(cat not in DEFAULT_CATEGORIES or cat in ("我的收藏","最近启动"))
