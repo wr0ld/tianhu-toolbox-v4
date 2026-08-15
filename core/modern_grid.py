@@ -1178,8 +1178,6 @@ class ModernToolGrid (QListView ):
         act_del =menu .addAction ("删除")
         menu .addSeparator ()
         act_folder =menu .addAction ("打开程序文件夹")
-        act_cmd =menu .addAction ("在此处打开CMD")
-        act_ps =menu .addAction ("在此处打开PowerShell")
 
 
         pos =self .mapToGlobal (event .pos ())
@@ -1192,8 +1190,8 @@ class ModernToolGrid (QListView ):
                     self .tool_edit .emit (tool )
                 elif action ==act_del :
                     self .tool_delete .emit (tool )
-                elif action in (act_folder ,act_cmd ,act_ps ):
-                    self ._handle_context_action (action ,tool ,act_folder ,act_cmd ,act_ps )
+                elif action ==act_folder :
+                    self ._handle_context_action (tool )
             finally :
                 try :
                     menu .deleteLater ()
@@ -1239,10 +1237,7 @@ class ModernToolGrid (QListView ):
             pass 
         menu .popup (pos )
 
-    def _handle_context_action (self ,action ,tool ,act_folder ,act_cmd ,act_ps ):
-        from utils import SETTINGS 
-        from core .env_manager import EnvManager 
-
+    def _handle_context_action (self ,tool ):
         path =tool .get ("path","")
         base_path =os .path .abspath ("tools")
         if not os .path .isabs (path ):
@@ -1259,13 +1254,8 @@ class ModernToolGrid (QListView ):
         if not folder_path or not os .path .exists (folder_path ):
             return 
 
-        if action ==act_folder :
-            if sys .platform .startswith ("win"):
-                subprocess .Popen (["explorer",folder_path ])
-        elif action ==act_cmd :
-            EnvManager ().open_cmd (cwd =folder_path ,env_type ="cli_default")
-        elif action ==act_ps :
-            EnvManager ().open_powershell (cwd =folder_path ,env_type ="cli_default")
+        if sys .platform .startswith ("win"):
+            subprocess .Popen (["explorer",folder_path ])
 
     # === 拖动排序：权重重算与洗牌 ===
 

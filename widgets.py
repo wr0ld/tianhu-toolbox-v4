@@ -1043,13 +1043,9 @@ class SettingsDialog (QDialog ):
 
         self .cli_python_list =list (SETTINGS .get ("cli_python_interpreters",[])or [])
         self .cli_java_list =list (SETTINGS .get ("cli_java_interpreters",[])or [])
-        self ._default_python =str (SETTINGS .get ("cli_default_python","")).strip ()
-        self ._default_java =str (SETTINGS .get ("cli_default_java","")).strip ()
-        self ._syncing_tables =False 
 
         lay .addWidget (QLabel ("Python解释器:"))
         self .table_py =self ._make_interpreter_table ()
-        self .table_py .itemChanged .connect (self ._on_table_item_changed )
         lay .addWidget (self .table_py )
         py_btn_row =QHBoxLayout ()
         btn_add_cli_py =QPushButton ("新增")
@@ -1065,7 +1061,6 @@ class SettingsDialog (QDialog ):
 
         lay .addWidget (QLabel ("Java解释器:"))
         self .table_java =self ._make_interpreter_table ()
-        self .table_java .itemChanged .connect (self ._on_table_item_changed )
         lay .addWidget (self .table_java )
         java_btn_row =QHBoxLayout ()
         btn_add_cli_java =QPushButton ("新增")
@@ -1274,24 +1269,21 @@ class SettingsDialog (QDialog ):
 
             self .cli_python_list =list (DEFAULT_SETTINGS .get ("cli_python_interpreters",[])or [])
             self .cli_java_list =list (DEFAULT_SETTINGS .get ("cli_java_interpreters",[])or [])
-            self ._default_python =str (DEFAULT_SETTINGS .get ("cli_default_python","")).strip ()
-            self ._default_java =str (DEFAULT_SETTINGS .get ("cli_default_java","")).strip ()
             self ._refresh_interpreter_tables ()
 
     def _make_interpreter_table (self ):
         table =QTableWidget ()
-        table .setColumnCount (3 )
-        table .setHorizontalHeaderLabels (["名称","路径","默认"])
+        table .setColumnCount (2 )
+        table .setHorizontalHeaderLabels (["名称","路径"])
         table .setSelectionBehavior (QAbstractItemView .SelectionBehavior .SelectRows )
         table .setSelectionMode (QAbstractItemView .SelectionMode .SingleSelection )
         table .setEditTriggers (QAbstractItemView .EditTrigger .NoEditTriggers )
         table .verticalHeader () .setVisible (False )
         table .setShowGrid (False )
         table .setAlternatingRowColors (True )
-        table .horizontalHeader () .setStretchLastSection (False )
+        table .horizontalHeader () .setStretchLastSection (True )
         table .horizontalHeader () .setSectionResizeMode (0 ,QHeaderView .ResizeMode .ResizeToContents )
         table .horizontalHeader () .setSectionResizeMode (1 ,QHeaderView .ResizeMode .Stretch )
-        table .horizontalHeader () .setSectionResizeMode (2 ,QHeaderView .ResizeMode .ResizeToContents )
         table .setMinimumHeight (110 )
         table .setMaximumHeight (180 )
         border =THEME .get ("border","#333")
@@ -1317,70 +1309,21 @@ class SettingsDialog (QDialog ):
             return ""
         return self ._table_row_name (table ,row )
 
-    def _populate_interpreter_table (self ,table ,items ,default_name ):
-        self ._syncing_tables =True 
-        try :
-            table .setRowCount (0 )
-            for item in items :
-                nm =str (item .get ("name","")).strip ()
-                p =str (item .get ("path","")).strip ()
-                if not nm and not p :
-                    continue 
-                row =table .rowCount ()
-                table .insertRow (row )
-                table .setItem (row ,0 ,QTableWidgetItem (nm ))
-                table .setItem (row ,1 ,QTableWidgetItem (p ))
-                chk_item =QTableWidgetItem ()
-                chk_item .setFlags (Qt .ItemFlag .ItemIsUserCheckable |Qt .ItemFlag .ItemIsEnabled |Qt .ItemFlag .ItemIsSelectable )
-                chk_item .setCheckState (Qt .CheckState .Checked if nm ==default_name else Qt .CheckState .Unchecked )
-                table .setItem (row ,2 ,chk_item )
-        finally :
-            self ._syncing_tables =False 
+    def _populate_interpreter_table (self ,table ,items ):
+        table .setRowCount (0 )
+        for item in items :
+            nm =str (item .get ("name","")).strip ()
+            p =str (item .get ("path","")).strip ()
+            if not nm and not p :
+                continue 
+            row =table .rowCount ()
+            table .insertRow (row )
+            table .setItem (row ,0 ,QTableWidgetItem (nm ))
+            table .setItem (row ,1 ,QTableWidgetItem (p ))
 
     def _refresh_interpreter_tables (self ):
-        self ._populate_interpreter_table (self .table_py ,self .cli_python_list ,self ._default_python )
-        self ._populate_interpreter_table (self .table_java ,self .cli_java_list ,self ._default_java )
-
-    def _sync_default_checkstates (self ):
-        self ._syncing_tables =True 
-        try :
-            self ._sync_table_checkstates (self .table_py ,self ._default_python )
-            self ._sync_table_checkstates (self .table_java ,self ._default_java )
-        finally :
-            self ._syncing_tables =False 
-
-    def _sync_table_checkstates (self ,table ,default_name ):
-        for row in range (table .rowCount ()):
-            nm =self ._table_row_name (table ,row )
-            chk_item =table .item (row ,2 )
-            if chk_item is not None :
-                chk_item .setCheckState (Qt .CheckState .Checked if nm ==default_name else Qt .CheckState .Unchecked )
-
-    def _on_table_item_changed (self ,item ):
-        if getattr (self ,"_syncing_tables",False ):
-            return 
-        table =item .tableWidget ()
-        if table is None :
-            return 
-        if item .column ()!=2 :
-            return 
-        is_py =(table is self .table_py )
-        name =self ._table_row_name (table ,item .row ())
-        if not name :
-            return 
-        if item .checkState ()==Qt .CheckState .Checked :
-            if is_py :
-                self ._default_python =name 
-            else :
-                self ._default_java =name 
-        else :
-            if is_py :
-                if self ._default_python ==name :
-                    self ._default_python =""
-            else :
-                if self ._default_java ==name :
-                    self ._default_java =""
-        self ._sync_default_checkstates ()
+        self ._populate_interpreter_table (self .table_py ,self .cli_python_list )
+        self ._populate_interpreter_table (self .table_java ,self .cli_java_list )
 
     def add_cli_python (self ):
         name ,ok =QInputDialog .getText (self ,"名称","Python解释器名称：")
@@ -1413,8 +1356,6 @@ class SettingsDialog (QDialog ):
             QMessageBox .warning (self ,"错误","没有选中要删除的Python解释器")
             return 
         self .cli_python_list =[x for x in self .cli_python_list if str (x .get ("name",""))!=str (nm )]
-        if self ._default_python ==nm :
-            self ._default_python =""
         self ._refresh_interpreter_tables ()
 
     def add_cli_java (self ):
@@ -1448,8 +1389,6 @@ class SettingsDialog (QDialog ):
             QMessageBox .warning (self ,"错误","没有选中要删除的Java解释器")
             return 
         self .cli_java_list =[x for x in self .cli_java_list if str (x .get ("name",""))!=str (nm )]
-        if self ._default_java ==nm :
-            self ._default_java =""
         self ._refresh_interpreter_tables ()
 
     def _on_health_check (self ):
@@ -1515,15 +1454,6 @@ class SettingsDialog (QDialog ):
 
         new_s ["cli_python_interpreters"]=list (self .cli_python_list )
         new_s ["cli_java_interpreters"]=list (self .cli_java_list )
-        new_s ["cli_default_python"]=str (self ._default_python or "").strip ()
-        new_s ["cli_default_java"]=str (self ._default_java or "").strip ()
-
-        if new_s ["cli_default_python"]:
-            if not any (str (x .get ("name",""))==new_s ["cli_default_python"]for x in new_s ["cli_python_interpreters"]):
-                new_s ["cli_default_python"]=""
-        if new_s ["cli_default_java"]:
-            if not any (str (x .get ("name",""))==new_s ["cli_default_java"]for x in new_s ["cli_java_interpreters"]):
-                new_s ["cli_default_java"]=""
 
         if theme_key =="custom_image":
             bg_path =self .ed_bg_path .text ().strip ()

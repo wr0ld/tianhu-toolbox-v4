@@ -19,8 +19,6 @@
       "path": "E:/jdk-24/bin"
     }
   ],
-  "cli_default_python": "",
-  "cli_default_java": "",
   "favorite_tools": [
     [
       "UploadRanger",
@@ -141,6 +139,26 @@
   ],
   "recent_tools": [
     [
+      "jwt_GUI",
+      "我的"
+    ],
+    [
+      "jingren",
+      "我的"
+    ],
+    [
+      "crawlergo",
+      "我的"
+    ],
+    [
+      "JNDI-Injection-Exploit-1.0-SNAPSHOT-all-",
+      "我的"
+    ],
+    [
+      "nmap",
+      "我的"
+    ],
+    [
       "灯塔 plus",
       "我的"
     ],
@@ -159,29 +177,9 @@
     [
       "XXL-JOB漏洞利用工具",
       "漏洞扫描与利用工具"
-    ],
-    [
-      "xxl-jobExploitGUI_v1.0",
-      "VulToolsKit"
-    ],
-    [
-      "JDumpSpiderGUI-1.0-SNAPSHOT-full",
-      "我的"
-    ],
-    [
-      "Nacos综合利用工具",
-      "漏洞扫描与利用工具"
-    ],
-    [
-      "Redis-Tools",
-      "其他工具"
-    ],
-    [
-      "Counter-Strike",
-      "后渗透工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAACQAAAAfQAABpAAAANzAAAAkAAAAH0AAAaQAAADcwAAAAAAAAAABqsAAACQAAAAfQAABpAAAANz",
+  "main_window_geometry": "AdnQywADAAD///91AAAArgAABXUAAAOk////dQAAAK4AAAV1AAADpAAAAAAAAAAABqv///91AAAArgAABXUAAAOk",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
@@ -190,6 +188,8 @@
   "terminal_save_prompt": "prompt_if_content",
   "terminal_default_shell": "cmd",
   "terminal_font_size": 10,
+  "cli_default_python": "",
+  "cli_default_java": "",
   "open_log_hotkey": "Ctrl+L",
   "collapsed_categories": [
     "网页工具"

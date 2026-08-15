@@ -340,8 +340,6 @@ DEFAULT_SETTINGS ={
 "display_mode":"scroll",
 "cli_python_interpreters":[],
 "cli_java_interpreters":[],
-"cli_default_python":"",
-"cli_default_java":"",
 "favorite_tools":[],
 "recent_tools":[],
 "main_window_geometry":None ,
@@ -404,10 +402,6 @@ def load_settings ():
                 final_cfg ["cli_python_interpreters"]=[]
             if "cli_java_interpreters"not in final_cfg :
                 final_cfg ["cli_java_interpreters"]=[]
-            if "cli_default_python"not in final_cfg :
-                final_cfg ["cli_default_python"]=""
-            if "cli_default_java"not in final_cfg :
-                final_cfg ["cli_default_java"]=""
 
 
             legacy =final_cfg .get ("custom_interpreters",None )

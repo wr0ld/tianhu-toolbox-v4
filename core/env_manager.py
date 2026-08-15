@@ -75,38 +75,6 @@ class EnvManager :
                 continue 
         return None 
 
-    def _get_cli_default_python_exe (self )->Optional [str ]:
-        settings =self ._get_settings ()
-        name =str (settings .get ("cli_default_python","")).strip ()
-        if name :
-            item =self ._find_cli_interpreter ("python",name )
-            if item :
-                p =self ._resolve_path (item .get ("path",""))
-                if p and os .path .isfile (p )and os .path .exists (p ):
-                    return p 
-        return None 
-
-    def _get_cli_default_java_home (self )->Optional [str ]:
-        settings =self ._get_settings ()
-        name =str (settings .get ("cli_default_java","")).strip ()
-        if name :
-            item =self ._find_cli_interpreter ("java",name )
-            if item :
-                p =self ._resolve_path (item .get ("path",""))
-                if not p :
-                    return None 
-
-                if os .path .basename (p ).lower ()=="bin":
-                    p =os .path .dirname (p )
-
-                if os .path .exists (os .path .join (p ,"bin","java.exe")):
-                    return p 
-                if os .path .exists (os .path .join (p ,"java.exe")):
-                    return os .path .dirname (p )
-                if os .path .isdir (p )and os .path .exists (p ):
-                    return p 
-        return None 
-
     def get_python_path (self )->str :
         settings =self ._get_settings ()
         custom =self ._resolve_path (settings .get ("python_path",""))
@@ -180,12 +148,6 @@ class EnvManager :
         except Exception :
             pass 
 
-        if env_type =="cli_default":
-            env_type ="all"
-            cli_py =cli_py or self ._get_cli_default_python_exe ()
-            cli_java =cli_java or self ._get_cli_default_java_home ()
-
-
         if env_type in ["python","all"]:
             py_exe =cli_py or self .get_python_path ()
 
@@ -251,63 +213,6 @@ class EnvManager :
             env ["PATH"]=os .pathsep .join (unique_paths )+os .pathsep +original_path 
 
         return env 
-
-    def _build_cmd_env_prefix (self ,env :Dict [str ,str ])->str :
-        try :
-            parts =[]
-            for k in ("PATH","JAVA_HOME","PYTHONHOME"):
-                v =env .get (k )
-                if v is None :
-                    continue 
-                try :
-                    v =str (v )
-                except Exception :
-                    continue 
-                v =v .replace ('"','""')
-                parts .append (f'set "{k }={v }"')
-            if not parts :
-                return ""
-            return " && ".join (parts )+" && "
-        except Exception :
-            return ""
-
-    def open_cmd (self ,cwd :str ,env_type ="all"):
-        env =self .get_injected_env (env_type )
-        if not cwd or not os .path .exists (cwd ):
-            cwd =self .base_dir 
-
-        if sys .platform .startswith ("win"):
-            creationflags =getattr (subprocess ,"CREATE_NEW_CONSOLE",0 )
-            title =f"TH-Tools Environment ({env_type})"
-            init_cmd =f'title {title} && echo [TH-Tools] Environment Injected Successfully! && echo.'
-            subprocess .Popen (
-            ["cmd.exe","/k",init_cmd ],
-            shell =False ,
-            cwd =cwd ,
-            env =env ,
-            creationflags =creationflags ,
-            )
-
-    def open_powershell (self ,cwd :str ,env_type ="all"):
-        env =self .get_injected_env (env_type )
-        if not cwd or not os .path .exists (cwd ):
-            cwd =self .base_dir 
-
-        if sys .platform .startswith ("win"):
-            creationflags =getattr (subprocess ,"CREATE_NEW_CONSOLE",0 )
-            title =f"TH-Tools PowerShell ({env_type})"
-            ps_cmd =(
-            f"$host.UI.RawUI.WindowTitle = '{title}'; "
-            f"Write-Host '[TH-Tools] Environment Injected [{env_type}]' -ForegroundColor Green; "
-            f"Write-Host 'Path modified to prioritize built-in tools.' -ForegroundColor Gray"
-            )
-            subprocess .Popen (
-            ["powershell.exe","-NoExit","-Command",ps_cmd ],
-            shell =False ,
-            cwd =cwd ,
-            env =env ,
-            creationflags =creationflags ,
-            )
 
     def identify_version (self ,path :str )->str :
         if not path or not os .path .exists (path ):
