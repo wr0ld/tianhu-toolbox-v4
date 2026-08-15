@@ -1039,8 +1039,6 @@ class SettingsDialog (QDialog ):
         lay .setSpacing (12 )
         lay .setContentsMargins (10 ,10 ,10 ,10 )
 
-        lay .addWidget (QLabel ("命令行默认调用(程序内部打开CMD/PowerShell后生效):"))
-
         self .cli_python_list =list (SETTINGS .get ("cli_python_interpreters",[])or [])
         self .cli_java_list =list (SETTINGS .get ("cli_java_interpreters",[])or [])
 
@@ -1279,6 +1277,7 @@ class SettingsDialog (QDialog ):
         table .setSelectionMode (QAbstractItemView .SelectionMode .SingleSelection )
         table .setEditTriggers (QAbstractItemView .EditTrigger .NoEditTriggers )
         table .verticalHeader () .setVisible (False )
+        table .horizontalHeader () .setVisible (False )
         table .setShowGrid (False )
         table .setAlternatingRowColors (True )
         table .horizontalHeader () .setStretchLastSection (True )
@@ -1355,6 +1354,13 @@ class SettingsDialog (QDialog ):
         if not nm :
             QMessageBox .warning (self ,"错误","没有选中要删除的Python解释器")
             return 
+        msg =QMessageBox (self )
+        msg .setWindowTitle ("确认删除")
+        msg .setIcon (QMessageBox .Icon .Question )
+        msg .setText (f"确定删除Python解释器 '{nm}' 吗？")
+        msg .setStandardButtons (QMessageBox .StandardButton .Yes |QMessageBox .StandardButton .No )
+        if msg .exec ()!=QMessageBox .StandardButton .Yes :
+            return 
         self .cli_python_list =[x for x in self .cli_python_list if str (x .get ("name",""))!=str (nm )]
         self ._refresh_interpreter_tables ()
 
@@ -1387,6 +1393,13 @@ class SettingsDialog (QDialog ):
         nm =self ._selected_interpreter_name (self .table_java )
         if not nm :
             QMessageBox .warning (self ,"错误","没有选中要删除的Java解释器")
+            return 
+        msg =QMessageBox (self )
+        msg .setWindowTitle ("确认删除")
+        msg .setIcon (QMessageBox .Icon .Question )
+        msg .setText (f"确定删除Java解释器 '{nm}' 吗？")
+        msg .setStandardButtons (QMessageBox .StandardButton .Yes |QMessageBox .StandardButton .No )
+        if msg .exec ()!=QMessageBox .StandardButton .Yes :
             return 
         self .cli_java_list =[x for x in self .cli_java_list if str (x .get ("name",""))!=str (nm )]
         self ._refresh_interpreter_tables ()

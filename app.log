@@ -994,3 +994,5 @@ NameError: name 'QStyleOptionViewItem' is not defined
 2026-08-16 04:39:59,925 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/other/jwt_GUI/jwt_GUI.exe" 
 2026-08-16 04:40:07,138 - INFO - [运行工具] "E:\ONE-FOX-toolsV4.0\Java_path\Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/VulToolsKit/Thinkphp综合漏洞利用工具/ThinkphpGUI-1.3-SNAPSHOT.jar" 
 
+
+
