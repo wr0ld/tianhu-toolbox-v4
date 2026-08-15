@@ -373,7 +373,7 @@ def _probe_existing (port :int )->bool :
 
     try :
         s =socket .socket (socket .AF_INET ,socket .SOCK_STREAM )
-        s .settimeout (1.0 )
+        s .settimeout (0.2 )
         s .connect (("127.0.0.1",port ))
         s .sendall (_LOCK_MAGIC )
         resp =s .recv (len (_LOCK_RESPONSE ))
