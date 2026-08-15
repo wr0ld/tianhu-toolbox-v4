@@ -1197,24 +1197,8 @@ class MainWindow (QMainWindow ):
         diag .exec ()
 
     def on_settings_changed (self ,new_s ):
-        old_exit_mode =SETTINGS .get ("exit_mode","ask")
-        new_exit_mode =new_s .get ("exit_mode","ask")
-
         SETTINGS .clear ()
         SETTINGS .update (new_s )
-
-        if old_exit_mode !=new_exit_mode :
-            msg =QMessageBox (self )
-            msg .setWindowTitle ("重启确认")
-            msg .setIcon (QMessageBox .Icon .Information )
-            msg .setText ("退出模式已更改，需要重启才能生效。程序将立即重启。")
-            ok_btn =msg .addButton ("确定",QMessageBox .ButtonRole .AcceptRole )
-            ok_btn .setObjectName ("dialogBtn")
-            msg .setDefaultButton (ok_btn )
-            msg .exec ()
-            self .restart_application ()
-            return 
-
         self .apply_theme ()
         self .update_tool_grid ()
         self .refresh_grid_layout ()

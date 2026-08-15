@@ -881,22 +881,6 @@ class SettingsDialog (QDialog ):
         lay .setSpacing (12 )
         lay .setContentsMargins (10 ,10 ,10 ,10 )
 
-        self .chk_confirm =QCheckBox ("退出时确认对话框")
-        self .chk_confirm .setChecked (SETTINGS .get ("confirm_exit",True ))
-        lay .addWidget (self .chk_confirm )
-
-        lay .addWidget (QLabel ("退出模式:"))
-        self .cb_exit =QComboBox ()
-        self .cb_exit .addItems (["每次询问","最小化到托盘","直接退出"])
-        cc =SETTINGS .get ("exit_mode","ask")
-        if cc =="tray":
-            self .cb_exit .setCurrentText ("最小化到托盘")
-        elif cc =="quit":
-            self .cb_exit .setCurrentText ("直接退出")
-        else :
-            self .cb_exit .setCurrentText ("每次询问")
-        lay .addWidget (self .cb_exit )
-
         lay .addWidget (QLabel (""))
         health_row =QHBoxLayout ()
         health_row .addWidget (QLabel ("工具健康检查:"))
@@ -1171,14 +1155,6 @@ class SettingsDialog (QDialog ):
         msg .setStandardButtons (QMessageBox .StandardButton .Yes |QMessageBox .StandardButton .No )
         r =msg .exec ()
         if r ==QMessageBox .StandardButton .Yes :
-            self .chk_confirm .setChecked (DEFAULT_SETTINGS ["confirm_exit"])
-            if DEFAULT_SETTINGS ["exit_mode"]=="tray":
-                self .cb_exit .setCurrentText ("最小化到托盘")
-            elif DEFAULT_SETTINGS ["exit_mode"]=="quit":
-                self .cb_exit .setCurrentText ("直接退出")
-            else :
-                self .cb_exit .setCurrentText ("每次询问")
-
             self .ed_py .setText (DEFAULT_SETTINGS ["python_path"])
             self .ed_j8 .setText (DEFAULT_SETTINGS ["java8_path"])
             self .ed_j11 .setText (DEFAULT_SETTINGS ["java11_path"])
@@ -1351,16 +1327,7 @@ class SettingsDialog (QDialog ):
     def save_settings (self ):
         from config import SETTINGS ,save_settings
 
-        exit_map ={
-        "每次询问":"ask",
-        "最小化到托盘":"tray",
-        "直接退出":"quit"
-        }
-        ex =exit_map .get (self .cb_exit .currentText (),"ask")
-
         new_s =dict (SETTINGS )
-        new_s ["confirm_exit"]=self .chk_confirm .isChecked ()
-        new_s ["exit_mode"]=ex 
         new_s ["python_path"]=self .ed_py .text ().strip ()
         new_s ["java8_path"]=self .ed_j8 .text ().strip ()
         new_s ["java11_path"]=self .ed_j11 .text ().strip ()

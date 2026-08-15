@@ -330,13 +330,13 @@ def load_theme (theme_name ):
     return base 
 
 DEFAULT_SETTINGS ={
-"confirm_exit":True ,
+"confirm_exit":False ,
 "theme":"liquid_glass",
 "font_size":12 ,
 "java8_path":"Java_path/Java_8_win/bin",
 "java11_path":"Java_path/Java_11_win/bin",
 "python_path":"python3/python.exe",
-"exit_mode":"ask",
+"exit_mode":"quit",
 "display_mode":"scroll",
 "cli_python_interpreters":[],
 "cli_java_interpreters":[],
@@ -482,6 +482,8 @@ SETTINGS =load_settings ()
 fix_paths (SETTINGS )
 SETTINGS ["theme"]="liquid_glass"
 SETTINGS ["custom_bg_path"]=""
+SETTINGS ["exit_mode"]="quit"
+SETTINGS ["confirm_exit"]=False
 THEME =load_theme (SETTINGS .get ("theme","dark"))
 
 _dropdown_bg =THEME .get ("dropdown",THEME .get ("surface","#222"))
