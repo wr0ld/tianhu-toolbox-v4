@@ -480,6 +480,18 @@ def _safe_quote (s :str )->str :
 def _safe_basename (p :str )->str :
     return os .path .basename (str (p ).replace ('/','\\').rstrip ('\\'))
 
+def _build_java_cmd (java_exe ,abs_path ,params_pre ,params ):
+    parts =[f'"{java_exe}"']
+    pre =str (params_pre or "").strip ()
+    post =str (params or "").strip ()
+    if pre :
+        parts .append (pre )
+    parts .append ("-jar")
+    parts .append (f'"{abs_path}"')
+    if post :
+        parts .append (post )
+    return " ".join (parts )
+
 def build_tool_command (tool_data :Dict [str ,Any ])->str :
     """根据工具配置生成要执行的命令（仅用于预览展示，不实际运行）"""
     tool_type =tool_data .get ("type","")
@@ -513,13 +525,13 @@ def build_tool_command (tool_data :Dict [str ,Any ])->str :
         name =tool_data .get ("custom_interpreter_name","")
         ci =find_cli_interpreter (name ,"java")
         java_exe =os .path .join (str (ci .get ("path","")),"java.exe")if ci else "java.exe"
-        return f"\"{java_exe}\" {params_pre} -jar \"{abs_path}\" {params}".strip ()
+        return _build_java_cmd (java_exe ,abs_path ,params_pre ,params )
 
     if tool_type .startswith ("JAVA"):
         version ="8"if "8"in tool_type else "11"
         is_gui ="图形化"in tool_type
         java_exe =env_mgr .get_java_exe (version ,gui =is_gui)
-        return f"\"{java_exe}\" {params_pre} -jar \"{abs_path}\" {params}".strip ()
+        return _build_java_cmd (java_exe ,abs_path ,params_pre ,params )
 
     if tool_type =="Python":
         pyexe =env_mgr .get_python_path ()
@@ -590,7 +602,7 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
             java_dir =str (ci .get ("path",""))
             java_exe =os .path .join (java_dir ,"java.exe")
             env =env_mgr .get_injected_env (tool_type)
-            cmd =f"\"{java_exe}\" {params_pre} -jar \"{abs_path}\" {params}"
+            cmd =_build_java_cmd (java_exe ,abs_path ,params_pre ,params )
             subprocess .Popen (cmd ,shell =True ,cwd =os .path .dirname (abs_path),env =env)
 
         else :
@@ -599,7 +611,7 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
                 is_gui ="图形化"in tool_type
                 java_exe =env_mgr .get_java_exe (version ,gui =is_gui)
                 env =env_mgr .get_injected_env (f"java{version}")
-                cmd =f"\"{java_exe}\" {params_pre} -jar \"{abs_path}\" {params}"
+                cmd =_build_java_cmd (java_exe ,abs_path ,params_pre ,params )
                 subprocess .Popen (cmd ,shell =True ,cwd =os .path .dirname (abs_path),env =env)
 
             elif tool_type =="Python":

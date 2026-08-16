@@ -216,3 +216,30 @@
 --------------------------------------------------------
 2026-08-17 02:54:46  [程序启动]
 --------------------------------------------------------
+
+--------------------------------------------------------
+2026-08-17 02:57:59  [程序启动]
+--------------------------------------------------------
+2026-08-17 02:58:43,413 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_scan/dddd" && "dddd2.exe" -h"
+
+
+========================================================
+2026-08-17 03:04:09  [程序启动]
+========================================================
+
+2026-08-17 03:04:19,927 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/nmap" && "nmap.exe" "
+
+
+========================================================
+2026-08-17 03:04:34  [程序启动]
+========================================================
+
+
+2026-08-17 03:06:23,066 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/redis-rogue-server/redis.exe" 
+2026-08-17 03:06:30,145 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/gui_shouji/oneforall" && "E:/ONE-FOX-toolsV4.0/python3/python.exe"  "oneforall.py" "
+
+
+
+2026-08-17 03:07:05,301 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/subfinder_2.14.0_windows_amd64" && "subfinder.exe" "
+
+2026-08-17 03:07:22,725 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/subfinder_2.14.0_windows_amd64" && "subfinder.exe" "

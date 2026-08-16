@@ -135,8 +135,24 @@
   ],
   "recent_tools": [
     [
+      "subfinder",
+      "我的"
+    ],
+    [
+      "OneForALL",
+      "信息收集工具"
+    ],
+    [
+      "Redis-Tools",
+      "其他工具"
+    ],
+    [
       "nmap",
       "我的"
+    ],
+    [
+      "DDDD漏扫工具",
+      "漏洞扫描与利用工具"
     ],
     [
       "2023HW",
@@ -157,25 +173,9 @@
     [
       "trafficeye",
       "我的"
-    ],
-    [
-      "JAVA框架漏洞利用工具探测工具",
-      "框架漏洞利用工具"
-    ],
-    [
-      "WeblogicTool_1.3",
-      "VulToolsKit"
-    ],
-    [
-      "WeblogicTool",
-      "框架漏洞利用工具"
-    ],
-    [
-      "YongYouNcTool-1.0",
-      "VulToolsKit"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAGIAAAAHgAABpUAAAMZAAABiAAAAB4AAAaVAAADGQAAAAAAAAAABqsAAAGIAAAAHgAABpUAAAMZ",
+  "main_window_geometry": "AdnQywADAAAAAAF9AAAAQAAABooAAAM7AAABfQAAAEAAAAaKAAADOwAAAAAAAAAABqsAAAF9AAAAQAAABooAAAM7",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABQ4AAAL8AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "sidebar_collapsed": true,
   "hide_web_tools": true,

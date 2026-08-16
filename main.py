@@ -1163,10 +1163,7 @@ class MainWindow (QMainWindow ):
 def _mark_log_session ():
     try :
         if os .path .exists (_LOG_PATH )and os .path .getsize (_LOG_PATH )>0 :
-            sep ="-"*56 
-            _file .stream .write ("\n"+sep +"\n")
-            _file .stream .write (time .strftime ("%Y-%m-%d %H:%M:%S")+"  [程序启动]\n")
-            _file .stream .write (sep +"\n")
+            _file .stream .write ("\n")
             _file .stream .flush ()
     except Exception :
         pass 
