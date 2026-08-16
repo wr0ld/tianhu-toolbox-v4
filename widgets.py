@@ -806,6 +806,10 @@ class SettingsDialog (QDialog ):
         lay .setSpacing (12 )
         lay .setContentsMargins (10 ,10 ,10 ,10 )
 
+        self .chk_hide_web =QCheckBox ("主界面不显示网页工具卡片")
+        self .chk_hide_web .setChecked (SETTINGS .get ("hide_web_tools",False ))
+        lay .addWidget (self .chk_hide_web )
+
         lay .addWidget (QLabel (""))
         health_row =QHBoxLayout ()
         health_row .addWidget (QLabel ("工具健康检查:"))
@@ -1186,6 +1190,7 @@ class SettingsDialog (QDialog ):
         from config import SETTINGS ,save_settings
 
         new_s =dict (SETTINGS )
+        new_s ["hide_web_tools"]=self .chk_hide_web .isChecked ()
         new_s ["python_path"]=self .ed_py .text ().strip ()
         new_s ["java8_path"]=self .ed_j8 .text ().strip ()
         new_s ["java11_path"]=self .ed_j11 .text ().strip ()

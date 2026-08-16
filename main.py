@@ -686,6 +686,9 @@ class MainWindow (QMainWindow ):
         if search_text :
             filtered =fuzzy_search (filtered ,search_text )
 
+        if SETTINGS .get ("hide_web_tools",False ):
+            filtered =[t for t in filtered if t .get ("type","")!="网页"]
+
         seen =set ()
         final =[]
         for t in filtered :

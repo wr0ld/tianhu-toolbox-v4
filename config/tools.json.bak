@@ -10,7 +10,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "中国蚁剑",
@@ -25,7 +26,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "冰蝎3",
@@ -38,7 +40,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "冰蝎3魔改版",
@@ -51,7 +54,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "天蝎",
@@ -64,7 +68,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "哥斯拉",
@@ -78,7 +83,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "哥斯拉特战版",
@@ -93,7 +99,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "游魂",
@@ -108,7 +115,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "冰蝎4",
@@ -123,7 +131,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "BurpSuit-Pro",
@@ -138,7 +147,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "北极熊综合利用工具",
@@ -151,7 +161,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "OneForALL",
@@ -166,7 +177,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "雪影信息收集工具",
@@ -181,7 +193,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "WebFinder_修改版",
@@ -194,7 +207,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "网络测绘平台综合收集工具",
@@ -207,7 +221,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "ENScan",
@@ -222,7 +237,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "御剑2珍藏版",
@@ -235,7 +251,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "PackerFuzzer信息探测工具",
@@ -249,7 +266,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "DirSearch目录探测工具",
@@ -262,7 +280,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "APP信息收集工具探测工具",
@@ -275,7 +294,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "GOlin等保核查工具",
@@ -288,7 +308,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Fiddler代理工具汉化版",
@@ -301,7 +322,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Proxifire代理工具汉化版",
@@ -314,7 +336,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Yakit",
@@ -329,7 +352,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "CobaltStrike 4.7",
@@ -343,7 +367,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "XieBro_C2",
@@ -358,7 +383,8 @@
     "custom_interpreter_type": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Counter-Strike",
@@ -372,7 +398,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Ladon_GUI",
@@ -385,7 +412,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Quasar最新内部成员汉化版远控",
@@ -398,7 +426,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Linux一键维权探测工具",
@@ -411,7 +440,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "内网横向移动利用工具",
@@ -424,7 +454,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "AD域自动化评估工具",
@@ -437,7 +468,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Vcenter综合渗适利用工具包",
@@ -450,7 +482,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "方程式工具包",
@@ -465,7 +498,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "XRAY图形化版工具",
@@ -478,7 +512,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Goby_v2.4.7_1400+Poc版本",
@@ -491,7 +526,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Fscan_V2.0",
@@ -504,7 +540,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "SQLMAP X Plus",
@@ -517,7 +554,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "超级SQL注入工具",
@@ -530,7 +568,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Gorailgun",
@@ -543,7 +582,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Kscan-1.85稳定版",
@@ -556,7 +596,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "棱镜X单兵作战系统",
@@ -569,7 +610,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "AniYa-GUl免杀框架",
@@ -582,7 +624,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "掩日红队免杀工具",
@@ -595,7 +638,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Webshell生成器",
@@ -609,7 +653,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "XG拟态WEBSHELL免杀工具",
@@ -624,7 +669,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "goon扫描探测爆破工具集",
@@ -637,7 +683,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Afrog可定制化漏洞扫描工具",
@@ -650,7 +697,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "蓝队分析辅助工具箱",
@@ -663,7 +711,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "AuxTools",
@@ -676,7 +725,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DecryptTools综合解密",
@@ -689,7 +739,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Mimikatz",
@@ -702,7 +753,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "OA漏洞检测利用工具",
@@ -715,7 +767,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "OA-Tools",
@@ -729,7 +782,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Gr33k漏洞利用工具集 Win",
@@ -742,7 +796,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "若依漏洞检测利用工具",
@@ -755,7 +810,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "OracleShell",
@@ -768,7 +824,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Postgresql一键利用工具",
@@ -781,7 +838,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Fastjson检测利用工具",
@@ -796,7 +854,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "nuclei漏洞扫描器",
@@ -810,7 +869,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Redis-Tools",
@@ -823,7 +883,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "MDUT增强版",
@@ -838,7 +899,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Liqun工具箱1.6.2",
@@ -852,7 +914,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Poc2jar",
@@ -865,7 +928,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "SpringBoot-Scan",
@@ -878,7 +942,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Httpx辅助工具",
@@ -893,7 +958,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Xscan",
@@ -906,7 +972,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "RequestTemplate",
@@ -919,7 +986,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "MYExploit",
@@ -932,7 +1000,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "加密解密小工具(非MD5版)",
@@ -945,7 +1014,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "杂项加密解密小工具(MD5版)",
@@ -958,7 +1028,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "IWannaGetAll",
@@ -972,7 +1043,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "AK SK利用工具(图形化版)",
@@ -985,7 +1057,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "AK SK利用工具",
@@ -1000,7 +1073,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "CF利用工具",
@@ -1013,7 +1087,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Ehole指纹识别工具魔改版",
@@ -1026,7 +1101,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Seay-Svn源代码泄露漏洞",
@@ -1039,7 +1115,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "TscanPlus",
@@ -1052,7 +1129,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "EZ扫描检测工具",
@@ -1065,7 +1143,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "0x7eTeamTools",
@@ -1078,7 +1157,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "API渗透利用工具",
@@ -1091,7 +1171,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "API接管利用工具",
@@ -1104,7 +1185,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "密探渗透测试工具",
@@ -1117,7 +1199,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "PPPScan",
@@ -1130,7 +1213,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "PotatoTool",
@@ -1143,7 +1227,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Nacos综合利用工具",
@@ -1158,7 +1243,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Jeecg系列综合利用工具",
@@ -1171,7 +1257,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Jenkins综合利用工具",
@@ -1184,7 +1271,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "XXL-JOB漏洞利用工具",
@@ -1197,7 +1285,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "SpringBootVul-GUI",
@@ -1210,7 +1299,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "heapdump解密工具",
@@ -1225,7 +1315,8 @@
     "custom_interpreter_type": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Shiro_Attack",
@@ -1238,7 +1329,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Shiro反序列化利用工具",
@@ -1253,7 +1345,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Thinkphp漏洞利用工具",
@@ -1266,7 +1359,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "WeblogicTool",
@@ -1279,20 +1373,23 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "JAVA框架漏洞利用工具探测工具",
     "category": "框架漏洞利用工具",
-    "type": "JAVA8(图形化)",
+    "type": "JAVA8",
     "description": "",
     "weight": 0.0,
+    "tags": [],
     "path": "/tools/gui_scan/struts2/hyacinth.jar",
     "params": "",
+    "params_pre": "",
     "url": "",
-    "tags": [],
-    "group": "",
-    "_health": "ok"
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
   },
   {
     "name": "Struts2 全版本漏洞检测工具",
@@ -1305,7 +1402,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "JBoss漏洞检测利用工具",
@@ -1318,7 +1416,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "JNDI利用工具",
@@ -1333,7 +1432,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "FOFA",
@@ -1346,7 +1446,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "鹰图Hunter",
@@ -1359,7 +1460,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "360Quake",
@@ -1372,7 +1474,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Zoomeye(钟馗之眼)",
@@ -1385,7 +1488,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Shodan",
@@ -1398,7 +1502,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "零零信安",
@@ -1411,7 +1516,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DayDayMap",
@@ -1424,7 +1530,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "微步资产测绘平台",
@@ -1437,7 +1544,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DNSLOG",
@@ -1450,7 +1558,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DNSLOG-PW",
@@ -1463,7 +1572,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "CEYE",
@@ -1476,7 +1586,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DNSLOG-DIG",
@@ -1489,7 +1600,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DNSLOG-EYES",
@@ -1502,7 +1614,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DNSLOG-CallBack-Red",
@@ -1515,7 +1628,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "GitHub",
@@ -1528,7 +1642,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Gitee",
@@ -1541,7 +1656,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "CMD5",
@@ -1554,7 +1670,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "SOMD5",
@@ -1567,7 +1684,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "MD5解密聚合平台",
@@ -1580,7 +1698,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "IP138",
@@ -1593,7 +1712,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "站长工具",
@@ -1606,7 +1726,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "ICP备案查询官网",
@@ -1619,7 +1740,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "企查查",
@@ -1632,7 +1754,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "爱企查",
@@ -1645,7 +1768,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "天眼查",
@@ -1658,7 +1782,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "七麦",
@@ -1671,7 +1796,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "小蓝本",
@@ -1684,7 +1810,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "凌风云-云盘搜索",
@@ -1697,7 +1824,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "棱角社区工具库",
@@ -1710,7 +1838,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "提权辅助查询网",
@@ -1723,7 +1852,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "多功能实用小工具",
@@ -1736,7 +1866,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "微步情报社区",
@@ -1749,7 +1880,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "奇安信威胁情报",
@@ -1762,7 +1894,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "安恒威胁情报",
@@ -1775,7 +1908,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "360威胁情报",
@@ -1788,7 +1922,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "微步云沙箱",
@@ -1801,7 +1936,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "安恒云沙箱",
@@ -1814,7 +1950,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "360云沙箱",
@@ -1827,7 +1964,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "VT云沙箱",
@@ -1840,7 +1978,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "腾讯哈勃云沙箱",
@@ -1853,7 +1992,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "天穹动态分析云沙箱",
@@ -1866,7 +2006,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "PeiQi文库",
@@ -1879,7 +2020,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Morker文库",
@@ -1892,7 +2034,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "狼组知识库",
@@ -1905,7 +2048,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "云安全文库",
@@ -1918,7 +2062,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "暗月知识中心",
@@ -1931,20 +2076,22 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "小迪渗透",
     "category": "网页工具",
     "type": "网页",
     "description": "",
-    "weight": 0.0,
+    "weight": 1.0,
     "url": "http://www.xiaodi8.com/",
     "path": "",
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Tools论坛",
@@ -1957,7 +2104,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "棱角社区",
@@ -1970,7 +2118,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "CSDN",
@@ -1983,7 +2132,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "博客园",
@@ -1996,7 +2146,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "先知社区",
@@ -2009,7 +2160,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "FreeBuf",
@@ -2022,7 +2174,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "奇安信攻防社区",
@@ -2035,7 +2188,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "安全客",
@@ -2048,7 +2202,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "I春秋",
@@ -2061,7 +2216,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "漏洞银行",
@@ -2074,7 +2230,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "洞见网安",
@@ -2087,7 +2244,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "阿里云漏洞库",
@@ -2100,7 +2258,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "SeeBug",
@@ -2113,7 +2272,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "安全牛",
@@ -2126,7 +2286,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "安全内参",
@@ -2139,7 +2300,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "安全脉搏",
@@ -2152,7 +2314,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "SecWiKi",
@@ -2165,7 +2328,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "CN-SEC中文网",
@@ -2178,7 +2342,8 @@
     "params": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Clash代理工具",
@@ -2193,7 +2358,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "V2Ray代理工具",
@@ -2206,7 +2372,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "FinalShell连接工具",
@@ -2220,7 +2387,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "HeavenlyBypassAV",
@@ -2233,7 +2401,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Serein",
@@ -2246,7 +2415,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "TideFinger指纹识别工具",
@@ -2259,7 +2429,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DDDD漏扫工具",
@@ -2274,7 +2445,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "WExploit漏洞利用工具",
@@ -2287,7 +2459,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "FoxBypass分离免杀工具",
@@ -2300,7 +2473,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DeepSeekSelfTools",
@@ -2315,7 +2489,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "DockerApi未授权利用工具",
@@ -2328,7 +2503,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "P1finger指纹识别",
@@ -2341,7 +2517,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Rscan",
@@ -2354,7 +2531,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Week-Passwd",
@@ -2369,7 +2547,8 @@
     "custom_interpreter_type": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "若依检测利用Tools",
@@ -2384,7 +2563,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "APP检测利用工具",
@@ -2397,7 +2577,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "MaLoader免杀工具",
@@ -2410,7 +2591,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Frp",
@@ -2425,7 +2607,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Suo5",
@@ -2438,7 +2621,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "SQLMAP-GUI",
@@ -2453,7 +2637,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Reqable小黄鸟-Httpcanary抓包工具",
@@ -2468,7 +2653,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Neo-reGeorg",
@@ -2481,7 +2667,8 @@
     "url": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "MDUT",
@@ -2496,7 +2683,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "VUE框架扫描工具",
@@ -2511,7 +2699,8 @@
     "custom_interpreter_type": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Thinkphp利用工具",
@@ -2526,7 +2715,8 @@
     "custom_interpreter_type": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "SharpScan",
@@ -2541,7 +2731,8 @@
     "custom_interpreter_type": "",
     "tags": [],
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "GoExec",
@@ -2556,7 +2747,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Fine",
@@ -2571,7 +2763,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "MFinder",
@@ -2586,7 +2779,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "VEO指纹识别工具",
@@ -2601,7 +2795,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "IP归属地查询",
@@ -2616,7 +2811,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "UploadRanger",
@@ -2631,7 +2827,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "JNDI-Injection-Exploit-1.0-SNAPSHOT-all",
@@ -2646,7 +2843,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JNDI-Injection-Exploit-Plus-2.5-SNAPSHOT-all",
@@ -2661,7 +2859,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "marshalsec-0.0.3-SNAPSHOT-all",
@@ -2676,14 +2875,15 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "jwt_GUI",
     "category": "我的",
     "type": "GUI应用",
     "description": "",
-    "weight": 0.0,
+    "weight": 1.0,
     "tags": [],
     "path": "/tools/other/jwt_GUI/jwt_GUI.exe",
     "params": "",
@@ -2691,7 +2891,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "ShiroExploit-1.0.2",
@@ -2706,7 +2907,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "shiro_attack-5.0.1-zulu-8-jfx",
@@ -2720,7 +2922,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "bp",
@@ -2735,7 +2938,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "jingren",
@@ -2750,7 +2954,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "EasyTools",
@@ -2764,7 +2969,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "TscanPlus_Win_Amd64",
@@ -2779,7 +2985,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "jmg-gui-1.0.9_250101",
@@ -2794,7 +3001,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Online_tools",
@@ -2809,7 +3017,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "woodpecker-framework.1.3.5",
@@ -2824,7 +3033,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "秋风AI代码审计个人版",
@@ -2839,7 +3049,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "trafficeye",
@@ -2854,7 +3065,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "unauthorized-tools-1.0.0",
@@ -2869,7 +3081,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Bu-40xbypass",
@@ -2884,7 +3097,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "YsoGUI-1.0.0",
@@ -2899,7 +3113,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "subfinder",
@@ -2914,7 +3129,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "nmap",
@@ -2929,7 +3145,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "SunnyNet",
@@ -2944,7 +3161,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "java-chains",
@@ -2959,14 +3177,15 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "AES-Encoder",
     "category": "免杀工具",
     "type": "批处理",
     "description": "amsi powershell 加密免杀",
-    "weight": 0.0,
+    "weight": 1.0,
     "tags": [],
     "path": "/tools/other/AES-Encoder-main/aes_tool.bat",
     "params": "",
@@ -2974,7 +3193,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "morelian",
@@ -2988,7 +3208,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "upx",
@@ -3003,7 +3224,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "pyinstxtractor",
@@ -3018,7 +3240,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "[随波逐流]CTF编码工具 V7.2 20260112",
@@ -3033,7 +3256,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Venom",
@@ -3048,7 +3272,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "Kunlun-Penetration-Testing-Platform-main",
@@ -3063,7 +3288,8 @@
     "custom_interpreter_name": "python3",
     "custom_interpreter_type": "python",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "ShadowScan",
@@ -3078,7 +3304,8 @@
     "custom_interpreter_name": "java21",
     "custom_interpreter_type": "java",
     "_health": "ok",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "云资产管理工具",
@@ -3093,7 +3320,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "CyberStrikeAI",
@@ -3108,7 +3336,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "ksubdomain",
@@ -3123,7 +3352,8 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": "",
-    "_health": "ok"
+    "_health": "ok",
+    "params_pre": ""
   },
   {
     "name": "BinarySpy",
@@ -3137,7 +3367,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "XTerminal",
@@ -3151,7 +3382,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "jeecg-exploit-scanner-4.3.0",
@@ -3165,7 +3397,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "memory-shell-detector-gui",
@@ -3179,7 +3412,8 @@
     "url": "",
     "custom_interpreter_name": "java21",
     "custom_interpreter_type": "java",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "sensitive-info-tool",
@@ -3193,7 +3427,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "crawlergo",
@@ -3207,7 +3442,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "DudeSuite",
@@ -3221,7 +3457,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "PyGlimmer",
@@ -3235,7 +3472,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "vshell",
@@ -3249,7 +3487,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "rscan_win64",
@@ -3263,7 +3502,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "灯塔 plus",
@@ -3277,7 +3517,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "MemShellParty",
@@ -3291,7 +3532,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Sign-Sacker-2.0",
@@ -3305,7 +3547,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Sign-Sacker-2.0.1",
@@ -3319,7 +3562,8 @@
     "url": "",
     "custom_interpreter_name": "python3",
     "custom_interpreter_type": "python",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Seay源代码审计系统",
@@ -3333,7 +3577,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "dirsearch_bypass403",
@@ -3347,7 +3592,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "k8s-pen-tool-1.0.0",
@@ -3361,7 +3607,8 @@
     "url": "",
     "custom_interpreter_name": "java21",
     "custom_interpreter_type": "java",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "easyshell",
@@ -3375,7 +3622,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "gowitness",
@@ -3389,7 +3637,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "ds_store_exp",
@@ -3403,7 +3652,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Rookie-修复版",
@@ -3417,7 +3667,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "HikvisionExploitGUI-windows",
@@ -3431,7 +3682,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JDumpSpider-1.1-SNAPSHOT-full",
@@ -3445,7 +3697,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "ActiveMQRCE",
@@ -3459,7 +3712,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "confluence_memshell-1.1-SNAPSHOT",
@@ -3473,7 +3727,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "DecryptToolsV2.4",
@@ -3487,7 +3742,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "GeoServerV1.2",
@@ -3501,7 +3757,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Rookie_Hikvison",
@@ -3515,7 +3772,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Ingram-sxt",
@@ -3529,7 +3787,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "hikvision漏洞利用工具",
@@ -3543,7 +3802,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "CVE-2021-36260",
@@ -3557,7 +3817,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "decrypt_configurationFile",
@@ -3571,7 +3832,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JavaJboss",
@@ -3585,7 +3847,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JBossExploit-v1.0",
@@ -3599,7 +3862,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Jeecg_Tools-1.0-java8",
@@ -3613,7 +3877,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "jeecgExploitss",
@@ -3627,7 +3892,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JenkinsExploitGUI_v1.0",
@@ -3641,7 +3907,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JenkinsExploit-GUI-1.3-SNAPSHOT",
@@ -3655,7 +3922,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "blackjump",
@@ -3669,7 +3937,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "NacosExploit",
@@ -3683,7 +3952,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "NacosExploit-1.0.1-SNAPSHOT-jar-with-dependencies",
@@ -3697,7 +3967,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "NacosExploitGUI_v4.0",
@@ -3711,21 +3982,23 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "YONYOU-TOOL-2.0.9",
     "category": "VulToolsKit",
     "type": "JAVA8",
     "description": "",
-    "weight": 0.0,
+    "weight": 1.0,
     "tags": [],
     "path": "/tools/other/VulToolsKit/OA综合漏洞利用工具/YONYOU-TOOL-2.0.9.jar",
     "params": "",
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "YongYouNcTool-1.0",
@@ -3739,7 +4012,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "TongdaTools",
@@ -3753,7 +4027,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Thelostworld_OA",
@@ -3767,7 +4042,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "MYExploit-",
@@ -3781,7 +4057,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "IWannaGetAll-v1.3.0",
@@ -3795,7 +4072,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Exp-Tools-1.2.7-encrypted",
@@ -3809,7 +4087,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "2023HW",
@@ -3823,7 +4102,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "weekoa",
@@ -3837,7 +4117,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "HVVExploitApply",
@@ -3851,7 +4132,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "apt-tools",
@@ -3865,7 +4147,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Ruoyi-All-1.0-SNAPSHOT",
@@ -3879,7 +4162,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "RuoYiExploitGUI_v1.0",
@@ -3893,7 +4177,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "FrChannel",
@@ -3907,7 +4192,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "FrChannelPlus",
@@ -3921,7 +4207,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "xxl-jobExploitGUI_v1.0",
@@ -3935,7 +4222,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "WeblogicTool_1.3",
@@ -3949,7 +4237,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Struts2漏洞检查工具2019版 V2.3",
@@ -3963,7 +4252,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "Struts2_19.32",
@@ -3977,7 +4267,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JDumpSpiderGUI-1.0-SNAPSHOT-full",
@@ -3991,7 +4282,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "ysoserial-all",
@@ -4005,7 +4297,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "ysoserial-0.0.6-SNAPSHOT-all",
@@ -4019,7 +4312,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JYso-1.3.3",
@@ -4033,7 +4327,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JNDI-Injection-Exploit-Plus-2.5-SNAPSHOT-all-",
@@ -4047,7 +4342,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JNDI-Injection-Exploit-1.0-SNAPSHOT-all-",
@@ -4061,7 +4357,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JenkinsExploitGUI_v1.0-",
@@ -4075,7 +4372,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "JenkinsExploit-GUI-1.3-SNAPSHOT-",
@@ -4089,7 +4387,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "ThinkphpGUI-1.3-SNAPSHOT",
@@ -4103,7 +4402,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "ThinkPHP",
@@ -4117,7 +4417,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "rexha",
@@ -4131,7 +4432,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "DahuaExploitGUI",
@@ -4145,7 +4447,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "API-T00L_v1.2",
@@ -4159,7 +4462,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "API-Explorer.v2.0.0",
@@ -4173,7 +4477,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "OSSFileBrowse-1.1-SNAPSHOT",
@@ -4187,7 +4492,8 @@
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
-    "group": ""
+    "group": "",
+    "params_pre": ""
   },
   {
     "name": "密探",
@@ -4198,6 +4504,22 @@
     "tags": [],
     "path": "E:\\密探\\mitan.exe",
     "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": "",
+    "params_pre": ""
+  },
+  {
+    "name": "双网卡路由工具",
+    "category": "我的",
+    "type": "GUI应用",
+    "description": "",
+    "weight": 2.0,
+    "tags": [],
+    "path": "E:\\tools\\双网卡路由工具\\dist\\双网卡路由工具.exe",
+    "params": "",
+    "params_pre": "",
     "url": "",
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",

@@ -345,6 +345,7 @@ DEFAULT_SETTINGS ={
 "main_window_geometry":None ,
 "main_window_state":None ,
 "sidebar_collapsed":False ,
+"hide_web_tools":False ,
 "auto_theme_mode":"manual",
 "custom_bg_path":"",
 "screenshot_hotkey":"",

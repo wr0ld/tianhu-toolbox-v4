@@ -73,10 +73,6 @@
       "框架漏洞利用工具"
     ],
     [
-      "jwt_GUI",
-      "我的"
-    ],
-    [
       "jmg-gui-1.0.9_250101",
       "我的"
     ],
@@ -91,10 +87,6 @@
     [
       "nmap",
       "我的"
-    ],
-    [
-      "AES-Encoder",
-      "免杀工具"
     ],
     [
       "morelian",
@@ -143,9 +135,37 @@
     [
       "TscanPlus",
       "漏洞扫描与利用工具"
+    ],
+    [
+      "YsoGUI-1.0.0",
+      "jndi"
     ]
   ],
   "recent_tools": [
+    [
+      "YsoGUI-1.0.0",
+      "jndi"
+    ],
+    [
+      "双网卡路由工具",
+      "我的"
+    ],
+    [
+      "小迪渗透",
+      "网页工具"
+    ],
+    [
+      "YONYOU-TOOL-2.0.9",
+      "VulToolsKit"
+    ],
+    [
+      "jwt_GUI",
+      "我的"
+    ],
+    [
+      "AES-Encoder",
+      "免杀工具"
+    ],
     [
       "哥斯拉",
       "WebShell管理工具"
@@ -161,35 +181,12 @@
     [
       "CMD5",
       "网页工具"
-    ],
-    [
-      "MDUT增强版",
-      "漏洞扫描与利用工具"
-    ],
-    [
-      "EveryThing",
-      "其他工具"
-    ],
-    [
-      "IWannaGetAll",
-      "漏洞扫描与利用工具"
-    ],
-    [
-      "JDumpSpiderGUI-1.0-SNAPSHOT-full",
-      "我的"
-    ],
-    [
-      "JDumpSpider-1.1-SNAPSHOT-full",
-      "我的"
-    ],
-    [
-      "密探",
-      "我的"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAABeAAAAdwAABWsAAANyAAAAXgAAAHcAAAVrAAADcgAAAAAAAAAABqsAAABeAAAAdwAABWsAAANy",
+  "main_window_geometry": "AdnQywADAAAAAABxAAAAxgAABX4AAAPBAAAAcQAAAMYAAAV+AAADwQAAAAAAAAAABqsAAABxAAAAxgAABX4AAAPB",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABQ4AAAL8AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "sidebar_collapsed": true,
+  "hide_web_tools": true,
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
   "screenshot_hotkey": "",
