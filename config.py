@@ -937,6 +937,8 @@ def load_tools ():
                     tool ["path"]=""
                 if "params"not in tool :
                     tool ["params"]=""
+                if "params_pre"not in tool :
+                    tool ["params_pre"]=""
                 if "url"not in tool :
                     tool ["url"]=""
                 if "description"not in tool :

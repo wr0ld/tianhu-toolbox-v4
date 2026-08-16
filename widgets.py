@@ -558,6 +558,14 @@ class ToolDialog (QDialog ):
             self .cb_cat .setCurrentText (self .tool_data ['category'])
         lay .addWidget (self .cb_cat )
 
+        self .lb_params_pre =QLabel ("前置参数(可选):")
+        lay .addWidget (self .lb_params_pre )
+        self .ed_params_pre =QLineEdit ()
+        self .ed_params_pre .setPlaceholderText ("Java: 插在 -jar 之前 / Python: 插在脚本之前")
+        if self .tool_data :
+            self .ed_params_pre .setText (self .tool_data .get ("params_pre",""))
+        lay .addWidget (self .ed_params_pre )
+
         lb_params =QLabel ("启动参数:")
         lay .addWidget (lb_params )
         self .ed_params =QLineEdit ()
@@ -603,6 +611,7 @@ class ToolDialog (QDialog ):
         self .cb_type .currentTextChanged .connect (self ._update_cmd_preview )
         self .ed_path .textChanged .connect (self ._update_cmd_preview )
         self .ed_params .textChanged .connect (self ._update_cmd_preview )
+        self .ed_params_pre .textChanged .connect (self ._update_cmd_preview )
         self .ed_url .textChanged .connect (self ._update_cmd_preview )
 
         hbtn =QHBoxLayout ()
@@ -663,6 +672,8 @@ class ToolDialog (QDialog ):
         self .ed_path .setVisible (not is_web )
         self .btn_browse .setVisible (not is_web )
         self .ed_params .setVisible (not is_web )
+        self .lb_params_pre .setVisible (not is_web )
+        self .ed_params_pre .setVisible (not is_web )
 
     def _update_cmd_preview (self ):
         try :
@@ -706,9 +717,11 @@ class ToolDialog (QDialog ):
             data ['url']=self .ed_url .text ().strip ()
             data ['path']=""
             data ['params']=""
+            data ['params_pre']=""
         else :
             data ['path']=self .ed_path .text ().strip ()
             data ['params']=self .ed_params .text ().strip ()
+            data ['params_pre']=self .ed_params_pre .text ().strip ()
             data ['url']=""
 
         data ['custom_interpreter_name']=""

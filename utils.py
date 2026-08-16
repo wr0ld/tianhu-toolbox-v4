@@ -485,6 +485,7 @@ def build_tool_command (tool_data :Dict [str ,Any ])->str :
     tool_type =tool_data .get ("type","")
     path =tool_data .get ("path","")
     params =tool_data .get ("params","")
+    params_pre =tool_data .get ("params_pre","")
     url =tool_data .get ("url","")
 
     base_path =os .path .abspath ("tools")
@@ -506,38 +507,40 @@ def build_tool_command (tool_data :Dict [str ,Any ])->str :
         name =tool_data .get ("custom_interpreter_name","")
         ci =find_cli_interpreter (name ,"python")
         pyexe =str (ci .get ("path",""))if ci else "python.exe"
-        return f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" \"{os.path.basename(abs_path)}\" {params}"'.strip ()
+        return f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" {params_pre} \"{os.path.basename(abs_path)}\" {params}"'.strip ()
 
     if tool_type .startswith ("Java("):
         name =tool_data .get ("custom_interpreter_name","")
         ci =find_cli_interpreter (name ,"java")
         java_exe =os .path .join (str (ci .get ("path","")),"java.exe")if ci else "java.exe"
-        return f"\"{java_exe}\" -jar \"{abs_path}\" {params}".strip ()
+        return f"\"{java_exe}\" {params_pre} -jar \"{abs_path}\" {params}".strip ()
 
     if tool_type .startswith ("JAVA"):
         version ="8"if "8"in tool_type else "11"
         is_gui ="图形化"in tool_type
         java_exe =env_mgr .get_java_exe (version ,gui =is_gui)
-        return f"\"{java_exe}\" -jar \"{abs_path}\" {params}".strip ()
+        return f"\"{java_exe}\" {params_pre} -jar \"{abs_path}\" {params}".strip ()
 
     if tool_type =="Python":
         pyexe =env_mgr .get_python_path ()
-        return f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" \"{os.path.basename(abs_path)}\" {params}"'
+        return f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" {params_pre} \"{os.path.basename(abs_path)}\" {params}"'
+
+    all_params =(" ".join ([params_pre ,params ])).strip ()
 
     if tool_type =="GUI应用":
-        return f"cmd /c start \"\" \"{abs_path}\" {params}".strip ()
+        return f"cmd /c start \"\" \"{abs_path}\" {all_params}".strip ()
 
     if tool_type =="命令行":
-        return f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {params}\""
+        return f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {all_params}\""
 
     if tool_type =="批处理":
         ext =os .path .splitext (abs_path)[1 ].lower ()
         if ext ==".vbs":
-            return f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && wscript \"{os.path.basename(abs_path)}\" {params}\""
-        return f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {params}\""
+            return f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && wscript \"{os.path.basename(abs_path)}\" {all_params}\""
+        return f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {all_params}\""
 
     if tool_type =="PowerShell":
-        return f"cmd /c start powershell -noexit -command \"cd '{os.path.dirname(abs_path)}'; .\\{os.path.basename(abs_path)} {params}\""
+        return f"cmd /c start powershell -noexit -command \"cd '{os.path.dirname(abs_path)}'; .\\{os.path.basename(abs_path)} {all_params}\""
 
     return ""
 
@@ -545,7 +548,9 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
     tool_type =tool_data .get ("type","")
     path =tool_data .get ("path","")
     params =tool_data .get ("params","")
+    params_pre =tool_data .get ("params_pre","")
     url =tool_data .get ("url","")
+    all_params =(" ".join ([params_pre ,params ])).strip ()
     cmd =""
 
     base_path =os .path .abspath ("tools")
@@ -574,7 +579,7 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
                 raise RuntimeError (f"未找到自定义Python解释器[{name}]的路径")
             pyexe =str (ci .get ("path",""))
             env =env_mgr .get_injected_env (tool_type)
-            cmd =f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" \"{os.path.basename(abs_path)}\" {params}"'
+            cmd =f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" {params_pre} \"{os.path.basename(abs_path)}\" {params}"'
             subprocess .Popen (cmd ,shell =True ,env =env)
 
         elif tool_type .startswith ("Java("):
@@ -585,7 +590,7 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
             java_dir =str (ci .get ("path",""))
             java_exe =os .path .join (java_dir ,"java.exe")
             env =env_mgr .get_injected_env (tool_type)
-            cmd =f"\"{java_exe}\" -jar \"{abs_path}\" {params}"
+            cmd =f"\"{java_exe}\" {params_pre} -jar \"{abs_path}\" {params}"
             subprocess .Popen (cmd ,shell =True ,cwd =os .path .dirname (abs_path),env =env)
 
         else :
@@ -594,37 +599,37 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
                 is_gui ="图形化"in tool_type
                 java_exe =env_mgr .get_java_exe (version ,gui =is_gui)
                 env =env_mgr .get_injected_env (f"java{version}")
-                cmd =f"\"{java_exe}\" -jar \"{abs_path}\" {params}"
+                cmd =f"\"{java_exe}\" {params_pre} -jar \"{abs_path}\" {params}"
                 subprocess .Popen (cmd ,shell =True ,cwd =os .path .dirname (abs_path),env =env)
 
             elif tool_type =="Python":
                 pyexe =env_mgr .get_python_path ()
                 env =env_mgr .get_injected_env ("python")
-                cmd =f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" \"{os.path.basename(abs_path)}\" {params}"'
+                cmd =f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" {params_pre} \"{os.path.basename(abs_path)}\" {params}"'
                 subprocess .Popen (cmd ,shell =True ,env =env)
 
             elif tool_type =="GUI应用":
                 env =env_mgr .get_injected_env ("all")
-                cmd =f"cmd /c start \"\" \"{abs_path}\" {params}"
+                cmd =f"cmd /c start \"\" \"{abs_path}\" {all_params}"
                 subprocess .Popen (cmd ,shell =True ,cwd =os .path .dirname (abs_path),env =env)
 
             elif tool_type =="命令行":
                 env =env_mgr .get_injected_env ("all")
-                cmd =f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {params}\""
+                cmd =f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {all_params}\""
                 subprocess .Popen (cmd ,shell =True ,env =env)
 
             elif tool_type =="批处理":
                 env =env_mgr .get_injected_env ("all")
                 ext =os .path .splitext (abs_path)[1 ].lower ()
                 if ext ==".vbs":
-                    cmd =f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && wscript \"{os.path.basename(abs_path)}\" {params}\""
+                    cmd =f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && wscript \"{os.path.basename(abs_path)}\" {all_params}\""
                 else :
-                    cmd =f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {params}\""
+                    cmd =f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {all_params}\""
                 subprocess .Popen (cmd ,shell =True ,env =env)
 
             elif tool_type =="PowerShell":
                 env =env_mgr .get_injected_env ("all")
-                cmd =f"cmd /c start powershell -noexit -command \"cd '{os.path.dirname(abs_path)}'; .\\{os.path.basename(abs_path)} {params}\""
+                cmd =f"cmd /c start powershell -noexit -command \"cd '{os.path.dirname(abs_path)}'; .\\{os.path.basename(abs_path)} {all_params}\""
                 subprocess .Popen (cmd ,shell =True ,env =env)
 
             else :
