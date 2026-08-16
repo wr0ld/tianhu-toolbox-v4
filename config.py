@@ -344,6 +344,7 @@ DEFAULT_SETTINGS ={
 "recent_tools":[],
 "main_window_geometry":None ,
 "main_window_state":None ,
+"sidebar_collapsed":False ,
 "auto_theme_mode":"manual",
 "custom_bg_path":"",
 "screenshot_hotkey":"",

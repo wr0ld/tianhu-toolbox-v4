@@ -187,8 +187,9 @@
       "我的"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAGEAAAAaQAAB4QAAAOAAAABhAAAAGkAAAeEAAADgAAAAAAAAAAABqsAAAGEAAAAaQAAB4QAAAOA",
-  "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
+  "main_window_geometry": "AdnQywADAAAAAAEFAAAAoAAABbUAAAO3AAABBQAAAKAAAAW1AAADtwAAAAAAAAAABqsAAAEFAAAAoAAABbUAAAO3",
+  "main_window_state": "AAAA/wAAAAD9AAAAAAAABPoAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
+  "sidebar_collapsed": true,
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
   "screenshot_hotkey": "",

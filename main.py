@@ -247,6 +247,7 @@ class MainWindow (QMainWindow ):
         self .init_tray ()
         # self.init_shortcuts()  # 已禁用全局热键功能
         self .load_main_window_state_and_geometry ()
+        self ._restore_sidebar_state ()
         self ._clamp_to_screen ()
 
         self ._toggle_visibility_signal .connect (self .toggle_window_visibility )
@@ -364,7 +365,7 @@ class MainWindow (QMainWindow ):
         hl =QHBoxLayout (topbar )
         hl .setContentsMargins (10 ,10 ,10 ,10 )
 
-        self .btn_sidebar =QPushButton ("▶")
+        self .btn_sidebar =QPushButton ("◀")
         self .btn_sidebar .setObjectName ("noHoverBtn")
         self .btn_sidebar .setFixedWidth (40 )
         self .btn_sidebar .setToolTip ("收起 / 展开左侧分类栏")
@@ -559,10 +560,28 @@ class MainWindow (QMainWindow ):
 
     def toggle_sidebar (self ):
         try :
-            visible =self .cat_panel .isVisible ()
-            self .cat_panel .setVisible (not visible )
-            if hasattr (self ,"btn_sidebar"):
-                self .btn_sidebar .setText ("◀" if visible else "▶")
+            delta =260   # 侧边栏宽 240 + 布局间距 20
+            if self .cat_panel .isVisible ():
+                self .cat_panel .hide ()
+                self .move (self .x ()+delta ,self .y ())
+                self .resize (self .width ()-delta ,self .height ())
+                self .btn_sidebar .setText ("▶")
+                SETTINGS ["sidebar_collapsed"]=True 
+            else :
+                self .move (self .x ()-delta ,self .y ())
+                self .resize (self .width ()+delta ,self .height ())
+                self .cat_panel .show ()
+                self .btn_sidebar .setText ("◀")
+                SETTINGS ["sidebar_collapsed"]=False 
+            save_settings (SETTINGS )
+        except Exception :
+            pass 
+
+    def _restore_sidebar_state (self ):
+        try :
+            if SETTINGS .get ("sidebar_collapsed",False ):
+                self .cat_panel .hide ()
+                self .btn_sidebar .setText ("▶")
         except Exception :
             pass 
 
