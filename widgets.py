@@ -188,14 +188,8 @@ class TitleBar (QWidget ):
 
         lay .addStretch ()
 
-        # 顶部性能监控文字已停用
         self .perf_label =QLabel ("",self )
         self .perf_label .hide ()
-        # self .perf_label .setAlignment (Qt .AlignmentFlag .AlignVCenter |Qt .AlignmentFlag .AlignRight )
-        # self .perf_label .setStyleSheet ("font-size:12px; padding-right:10px;")
-        # self .perf_label .setMinimumWidth (180 )
-        # lay .addWidget (self .perf_label )
-
         self .btn_min =QPushButton ("🗕")
         self .btn_min .setObjectName ("titleButton")
         self .btn_min .clicked .connect (self .parent .showMinimized )
@@ -262,9 +256,6 @@ class SearchBar (QFrame ):
         lay =QHBoxLayout (self )
         lay .setContentsMargins (0 ,0 ,0 ,0 )
         lay .setSpacing (6 )
-
-        # lab_icon =QLabel ("",self )  # 已移除左侧空占位，搜索框与卡片左侧对齐
-        # lay .addWidget (lab_icon )
 
         self .search_input =QLineEdit ()
         self .search_input .setPlaceholderText ("搜索工具...")
@@ -486,7 +477,6 @@ class ToolDialog (QDialog ):
         super ().__init__ (parent )
         self .categories =categories 
         self .tool_data =tool_data 
-        # self.shortcut_key = ""  # 已禁用全局热键功能
         self .init_ui ()
         self .setModal (True )
 
@@ -581,17 +571,6 @@ class ToolDialog (QDialog ):
             self .ed_desc .setText (self .tool_data .get ("description",""))
         lay .addWidget (self .ed_desc )
 
-        # lb_tags =QLabel ("标签 (最多3个, 每个≤10字符, 英文逗号分隔):")  # 标签功能已禁用
-        # lay .addWidget (lb_tags )
-        # self .ed_tags =QLineEdit ()
-        # self .ed_tags .setPlaceholderText ("如：内网, 提权, webshell")
-        # if self .tool_data and self .tool_data .get ("tags"):
-        #     self .ed_tags .setText (", ".join (self .tool_data .get ("tags",[])[:3 ]))
-        # lay .addWidget (self .ed_tags )
-        # lab_tip =QLabel ("多个标签请用英文逗号 , 分隔；每个标签最多10字符，最多3个标签")
-        # lab_tip .setStyleSheet ("color: #888; font-size: 11px; padding-left:3px;")
-        # lay .addWidget (lab_tip )
-
         lb_weight =QLabel ("显示权重(任意数字):")
         lay .addWidget (lb_weight )
         self .ed_weight =QLineEdit ()
@@ -605,23 +584,6 @@ class ToolDialog (QDialog ):
         else :
             self .ed_weight .setText ("0")
         lay .addWidget (self .ed_weight )
-
-        # lb_short = QLabel("快捷键:")  # 已禁用全局热键功能
-        # lay.addWidget(lb_short)
-        # hshort = QHBoxLayout()
-        # self.ed_shortcut = QLineEdit()
-        # self.ed_shortcut.setPlaceholderText("按下组合键或手动输入")
-        # if self.tool_data and hasattr(self.parent(), "tool_shortcuts"):
-        #     exist = self.parent().tool_shortcuts.get(self.tool_data['name'], "")
-        #     if exist:
-        #         self.ed_shortcut.setText(exist)
-        #         self.shortcut_key = exist
-        # btn_clear = QPushButton("清除")
-        # btn_clear.setObjectName("noHoverBtn")
-        # btn_clear.clicked.connect(self.clear_short)
-        # hshort.addWidget(self.ed_shortcut)
-        # hshort.addWidget(btn_clear)
-        # lay.addLayout(hshort)
 
         hbtn =QHBoxLayout ()
         self .btn_save =QPushButton ("保存")
@@ -692,81 +654,7 @@ class ToolDialog (QDialog ):
         if fi :
             self .ed_path .setText (fi )
 
-    # def clear_short(self):  # 已禁用全局热键功能
-    #     self.ed_shortcut.clear()
-    #     self.shortcut_key = ""
-    #     if self.tool_data and hasattr(self.parent(), "tool_shortcuts"):
-    #         nm = self.tool_data['name']
-    #         if nm in self.parent().tool_shortcuts:
-    #             del self.parent().tool_shortcuts[nm]
-    #             sets = QSettings("config/shortcuts.ini", QSettings.Format.IniFormat)
-    #             sets.remove(f"shortcuts/{nm}")
-    #             sets.sync()
-    #             # self.parent().init_shortcuts()
-
-    # def keyPressEvent(self, e):  # 已禁用全局热键功能
-    #     if self.ed_shortcut.hasFocus():
-    #         mods = []
-    #         if e.modifiers() & Qt.KeyboardModifier.ControlModifier:
-    #             mods.append("Ctrl")
-    #         if e.modifiers() & Qt.KeyboardModifier.AltModifier:
-    #             mods.append("Alt")
-    #         if e.modifiers() & Qt.KeyboardModifier.ShiftModifier:
-    #             mods.append("Shift")
-    #         if e.key() in (Qt.Key.Key_Control, Qt.Key.Key_Alt, Qt.Key.Key_Shift):
-    #             return
-    #         keystr = QKeySequence(e.key()).toString()
-    #         if not keystr:
-    #             return
-    #         final = "+".join(mods + [keystr])
-    #         forbidden = final.strip().lower().replace(' ', '')
-    #         if forbidden in FORBIDDEN_HOTKEYS:
-    #             QMessageBox.warning(self, "快捷键冲突", "此快捷键为系统常用快捷键，禁止使用")
-    #             self.ed_shortcut.clear()
-    #             return
-    #         if self.check_conflict(final):
-    #             QMessageBox.warning(self, "快捷键冲突", "此快捷键已被其它工具占用")
-    #             self.ed_shortcut.clear()
-    #             return
-    #         self.ed_shortcut.setText(final)
-    #         self.shortcut_key = final
-    #         if self.tool_data:
-    #             sets = QSettings("config/shortcuts.ini", QSettings.Format.IniFormat)
-    #             sets.setValue(f"shortcuts/{self.tool_data['name']}", final)
-    #             sets.sync()
-    #             if hasattr(self.parent(), "tool_shortcuts"):
-    #                 self.parent().tool_shortcuts[self.tool_data['name']] = final
-    #                     # self.parent().init_shortcuts()
-    #     else:
-    #         super().keyPressEvent(e)
-
-    # def check_conflict(self, newval):  # 已禁用全局热键功能
-    #     if not hasattr(self.parent(), "tool_shortcuts"):
-    #         return False
-    #     curr = self.tool_data['name'] if self.tool_data else None
-    #     for nm, val in self.parent().tool_shortcuts.items():
-    #         if val == newval and nm != curr:
-    #             return True
-    #     return False
-
     def _on_save_clicked (self ):
-        # tags_str =self .ed_tags .text ().strip ()  # 标签功能已禁用
-        # tags =[t .strip ()for t in tags_str .split (",")if t .strip ()]
-        # if len (tags )>3 :
-        #     QMessageBox .warning (self ,"标签数量超限","最多只能填写3个标签！")
-        #     return 
-        # long_tags =[t for t in tags if len (t )>10 ]
-        # if long_tags :
-        #     QMessageBox .warning (self ,"标签超长","每个标签最多10个字符！")
-        #     return 
-        # val = self.ed_shortcut.text().strip()  # 已禁用全局热键功能
-        # forbidden = val.lower().replace(' ', '')
-        # if forbidden and forbidden in FORBIDDEN_HOTKEYS:
-        #     QMessageBox.warning(self, "快捷键冲突", "此快捷键为系统常用快捷键，禁止使用")
-        #     return
-        # if val and self.check_conflict(val):
-        #     QMessageBox.warning(self, "快捷键冲突", "此快捷键已被其它工具占用")
-        #     return
         self .accept ()
 
     def get_tool_data (self ):
@@ -781,11 +669,6 @@ class ToolDialog (QDialog ):
         except Exception :
             data ['weight']=0.0
 
-        # tags_str =self .ed_tags .text ().strip ()  # 标签功能已禁用
-        # tags =[t .strip ()for t in tags_str .split (",")if t .strip ()]
-        # tags =tags [:3 ]
-        # tags =[t [:10 ]for t in tags ]
-        # data ['tags']=tags 
         data ['tags']=[]  # 标签功能已禁用 
 
         if data ['type']=="网页":
@@ -810,15 +693,6 @@ class ToolDialog (QDialog ):
                 data ['custom_interpreter_name']=tt [5 :-1 ]
         except Exception :
             pass 
-
-        # if hasattr(self.parent(), "tool_shortcuts"):  # 已禁用全局热键功能
-        #     if self.tool_data and self.tool_data['name'] in self.parent().tool_shortcuts:
-        #         if (not self.shortcut_key) or (self.tool_data['name'] != data['name']):
-        #             if self.tool_data['name'] in self.parent().tool_shortcuts:
-        #                 del self.parent().tool_shortcuts[self.tool_data['name']]
-        #                 # self.parent().init_shortcuts()
-        #     if self.shortcut_key:
-        #         self.parent().tool_shortcuts[data['name']] = self.shortcut_key
 
         return data 
 
@@ -1019,60 +893,6 @@ class SettingsDialog (QDialog ):
 
         lay .addWidget (QLabel (""))
 
-        # 以下截图快捷键UI已禁用
-        # ss_row = QHBoxLayout()
-        # ss_row.addWidget(QLabel("截图快捷键:"))
-        # self.ed_screenshot_key = QLineEdit()
-        # self.ed_screenshot_key.setPlaceholderText("点击后按下组合键")
-        # existing_ss = SETTINGS.get("screenshot_hotkey", "")
-        # if existing_ss:
-        #     self.ed_screenshot_key.setText(existing_ss)
-        # self.ed_screenshot_key.keyPressEvent = self._capture_screenshot_key
-        # ss_row.addWidget(self.ed_screenshot_key)
-        # btn_clear_ss = QPushButton("清除")
-        # btn_clear_ss.setObjectName("noHoverBtn")
-        # btn_clear_ss.clicked.connect(self.ed_screenshot_key.clear)
-        # ss_row.addWidget(btn_clear_ss)
-        # lay.addLayout(ss_row)
-
-        # 以下快捷启动面板UI已禁用
-        # qo_row = QHBoxLayout()
-        # qo_row.addWidget(QLabel("快捷启动面板:"))
-        # self.ed_quick_open_key = QLineEdit()
-        # self.ed_quick_open_key.setPlaceholderText("点击后按下组合键")
-        # existing_qo = SETTINGS.get("quick_open_hotkey", "")
-        # if existing_qo:
-        #     self.ed_quick_open_key.setText(existing_qo)
-        # self.ed_quick_open_key.keyPressEvent = self._capture_quick_open_key
-        # qo_row.addWidget(self.ed_quick_open_key)
-        # btn_clear_qo = QPushButton("清除")
-        # btn_clear_qo.setObjectName("noHoverBtn")
-        # btn_clear_qo.clicked.connect(self.ed_quick_open_key.clear)
-        # qo_row.addWidget(btn_clear_qo)
-        # lay.addLayout(qo_row)
-
-        # lay.addWidget(QLabel(""))  # 已禁用终端功能
-        # lay.addWidget(QLabel("终端设置:"))
-
-        # term_save_row = QHBoxLayout()
-        # term_save_row.addWidget(QLabel("关闭标签时:"))
-        # self.cb_term_save = QComboBox()
-        # self.cb_term_save.addItems(["有内容时询问","总是询问","总是自动保存","总是丢弃"])
-        # term_save_map = {"prompt_if_content":0,"prompt":1,"always_save":2,"always_discard":3}
-        # ts_idx = term_save_map.get(SETTINGS.get("terminal_save_prompt","prompt_if_content"),0)
-        # self.cb_term_save.setCurrentIndex(ts_idx)
-        # term_save_row.addWidget(self.cb_term_save)
-        # lay.addLayout(term_save_row)
-
-        # term_shell_row = QHBoxLayout()
-        # term_shell_row.addWidget(QLabel("默认Shell:"))
-        # self.cb_term_shell = QComboBox()
-        # self.cb_term_shell.addItems(["CMD","PowerShell"])
-        # shell_idx = 0 if SETTINGS.get("terminal_default_shell","cmd")=="cmd" else 1
-        # self.cb_term_shell.setCurrentIndex(shell_idx)
-        # term_shell_row.addWidget(self.cb_term_shell)
-        # lay.addLayout(term_shell_row)
-
         lay .addStretch ()
         scroll .setWidget (scroll_w )
         self ._fix_scroll_viewport (scroll ,scroll_w )
@@ -1154,12 +974,6 @@ class SettingsDialog (QDialog ):
             return
         final ="+".join (mods +[keystr ])
         line_edit .setText (final )
-
-    # def _capture_screenshot_key(self, event):  # 已禁用截图功能
-    #     self._capture_hotkey_common(event, self.ed_screenshot_key)
-
-    # def _capture_quick_open_key(self, event):  # 已禁用全局热键功能
-    #     self._capture_hotkey_common(event, self.ed_quick_open_key)
 
     def _make_interpreter_table (self ):
         table =QTableWidget ()
@@ -1333,14 +1147,6 @@ class SettingsDialog (QDialog ):
 
         new_s ["cli_python_interpreters"]=list (self .cli_python_list )
         new_s ["cli_java_interpreters"]=list (self .cli_java_list )
-
-        # new_s["screenshot_hotkey"] = self.ed_screenshot_key.text().strip()  # 已禁用截图功能
-        # new_s["quick_open_hotkey"] = self.ed_quick_open_key.text().strip()  # 已禁用全局热键功能
-
-        # term_save_map = {"有内容时询问":"prompt_if_content","总是询问":"prompt","总是自动保存":"always_save","总是丢弃":"always_discard"}  # 已禁用终端功能
-        # new_s["terminal_save_prompt"] = term_save_map.get(self.cb_term_save.currentText(), "prompt_if_content")
-        # new_s["terminal_default_shell"] = "cmd" if self.cb_term_shell.currentText() == "CMD" else "powershell"
-        # new_s["terminal_font_size"] = 10
 
         if save_settings (new_s ):
             self .settings_changed .emit (new_s )

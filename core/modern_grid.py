@@ -61,12 +61,6 @@ class TooltipPopup (QWidget ):
         self ._label .setWordWrap (True )
         c_layout .addWidget (self ._label )
 
-        # effect =QGraphicsDropShadowEffect (self )  # 已移除提示卡片阴影
-        # effect .setBlurRadius (26 )
-        # effect .setOffset (0 ,8 )
-        # effect .setColor (QColor (0 ,0 ,0 ,160 ))
-        # self ._content .setGraphicsEffect (effect )
-
         self ._anim =QVariantAnimation (self )
         self ._anim .setDuration (160 )
         self ._anim .setEasingCurve (QEasingCurve .Type .OutCubic )
@@ -381,10 +375,6 @@ class ToolDelegate (QStyledItemDelegate ):
         is_selected =(option .state &QStyle .StateFlag .State_Selected )
 
 
-        # show_selection =is_selected  # 已禁用批量模式选中态
-        # if hasattr (self .parent (),"show_select_box"):
-        #     if not self .parent ().show_select_box :
-        #         show_selection =False 
         show_selection =False 
 
         if show_selection :
@@ -450,26 +440,6 @@ class ToolDelegate (QStyledItemDelegate ):
         content_rect =card_rect .adjusted (self .padding ,self .padding ,-self .padding ,-self .padding )
 
 
-        # 工具健康检查红绿状态灯已停用，仅保留设置页中的手动“立即检查”
-        # health_status =str (tool .get ("_health","ok"))
-        # dot_radius =5
-        # dot_cx =content_rect .left ()+dot_radius +3
-        # dot_cy =content_rect .top ()+11
-        # dot_color =QColor ("#10B981")if health_status =="ok" else QColor ("#EF4444")
-        # painter .save ()
-        # glow_color =QColor (dot_color )
-        # glow_color .setAlpha (50 )
-        # painter .setPen (Qt .PenStyle .NoPen )
-        # painter .setBrush (glow_color )
-        # painter .drawEllipse (QPoint (dot_cx ,dot_cy ),dot_radius +3 ,dot_radius +3 )
-        # painter .setBrush (dot_color )
-        # painter .drawEllipse (QPoint (dot_cx ,dot_cy ),dot_radius ,dot_radius )
-        # highlight =QColor (255 ,255 ,255 ,80 )
-        # painter .setBrush (highlight )
-        # painter .drawEllipse (QPoint (dot_cx -1 ,dot_cy -1 ),2 ,2 )
-        # painter .restore ()
-
-
         header_height =24
         name_rect =QRect (content_rect .left ()+16 ,content_rect .top (),content_rect .width ()-80 ,header_height )
         weight_rect =QRect (content_rect .right ()-58 ,content_rect .top ()+4 ,22 ,16 )
@@ -485,38 +455,6 @@ class ToolDelegate (QStyledItemDelegate ):
         painter .drawText (name_rect ,Qt .AlignmentFlag .AlignLeft |Qt .AlignmentFlag .AlignVCenter ,name_text )
 
 
-        # 权重徽章渲染已禁用
-        # try :
-        #     w =tool .get ("weight",None )
-        #     if w is not None :
-        #         try :
-        #             fw =float (w )
-        #             # 格式化浮点数: 整数不带小数点，小数保留最多3位
-        #             if fw ==int (fw ):
-        #                 w_str =str (int (fw ))
-        #             else :
-        #                 w_str =f"{fw:.3f}".rstrip ("0").rstrip (".")
-        #             badge_bg =QColor (primary_color )
-        #             badge_bg .setAlpha (28 )
-        #             badge_bd =QColor (primary_color )
-        #             badge_bd .setAlpha (90 )
-        #             # 调整徽章宽度适应长文本
-        #             fm =painter .fontMetrics ()
-        #             text_w =fm .horizontalAdvance (w_str )+8
-        #             adjusted_rect =QRect (weight_rect .right ()-max (22 ,text_w ),weight_rect .top (),max (22 ,text_w ),16 )
-        #             painter .setPen (QPen (badge_bd ,1 ))
-        #             painter .setBrush (badge_bg )
-        #             painter .drawRoundedRect (adjusted_rect ,8 ,8 )
-        #             painter .setPen (primary_color )
-        #             font =QFont ("Segoe UI",7 ,QFont .Weight .Bold )
-        #             painter .setFont (font )
-        #             painter .drawText (adjusted_rect ,Qt .AlignmentFlag .AlignCenter ,w_str )
-        #         except (ValueError ,TypeError ):
-        #             pass
-        # except Exception :
-        #     pass
-
-
         is_fav =is_tool_favorited (tool )
         fav_text ="★"if is_fav else "☆"
         painter .setPen (QColor ("#FFD700")if is_fav else _theme_qcolor (config .THEME ['text_secondary']))
@@ -524,27 +462,6 @@ class ToolDelegate (QStyledItemDelegate ):
         painter .drawText (fav_rect ,Qt .AlignmentFlag .AlignCenter ,fav_text )
 
 
-        # tags =tool .get ("tags",[])[:3 ]  # 标签功能已禁用
-        # tag_y =content_rect .top ()+header_height +4 
-        # tag_height =18 
-
-        # painter .setFont (QFont ("Segoe UI",8 ))
-        # tag_x =content_rect .left ()
-        # for tag in tags :
-        #     tag_text =f"#{tag[:10]}"
-        #     tag_width =painter .fontMetrics ().horizontalAdvance (tag_text )+10 
-        #     tag_rect =QRect (tag_x ,tag_y ,tag_width ,tag_height )
-
-        #     painter .setPen (Qt .PenStyle .NoPen )
-        #     painter .setBrush (_theme_qcolor (config .THEME ['surface']))
-        #     painter .drawRoundedRect (tag_rect ,4 ,4 )
-
-        #     painter .setPen (_theme_qcolor (config .THEME ['text_secondary']))
-        #     painter .drawText (tag_rect ,Qt .AlignmentFlag .AlignCenter ,tag_text )
-
-        #     tag_x +=tag_width +4 
-
-        # desc_y =tag_y +tag_height +6 
         desc_y =content_rect .top ()+header_height +4  # 标签功能已禁用，使用默认位置
         desc_height =36 
         desc_rect =QRect (content_rect .left (),desc_y ,content_rect .width (),desc_height )
@@ -568,22 +485,6 @@ class ToolDelegate (QStyledItemDelegate ):
             "PowerShell": "PS", "网页": "WEB",
         }
         type_label = type_short_map.get(tool_type_str, tool_type_str[:3] if tool_type_str else "")
-        # if type_label:
-        #     type_font = QFont("Segoe UI", 8, QFont.Weight.Bold)
-        #     painter.setFont(type_font)
-        #     type_text_w = painter.fontMetrics().horizontalAdvance(type_label) + 10
-        #     type_badge_rect = QRect(content_rect.left(), footer_y + 4, type_text_w, 18)
-        #     type_bg = QColor(primary_color)
-        #     type_bg.setAlpha(35)
-        #     type_bd = QColor(primary_color)
-        #     type_bd.setAlpha(100)
-        #     painter.setPen(QPen(type_bd, 1))
-        #     painter.setBrush(type_bg)
-        #     painter.drawRoundedRect(type_badge_rect, 4, 4)
-        #     painter.setPen(_theme_qcolor(config.THEME['primary']))
-        #     painter.drawText(type_badge_rect, Qt.AlignmentFlag.AlignCenter, type_label)
-        #     cat_left = content_rect.left() + type_text_w + 6
-        # else:
         cat_left = content_rect.left()
 
         # cat_rect = QRect(cat_left, footer_y, content_rect.width() - 70 - (cat_left - content_rect.left()), footer_height)
@@ -623,8 +524,6 @@ class ModernToolGrid (QListView ):
     tool_edit =pyqtSignal (dict )
     tool_delete =pyqtSignal (dict )
     favorite_changed =pyqtSignal (dict ,bool )
-    # batch_run_requested =pyqtSignal (list )  # 已禁用批量模式
-
     def __init__ (self ,parent =None ):
         super ().__init__ (parent )
         self .setViewMode (QListView .ViewMode .IconMode )
@@ -665,8 +564,6 @@ class ModernToolGrid (QListView ):
 
         self .doubleClicked .connect (self ._on_double_clicked )
 
-        # self .show_select_box =False  # 已禁用批量模式
-
         self ._hovering_run_button =False 
 
         self ._tip_timer =QTimer (self )
@@ -697,8 +594,6 @@ class ModernToolGrid (QListView ):
 
     def _hit_test_run_button (self ,pos :QPoint )->bool :
         try :
-            # if self .show_select_box :  # 已禁用批量模式
-            #     return False 
             idx =self .indexAt (pos )
             if not idx .isValid ():
                 return False 
@@ -845,8 +740,6 @@ class ModernToolGrid (QListView ):
             desc =str (tool .get ('description',''))
             path =str (tool .get ('path',''))
             url =str (tool .get ('url',''))
-            # tags =tool .get ('tags',[])or []  # 标签功能已禁用
-            # tags_str =', '.join ([str (t )for t in tags if str (t ).strip ()])
             tags_str =''  # 标签功能已禁用
 
             def esc (v ):
@@ -858,8 +751,6 @@ class ModernToolGrid (QListView ):
             ]
             if w !="":
                 rows .append (("权重",w ))
-            # if tags_str :  # 标签功能已禁用
-            #     rows .append (("标签",tags_str ))
             if desc :
                 rows .append (("描述",desc ))
             if url :
@@ -1107,24 +998,10 @@ class ModernToolGrid (QListView ):
 
         self .viewport ().update ()
 
-    # def get_selected_tools (self ):  # 已禁用批量模式
-    #     indexes =self .selectedIndexes ()
-    #     tools =[]
-    #     for idx in indexes :
-    #         t =idx .data (Qt .ItemDataRole .UserRole )
-    #         if t :
-    #             tools .append (t )
-    #     return tools 
-
     def set_display_mode (self ,mode ):
 
 
         pass 
-
-    # def enable_batch_mode (self ,enable =True ):  # 已禁用批量模式
-    #     self .show_select_box =enable 
-    #     self .setSelectionMode (QListView .SelectionMode .MultiSelection if enable else QListView .SelectionMode .SingleSelection )
-    #     self .viewport ().update ()
 
     def adjust_card_size (self ):
 

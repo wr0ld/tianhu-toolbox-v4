@@ -188,8 +188,8 @@
     ]
   ],
   "main_window_geometry": "AdnQywADAAAAAAElAAAArAAABjIAAAOnAAABJQAAAKwAAAYyAAADpwAAAAAAAAAABqsAAAElAAAArAAABjIAAAOn",
-  "main_window_state": "AAAA/wAAAAD9AAAAAAAABPsAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
-  "sidebar_collapsed": true,
+  "main_window_state": "AAAA/wAAAAD9AAAAAAAABQ4AAAL8AAAABAAAAAQAAAAIAAAACPwAAAAA",
+  "sidebar_collapsed": false,
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
   "screenshot_hotkey": "",

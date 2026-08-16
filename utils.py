@@ -698,11 +698,6 @@ def fuzzy_search (tools :List [Dict [str ,Any ]],search_text :str )->List [Dict 
             path =str (t .get ('path','')).casefold ()
             url =str (t .get ('url','')).casefold ()
             params =str (t .get ('params','')).casefold ()
-            # tags_val =t .get ("tags",[])  # 标签功能已禁用
-            # if isinstance (tags_val ,(list ,tuple ,set )):
-            #     tags =" ".join ([str (x )for x in tags_val ]).casefold ()
-            # else :
-            #     tags =str (tags_val ).casefold ()
             tags =""  # 标签功能已禁用
         except Exception :
             nm =""

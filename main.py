@@ -2,7 +2,6 @@ import sys
 import os
 import logging
 import subprocess
-# import keyboard  # 已禁用全局热键功能
 import threading
 import time
 import traceback
@@ -23,7 +22,6 @@ export_all_data ,import_all_data
 )
 from utils import (
 ensure_single_instance ,check_environment ,validate_java_path ,run_tool ,
-# run_tools_batch ,is_tool_favorited ,add_favorite_tool ,remove_favorite_tool ,  # 已禁用批量运行功能
 is_tool_favorited ,add_favorite_tool ,remove_favorite_tool ,
 save_main_window_geometry ,load_main_window_geometry ,save_main_window_state ,load_main_window_state ,
 SearchWorker ,fuzzy_search ,get_favorite_tools ,get_recent_tools
@@ -35,8 +33,6 @@ ToolDialog ,SettingsDialog
 from core .window_effect import WindowEffect
 from core .modern_grid import ModernToolGrid
 from services.tool_health import ToolHealthChecker
-# from views.terminal_tab_widget import TerminalTabWidget  # 已禁用终端功能
-
 class _RateLimitingHandler (logging .Handler ):
     def __init__ (self ,inner :logging .Handler ,*,window_sec :float =10.0 ,max_per_key :int =20 ):
         super ().__init__ (level =inner .level )
@@ -192,8 +188,6 @@ def compute_category_counts (tools_list ):
 
 class MainWindow (QMainWindow ):
     _toggle_visibility_signal =pyqtSignal ()
-    # _screenshot_signal = pyqtSignal()  # 已禁用截图功能
-
     def __init__ (self ):
         super ().__init__ ()
         if not ensure_single_instance ():
@@ -219,18 +213,8 @@ class MainWindow (QMainWindow ):
         if self .categories !=raw_categories :
             save_categories (self .categories )
 
-        # self.tool_shortcuts = {}  # 已禁用全局热键功能
-        # self.load_shortcuts()
-        # self.registered_hotkeys = {}
-
         self .current_category =""
         self .search_text =""
-
-        # 分页模式已停用，仅保留 scroll(滚动) 模式
-        # self.current_page = 1
-        # self.page_size = 16
-        # self.total_pages = 1
-
 
         self ._is_restarting =False
         self ._dpi_adjusting =False
@@ -245,19 +229,12 @@ class MainWindow (QMainWindow ):
         QApplication .instance ().installEventFilter (self ._btn_cursor_filter )
 
         self .init_tray ()
-        # self.init_shortcuts()  # 已禁用全局热键功能
         self .load_main_window_state_and_geometry ()
         self ._restore_sidebar_state ()
         self ._clamp_to_screen ()
 
         self ._toggle_visibility_signal .connect (self .toggle_window_visibility )
-        # self._screenshot_signal.connect(self.take_screenshot)  # 已禁用截图功能
-
-        # 启动自动工具健康检查已停用，仅保留设置页中的手动“立即检查”
-        # QTimer .singleShot (500 ,self .check_tools_health )
         QTimer .singleShot (3000 ,self .check_java_path )
-
-        # self._register_global_hotkeys()  # 已禁用全局热键功能
 
         QTimer .singleShot (100 ,self .refresh_grid_layout )
 
@@ -379,18 +356,6 @@ class MainWindow (QMainWindow ):
         self .shortcut_find =QShortcut (QKeySequence ("Ctrl+F"),self )
         self .shortcut_find .activated .connect (self ._focus_search )
 
-        # btn_add =QPushButton ("添加工具")  # 已隐藏添加工具按钮
-        # btn_add .setObjectName ("noHoverBtn")
-        # btn_add .setFixedWidth (100 )
-        # btn_add .clicked .connect (self .add_tool )
-        # hl .addWidget (btn_add )
-
-        # self .btn_notebook =QPushButton ("记事本")  # 已禁用记事本入口
-        # self .btn_notebook .setObjectName ("noHoverBtn")
-        # self .btn_notebook .setFixedWidth (80 )
-        # self .btn_notebook .clicked .connect (self .open_notebook )
-        # hl .addWidget (self .btn_notebook )
-
         btn_log =QPushButton ("日志")
         btn_log .setObjectName ("noHoverBtn")
         btn_log .setFixedWidth (80 )
@@ -403,37 +368,6 @@ class MainWindow (QMainWindow ):
         btn_set .clicked .connect (self .show_settings )
         hl .addWidget (btn_set )
 
-        # self.btn_terminal = QPushButton("终端")  # 已禁用终端功能
-        # self.btn_terminal.setObjectName("noHoverBtn")
-        # self.btn_terminal.setMinimumWidth(60)
-        # self.btn_terminal.clicked.connect(self.toggle_terminal)
-        # hl.addWidget(self.btn_terminal)
-
-        # self .btn_batch =QPushButton ("批量模式")  # 已禁用批量模式
-        # self .btn_batch .setObjectName ("noHoverBtn")
-        # self .btn_batch .setFixedWidth (100 )
-        # self .btn_batch .clicked .connect (self .toggle_batch_mode )
-        # hl .addWidget (self .btn_batch )
-
-        # self .btn_run_batch =QPushButton ("运行选中")  # 已禁用批量模式
-        # self .btn_run_batch .setObjectName ("noHoverBtn")
-        # self .btn_run_batch .setFixedWidth (100 )
-        # self .btn_run_batch .clicked .connect (self .do_batch_run )
-        # self .btn_run_batch .hide ()
-        # hl .addWidget (self .btn_run_batch )
-
-        # btn_import =QPushButton ("导入")  # 已移至设置界面
-        # btn_import .setObjectName ("noHoverBtn")
-        # btn_import .setFixedWidth (70 )
-        # btn_import .clicked .connect (self .import_data )
-        # hl .addWidget (btn_import )
-
-        # btn_export =QPushButton ("导出")  # 已移至设置界面
-        # btn_export .setObjectName ("noHoverBtn")
-        # btn_export .setFixedWidth (70 )
-        # btn_export .clicked .connect (self .export_data )
-        # hl .addWidget (btn_export )
-
         topbar .setLayout (hl )
         rlayout .addWidget (topbar )
 
@@ -442,41 +376,7 @@ class MainWindow (QMainWindow ):
         self .tool_grid .tool_edit .connect (self .edit_tool )
         self .tool_grid .tool_delete .connect (self .delete_tool )
         self .tool_grid .favorite_changed .connect (self .on_favorite_changed )
-        # self .tool_grid .batch_run_requested .connect (self .run_tools_batch )  # 已禁用批量模式
         rlayout .addWidget (self .tool_grid )
-
-        # 分页模式已停用，仅保留 scroll(滚动) 模式
-        # self.page_widget = QWidget()
-        # page_layout = QHBoxLayout(self.page_widget)
-        # page_layout.setContentsMargins(0, 5, 0, 5)
-        # self.btn_prev = QPushButton("上一页")
-        # self.btn_prev.setObjectName("noHoverBtn")
-        # self.btn_prev.setFixedWidth(80)
-        # self.btn_prev.clicked.connect(self.prev_page)
-        # self.lb_page = QLabel("1 / 1")
-        # self.lb_page.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        # self.btn_next = QPushButton("下一页")
-        # self.btn_next.setObjectName("noHoverBtn")
-        # self.btn_next.setFixedWidth(80)
-        # self.btn_next.clicked.connect(self.next_page)
-        # self.ed_page_jump = QLineEdit()
-        # self.ed_page_jump.setFixedWidth(50)
-        # self.ed_page_jump.setPlaceholderText("页码")
-        # self.ed_page_jump.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        # self.ed_page_jump.returnPressed.connect(self.jump_to_page)
-        # self.btn_jump = QPushButton("跳转")
-        # self.btn_jump.setObjectName("noHoverBtn")
-        # self.btn_jump.setFixedWidth(60)
-        # self.btn_jump.clicked.connect(self.jump_to_page)
-        # page_layout.addStretch()
-        # page_layout.addWidget(self.btn_prev)
-        # page_layout.addWidget(self.lb_page)
-        # page_layout.addWidget(self.btn_next)
-        # page_layout.addSpacing(20)
-        # page_layout.addWidget(self.ed_page_jump)
-        # page_layout.addWidget(self.btn_jump)
-        # page_layout.addStretch()
-        # rlayout.addWidget(self.page_widget)
 
         content_layout .addWidget (right_panel )
         main_lay .addLayout (content_layout )
@@ -484,10 +384,6 @@ class MainWindow (QMainWindow ):
         self .apply_theme ()
         self .update_cat_panel ()
         self .update_tool_grid ()
-
-        # 顶部 CPU / 内存性能监控已停用
-        # self .init_perf_monitor ()
-
 
     def init_perf_monitor (self ):
         try :
@@ -650,7 +546,6 @@ class MainWindow (QMainWindow ):
             QMessageBox .information (self ,"提示","仅支持拖拽 vbs/bat/py/jar/exe 文件")
             return 
 
-        # self.disable_all_hotkeys()  # 已禁用全局热键功能
         try :
             diag =ToolDialog (self .categories ,None ,self )
 
@@ -692,60 +587,22 @@ class MainWindow (QMainWindow ):
                             if not self ._add_new_tool (td ):
                                 QMessageBox .warning (self ,"错误","保存工具数据失败")
 
-                # if diag.shortcut_key:  # 已禁用全局热键功能
-                #     self.tool_shortcuts[td['name']] = diag.shortcut_key
-                #     self.save_shortcuts()
         finally :
-            # self.re_register_hotkeys()  # 已禁用全局热键功能
             self .update_tool_grid ()
 
     def refresh_grid_layout (self ):
         try :
             self .tool_grid .adjust_card_size ()
-            # 分页模式已停用
-            # self._recompute_page_size_if_needed()
         except Exception as e :
             logger .error (f"刷新卡片布局异常: {e}")
 
     def _recompute_page_size_if_needed (self ):
-        # 分页模式已停用，仅保留 scroll(滚动) 模式
         return
 
     def resizeEvent (self ,e ):
         super ().resizeEvent (e )
         if getattr (self ,'_dpi_adjusting',False ):
             return
-        # 分页模式已停用
-        # self._recompute_page_size_if_needed()
-
-    # def prev_page(self):
-    #     if self.current_page > 1:
-    #         self.current_page -= 1
-    #         self.update_tool_grid()
-
-    # def next_page(self):
-    #     if self.current_page < self.total_pages:
-    #         self.current_page += 1
-    #         self.update_tool_grid()
-
-    # def jump_to_page(self):
-    #     txt = self.ed_page_jump.text().strip()
-    #     if not txt.isdigit():
-    #         return
-    #     val = int(txt)
-    #     if 1 <= val <= self.total_pages:
-    #         self.current_page = val
-    #         self.update_tool_grid()
-    #         self.ed_page_jump.clear()
-    #     else:
-    #         msg = QMessageBox(self)
-    #         msg.setWindowTitle("提示")
-    #         msg.setText(f"页码超出范围 (1-{self.total_pages})")
-    #         msg.setIcon(QMessageBox.Icon.Warning)
-    #         ok_btn = msg.addButton("确定", QMessageBox.ButtonRole.AcceptRole)
-    #         msg.setDefaultButton(ok_btn)
-    #         msg.exec()
-
     def import_data (self ):
         try :
             path ,_ =QFileDialog .getOpenFileName (self ,"选择导入文件","","JSON Files (*.json)")
@@ -788,28 +645,6 @@ class MainWindow (QMainWindow ):
             self .setStyleSheet (STYLESHEET )
 
 
-        # 以下特效已注释（毛玻璃 acrylic + 动画 + 弹窗模糊），用于加快启动速度
-        # try :
-        #     from utils import install_liquid_glass_animations 
-        #     install_liquid_glass_animations (self )
-        # except Exception :
-        #     pass 
-
-        # try :
-        #     from utils import install_red_blue_glass_popup_blur 
-        #     install_red_blue_glass_popup_blur (self )
-        # except Exception :
-        #     pass 
-
-        # theme_name =SETTINGS .get ("theme","dark")
-        # hwnd =int (self .winId ())
-        # effect =WindowEffect ()
-
-        # if theme_name in ("liquid_glass","red_blue_glass","custom_image"):
-        #     effect .set_acrylic_effect (hwnd ,is_dark =True )
-        # else :
-        #     effect .remove_background_effect (hwnd )
-
     def paintEvent (self ,event ):
         if SETTINGS .get ("theme")=="custom_image":
             image_path =SETTINGS .get ("custom_bg_path","")
@@ -831,12 +666,6 @@ class MainWindow (QMainWindow ):
         self .cat_panel .categories =self .categories 
         self .cat_panel .update_categories (self .categories ,ccount )
 
-
-        # try :  # 特效已注释
-        #     from utils import install_liquid_glass_animations 
-        #     install_liquid_glass_animations (self .cat_panel )
-        # except Exception :
-        #     pass 
 
     def update_tool_grid (self ):
 
@@ -869,21 +698,11 @@ class MainWindow (QMainWindow ):
         final .sort (key =lambda x :(-float (x .get ("weight",0 )or 0 ),str (x .get ('name',''))))
 
 
-        # 分页模式已停用，仅保留 scroll(滚动) 模式
         display_tools =final
-
-        # 工具卡片健康状态灯已停用，不再向卡片注入 _health 状态
-        # for tool in display_tools :
-        #     tool ["_health"]=self ._health_status .get (tool .get ("name",""),"ok")
 
         self .tool_grid .set_final_tools (display_tools )
 
 
-        # try :  # 特效已注释
-        #     from utils import animate_liquid_glass_fade 
-        #     animate_liquid_glass_fade (self .tool_grid )
-        # except Exception :
-        #     pass 
         self .refresh_grid_layout ()
 
     def on_cat_selected (self ,cat ):
@@ -973,20 +792,7 @@ class MainWindow (QMainWindow ):
         self .update_tool_grid ()
         self .refresh_grid_layout ()
 
-    # def disable_all_hotkeys(self):  # 已禁用全局热键功能
-    #     for tool_name, hotkey in list(self.registered_hotkeys.items()):
-    #         try:
-    #             keyboard.remove_hotkey(hotkey)
-    #         except:
-    #             pass
-    #     self.registered_hotkeys.clear()
-
-    # def re_register_hotkeys(self):  # 已禁用全局热键功能
-    #     for nm, hk in self.tool_shortcuts.items():
-    #         self.register_hotkey(nm, hk)
-
     def add_tool (self ):
-        # self.disable_all_hotkeys()  # 已禁用全局热键功能
         try :
             diag =ToolDialog (self .categories ,None ,self )
             if diag .exec ():
@@ -1005,12 +811,8 @@ class MainWindow (QMainWindow ):
                             if not self ._add_new_tool (td ):
                                 QMessageBox .warning (self ,"错误","保存工具数据失败")
 
-                # if diag.shortcut_key:  # 已禁用全局热键功能
-                #     self.tool_shortcuts[td['name']] = diag.shortcut_key
-                #     self.save_shortcuts()
         except Exception as e :
             QMessageBox .warning (self ,"添加工具异常",str (e ))
-        # self.re_register_hotkeys()  # 已禁用全局热键功能
         self .update_tool_grid ()
 
     def _add_new_tool (self ,td ):
@@ -1032,14 +834,11 @@ class MainWindow (QMainWindow ):
         if save_tools (self .tools ):
             self .update_cat_panel ()
             self .update_tool_grid ()
-            # 新增工具时不再主动执行健康检查，仅保留设置页手动检测
-            # self ._health_status [td .get ("name","")]=self .health_checker .check_tool (td )
             self .update_tool_grid ()
             return True
         return False 
 
     def edit_tool (self ,tool_data ):
-        # self.disable_all_hotkeys()  # 已禁用全局热键功能
         try :
             diag =ToolDialog (self .categories ,tool_data ,self )
             old_name =tool_data ['name']
@@ -1065,25 +864,8 @@ class MainWindow (QMainWindow ):
                     self .update_cat_panel ()
                     self .update_tool_grid ()
 
-                # 以下热键相关代码已禁用
-                # new_short = diag.shortcut_key
-                # if old_name != newinfo['name']:
-                #     if old_name in self.tool_shortcuts:
-                #         self.tool_shortcuts.pop(old_name, None)
-                #     if old_name in self.registered_hotkeys:
-                #         self.remove_hotkey(old_name)
-                # if new_short:
-                #     self.tool_shortcuts[newinfo['name']] = new_short
-                # else:
-                #     if newinfo['name'] in self.tool_shortcuts:
-                #         self.tool_shortcuts.pop(newinfo['name'], None)
-                #     self.remove_hotkey(newinfo['name'])
-                # self.save_shortcuts()
         except Exception as e :
             QMessageBox .warning (self ,"编辑工具异常",str (e ))
-        # self.re_register_hotkeys()  # 已禁用全局热键功能
-        # 编辑工具后不再主动执行健康检查，仅保留设置页手动检测
-        # self .check_tools_health ()
         self .update_tool_grid ()
 
     def delete_tool (self ,tool_data ):
@@ -1102,10 +884,6 @@ class MainWindow (QMainWindow ):
                 return 
 
             nm =tool_data ['name']
-            # if nm in self.tool_shortcuts:  # 已禁用全局热键功能
-            #     self.tool_shortcuts.pop(nm, None)
-            # self.remove_hotkey(nm)
-
             remain =[t for t in self .tools if t ["category"]==cat ]
             if not remain and cat not in DEFAULT_CATEGORIES :
                 if cat in self .categories :
@@ -1122,112 +900,14 @@ class MainWindow (QMainWindow ):
         except Exception as e :
             QMessageBox .warning (self ,"错误",f"运行失败:{e}")
 
-    # def run_tools_batch (self ,tools ):  # 已禁用批量模式
-    #     try :
-    #         succ =run_tools_batch (tools )
-    #         QMessageBox .information (self ,"批量运行",f"已启动 {succ} 个工具")
-    #     except Exception as e :
-    #         QMessageBox .warning (self ,"批量运行",f"发生异常: {e}")
-
     def on_favorite_changed (self ,tool_data ,is_fav ):
         self .update_cat_panel ()
         self .update_tool_grid ()
         self .refresh_grid_layout ()
 
-    # def load_shortcuts(self):  # 已禁用全局热键功能
-    #     s = QSettings("config/shortcuts.ini", QSettings.Format.IniFormat)
-    #     for t in self.tools:
-    #         val = s.value(f"shortcuts/{t['name']}", "")
-    #         if val:
-    #             self.tool_shortcuts[t['name']] = val
-
-    # def save_shortcuts(self):  # 已禁用全局热键功能
-    #     s = QSettings("config/shortcuts.ini", QSettings.Format.IniFormat)
-    #     all_keys = s.allKeys()
-    #     for k in all_keys:
-    #         if k.startswith("shortcuts/"):
-    #             s.remove(k)
-    #     for nm, val in self.tool_shortcuts.items():
-    #         s.setValue(f"shortcuts/{nm}", val)
-    #     s.sync()
-
-    # def init_shortcuts(self):  # 已禁用全局热键功能
-    #     for nm, hk in self.tool_shortcuts.items():
-    #         self.register_hotkey(nm, hk)
-
-    # def register_hotkey(self, tool_name: str, hotkey: str):  # 已禁用全局热键功能
-    #     self.remove_hotkey(tool_name)
-    #     lower_key = hotkey.lower()
-    #     for exist_tool, exist_key in self.registered_hotkeys.items():
-    #         if exist_key == lower_key and exist_tool != tool_name:
-    #             QMessageBox.warning(
-    #                 self,
-    #                 "快捷键冲突",
-    #                 f"快捷键 '{hotkey}' 已被【{exist_tool}】使用，无法设置给【{tool_name}】。"
-    #             )
-    #             return
-    #     try:
-    #         def _callback(tn=tool_name):
-    #             found = [t for t in self.tools if t['name'] == tn]
-    #             if found:
-    #                 self.run_tool(found[0])
-    #         keyboard.add_hotkey(lower_key, _callback)
-    #         self.registered_hotkeys[tool_name] = lower_key
-    #     except Exception as e:
-    #         logger.error(f"注册热键失败: {hotkey} - {e}")
-
-    # def remove_hotkey(self, tool_name: str):  # 已禁用全局热键功能
-    #     if tool_name in self.registered_hotkeys:
-    #         old_hk = self.registered_hotkeys[tool_name]
-    #         try:
-    #             keyboard.remove_hotkey(old_hk)
-    #         except:
-    #             pass
-    #         self.registered_hotkeys.pop(tool_name, None)
-
-    # def toggle_terminal(self):  # 已禁用终端功能
-    #     if not hasattr(self, '_terminal_panel'):
-    #         self._setup_terminal_panel()
-    #     if self._terminal_panel.isVisible():
-    #         self._terminal_panel.hide()
-    #         self.btn_terminal.setText("终端")
-    #     else:
-    #         self._terminal_panel.show()
-    #         self.btn_terminal.setText("关闭终端")
-    #         if self._terminal_tabs.terminal_count() == 0:
-    #             from config import SETTINGS
-    #             shell = SETTINGS.get("terminal_default_shell", "cmd")
-    #             self._terminal_tabs.add_terminal(shell_type=shell)
-
-    # def _setup_terminal_panel(self):  # 已禁用终端功能
-    #     from PyQt6.QtWidgets import QDockWidget
-    #     from views.terminal_tab_widget import TerminalTabWidget
-    #     self._terminal_panel = QWidget(self)
-    #     layout = QVBoxLayout(self._terminal_panel)
-    #     layout.setContentsMargins(0, 0, 0, 0)
-    #     layout.setSpacing(0)
-    #     self._terminal_tabs = TerminalTabWidget(self._terminal_panel)
-    #     layout.addWidget(self._terminal_tabs)
-    #     self._terminal_panel.setLayout(layout)
-    #     self._terminal_panel.setMinimumHeight(200)
-    #     self._terminal_panel.setMaximumHeight(500)
-    #     self._terminal_panel.hide()
-    #     right_panel = self.tool_grid.parentWidget()
-    #     if right_panel:
-    #         rlayout = right_panel.layout()
-    #         if rlayout:
-    #             idx = rlayout.indexOf(self.tool_grid)
-    #             rlayout.insertWidget(idx + 1, self._terminal_panel)
-
     def show_settings (self ):
         diag =SettingsDialog (self )
         diag .settings_changed .connect (self .on_settings_changed )
-
-        # try :  # 特效已注释
-        #     from utils import install_liquid_glass_animations 
-        #     install_liquid_glass_animations (diag )
-        # except Exception :
-        #     pass 
 
         diag .exec ()
 
@@ -1237,51 +917,6 @@ class MainWindow (QMainWindow ):
         self .apply_theme ()
         self .update_tool_grid ()
         self .refresh_grid_layout ()
-
-        # self._register_global_hotkeys()  # 已禁用全局热键功能
-
-    # def _register_global_hotkeys(self):  # 已禁用全局热键功能
-    #     for hk_name in ("screenshot_hotkey", "quick_open_hotkey"):
-    #         old_val = getattr(self, f"_{hk_name}_registered", "")
-    #         if old_val:
-    #             try:
-    #                 keyboard.remove_hotkey(old_val)
-    #             except Exception:
-    #                 pass
-    #     ss_val = SETTINGS.get("screenshot_hotkey", "")
-    #     if ss_val:
-    #         try:
-    #             keyboard.add_hotkey(ss_val, lambda: self._screenshot_signal.emit())
-    #             self._screenshot_hotkey_registered = ss_val
-    #         except Exception as e:
-    #             logger.warning(f"注册截图快捷键失败: {e}")
-    #             self._screenshot_hotkey_registered = ""
-    #     else:
-    #         self._screenshot_hotkey_registered = ""
-    #     qo_val = SETTINGS.get("quick_open_hotkey", "")
-    #     if qo_val:
-    #         try:
-    #             keyboard.add_hotkey(qo_val, lambda: self._toggle_visibility_signal.emit())
-    #             self._quick_open_hotkey_registered = qo_val
-    #         except Exception as e:
-    #             logger.warning(f"注册快捷启动快捷键失败: {e}")
-    #             self._quick_open_hotkey_registered = ""
-    #     else:
-    #         self._quick_open_hotkey_registered = ""
-
-    # def take_screenshot(self):  # 已禁用截图功能
-    #     try:
-    #         from core.screenshot import ScreenshotOverlay
-    #         self._screenshot_overlay = ScreenshotOverlay(callback=self._on_screenshot_taken)
-    #         self._screenshot_overlay.show_and_capture()
-    #     except Exception as e:
-    #         logger.error(f"截图失败: {e}", exc_info=True)
-
-    # def _on_screenshot_taken(self, filepath):  # 已禁用截图功能
-    #     try:
-    #         logger.info(f"截图已保存: {filepath}")
-    #     except Exception:
-    #         pass
 
     def toggle_window_visibility (self ):
         try :
@@ -1409,19 +1044,6 @@ class MainWindow (QMainWindow ):
             return 
         self ._is_exiting =True 
 
-        # try:  # 已禁用全局热键功能
-        #     self.disable_all_hotkeys()
-        # except Exception:
-        #     pass
-        # try:
-        #     keyboard.unhook_all_hotkeys()
-        # except Exception:
-        #     pass
-        # try:
-        #     keyboard.unhook_all()
-        # except Exception:
-        #     pass
-
         try :
             if hasattr (self ,"tray_icon")and self .tray_icon :
                 try :
@@ -1444,10 +1066,6 @@ class MainWindow (QMainWindow ):
         os ._exit (0 )
 
     def closeEvent (self ,e ):
-        # if hasattr(self, '_terminal_tabs') and self._terminal_tabs.terminal_count() > 0:  # 已禁用终端功能
-        #     if not self._terminal_tabs.close_all_terminals():
-        #         e.ignore()
-        #         return
         save_main_window_geometry (self .saveGeometry ())
         save_main_window_state (self .saveState ())
 
@@ -1497,46 +1115,6 @@ class MainWindow (QMainWindow ):
                 subprocess .Popen ([notepad_path ])
         except Exception as e :
             QMessageBox .warning (self ,"错误",f"运行失败: {e}")
-
-    # def _update_batch_button_order (self ,run_first :bool ):  # 已禁用批量模式
-    #     layout =self .btn_batch .parentWidget ().layout ()
-    #     if layout is None :
-    #         return 
-    #     idx_batch =layout .indexOf (self .btn_batch )
-    #     idx_run =layout .indexOf (self .btn_run_batch )
-    #     if idx_batch <0 or idx_run <0 :
-    #         return 
-    #     start_idx =min (idx_batch ,idx_run )
-    #     layout .removeWidget (self .btn_batch )
-    #     layout .removeWidget (self .btn_run_batch )
-    #     if run_first :
-    #         layout .insertWidget (start_idx ,self .btn_run_batch )
-    #         layout .insertWidget (start_idx +1 ,self .btn_batch )
-    #     else :
-    #         layout .insertWidget (start_idx ,self .btn_batch )
-    #         layout .insertWidget (start_idx +1 ,self .btn_run_batch )
-
-    # def toggle_batch_mode (self ):  # 已禁用批量模式
-    #     is_active =not self .tool_grid .show_select_box 
-    #     self .tool_grid .enable_batch_mode (is_active )
-    #     if is_active :
-    #         self .btn_batch .setText ("退出批量")
-    #         self .btn_run_batch .show ()
-    #         self ._update_batch_button_order (True )
-    #     else :
-    #         self .btn_batch .setText ("批量模式")
-    #         self .btn_run_batch .hide ()
-    #         self ._update_batch_button_order (False )
-
-    # def do_batch_run (self ):  # 已禁用批量模式
-    #     selected =self .tool_grid .get_selected_tools ()
-    #     if not selected :
-    #         QMessageBox .information (self ,"提示","未选择任何工具")
-    #         return 
-
-    #     self .run_tools_batch (selected )
-
-    #     self .toggle_batch_mode ()
 
     def check_tools_health (self ):
         try :
