@@ -6,7 +6,7 @@ QFrame ,QVBoxLayout ,QHBoxLayout ,QLabel ,QLineEdit ,QPushButton ,
 QComboBox ,QScrollArea ,QWidget ,QToolButton ,QMenu ,QDialog ,
 QFileDialog ,QMessageBox ,QInputDialog ,QCheckBox ,QGridLayout ,QSizePolicy ,
 QTabWidget ,QStackedWidget ,QSplitter ,QTableWidget ,QTableWidgetItem ,
-QHeaderView ,QAbstractItemView
+QHeaderView ,QAbstractItemView ,QPlainTextEdit
 )
 from PyQt6 .QtCore import Qt ,pyqtSignal ,QTimer ,QEvent ,QSettings ,QVariantAnimation ,QEasingCurve
 from PyQt6 .QtGui import QAction ,QKeySequence ,QIcon ,QColor ,QPalette
@@ -513,21 +513,60 @@ class ToolDialog (QDialog ):
         lay .setSpacing (10 )
         lay .setContentsMargins (10 ,10 ,10 ,10 )
 
+        hname =QHBoxLayout ()
+        name_col =QVBoxLayout ()
         lb_name =QLabel ("工具名称:")
-        lay .addWidget (lb_name )
+        name_col .addWidget (lb_name )
         self .ed_name =QLineEdit ()
         if self .tool_data :
             self .ed_name .setText (self .tool_data ['name'])
-        lay .addWidget (self .ed_name )
+        name_col .addWidget (self .ed_name )
+        hname .addLayout (name_col ,1 )
 
+        weight_col =QVBoxLayout ()
+        lb_weight =QLabel ("显示权重:")
+        weight_col .addWidget (lb_weight )
+        self .ed_weight =QLineEdit ()
+        self .ed_weight .setPlaceholderText ("越大越靠前")
+        if self .tool_data :
+            w =self .tool_data .get ("weight",None )
+            if w is not None :
+                self .ed_weight .setText (str (w ))
+            else :
+                self .ed_weight .setText ("0")
+        else :
+            self .ed_weight .setText ("0")
+        self .ed_weight .setFixedWidth (110 )
+        weight_col .addWidget (self .ed_weight )
+        hname .addLayout (weight_col )
+        lay .addLayout (hname )
+
+        htype_cat =QHBoxLayout ()
+
+        col_type =QVBoxLayout ()
         lb_type =QLabel ("工具类型:")
-        lay .addWidget (lb_type )
+        col_type .addWidget (lb_type )
         self .cb_type =QComboBox ()
         self .refresh_type_choices ()
         if self .tool_data :
             self .cb_type .setCurrentText (self .tool_data ['type'])
         self .cb_type .currentTextChanged .connect (self .on_type_changed )
-        lay .addWidget (self .cb_type )
+        col_type .addWidget (self .cb_type )
+        htype_cat .addLayout (col_type ,1 )
+
+        col_cat =QVBoxLayout ()
+        lb_cat =QLabel ("工具分类:")
+        col_cat .addWidget (lb_cat )
+        self .cb_cat =QComboBox ()
+        self .cb_cat .setEditable (True )
+        filtered_categories =[cat for cat in self .categories if cat not in ("最近启动","我的收藏")]
+        self .cb_cat .addItems (sorted (filtered_categories ))
+        if self .tool_data :
+            self .cb_cat .setCurrentText (self .tool_data ['category'])
+        col_cat .addWidget (self .cb_cat )
+        htype_cat .addLayout (col_cat ,1 )
+
+        lay .addLayout (htype_cat )
 
         lb_path =QLabel ("工具路径:")
         lay .addWidget (lb_path )
@@ -551,51 +590,40 @@ class ToolDialog (QDialog ):
         self .lb_url .hide ()
         self .ed_url .hide ()
 
-        lb_cat =QLabel ("工具分类:")
-        lay .addWidget (lb_cat )
-        self .cb_cat =QComboBox ()
-        self .cb_cat .setEditable (True )
-        filtered_categories =[cat for cat in self .categories if cat not in ("最近启动","我的收藏")]
-        self .cb_cat .addItems (sorted (filtered_categories ))
-        if self .tool_data :
-            self .cb_cat .setCurrentText (self .tool_data ['category'])
-        lay .addWidget (self .cb_cat )
+        self .params_widget =QWidget ()
+        hparams =QHBoxLayout (self .params_widget )
+        hparams .setContentsMargins (0 ,0 ,0 ,0 )
+        hparams .setSpacing (10 )
 
-        self .lb_params_pre =QLabel ("前置参数(可选):")
-        lay .addWidget (self .lb_params_pre )
+        col_pre =QVBoxLayout ()
+        self .lb_params_pre =QLabel ("前置参数:")
+        col_pre .addWidget (self .lb_params_pre )
         self .ed_params_pre =QLineEdit ()
-        self .ed_params_pre .setPlaceholderText ("Java: 插在 -jar 之前 / Python: 插在脚本之前")
+        self .ed_params_pre .setPlaceholderText ("Java: -jar 之前 / Python: 脚本之前")
         if self .tool_data :
             self .ed_params_pre .setText (self .tool_data .get ("params_pre",""))
-        lay .addWidget (self .ed_params_pre )
+        col_pre .addWidget (self .ed_params_pre )
+        hparams .addLayout (col_pre ,1 )
 
-        lb_params =QLabel ("启动参数:")
-        lay .addWidget (lb_params )
+        col_post =QVBoxLayout ()
+        lb_params =QLabel ("后置参数:")
+        col_post .addWidget (lb_params )
         self .ed_params =QLineEdit ()
         if self .tool_data :
             self .ed_params .setText (self .tool_data .get ("params",""))
-        lay .addWidget (self .ed_params )
+        col_post .addWidget (self .ed_params )
+        hparams .addLayout (col_post ,1 )
+
+        lay .addWidget (self .params_widget )
 
         lb_desc =QLabel ("工具描述:")
         lay .addWidget (lb_desc )
-        self .ed_desc =QLineEdit ()
+        self .ed_desc =QPlainTextEdit ()
+        self .ed_desc .setPlaceholderText ("可换行输入描述")
+        self .ed_desc .setFixedHeight (72 )
         if self .tool_data :
-            self .ed_desc .setText (self .tool_data .get ("description",""))
+            self .ed_desc .setPlainText (self .tool_data .get ("description",""))
         lay .addWidget (self .ed_desc )
-
-        lb_weight =QLabel ("显示权重(任意数字):")
-        lay .addWidget (lb_weight )
-        self .ed_weight =QLineEdit ()
-        self .ed_weight .setPlaceholderText ("如 5、3.14、-2.5，数字越大越靠前")
-        if self .tool_data :
-            w =self .tool_data .get ("weight",None )
-            if w is not None :
-                self .ed_weight .setText (str (w ))
-            else :
-                self .ed_weight .setText ("0")
-        else :
-            self .ed_weight .setText ("0")
-        lay .addWidget (self .ed_weight )
 
         lb_cmd =QLabel ("执行命令预览:")
         lay .addWidget (lb_cmd )
@@ -674,9 +702,7 @@ class ToolDialog (QDialog ):
         self .ed_url .setVisible (is_web )
         self .ed_path .setVisible (not is_web )
         self .btn_browse .setVisible (not is_web )
-        self .ed_params .setVisible (not is_web )
-        self .lb_params_pre .setVisible (not is_web )
-        self .ed_params_pre .setVisible (not is_web )
+        self .params_widget .setVisible (not is_web )
 
     def _update_cmd_preview (self ):
         try :
@@ -708,7 +734,7 @@ class ToolDialog (QDialog ):
         data ['category']=self .cb_cat .currentText ().strip ()
         data ['type']=self .cb_type .currentText ()
 
-        data ['description']=self .ed_desc .text ().strip ()
+        data ['description']=self .ed_desc .toPlainText ().strip ()
         try :
             data ['weight']=float (self .ed_weight .text ().strip ())
         except Exception :

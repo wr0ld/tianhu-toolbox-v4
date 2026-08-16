@@ -166,3 +166,53 @@
 2026-08-16 23:56:07  [程序启动]
 --------------------------------------------------------
 2026-08-16 23:56:30,776 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe"  -jar "E:\tools\YsoGUI\target\YsoGUI-1.0.0.jar" 
+
+--------------------------------------------------------
+2026-08-16 23:57:04  [程序启动]
+--------------------------------------------------------
+
+--------------------------------------------------------
+2026-08-17 00:00:23  [程序启动]
+--------------------------------------------------------
+
+--------------------------------------------------------
+2026-08-17 00:36:31  [程序启动]
+--------------------------------------------------------
+2026-08-17 00:37:37,396 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/tscanplus/TscanPlus_Win_Amd64.exe" 
+2026-08-17 00:38:07,169 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_scan/tscanplus/TscanPlus_Win_Amd64.exe" 
+2026-08-17 00:38:46,256 - INFO - [运行工具] cmd /c start "" "E:/TscanPlus/TscanPlus_Win_Amd64.exe" 
+2026-08-17 01:20:54,946 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/dogcs_v2.1/XieBroC2.exe" 
+
+--------------------------------------------------------
+2026-08-17 02:27:08  [程序启动]
+--------------------------------------------------------
+2026-08-17 02:27:12,853 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe"  -jar "E:\ONE-FOX-toolsV4.0\tools/other/VulToolsKit/OA综合漏洞利用工具/YongYouNcTool-1.0.jar" 
+
+--------------------------------------------------------
+2026-08-17 02:28:55  [程序启动]
+--------------------------------------------------------
+2026-08-17 02:29:04,942 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\javaw.exe"  -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/weblogic/WeblogicTool_1.3.jar" 
+2026-08-17 02:29:05,638 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe"  -jar "E:\ONE-FOX-toolsV4.0\tools/other/VulToolsKit/Weblogic综合漏洞利用工具/WeblogicTool_1.3.jar" 
+2026-08-17 02:31:04,710 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe"  -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/struts2/hyacinth.jar" 
+2026-08-17 02:32:15,051 - INFO - [运行工具] cmd /c start "" "E:\TrafficEye\trafficeye.exe" 
+2026-08-17 02:33:03,056 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/MemShellParty" && "start_memshell_party.bat" "
+2026-08-17 02:33:08,878 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe"  -jar "E:\ONE-FOX-toolsV4.0\tools/other/jmg-gui-1.0.9_250101.jar" 
+2026-08-17 02:33:19,329 - INFO - [运行工具] cmd /c start "" "E:\ONE-FOX-toolsV4.0\tools/gui_other/aniya/AniYa.exe" 
+2026-08-17 02:33:29,335 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe"  -jar "E:\ONE-FOX-toolsV4.0\tools/other/VulToolsKit/OA综合漏洞利用工具/2023HW.jar" 
+2026-08-17 02:46:24,736 - INFO - [运行工具] cmd /c start cmd /k "cd /d "E:\ONE-FOX-toolsV4.0\tools/other/nmap" && "nmap.exe" "
+
+--------------------------------------------------------
+2026-08-17 02:49:48  [程序启动]
+--------------------------------------------------------
+
+--------------------------------------------------------
+2026-08-17 02:52:58  [程序启动]
+--------------------------------------------------------
+
+--------------------------------------------------------
+2026-08-17 02:53:49  [程序启动]
+--------------------------------------------------------
+
+--------------------------------------------------------
+2026-08-17 02:54:46  [程序启动]
+--------------------------------------------------------

@@ -29,14 +29,6 @@
       "WebShell管理工具"
     ],
     [
-      "Mimikatz",
-      "后渗透工具"
-    ],
-    [
-      "DirSearch目录探测工具",
-      "信息收集工具"
-    ],
-    [
       "OneForALL",
       "信息收集工具"
     ],
@@ -66,14 +58,6 @@
     ],
     [
       "TscanPlus_Win_Amd64",
-      "我的"
-    ],
-    [
-      "JAVA框架漏洞利用工具探测工具",
-      "框架漏洞利用工具"
-    ],
-    [
-      "jmg-gui-1.0.9_250101",
       "我的"
     ],
     [
@@ -139,52 +123,60 @@
     [
       "YsoGUI-1.0.0",
       "jndi"
+    ],
+    [
+      "MDUT增强版",
+      "漏洞扫描与利用工具"
+    ],
+    [
+      "BurpSuit-Pro",
+      "抓包与代理工具"
     ]
   ],
   "recent_tools": [
     [
-      "YsoGUI-1.0.0",
-      "jndi"
-    ],
-    [
-      "双网卡路由工具",
+      "nmap",
       "我的"
     ],
     [
-      "小迪渗透",
-      "网页工具"
-    ],
-    [
-      "YONYOU-TOOL-2.0.9",
+      "2023HW",
       "VulToolsKit"
     ],
     [
-      "jwt_GUI",
-      "我的"
-    ],
-    [
-      "AES-Encoder",
+      "AniYa-GUl免杀框架",
       "免杀工具"
     ],
     [
-      "哥斯拉",
-      "WebShell管理工具"
+      "jmg-gui-1.0.9_250101",
+      "我的"
     ],
     [
-      "VUE框架扫描工具",
-      "漏洞扫描与利用工具"
+      "MemShellParty",
+      "我的"
     ],
     [
-      "SOMD5",
-      "网页工具"
+      "trafficeye",
+      "我的"
     ],
     [
-      "CMD5",
-      "网页工具"
+      "JAVA框架漏洞利用工具探测工具",
+      "框架漏洞利用工具"
+    ],
+    [
+      "WeblogicTool_1.3",
+      "VulToolsKit"
+    ],
+    [
+      "WeblogicTool",
+      "框架漏洞利用工具"
+    ],
+    [
+      "YongYouNcTool-1.0",
+      "VulToolsKit"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAABxAAAAxgAABX4AAAPBAAAAcQAAAMYAAAV+AAADwQAAAAAAAAAABqsAAABxAAAAxgAABX4AAAPB",
-  "main_window_state": "AAAA/wAAAAD9AAAAAAAABhIAAAL8AAAABAAAAAQAAAAIAAAACPwAAAAA",
+  "main_window_geometry": "AdnQywADAAAAAAGIAAAAHgAABpUAAAMZAAABiAAAAB4AAAaVAAADGQAAAAAAAAAABqsAAAGIAAAAHgAABpUAAAMZ",
+  "main_window_state": "AAAA/wAAAAD9AAAAAAAABQ4AAAL8AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "sidebar_collapsed": true,
   "hide_web_tools": true,
   "auto_theme_mode": "manual",
