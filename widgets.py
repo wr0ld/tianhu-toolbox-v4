@@ -18,6 +18,7 @@ save_categories ,save_tools ,DEFAULT_CATEGORIES ,
 )
 from utils import (
 fuzzy_search ,is_tool_favorited ,add_favorite_tool ,remove_favorite_tool ,
+build_tool_command ,
 )
 
 FORBIDDEN_CATEGORIES =["","最近启动","我的收藏","全部工具"]
@@ -585,6 +586,25 @@ class ToolDialog (QDialog ):
             self .ed_weight .setText ("0")
         lay .addWidget (self .ed_weight )
 
+        lb_cmd =QLabel ("执行命令预览:")
+        lay .addWidget (lb_cmd )
+        self .lb_cmd =QLabel ("")
+        self .lb_cmd .setWordWrap (True )
+        self .lb_cmd .setTextInteractionFlags (Qt .TextInteractionFlag .TextSelectableByMouse )
+        self .lb_cmd .setStyleSheet (
+        f"color:{THEME .get ('text_secondary','#999')};"
+        f"background:{THEME .get ('surface','#222')};"
+        f"border:1px solid {THEME .get ('border','#333')};"
+        f"border-radius:6px; padding:8px;"
+        f"font-family:Consolas,'Courier New',monospace; font-size:12px;"
+        )
+        lay .addWidget (self .lb_cmd )
+
+        self .cb_type .currentTextChanged .connect (self ._update_cmd_preview )
+        self .ed_path .textChanged .connect (self ._update_cmd_preview )
+        self .ed_params .textChanged .connect (self ._update_cmd_preview )
+        self .ed_url .textChanged .connect (self ._update_cmd_preview )
+
         hbtn =QHBoxLayout ()
         self .btn_save =QPushButton ("保存")
         self .btn_save .setObjectName ("noHoverBtn")
@@ -600,6 +620,7 @@ class ToolDialog (QDialog ):
         self .setMinimumWidth (500 )
 
         self .on_type_changed (self .cb_type .currentText ())
+        self ._update_cmd_preview ()
 
     def refresh_type_choices (self ):
         self .cb_type .clear ()
@@ -642,6 +663,16 @@ class ToolDialog (QDialog ):
         self .ed_path .setVisible (not is_web )
         self .btn_browse .setVisible (not is_web )
         self .ed_params .setVisible (not is_web )
+
+    def _update_cmd_preview (self ):
+        try :
+            cmd =build_tool_command (self .get_tool_data ())
+            self .lb_cmd .setText (cmd if cmd else "（当前配置下无法生成命令）")
+        except Exception :
+            try :
+                self .lb_cmd .setText ("")
+            except Exception :
+                pass 
 
     def browse_file (self ):
         current_path =self .ed_path .text ().strip ()

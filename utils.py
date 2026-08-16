@@ -480,6 +480,67 @@ def _safe_quote (s :str )->str :
 def _safe_basename (p :str )->str :
     return os .path .basename (str (p ).replace ('/','\\').rstrip ('\\'))
 
+def build_tool_command (tool_data :Dict [str ,Any ])->str :
+    """根据工具配置生成要执行的命令（仅用于预览展示，不实际运行）"""
+    tool_type =tool_data .get ("type","")
+    path =tool_data .get ("path","")
+    params =tool_data .get ("params","")
+    url =tool_data .get ("url","")
+
+    base_path =os .path .abspath ("tools")
+    if os .path .isabs (path ):
+        abs_path =path
+    else :
+        abs_path =os .path .join (base_path ,path)
+
+    env_mgr =EnvManager ()
+
+    if tool_type =="网页":
+        if url :
+            if not url .lower ().startswith (("http://","https://")):
+                url ="http://"+url
+            return f"webbrowser.open({url})"
+        return "（未填写网页地址）"
+
+    if tool_type .startswith ("Python("):
+        name =tool_data .get ("custom_interpreter_name","")
+        ci =find_cli_interpreter (name ,"python")
+        pyexe =str (ci .get ("path",""))if ci else "python.exe"
+        return f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" \"{os.path.basename(abs_path)}\" {params}"'.strip ()
+
+    if tool_type .startswith ("Java("):
+        name =tool_data .get ("custom_interpreter_name","")
+        ci =find_cli_interpreter (name ,"java")
+        java_exe =os .path .join (str (ci .get ("path","")),"java.exe")if ci else "java.exe"
+        return f"\"{java_exe}\" -jar \"{abs_path}\" {params}".strip ()
+
+    if tool_type .startswith ("JAVA"):
+        version ="8"if "8"in tool_type else "11"
+        is_gui ="图形化"in tool_type
+        java_exe =env_mgr .get_java_exe (version ,gui =is_gui)
+        return f"\"{java_exe}\" -jar \"{abs_path}\" {params}".strip ()
+
+    if tool_type =="Python":
+        pyexe =env_mgr .get_python_path ()
+        return f'cmd /c start cmd /k "cd /d \"{os.path.dirname(abs_path)}\" && \"{pyexe}\" \"{os.path.basename(abs_path)}\" {params}"'
+
+    if tool_type =="GUI应用":
+        return f"cmd /c start \"\" \"{abs_path}\" {params}".strip ()
+
+    if tool_type =="命令行":
+        return f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {params}\""
+
+    if tool_type =="批处理":
+        ext =os .path .splitext (abs_path)[1 ].lower ()
+        if ext ==".vbs":
+            return f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && wscript \"{os.path.basename(abs_path)}\" {params}\""
+        return f"cmd /c start cmd /k \"cd /d \"{os.path.dirname(abs_path)}\" && \"{os.path.basename(abs_path)}\" {params}\""
+
+    if tool_type =="PowerShell":
+        return f"cmd /c start powershell -noexit -command \"cd '{os.path.dirname(abs_path)}'; .\\{os.path.basename(abs_path)} {params}\""
+
+    return ""
+
 def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
     tool_type =tool_data .get ("type","")
     path =tool_data .get ("path","")
