@@ -631,6 +631,7 @@ class ModernToolGrid (QListView ):
         self .setResizeMode (QListView .ResizeMode .Adjust )
         self .setUniformItemSizes (True )
         self .setSpacing (3 )
+        self .setViewportMargins (10 ,0 ,10 ,0 )
         self .setMouseTracking (True )
         self .viewport ().setMouseTracking (True )
         self .setSelectionMode (QListView .SelectionMode .NoSelection )
