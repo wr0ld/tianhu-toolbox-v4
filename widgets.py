@@ -171,11 +171,12 @@ else :
 
 
 class TitleBar (QWidget ):
-    def __init__ (self ,parent =None ,show_minmax =True ):
+    def __init__ (self ,parent =None ,show_minmax =True ,show_close =True ):
         super ().__init__ (parent )
         self .parent =parent 
         self .setObjectName ("titleBar")
         self .show_minmax =show_minmax 
+        self .show_close =show_close 
         self .init_ui ()
 
     def init_ui (self ):
@@ -210,6 +211,8 @@ class TitleBar (QWidget ):
         if not self .show_minmax :
             self .btn_min .hide ()
             self .btn_max .hide ()
+        if not self .show_close :
+            self .btn_close .hide ()
 
         self .setFixedHeight (60 )
         self .dragging =False 
@@ -488,7 +491,7 @@ class ToolDialog (QDialog ):
         main_lay .setContentsMargins (0 ,0 ,0 ,0 )
         main_lay .setSpacing (0 )
 
-        self .title_bar =TitleBar (self ,show_minmax =False )
+        self .title_bar =TitleBar (self ,show_minmax =False ,show_close =False )
         if not self .tool_data :
             self .title_bar .title_label .setText ("添加工具")
         else :
@@ -621,8 +624,8 @@ class ToolDialog (QDialog ):
         self .btn_cancel =QPushButton ("取消")
         self .btn_cancel .setObjectName ("noHoverBtn")
         self .btn_cancel .clicked .connect (self .reject )
-        hbtn .addWidget (self .btn_save )
-        hbtn .addWidget (self .btn_cancel )
+        hbtn .addWidget (self .btn_save ,1 )
+        hbtn .addWidget (self .btn_cancel ,1 )
         lay .addLayout (hbtn )
 
         main_lay .addWidget (content )
@@ -754,7 +757,7 @@ class SettingsDialog (QDialog ):
         ml .setContentsMargins (0 ,0 ,0 ,0 )
         ml .setSpacing (0 )
 
-        self .title_bar =TitleBar (self ,show_minmax =False )
+        self .title_bar =TitleBar (self ,show_minmax =False ,show_close =False )
         self .title_bar .title_label .setText ("设置")
         try :
             self .title_bar .perf_label .hide ()
@@ -782,15 +785,14 @@ class SettingsDialog (QDialog ):
         outer_lay .addWidget (self .tab_widget )
 
         hb_btn =QHBoxLayout ()
-        hb_btn .addStretch ()
         btn_save =QPushButton ("保存")
         btn_save .setObjectName ("noHoverBtn")
         btn_save .clicked .connect (self .save_settings )
         btn_cancel =QPushButton ("取消")
         btn_cancel .setObjectName ("noHoverBtn")
         btn_cancel .clicked .connect (self .reject )
-        hb_btn .addWidget (btn_save )
-        hb_btn .addWidget (btn_cancel )
+        hb_btn .addWidget (btn_save ,1 )
+        hb_btn .addWidget (btn_cancel ,1 )
         outer_lay .addLayout (hb_btn )
 
         ml .addWidget (content )
