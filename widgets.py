@@ -170,10 +170,11 @@ else :
 
 
 class TitleBar (QWidget ):
-    def __init__ (self ,parent =None ):
+    def __init__ (self ,parent =None ,show_minmax =True ):
         super ().__init__ (parent )
         self .parent =parent 
         self .setObjectName ("titleBar")
+        self .show_minmax =show_minmax 
         self .init_ui ()
 
     def init_ui (self ):
@@ -210,6 +211,10 @@ class TitleBar (QWidget ):
         lay .addWidget (self .btn_min )
         lay .addWidget (self .btn_max )
         lay .addWidget (self .btn_close )
+
+        if not self .show_minmax :
+            self .btn_min .hide ()
+            self .btn_max .hide ()
 
         self .setFixedHeight (60 )
         self .dragging =False 
@@ -492,7 +497,7 @@ class ToolDialog (QDialog ):
         main_lay .setContentsMargins (0 ,0 ,0 ,0 )
         main_lay .setSpacing (0 )
 
-        self .title_bar =TitleBar (self )
+        self .title_bar =TitleBar (self ,show_minmax =False )
         if not self .tool_data :
             self .title_bar .title_label .setText ("添加工具")
         else :
@@ -831,7 +836,7 @@ class SettingsDialog (QDialog ):
         ml .setContentsMargins (0 ,0 ,0 ,0 )
         ml .setSpacing (0 )
 
-        self .title_bar =TitleBar (self )
+        self .title_bar =TitleBar (self ,show_minmax =False )
         self .title_bar .title_label .setText ("设置")
         try :
             self .title_bar .perf_label .hide ()

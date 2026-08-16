@@ -139,9 +139,33 @@
     [
       "密探",
       "我的"
+    ],
+    [
+      "TscanPlus",
+      "漏洞扫描与利用工具"
     ]
   ],
   "recent_tools": [
+    [
+      "VUE框架扫描工具",
+      "漏洞扫描与利用工具"
+    ],
+    [
+      "SOMD5",
+      "网页工具"
+    ],
+    [
+      "CMD5",
+      "网页工具"
+    ],
+    [
+      "MDUT增强版",
+      "漏洞扫描与利用工具"
+    ],
+    [
+      "EveryThing",
+      "其他工具"
+    ],
     [
       "IWannaGetAll",
       "漏洞扫描与利用工具"
@@ -161,30 +185,10 @@
     [
       "ThinkphpGUI-1.3-SNAPSHOT",
       "我的"
-    ],
-    [
-      "Redis-Tools",
-      "其他工具"
-    ],
-    [
-      "哥斯拉特战版",
-      "WebShell管理工具"
-    ],
-    [
-      "bp",
-      "抓包与代理工具"
-    ],
-    [
-      "XG拟态WEBSHELL免杀工具",
-      "免杀工具"
-    ],
-    [
-      "超级SQL注入工具",
-      "漏洞扫描与利用工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAACpAAAAPgAABqkAAAM0AAAAqQAAAD4AAAapAAADNAAAAAAAAAAABqsAAACpAAAAPgAABqkAAAM0",
-  "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
+  "main_window_geometry": "AdnQywADAAAAAAGEAAAAaQAAB4QAAAOAAAABhAAAAGkAAAeEAAADgAAAAAAAAAAABqsAAAGEAAAAaQAAB4QAAAOA",
+  "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAMYAAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
   "screenshot_hotkey": "",

@@ -364,6 +364,13 @@ class MainWindow (QMainWindow ):
         hl =QHBoxLayout (topbar )
         hl .setContentsMargins (10 ,10 ,10 ,10 )
 
+        self .btn_sidebar =QPushButton ("▶")
+        self .btn_sidebar .setObjectName ("noHoverBtn")
+        self .btn_sidebar .setFixedWidth (40 )
+        self .btn_sidebar .setToolTip ("收起 / 展开左侧分类栏")
+        self .btn_sidebar .clicked .connect (self .toggle_sidebar )
+        hl .addWidget (self .btn_sidebar )
+
         self .search_bar =SearchBar ()
         self .search_bar .search_changed .connect (self .on_search )
         hl .addWidget (self .search_bar )
@@ -547,6 +554,15 @@ class MainWindow (QMainWindow ):
         try :
             self .search_bar .search_input .setFocus ()
             self .search_bar .search_input .selectAll ()
+        except Exception :
+            pass 
+
+    def toggle_sidebar (self ):
+        try :
+            visible =self .cat_panel .isVisible ()
+            self .cat_panel .setVisible (not visible )
+            if hasattr (self ,"btn_sidebar"):
+                self .btn_sidebar .setText ("◀" if visible else "▶")
         except Exception :
             pass 
 
