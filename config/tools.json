@@ -4202,5 +4202,19 @@
     "custom_interpreter_name": "",
     "custom_interpreter_type": "",
     "group": ""
+  },
+  {
+    "name": "密探",
+    "category": "我的",
+    "type": "GUI应用",
+    "description": "hashdump 微信小程序 云安全",
+    "weight": 0.0,
+    "tags": [],
+    "path": "E:\\密探\\mitan.exe",
+    "params": "",
+    "url": "",
+    "custom_interpreter_name": "",
+    "custom_interpreter_type": "",
+    "group": ""
   }
 ]

@@ -185,10 +185,6 @@ class TitleBar (QWidget ):
         self .title_label .setStyleSheet ("font-size:16px; font-weight:bold; padding-left:10px;")
         lay .addWidget (self .title_label )
 
-        self .team_info =QLabel ("ONE-FOX安全团队   By.狐狸   官网: https://www.one-fox.cn/",self )
-        self .team_info .setStyleSheet ("font-size:14px; padding-right:20px;")
-        lay .addWidget (self .team_info )
-
         lay .addStretch ()
 
         # 顶部性能监控文字已停用

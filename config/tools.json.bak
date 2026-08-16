@@ -965,7 +965,7 @@
     "name": "IWannaGetAll",
     "category": "漏洞扫描与利用工具",
     "type": "JAVA8",
-    "description": "多产品漏洞综合检测利用工具 sqlmap,内存马,yso,heapdump,tasklist,文件下载,反弹命令",
+    "description": "多产品漏洞综合检测利用工具 sqlmap,内存马,yso,heapdump,tasklist,文件下载,反弹命令,hashdump",
     "weight": 2.0,
     "tags": [],
     "path": "/tools/gui_scan/apt/IWannaGetAll-vFinal.jar",

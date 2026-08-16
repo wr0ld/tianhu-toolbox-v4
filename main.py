@@ -10,8 +10,7 @@ import logging .handlers
 from PyQt6 .QtWidgets import (
 QApplication ,QMainWindow ,QMessageBox ,QWidget ,
 QVBoxLayout ,QHBoxLayout ,QPushButton ,QSystemTrayIcon ,QMenu ,
-QFileDialog ,QInputDialog ,QLabel ,QLineEdit ,QAbstractButton ,
-QDialog ,QPlainTextEdit 
+QFileDialog ,QInputDialog ,QLabel ,QLineEdit ,QAbstractButton 
 )
 from PyQt6 .QtCore import Qt ,QSettings ,QByteArray ,QTimer ,pyqtSignal ,QThread ,QObject ,QEvent ,QVariantAnimation ,QEasingCurve ,qInstallMessageHandler ,QtMsgType 
 from PyQt6 .QtGui import QPainter ,QPixmap ,QShortcut ,QKeySequence 
@@ -557,42 +556,10 @@ class MainWindow (QMainWindow ):
             if not os .path .isfile (log_path ):
                 QMessageBox .information (self ,"打开日志",f"日志文件不存在:\n{log_path}")
                 return 
-
-            dlg =QDialog (self )
-            dlg .setWindowTitle ("日志查看")
-            dlg .resize (820 ,560 )
-            lay =QVBoxLayout (dlg )
-            lay .setContentsMargins (10 ,10 ,10 ,10 )
-            lay .setSpacing (8 )
-
-            view =QPlainTextEdit ()
-            view .setReadOnly (True )
-            lay .addWidget (view )
-
-            hb =QHBoxLayout ()
-            btn_refresh =QPushButton ("刷新")
-            btn_refresh .setObjectName ("noHoverBtn")
-            btn_close =QPushButton ("关闭")
-            btn_close .setObjectName ("noHoverBtn")
-            hb .addStretch ()
-            hb .addWidget (btn_refresh )
-            hb .addWidget (btn_close )
-            lay .addLayout (hb )
-
-            def _load ():
-                try :
-                    with open (log_path ,"r",encoding ="utf-8",errors ="replace")as f :
-                        content =f .read ()
-                    view .setPlainText (content )
-                    sb =view .verticalScrollBar ()
-                    sb .setValue (sb .maximum ())
-                except Exception as e :
-                    QMessageBox .warning (dlg ,"打开日志",f"读取日志失败: {e}")
-
-            _load ()
-            btn_refresh .clicked .connect (lambda *_ :_load ())
-            btn_close .clicked .connect (dlg .accept )
-            dlg .exec ()
+            if sys .platform .startswith ("win"):
+                os .startfile (log_path )
+            else :
+                subprocess .Popen (["xdg-open",log_path ])
         except Exception as e :
             QMessageBox .warning (self ,"打开日志",f"打开日志失败: {e}")
 
@@ -1564,8 +1531,6 @@ def main ():
     os .environ ["QT_SCALE_FACTOR_ROUNDING_POLICY"]="PassThrough"
 
     install_log_hooks ()
-    _file .stream .write ("\n")
-    _file .stream .flush ()
     app =QApplication (sys .argv )
     w =MainWindow ()
     w .show ()
