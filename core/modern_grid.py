@@ -3,8 +3,8 @@ import sys
 import os 
 import re 
 import html 
-from PyQt6 .QtCore import Qt ,QAbstractListModel ,QModelIndex ,pyqtSignal ,QSize ,QRect ,QPoint ,QEvent ,QRectF ,QVariantAnimation ,QEasingCurve ,QTimer ,QMimeData ,QByteArray
-from PyQt6 .QtGui import QPainter ,QColor ,QFont ,QPen ,QBrush ,QPixmap ,QIcon ,QMouseEvent ,QPainterPath ,QLinearGradient ,QDrag ,QCursor
+from PyQt6 .QtCore import Qt ,QAbstractListModel ,QModelIndex ,pyqtSignal ,QSize ,QRect ,QPoint ,QEvent ,QRectF ,QVariantAnimation ,QEasingCurve ,QTimer 
+from PyQt6 .QtGui import QPainter ,QColor ,QFont ,QPen ,QBrush ,QPixmap ,QIcon ,QMouseEvent ,QPainterPath ,QLinearGradient ,QCursor
 from PyQt6 .QtWidgets import QListView ,QStyledItemDelegate ,QApplication ,QMenu ,QStyle ,QToolTip ,QWidget ,QVBoxLayout ,QLabel ,QGraphicsDropShadowEffect
 
 import config 
@@ -210,37 +210,6 @@ class ToolModel (QAbstractListModel ):
             self ._tools [index .row ()]=value
             self .dataChanged .emit (index ,index ,[role ])
             return True
-        return False
-
-    def flags (self ,index ):
-        default_flags =super ().flags (index )
-        if not index .isValid ():
-            return Qt .ItemFlag .ItemIsDropEnabled |default_flags
-        return Qt .ItemFlag .ItemIsDragEnabled |Qt .ItemFlag .ItemIsDropEnabled |default_flags
-
-    def supportedDropActions (self ):
-        return Qt .DropAction .MoveAction
-
-    def mimeTypes (self ):
-        return ["application/x-toolgrid-index"]
-
-    def mimeData (self ,indexes ):
-        mime_data =QMimeData ()
-        data =QByteArray ()
-        for idx in indexes :
-            if idx .isValid ():
-                data .append (str (idx .row ()).encode ()+b",")
-        mime_data .setData ("application/x-toolgrid-index",data )
-        return mime_data
-
-    def dropMimeData (self ,data ,action ,row ,column ,parent ):
-        # InternalMove 模式下，Qt 会自行处理数据移动
-        # dropEvent 中用 id() 追踪位置变化并做权重重算
-        # 这里返回 False 让 Qt 接管移动操作
-        if action ==Qt .DropAction .IgnoreAction :
-            return True
-        if not data .hasFormat ("application/x-toolgrid-index"):
-            return False
         return False
 
     def set_tools (self ,tools ):
@@ -572,12 +541,6 @@ class ModernToolGrid (QListView ):
         self ._tip_index =QModelIndex ()
         self ._tip_popup =TooltipPopup (self )
 
-        self .setDragEnabled (True )
-        self .setAcceptDrops (True )
-        self .setDropIndicatorShown (True )
-        self .setDragDropMode (QListView .DragDropMode .InternalMove )
-        self .setDefaultDropAction (Qt .DropAction .MoveAction )
-
         self ._lg_item_reveal ={}
         self ._lg_item_reveal_timer =QTimer (self )
         self ._lg_item_reveal_timer .setInterval (16 )
@@ -587,10 +550,6 @@ class ModernToolGrid (QListView ):
             self .verticalScrollBar ().valueChanged .connect (lambda _ =None :self ._lg_update_item_reveal_targets ())
         except Exception :
             pass
-
-        # 拖拽防误触
-        self ._drag_start_pos =None
-        self ._drag_threshold =10 
 
     def _hit_test_run_button (self ,pos :QPoint )->bool :
         try :
@@ -1143,96 +1102,6 @@ class ModernToolGrid (QListView ):
 
         if sys .platform .startswith ("win"):
             os .startfile (folder_path )
-
-    # === 拖动排序：权重重算与洗牌 ===
-
-    def _reshuffle_all_weights (self ):
-        """将所有卡片的权重按当前显示顺序重新分配为递减的整数序列（1000, 999, 998...）"""
-        tools =self .tool_model .get_tools ()
-        n =len (tools )
-        if n ==0 :
-            return
-        new_weights =[]
-        base =1000.0
-        for i in range (n ):
-            new_weights .append (base -float (i ))
-        self .tool_model .update_weights (new_weights )
-        self .viewport ().update ()
-
-    def _recalculate_drop_weight (self ,dest_row :int )->float :
-        """计算拖动后目标位置的新权重。
-        取目标前后两个卡片的权重中间值。
-        如果边界权重相等或无效，先洗牌再重新计算。"""
-        tools =self .tool_model .get_tools ()
-        n =len (tools )
-        if n ==0 :
-            return 0.0
-
-        def _get_weight (idx ):
-            try :
-                w =tools [idx ].get ("weight",0 )
-                return float (w )
-            except Exception :
-                return 0.0
-
-        # 获取目标前后卡片的权重
-        prev_w =_get_weight (dest_row -1 )if dest_row >0 else None
-        next_w =_get_weight (dest_row )if dest_row <n else None
-
-        # 检查是否需要洗牌：前后权重相等且有效，或都是0
-        if prev_w is not None and next_w is not None and prev_w ==next_w :
-            self ._reshuffle_all_weights ()
-            # 洗牌后重新获取
-            tools =self .tool_model .get_tools ()
-            prev_w =_get_weight (dest_row -1 )if dest_row >0 else None
-            next_w =_get_weight (dest_row )if dest_row <n else None
-
-        if prev_w is None and next_w is None :
-            return 0.0
-        elif prev_w is None :
-            return next_w +1.0
-        elif next_w is None :
-            return prev_w -1.0
-        else :
-            return round ((prev_w +next_w )/2.0 ,4 )
-
-    def dropEvent (self ,e ):
-        """InternalMove 模式：Qt 内部处理移动，我们只需在之后做权重重算"""
-        # 记录拖动前的工具 id 序列
-        ids_before =[id (t )for t in self .tool_model ._tools ]
-
-        super ().dropEvent (e )
-
-        # 拖动后的工具 id 序列
-        ids_after =[id (t )for t in self .tool_model ._tools ]
-
-        if len (ids_before )!=len (ids_after ):
-            return
-
-        # 找出被移动的卡片：在前后序列中 id 位置发生变化
-        moved_id =None
-        dest_row =None
-        for i ,tid in enumerate (ids_before ):
-            j =ids_after .index (tid )if tid in ids_after else -1
-            if i !=j and j !=-1 :
-                moved_id =tid
-                dest_row =j
-                break
-
-        if moved_id is None :
-            return
-
-        # 计算新权重
-        new_weight =self ._recalculate_drop_weight (dest_row )
-        self .tool_model ._tools [dest_row ]["weight"]=new_weight
-
-        # 刷新卡片显示
-        idx =self .tool_model .index (dest_row )
-        self .tool_model .dataChanged .emit (idx ,idx ,[Qt .ItemDataRole .UserRole ])
-        self .viewport ().update ()
-
-        logger .debug (f"拖动排序: 位置 {dest_row}, 权重 {new_weight}")
-
 
 class LiquidGlassMenu (QMenu ):
     def __init__ (self ,parent =None ):

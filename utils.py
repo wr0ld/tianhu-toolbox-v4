@@ -681,6 +681,23 @@ def _build_search_aliases (text :str )->tuple :
 
     return tuple ([v for v in aliases if v ])
 
+@lru_cache (maxsize =4096 )
+def name_sort_key (text ):
+    try :
+        raw =str (text or "").casefold ()
+    except Exception :
+        raw =""
+    if any ('\u4e00' <=ch <='\u9fff' for ch in raw ):
+        eng =_get_pinyin_engine ()
+        if eng is not None :
+            try :
+                py =str (eng .get_pinyin (raw ,"")).casefold ()
+                if py :
+                    return py 
+            except Exception :
+                pass 
+    return raw 
+
 def fuzzy_search (tools :List [Dict [str ,Any ]],search_text :str )->List [Dict [str ,Any ]]:
     if not search_text :
         return tools 

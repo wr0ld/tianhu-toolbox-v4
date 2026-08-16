@@ -24,7 +24,7 @@ from utils import (
 ensure_single_instance ,check_environment ,validate_java_path ,run_tool ,
 is_tool_favorited ,add_favorite_tool ,remove_favorite_tool ,
 save_main_window_geometry ,load_main_window_geometry ,save_main_window_state ,load_main_window_state ,
-SearchWorker ,fuzzy_search ,get_favorite_tools ,get_recent_tools
+SearchWorker ,fuzzy_search ,get_favorite_tools ,get_recent_tools ,name_sort_key
 )
 from widgets import (
 TitleBar ,SearchBar ,CategoryPanel ,
@@ -695,7 +695,11 @@ class MainWindow (QMainWindow ):
                 final .append (t )
 
 
-        final .sort (key =lambda x :(-float (x .get ("weight",0 )or 0 ),str (x .get ('name',''))))
+        final .sort (key =lambda x :(
+        -(1 if is_tool_favorited (x )else 0 ),
+        -float (x .get ("weight",0 )or 0 ),
+        name_sort_key (x .get ('name',''))
+        ))
 
 
         display_tools =final
@@ -895,10 +899,27 @@ class MainWindow (QMainWindow ):
             self .refresh_grid_layout ()
 
     def run_tool (self ,tool_data ):
+        ok =False 
         try :
-            run_tool (tool_data )
+            ok =run_tool (tool_data )
         except Exception as e :
             QMessageBox .warning (self ,"错误",f"运行失败:{e}")
+
+        if ok :
+            try :
+                name =str (tool_data .get ("name","")).strip ()
+                cat =str (tool_data .get ("category","")).strip ()
+                for t in self .tools :
+                    if str (t .get ("name","")).strip ()==name and str (t .get ("category","")).strip ()==cat :
+                        try :
+                            t ["weight"]=float (t .get ("weight",0 )or 0 )+1.0
+                        except Exception :
+                            t ["weight"]=1.0
+                        save_tools (self .tools )
+                        self .update_tool_grid ()
+                        break 
+            except Exception :
+                pass 
 
     def on_favorite_changed (self ,tool_data ,is_fav ):
         self .update_cat_panel ()

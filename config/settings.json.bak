@@ -147,6 +147,10 @@
   ],
   "recent_tools": [
     [
+      "哥斯拉",
+      "WebShell管理工具"
+    ],
+    [
       "VUE框架扫描工具",
       "漏洞扫描与利用工具"
     ],
@@ -181,15 +185,11 @@
     [
       "密探",
       "我的"
-    ],
-    [
-      "ThinkphpGUI-1.3-SNAPSHOT",
-      "我的"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAAElAAAArAAABjIAAAOnAAABJQAAAKwAAAYyAAADpwAAAAAAAAAABqsAAAElAAAArAAABjIAAAOn",
+  "main_window_geometry": "AdnQywADAAAAAAEkAAAAiQAABjEAAAOEAAABJAAAAIkAAAYxAAADhAAAAAAAAAAABqsAAAEkAAAAiQAABjEAAAOE",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABQ4AAAL8AAAABAAAAAQAAAAIAAAACPwAAAAA",
-  "sidebar_collapsed": false,
+  "sidebar_collapsed": true,
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
   "screenshot_hotkey": "",
