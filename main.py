@@ -1523,6 +1523,17 @@ class MainWindow (QMainWindow ):
             self .restoreState (QByteArray (state_bytes ))
         self ._clamp_to_screen ()
 
+def _mark_log_session ():
+    try :
+        if os .path .exists (_LOG_PATH )and os .path .getsize (_LOG_PATH )>0 :
+            sep ="-"*56 
+            _file .stream .write ("\n"+sep +"\n")
+            _file .stream .write (time .strftime ("%Y-%m-%d %H:%M:%S")+"  [程序启动]\n")
+            _file .stream .write (sep +"\n")
+            _file .stream .flush ()
+    except Exception :
+        pass 
+
 def main ():
     QApplication .setHighDpiScaleFactorRoundingPolicy (
         Qt .HighDpiScaleFactorRoundingPolicy .PassThrough
@@ -1531,6 +1542,7 @@ def main ():
     os .environ ["QT_SCALE_FACTOR_ROUNDING_POLICY"]="PassThrough"
 
     install_log_hooks ()
+    _mark_log_session ()
     app =QApplication (sys .argv )
     w =MainWindow ()
     w .show ()

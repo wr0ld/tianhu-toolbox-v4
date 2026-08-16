@@ -1,15 +1,13 @@
+2026-08-16 21:52:48,359 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
+2026-08-16 21:52:53,393 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/JDumpSpider-1.1-SNAPSHOT-full/JDumpSpider-1.1-SNAPSHOT-full.jar" 
+2026-08-16 21:52:58,360 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/heapdump/JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" --gui
 
+--------------------------------------------------------
+2026-08-16 21:53:04  [程序启动]
+--------------------------------------------------------
+2026-08-16 21:53:09,393 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
+2026-08-16 21:53:15,223 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
 
-
-
-
-
-
-2026-08-16 21:45:52,745 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
-2026-08-16 21:45:58,322 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/JDumpSpider-1.1-SNAPSHOT-full/JDumpSpider-1.1-SNAPSHOT-full.jar" 
-2026-08-16 21:46:00,846 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/heapdump/JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" --gui
-2026-08-16 21:46:03,076 - INFO - [运行工具] cmd /c start "" "E:\密探\mitan.exe" 
-
-2026-08-16 21:46:20,845 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/apt/IWannaGetAll-vFinal.jar" 
-2026-08-16 21:46:23,912 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/other/JDumpSpider-1.1-SNAPSHOT-full/JDumpSpider-1.1-SNAPSHOT-full.jar" 
-2026-08-16 21:46:26,395 - INFO - [运行工具] "E:/ONE-FOX-toolsV4.0/Java_path/Java_8_win\bin\java.exe" -jar "E:\ONE-FOX-toolsV4.0\tools/gui_scan/heapdump/JDumpSpiderGUI-1.0-SNAPSHOT-full.jar" --gui
+--------------------------------------------------------
+2026-08-16 21:53:19  [程序启动]
+--------------------------------------------------------

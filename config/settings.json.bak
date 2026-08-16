@@ -143,19 +143,19 @@
   ],
   "recent_tools": [
     [
-      "JDumpSpider-1.1-SNAPSHOT-full",
-      "我的"
-    ],
-    [
       "IWannaGetAll",
       "漏洞扫描与利用工具"
     ],
     [
-      "密探",
+      "JDumpSpiderGUI-1.0-SNAPSHOT-full",
       "我的"
     ],
     [
-      "JDumpSpiderGUI-1.0-SNAPSHOT-full",
+      "JDumpSpider-1.1-SNAPSHOT-full",
+      "我的"
+    ],
+    [
+      "密探",
       "我的"
     ],
     [
@@ -183,7 +183,7 @@
       "漏洞扫描与利用工具"
     ]
   ],
-  "main_window_geometry": "AdnQywADAAAAAACfAAAAVwAABp8AAANNAAAAnwAAAFcAAAafAAADTQAAAAAAAAAABqsAAACfAAAAVwAABp8AAANN",
+  "main_window_geometry": "AdnQywADAAAAAACpAAAAPgAABqkAAAM0AAAAqQAAAD4AAAapAAADNAAAAAAAAAAABqsAAACpAAAAPgAABqkAAAM0",
   "main_window_state": "AAAA/wAAAAD9AAAAAAAABgEAAAL3AAAABAAAAAQAAAAIAAAACPwAAAAA",
   "auto_theme_mode": "manual",
   "custom_bg_path": "",
