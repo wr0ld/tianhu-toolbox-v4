@@ -859,10 +859,6 @@ class SettingsDialog (QDialog ):
         outer_lay .addWidget (self .tab_widget )
 
         hb_btn =QHBoxLayout ()
-        btn_reset =QPushButton ("重置")
-        btn_reset .setObjectName ("noHoverBtn")
-        btn_reset .clicked .connect (self .reset_settings )
-        hb_btn .addWidget (btn_reset )
         hb_btn .addStretch ()
         btn_save =QPushButton ("保存")
         btn_save .setObjectName ("noHoverBtn")
@@ -1159,23 +1155,6 @@ class SettingsDialog (QDialog ):
 
     # def _capture_quick_open_key(self, event):  # 已禁用全局热键功能
     #     self._capture_hotkey_common(event, self.ed_quick_open_key)
-
-    def reset_settings (self ):
-        from config import DEFAULT_SETTINGS 
-
-        msg =QMessageBox (self )
-        msg .setWindowTitle ("确认重置")
-        msg .setText ("确定要将所有设置重置为默认值吗？不会删除已添加的工具和分类。")
-        msg .setStandardButtons (QMessageBox .StandardButton .Yes |QMessageBox .StandardButton .No )
-        r =msg .exec ()
-        if r ==QMessageBox .StandardButton .Yes :
-            self .ed_py .setText (DEFAULT_SETTINGS ["python_path"])
-            self .ed_j8 .setText (DEFAULT_SETTINGS ["java8_path"])
-            self .ed_j11 .setText (DEFAULT_SETTINGS ["java11_path"])
-
-            self .cli_python_list =list (DEFAULT_SETTINGS .get ("cli_python_interpreters",[])or [])
-            self .cli_java_list =list (DEFAULT_SETTINGS .get ("cli_java_interpreters",[])or [])
-            self ._refresh_interpreter_tables ()
 
     def _make_interpreter_table (self ):
         table =QTableWidget ()
