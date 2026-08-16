@@ -24,7 +24,8 @@ from utils import (
 ensure_single_instance ,check_environment ,validate_java_path ,run_tool ,
 is_tool_favorited ,add_favorite_tool ,remove_favorite_tool ,
 save_main_window_geometry ,load_main_window_geometry ,save_main_window_state ,load_main_window_state ,
-SearchWorker ,fuzzy_search ,get_favorite_tools ,get_recent_tools ,name_sort_key
+SearchWorker ,fuzzy_search ,get_favorite_tools ,get_recent_tools ,name_sort_key ,
+reset_run_log_count
 )
 from widgets import (
 TitleBar ,SearchBar ,CategoryPanel ,
@@ -1160,14 +1161,6 @@ class MainWindow (QMainWindow ):
             self .restoreState (QByteArray (state_bytes ))
         self ._clamp_to_screen ()
 
-def _mark_log_session ():
-    try :
-        if os .path .exists (_LOG_PATH )and os .path .getsize (_LOG_PATH )>0 :
-            _file .stream .write ("\n")
-            _file .stream .flush ()
-    except Exception :
-        pass 
-
 def main ():
     QApplication .setHighDpiScaleFactorRoundingPolicy (
         Qt .HighDpiScaleFactorRoundingPolicy .PassThrough
@@ -1176,7 +1169,7 @@ def main ():
     os .environ ["QT_SCALE_FACTOR_ROUNDING_POLICY"]="PassThrough"
 
     install_log_hooks ()
-    _mark_log_session ()
+    reset_run_log_count ()
     app =QApplication (sys .argv )
     w =MainWindow ()
     w .show ()

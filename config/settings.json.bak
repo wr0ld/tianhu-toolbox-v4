@@ -135,16 +135,24 @@
   ],
   "recent_tools": [
     [
+      "Redis-Tools",
+      "其他工具"
+    ],
+    [
+      "YsoGUI-1.0.0",
+      "jndi"
+    ],
+    [
       "subfinder",
       "我的"
     ],
     [
-      "OneForALL",
-      "信息收集工具"
+      "0x7eTeamTools",
+      "漏洞扫描与利用工具"
     ],
     [
-      "Redis-Tools",
-      "其他工具"
+      "OneForALL",
+      "信息收集工具"
     ],
     [
       "nmap",
@@ -164,14 +172,6 @@
     ],
     [
       "jmg-gui-1.0.9_250101",
-      "我的"
-    ],
-    [
-      "MemShellParty",
-      "我的"
-    ],
-    [
-      "trafficeye",
       "我的"
     ]
   ],

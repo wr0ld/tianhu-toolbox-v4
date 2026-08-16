@@ -18,6 +18,20 @@ from core .window_effect import WindowEffect
 
 logger =logging .getLogger (__name__ )
 
+_RUN_LOG_COUNT =0 
+_LOG_FILE =os .path .join (os .path .dirname (os .path .abspath (__file__ )),"app.log")
+
+def reset_run_log_count ():
+    global _RUN_LOG_COUNT 
+    _RUN_LOG_COUNT =0 
+
+def _write_session_newline ():
+    try :
+        with open (_LOG_FILE ,"a",encoding ="utf-8")as f :
+            f .write ("\n")
+    except Exception :
+        pass 
+
 ENV_WARNED ={}
 JAVA_WARNED =False 
 
@@ -653,7 +667,11 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
             except Exception as e :
                 logger .warning (f"记录最近启动历史失败: {e}")
 
+        global _RUN_LOG_COUNT 
+        if _RUN_LOG_COUNT ==0 :
+            _write_session_newline ()
         logger .info (f"[运行工具] {cmd}")
+        _RUN_LOG_COUNT +=1 
 
         return True
 
