@@ -36,6 +36,7 @@
 
 | ![img](https://cdn.nlark.com/yuque/0/2026/png/48488607/1786977978348-9d971554-0f39-4195-b9b7-ef6b243e32d8.png) | ![img](https://cdn.nlark.com/yuque/0/2026/png/48488607/1786978000240-19094e29-f378-4a84-a194-cedfcb62eb4d.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![img](https://cdn.nlark.com/yuque/0/2026/png/48488607/1786978955360-e40f2364-fc82-4797-bf83-b428aa0fb4c1.png) | ![img](https://cdn.nlark.com/yuque/0/2026/png/48488607/1786978976570-0193c3ee-a0f8-4dda-8697-4d2fe3a716d8.png) |
 | ![img](https://cdn.nlark.com/yuque/0/2026/png/48488607/1786978049638-79844696-8e6a-41ea-a353-d6f3b463ec87.png) | ![img](https://cdn.nlark.com/yuque/0/2026/png/48488607/1786978052440-55c0ac70-b8f0-4299-9ccb-45ceaa0171ff.png) |
 
 ### 卡片交互

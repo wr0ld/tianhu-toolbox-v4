@@ -18,3 +18,5 @@ config/.instance.lock
 config/shortcuts.ini
 config/settings.json
 config/tools.json
+agent.md
+AGENTS.md
