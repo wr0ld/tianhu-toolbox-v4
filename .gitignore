@@ -8,3 +8,13 @@ tools/
 *.jpg
 *.png
 *.ico
+!config/fox.png
+!config/fox.ico
+*.bak
+*.zip
+__pycache__/
+app.log
+config/.instance.lock
+config/shortcuts.ini
+config/settings.json
+config/tools.json
