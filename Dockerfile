@@ -1,3 +1,6 @@
+FROM eclipse-temurin:8-jre-jammy AS java8
+FROM eclipse-temurin:11-jre-jammy AS java11
+
 FROM debian:bookworm-slim
 
 # Debian provides native PyQt6 packages for both arm64 and amd64.
@@ -7,8 +10,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && useradd --create-home --uid 1000 toolbox
 
-RUN apt-get update && apt-get install -y --no-install-recommends qt6-qpa-plugins \
+RUN apt-get update && apt-get install -y --no-install-recommends qt6-qpa-plugins xterm xdg-utils libasound2 \
     && rm -rf /var/lib/apt/lists/*
+
+COPY --from=java8 /opt/java/openjdk /opt/java8
+COPY --from=java11 /opt/java/openjdk /opt/java11
+ENV JAVA8_HOME=/opt/java8 \
+    JAVA11_HOME=/opt/java11 \
+    JAVA_HOME=/opt/java8 \
+    PATH=/opt/java8/bin:$PATH
+RUN java -version && /opt/java11/bin/java -version
 
 ENV DISPLAY=:99 \
     QT_QPA_PLATFORM=xcb \

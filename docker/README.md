@@ -35,17 +35,57 @@ docker build -t tianhu-toolbox:local .
 docker run --rm -p 127.0.0.1:6080:6080 --shm-size=256m tianhu-toolbox:local
 ```
 
+## Linux 工具启动
+
+镜像包含 ARM64/AMD64 原生 Java 8、Java 11 JRE 和 xterm。
+Java 8 位于 `/opt/java8`，Java 11 位于 `/opt/java11`。
+应用根据 JAVA8 / JAVA11 类型选择对应环境，图形化 JAR 使用同版本 java。
+Python 默认使用应用自身的 `/usr/bin/python3`。
+已有配置卷不需要删除；失效的 Windows Java 路径会回退到镜像中的环境。
+
+- Python、JAVA8、JAVA11、命令行工具在独立 xterm 窗口运行，结束后保留输出。
+- GUI应用、包含“图形化”的 Java 类型直接启动图形程序。
+- `.sh` 文件选择“命令行”类型，使用 Bash 执行；Linux 二进制需要执行权限。
+- 自定义 Java 路径支持 Java 根目录、bin 目录和 java 可执行文件。
+- 参数遵循 Linux 引号规则；包含空格的参数用双引号包围。
+  参数直接传给程序，不执行 `$()`、管道或重定向。如需组合命令，请编写 `.sh` 脚本。
+
+将自己的工具复制到正在运行的容器工具卷（在仓库目录执行）：
+
+```bash
+docker compose cp ./my-tool.jar toolbox:/app/tools/my-tool.jar
+```
+
+在界面里添加工具，选择 JAVA8 或 JAVA11，路径填 `/app/tools/my-tool.jar`。
+JVM 参数（例如 `-Xmx512m`）填“前置参数”，应用参数填“后置参数”。
+工具所需的 Python 库及其他系统依赖需要另外安装到镜像中。
+
+## 更新已运行的版本
+
+```bash
+git fetch https://github.com/stave888/tianhu-toolbox-v4.git codex/docker-arm64-gui
+git switch --detach FETCH_HEAD
+docker compose up -d --build
+```
+
+无需删除配置卷。如果切换提示有本地修改，请先保存修改，不要强制覆盖。
+
 ## 当前限制
 
 - 仓库是轻便版，没有附带 tools/ 工具或完整工具列表，空列表是预期行为。
-- 当前 utils.py 的 Python、GUI、命令行等启动逻辑仍使用 Windows `cmd`，
-  Java 环境路径也偏向 Windows。容器化主界面不代表这些工具启动功能已经移植。
-- Windows EXE、批处理、PowerShell、winpty 终端和部分“打开目录”操作不受支持。
-- 不包含 Java 8/11、Wine 或其他安全测试工具，也没有安装浏览器供“网页”工具使用。
-  启动时原应用可能弹出“未检测到 JAVA8 运行环境”等提示，点击 OK 关闭；
-  这不代表 Java 工具已可用。
-- 本次仅添加运行容器及说明，不修改原有应用功能。完整 Linux 工具启动支持需单独改造。
-- 镜像以普通用户运行。请使用兼容 Linux ARM64 的工具；macOS 程序不能在 Linux 容器运行。
+- Windows EXE、BAT、CMD、VBS 不支持，启动时会提示选择 Linux 版本。
+- PowerShell 仅在另外安装 Linux `pwsh` 后可用；内置 Windows winpty 终端仍未移植。
+- 部分原有“打开目录”操作及 Windows 记事本尚未适配。
+- 没有安装浏览器供“网页”工具使用，也不包含 Wine 或安全测试工具。
+- 镜像以普通用户运行。工具必须兼容 Linux 和容器 CPU 架构；macOS 程序不能直接运行。
+- JRE 可运行 JAR，但不包含 javac 编译器。Java GUI 的第三方原生库需匹配 ARM64/AMD64。
+
+## 验证
+
+```bash
+docker compose run --rm --entrypoint python3 toolbox -m unittest discover -s tests -v
+```
 
 依赖说明：https://packages.debian.org/bookworm/python3-pyqt6
+Java 镜像：https://adoptium.net/installation/containers
 显示方案：https://novnc.com/

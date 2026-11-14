@@ -78,9 +78,13 @@ class EnvManager :
     def get_python_path (self )->str :
         settings =self ._get_settings ()
         custom =self ._resolve_path (settings .get ("python_path",""))
-        if custom and os .path .exists (custom ):
-            return custom 
-
+        if sys.platform.startswith("linux"):
+            if (custom and not custom.lower().endswith(".exe")
+                    and os.path.isfile(custom) and os.access(custom, os.X_OK)):
+                return custom
+            return sys.executable
+        if custom and os.path.exists(custom):
+            return custom
 
         builtin_exe =os .path .join (self .python_builtin ,"python.exe")
         if os .path .exists (builtin_exe ):
@@ -94,6 +98,10 @@ class EnvManager :
         settings =self ._get_settings ()
         key ="java8_path"if version =="8"else "java11_path"
         custom =self ._resolve_path (settings .get (key ,""))
+
+        if sys.platform.startswith("linux"):
+            from core.linux_launch import find_java_home
+            return find_java_home(str(version), custom)
 
         if custom and os .path .exists (custom ):
 
@@ -111,6 +119,10 @@ class EnvManager :
 
     def get_java_exe (self ,version ="8",gui =False )->str :
         home =self .get_java_home (version )
+        if sys.platform.startswith("linux"):
+            if not home:
+                raise RuntimeError(f"未检测到 Java {version}，请设置 JAVA{version}_HOME 或配置 Java 路径")
+            return os.path.join(home, "bin", "java")
         if not home :
             return "javaw"if gui else "java"
 
@@ -121,6 +133,8 @@ class EnvManager :
         return exe_name 
 
     def get_injected_env (self ,env_type ="all")->Dict [str ,str ]:
+        if sys.platform.startswith("linux"):
+            return self._get_linux_env(env_type)
         env =os .environ .copy ()
         new_paths =[]
 
@@ -213,6 +227,34 @@ class EnvManager :
             env ["PATH"]=os .pathsep .join (unique_paths )+os .pathsep +original_path 
 
         return env 
+
+    def _get_linux_env(self, env_type):
+        from core.linux_launch import java_home
+        env = os.environ.copy()
+        paths = []
+        # A host PYTHONHOME can make the selected interpreter unable to import its stdlib.
+        env.pop("PYTHONHOME", None)
+        if env_type == "python" or env_type.startswith("Python(") or env_type == "all":
+            exe = self.get_python_path()
+            if env_type.startswith("Python("):
+                item = self._find_cli_interpreter("python", env_type[7:-1])
+                if item:
+                    exe = self._resolve_path(item.get("path", ""))
+            paths.append(os.path.dirname(exe))
+        home = ""
+        if env_type.startswith("Java("):
+            item = self._find_cli_interpreter("java", env_type[5:-1])
+            if item and item.get("path"):
+                home = java_home(self._resolve_path(item["path"]))
+        elif env_type.lower().startswith("java") or env_type == "all":
+            version = "11" if "11" in env_type else "8"
+            home = self.get_java_home(version)
+        if home:
+            env["JAVA_HOME"] = home
+            paths.insert(0, os.path.join(home, "bin"))
+        if paths:
+            env["PATH"] = os.pathsep.join(paths + [env.get("PATH", "")])
+        return env
 
     def identify_version (self ,path :str )->str :
         if not path or not os .path .exists (path ):
