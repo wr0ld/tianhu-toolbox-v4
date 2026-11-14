@@ -1,0 +1,13 @@
+services:
+  toolbox:
+    build: .
+    image: tianhu-toolbox:local
+    ports:
+      - "127.0.0.1:6080:6080"
+    shm_size: "256mb"
+    volumes:
+      - toolbox-config:/app/config
+      - toolbox-tools:/app/tools
+volumes:
+  toolbox-config:
+  toolbox-tools:
