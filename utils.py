@@ -5,6 +5,7 @@ import socket
 import subprocess
 import logging
 import threading
+import shlex
 from functools import lru_cache
 from typing import List ,Dict ,Any
 
@@ -521,6 +522,13 @@ def build_tool_command (tool_data :Dict [str ,Any ])->str :
         abs_path =os .path .join (base_path ,path)
 
     env_mgr =EnvManager ()
+    if sys.platform.startswith("linux") and tool_type != "网页":
+        from core.linux_launch import build_launch
+        try:
+            spec = build_launch(tool_data, env_mgr)
+            return shlex.join(spec.argv)
+        except (ValueError, RuntimeError) as error:
+            return str(error)
 
     if tool_type =="网页":
         if url :
@@ -588,7 +596,12 @@ def run_tool (tool_data :Dict [str ,Any ],record_recent =True )->bool :
     env_mgr =EnvManager ()
 
     try :
-        if tool_type =="网页":
+        if sys.platform.startswith("linux") and tool_type != "网页":
+            from core.linux_launch import build_launch, start_launch
+            spec = build_launch(tool_data, env_mgr)
+            start_launch(spec)
+            cmd = shlex.join(spec.argv)
+        elif tool_type =="网页":
             import webbrowser
             if url :
                 if not url .lower ().startswith (("http://","https://")):

@@ -112,3 +112,7 @@ python launcher.py    # 经典菜单启动器
 
 - GitHub：<https://github.com/wr0ld/tianhu-toolbox-v4>
 
+
+## Docker（Apple Silicon / ARM64）
+
+容器内运行 PyQt6，通过浏览器访问图形界面。构建与启动方式、持久化及 Windows 功能限制见 [Docker 使用说明](docker/README.md)。
